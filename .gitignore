@@ -6,3 +6,4 @@ scripts/.cache/
 .DS_Store
 revisoes/historico/
 .claude/
+backup/voz-expressiva/*.mp4

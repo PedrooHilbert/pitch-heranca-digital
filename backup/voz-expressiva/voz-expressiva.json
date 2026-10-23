@@ -1,0 +1,963 @@
+{
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "crossfadeMs": 15,
+ "frases": [
+  {
+   "id": "s01_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 285,
+   "segmentos": [
+    {
+     "texto": "Quando você morrer…",
+     "fala": "Quando você morrer…",
+     "rate": "-7%",
+     "pitch": "-7Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s01_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "quem fica com o seu",
+     "fala": "quem fica com o seu",
+     "rate": "+0%",
+     "pitch": "+2Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "Instagram?",
+     "fala": "Instagram?",
+     "rate": "-6%",
+     "pitch": "+23Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase",
+      "pergunta"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s01_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Com o seu",
+     "fala": "Com o seu",
+     "rate": "+0%",
+     "pitch": "+5Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "e-mail?",
+     "fala": "e-mail?",
+     "rate": "-6%",
+     "pitch": "+25Hz",
+     "volumeDb": 1.88,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase",
+      "pergunta"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s01_04",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Com as suas",
+     "fala": "Com as suas",
+     "rate": "+0%",
+     "pitch": "+9Hz",
+     "volumeDb": 0.75,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "criptomoedas?",
+     "fala": "criptomoedas?",
+     "rate": "-6%",
+     "pitch": "+25Hz",
+     "volumeDb": 2.25,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase",
+      "pergunta"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s01_05",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Somos o grupo [NOME DO GRUPO], e esta é a",
+     "fala": "Somos o grupo Eterna Báite, e esta é a",
+     "rate": "+0%",
+     "pitch": "+4Hz",
+     "volumeDb": 0.75,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "Herança Digital.",
+     "fala": "Herança Digital.",
+     "rate": "-6%",
+     "pitch": "+13Hz",
+     "volumeDb": 2.25,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s02_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas.",
+     "fala": "Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas.",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s02_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Quando a pessoa morre, a família",
+     "fala": "Quando a pessoa morre, a família",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "não sabe",
+     "fala": "não sabe",
+     "rate": "-10%",
+     "pitch": "+3Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "o que existe,",
+     "fala": "o que existe,",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "não tem",
+     "fala": "não tem",
+     "rate": "-10%",
+     "pitch": "+3Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "as senhas, e não sabe o que ela queria.",
+     "fala": "as senhas, e não sabe o que ela queria.",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s02_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Resultado: bens com valor perdidos, assinaturas cobrando",
+     "fala": "Resultado: bens com valor perdidos, assinaturas cobrando",
+     "rate": "-1%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "para sempre",
+     "fala": "para sempre",
+     "rate": "-7%",
+     "pitch": "+3Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "e perfis virando alvo de",
+     "fala": "e perfis virando alvo de",
+     "rate": "-1%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "golpe.",
+     "fala": "golpe.",
+     "rate": "-7%",
+     "pitch": "+3Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s03_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "A Herança Digital é um cofre onde você organiza, em vida, tudo o que tem no mundo digital.",
+     "fala": "A Herança Digital é um cofre onde você organiza, em vida, tudo o que tem no mundo digital.",
+     "rate": "+3%",
+     "pitch": "+6Hz",
+     "volumeDb": 0.75,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s03_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Juntamos",
+     "fala": "Juntamos",
+     "rate": "+3%",
+     "pitch": "+6Hz",
+     "volumeDb": 0.75,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "três coisas:",
+     "fala": "três coisas:",
+     "rate": "-3%",
+     "pitch": "+15Hz",
+     "volumeDb": 2.25,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "um inventário dos seus ativos, um cofre de acessos criptografado,",
+     "fala": "um inventário dos seus ativos, um cofre de acessos criptografado,",
+     "rate": "+3%",
+     "pitch": "+6Hz",
+     "volumeDb": 0.75,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s03_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "e uma liberação que só vale pelo caminho",
+     "fala": "e uma liberação que só vale pelo caminho",
+     "rate": "+3%",
+     "pitch": "+6Hz",
+     "volumeDb": 0.75,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "legal:",
+     "fala": "legal:",
+     "rate": "-3%",
+     "pitch": "+15Hz",
+     "volumeDb": 2.25,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "inventário em cartório ou na justiça.",
+     "fala": "inventário em cartório ou na justiça.",
+     "rate": "+3%",
+     "pitch": "+6Hz",
+     "volumeDb": 0.75,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s04_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Em vida, o titular cadastra os ativos e escolhe o destino de cada um.",
+     "fala": "Em vida, o titular cadastra os ativos e escolhe o destino de cada um.",
+     "rate": "+0%",
+     "pitch": "+0Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s04_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "No falecimento, o cofre é",
+     "fala": "No falecimento, o cofre é",
+     "rate": "-3%",
+     "pitch": "-2Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "congelado.",
+     "fala": "congelado.",
+     "rate": "-9%",
+     "pitch": "+7Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s04_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Só depois do inventário e de um prazo para contestação, cada herdeiro recebe",
+     "fala": "Só depois do inventário e de um prazo para contestação, cada herdeiro recebe",
+     "rate": "+0%",
+     "pitch": "+0Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "apenas a sua parte.",
+     "fala": "apenas a sua parte.",
+     "rate": "-6%",
+     "pitch": "+9Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s05_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Este é o",
+     "fala": "Este é o",
+     "rate": "+3%",
+     "pitch": "+8Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "protótipo.",
+     "fala": "protótipo.",
+     "rate": "-3%",
+     "pitch": "+17Hz",
+     "volumeDb": 3,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s05_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "O titular entra com a chave de acesso do celular e vê o que falta para o plano ficar completo.",
+     "fala": "O titular entra com a chave de acesso do celular e vê o que falta para o plano ficar completo.",
+     "rate": "+2%",
+     "pitch": "+2Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s05_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "No inventário, cada ativo (redes sociais, e-mails, cripto, assinaturas) recebe um destino:",
+     "fala": "No inventário, cada ativo (redes sociais, e-mails, cripto, assinaturas) recebe um destino:",
+     "rate": "+3%",
+     "pitch": "+5Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "pessoal, patrimonial ou encerrar.",
+     "fala": "pessoal, patrimonial ou encerrar.",
+     "rate": "-3%",
+     "pitch": "+14Hz",
+     "volumeDb": 1.88,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s05_04",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Depois, ele escolhe os herdeiros e define a carência:",
+     "fala": "Depois, ele escolhe os herdeiros e define a carência:",
+     "rate": "+3%",
+     "pitch": "+6Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "quinze, trinta, sessenta ou noventa dias.",
+     "fala": "quinze, trinta, sessenta ou noventa dias.",
+     "rate": "-3%",
+     "pitch": "+15Hz",
+     "volumeDb": 1.88,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s05_05",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Quando o titular falece, o herdeiro abre o pedido com a certidão de óbito, o documento do inventário e uma",
+     "fala": "Quando o titular falece, o herdeiro abre o pedido com a certidão de óbito, o documento do inventário e uma",
+     "rate": "+2%",
+     "pitch": "+2Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "selfie",
+     "fala": "selfie",
+     "rate": "-4%",
+     "pitch": "+11Hz",
+     "volumeDb": 1.88,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "para confirmar a identidade.",
+     "fala": "para confirmar a identidade.",
+     "rate": "+2%",
+     "pitch": "+2Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s05_06",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "A equipe valida, todos são avisados e podem contestar.",
+     "fala": "A equipe valida, todos são avisados e podem contestar.",
+     "rate": "+3%",
+     "pitch": "+5Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s05_07",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Terminado o prazo, cada herdeiro vê",
+     "fala": "Terminado o prazo, cada herdeiro vê",
+     "rate": "+3%",
+     "pitch": "+5Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "só o que foi destinado a ele,",
+     "fala": "só o que foi destinado a ele,",
+     "rate": "-3%",
+     "pitch": "+14Hz",
+     "volumeDb": 1.88,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "com instruções para cada ativo.",
+     "fala": "com instruções para cada ativo.",
+     "rate": "+3%",
+     "pitch": "+5Hz",
+     "volumeDb": 0.38,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s06_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Segurança é o coração do produto.",
+     "fala": "Segurança é o coração do produto.",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s06_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "O conteúdo é cifrado no aparelho do titular.",
+     "fala": "O conteúdo é cifrado no aparelho do titular.",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s06_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "A chave de sucessão é dividida em",
+     "fala": "A chave de sucessão é dividida em",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "três partes,",
+     "fala": "três partes,",
+     "rate": "-10%",
+     "pitch": "+3Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "e duas são necessárias para abri-la:",
+     "fala": "e duas são necessárias para abri-la:",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "nem a empresa",
+     "fala": "nem a empresa",
+     "rate": "-10%",
+     "pitch": "+3Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "consegue abrir o cofre sozinha.",
+     "fala": "consegue abrir o cofre sozinha.",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s06_04",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Mudanças críticas, como remover um herdeiro, geram um alerta: Não foi",
+     "fala": "Mudanças críticas, como remover um herdeiro, geram um alerta: Não foi",
+     "rate": "-4%",
+     "pitch": "-6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "você?",
+     "fala": "você?",
+     "rate": "-4%",
+     "pitch": "+6Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "pergunta"
+     ]
+    },
+    {
+     "texto": "Desfazer.",
+     "fala": "Desfazer.",
+     "rate": "-10%",
+     "pitch": "+3Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s07_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Gerenciadores de senha resolvem o",
+     "fala": "Gerenciadores de senha resolvem o",
+     "rate": "+2%",
+     "pitch": "+2Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "dia a dia, não a sucessão.",
+     "fala": "dia a dia, não a sucessão.",
+     "rate": "-4%",
+     "pitch": "+11Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s07_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Os contatos de legado de Google, Apple e Meta cobrem",
+     "fala": "Os contatos de legado de Google, Apple e Meta cobrem",
+     "rate": "+2%",
+     "pitch": "+2Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "só a própria plataforma.",
+     "fala": "só a própria plataforma.",
+     "rate": "-4%",
+     "pitch": "+11Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "ênfase"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s07_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "A Herança Digital reúne",
+     "fala": "A Herança Digital reúne",
+     "rate": "+2%",
+     "pitch": "+5Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "tudo em um só lugar,",
+     "fala": "tudo em um só lugar,",
+     "rate": "-4%",
+     "pitch": "+14Hz",
+     "volumeDb": 1.5,
+     "pausaDepoisMs": -1,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "seguindo o rito legal brasileiro.",
+     "fala": "seguindo o rito legal brasileiro.",
+     "rate": "+2%",
+     "pitch": "+5Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s08_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "A receita vem da assinatura anual do titular e de uma taxa na liberação.",
+     "fala": "A receita vem da assinatura anual do titular e de uma taxa na liberação.",
+     "rate": "+4%",
+     "pitch": "+3Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s08_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda.",
+     "fala": "Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda.",
+     "rate": "+4%",
+     "pitch": "+3Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s08_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Os valores serão definidos depois da pesquisa com usuários.",
+     "fala": "Os valores serão definidos depois da pesquisa com usuários.",
+     "rate": "+4%",
+     "pitch": "+3Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s09_01",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos.",
+     "fala": "Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos.",
+     "rate": "-2%",
+     "pitch": "-1Hz",
+     "volumeDb": 0,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s09_02",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP.",
+     "fala": "Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o ême vê pê.",
+     "rate": "+2%",
+     "pitch": "+5Hz",
+     "volumeDb": 0.75,
+     "pausaDepoisMs": 0,
+     "marcas": []
+    }
+   ]
+  },
+  {
+   "id": "s09_03",
+   "padIniMs": 70,
+   "padFimMs": 40,
+   "silencioFimMs": 0,
+   "segmentos": [
+    {
+     "texto": "Herança Digital…",
+     "fala": "Herança Digital…",
+     "rate": "-12%",
+     "pitch": "+11Hz",
+     "volumeDb": 2.63,
+     "pausaDepoisMs": 285,
+     "marcas": [
+      "ênfase"
+     ]
+    },
+    {
+     "texto": "seus dados, sua história, seu futuro.",
+     "fala": "seus dados, sua história, seu futuro.",
+     "rate": "-6%",
+     "pitch": "+2Hz",
+     "volumeDb": 1.13,
+     "pausaDepoisMs": -1,
+     "marcas": []
+    },
+    {
+     "texto": "Obrigado!",
+     "fala": "Obrigado!",
+     "rate": "-6%",
+     "pitch": "+8Hz",
+     "volumeDb": 1.88,
+     "pausaDepoisMs": 0,
+     "marcas": [
+      "exclamação"
+     ]
+    }
+   ]
+  }
+ ]
+}
