@@ -1,6 +1,6 @@
 // Timeline estilo editor de vídeo: régua em segundos + linhas de batida, playhead arrastável, zoom
 // (Ctrl+roda) e as trilhas Cenas · Legendas · Voz · SFX · Trilha · Comentários (cada uma com mudo/solo).
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { Projeto } from "../src/data/schema";
 import { LIMITE_QUADROS } from "../src/data/schema";
 import type { Derivado } from "../src/data/projeto";
@@ -36,11 +36,21 @@ export const Timeline: React.FC<Props> = ({ projeto, d, frame, onSeek, sel, onSe
   const fpb = projeto.framesPorBatida;
   const total = d.total;
 
-  // zoom inicial: cabe a duração inteira
+  // zoom "Ajustar": cabe a duração inteira; segue a largura da janela até alguém usar Ctrl+roda
+  const ajustado = useRef(true);
+  const ajustar = useCallback(() => {
+    if (!corpo.current) return;
+    ajustado.current = true;
+    setPxq(Math.max(0.05, (corpo.current.clientWidth - ROTULO - 50) / total));
+  }, [total]);
   useEffect(() => {
-    if (pxq || !corpo.current) return;
-    setPxq(Math.max(0.05, (corpo.current.clientWidth - ROTULO - 20) / total));
-  }, [pxq, total]);
+    const el = corpo.current;
+    if (!el) return;
+    ajustar();
+    const ro = new ResizeObserver(() => ajustado.current && ajustar());
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [ajustar]);
 
   // Ctrl+roda = zoom em volta do mouse
   useEffect(() => {
@@ -49,6 +59,7 @@ export const Timeline: React.FC<Props> = ({ projeto, d, frame, onSeek, sel, onSe
     const roda = (e: WheelEvent) => {
       if (!e.ctrlKey) return;
       e.preventDefault();
+      ajustado.current = false;
       const r = el.getBoundingClientRect();
       const xTela = e.clientX - r.left - ROTULO;
       setPxq((z) => {
@@ -197,7 +208,7 @@ export const Timeline: React.FC<Props> = ({ projeto, d, frame, onSeek, sel, onSe
         <span>· batida = {fpb} q</span>
         <span style={{ flex: 1 }} />
         <span>Arraste a borda direita de uma cena para mudar a duração (encaixa na batida; Shift = livre) · Ctrl+roda = zoom</span>
-        <button className="mini" onClick={() => setPxq(Math.max(0.05, ((corpo.current?.clientWidth ?? 1200) - ROTULO - 20) / total))}>Ajustar</button>
+        <button className="mini" onClick={ajustar}>Ajustar</button>
       </div>
       <div className="tl-corpo" ref={corpo}>
         <div className="tl-conteudo" style={{ width: larg + ROTULO }}>

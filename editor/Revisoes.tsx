@@ -20,8 +20,9 @@ export const DialogoPin: React.FC<{
   const [gravidade, setGravidade] = useState<NovoPin["gravidade"]>("Média");
   const ok = texto.trim().length > 0 && !salvando;
   return (
-    <div className="modal-fundo" style={{ background: "#0006", alignItems: "start", paddingTop: 70, pointerEvents: "none" }}>
-      <div className="modal" style={{ pointerEvents: "auto" }} onKeyDown={(e) => e.stopPropagation()}>
+    // encostado à direita (sobre o inspetor) para o vídeo ficar livre para o clique que marca o lugar
+    <div className="modal-fundo" style={{ background: "transparent", placeItems: "start end", padding: "56px 12px 0 0", pointerEvents: "none" }}>
+      <div className="modal" style={{ pointerEvents: "auto", width: 400 }} onKeyDown={(e) => e.stopPropagation()}>
         <h2>Novo comentário · {tempo}</h2>
         <div className="sub" style={{ color: "var(--txt3)" }}>
           Quadro {frame} · {cenaNome} · {pos ? `posição ${(pos.x * 100).toFixed(0)}%, ${(pos.y * 100).toFixed(0)}%` : "clique no vídeo para marcar o lugar (opcional)"}

@@ -13,7 +13,7 @@ export default defineConfig({
   server: {
     port: 5174,
     strictPort: true,
-    open: true,
+    open: !process.env.EDITOR_SEM_ABRIR, // EDITOR_SEM_ABRIR=1 → não abre o navegador (usado no preview)
     host: "127.0.0.1",
     fs: { allow: [path.resolve(__dirname, "..")] },
     watch: { ignored: ["**/revisoes/**", "**/out/**", "**/src/data/project.json", "**/src/studio/**", "**/whisper.cpp/**", "**/public/**"] },

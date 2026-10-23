@@ -4,3 +4,5 @@ whisper.cpp/
 scripts/.cache/
 *.log
 .DS_Store
+revisoes/historico/
+.claude/

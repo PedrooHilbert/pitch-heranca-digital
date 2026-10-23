@@ -32,11 +32,11 @@ export const telaSchema = z.object({
 
 export const cenaSchema = z.object({
   id: z.enum(CENAS),
-  nome: z.string().min(1),
+  nome: z.string().regex(/\S/, "nome vazio"),
   dur: z.number().int().min(30).max(LIMITE_QUADROS).describe("duração em quadros (30 = 1 s)"),
   durTravada: z.boolean().optional().describe("duração ajustada à mão: o `npm run sync` não muda (se couber a voz)"),
   fundos: z.record(z.string(), z.enum(TEMAS)).describe("fundo de cada bloco da cena"),
-  textos: z.record(z.string(), z.string().min(1, "texto vazio")).describe("textos que aparecem na tela"),
+  textos: z.record(z.string(), z.string().regex(/\S/, "texto vazio")).describe("textos que aparecem na tela"),
   telas: z.record(z.string(), telaSchema).describe("tela do protótipo + recorte de cada plano"),
 });
 
