@@ -1,83 +1,165 @@
-# Pitch "Herança Digital" — vídeo v2 (Remotion)
+# Pitch "Herança Digital" — vídeo v3 (Remotion + Estúdio de Revisão)
 
 Pitch de **≤ 3 min** do projeto **Herança Digital** (Sprint 2 do UC HUB, entrega 18/11).
-1920×1080, 30 fps, H.264. v2 = mesma estrutura e conteúdo da v1, refeita para **prender a atenção**:
-tipografia cinética, telas do protótipo se montando em 3D, contadores, órbitas, carimbos, transições na batida,
-**voz**, **trilha** e **efeitos sonoros**. A lógica de ritmo foi medida nas referências: `docs/RECEITA_DE_MOVIMENTO.md`.
+1920×1080, 30 fps, H.264. A v3 mantém o vídeo da v2 (tipografia cinética, telas do protótipo se montando,
+voz, trilha e efeitos na batida) e acrescenta:
 
-## Rodar e renderizar
+- **tudo editável num arquivo só** — `src/data/project.json`, validado por um schema Zod;
+- um **editor local** (`npm run editor`) para ajustar textos, tempos e áudio e para **deixar comentários no quadro exato**,
+  que depois o Claude Code resolve sozinho.
+
+## Começar
 
 ```bash
 cd video
 npm install
-npm run dev            # Remotion Studio (pré-visualização)
+npm run editor         # Estúdio de Revisão → http://localhost:5174 (abre o navegador sozinho)
+```
+
+Outros comandos:
+
+```bash
+npm run dev            # Remotion Studio (painel de props editável, com botão de salvar)
 npm run render         # confere placeholders e gera os arquivos finais (≈ 20–30 min)
-npm run render:draft   # rascunho rápido (só com voz), sem travar nos placeholders
+npm run render:draft   # rascunho rápido, sem travar nos placeholders
+npm run check          # lista o que ainda está [PREENCHER]
+npm run validar        # valida o project.json com o schema
+npm run revisoes       # lista as revisões abertas (pins do editor)
 npm run stills         # 2 quadros por cena em out/stills-v2/
 npm run audit          # auditoria: movimento, áudio, legendas, duração → out/auditoria.json
 ```
 
-Saídas: `out/pitch-v2.mp4` (com voz) · `out/pitch-v2-musica-e-sfx.mp4` (sem voz, para gravar por cima e testar tempos) · `out/audio-mix.wav`.
+Saídas: `out/pitch-v2.mp4` (com voz) · `out/pitch-v2-musica-e-sfx.mp4` (sem voz) · `out/audio-mix.wav` ·
+`out/rascunho-540p.mp4` (botão "Rascunho" do editor).
+
+Tudo roda **na sua máquina**: sem login, sem nuvem, sem telemetria, sem serviço pago.
+
+## Ciclo de trabalho
+
+1. `npm run editor` e assista ao vídeo.
+2. **Texto, duração, cores, volume, legenda, efeito sonoro** → mude você mesmo no editor. Salva sozinho em
+   `project.json` (e o Ctrl+S força). O preview muda na hora; `npm run render` usa o mesmo arquivo.
+3. **Animação, movimento, estrutura, coisa que o editor não alcança** → pare no quadro, aperte **C**, clique no
+   ponto do vídeo (opcional) e escreva o que está errado e o que você quer. O editor guarda o comentário em
+   `revisoes/revisoes.json` com a foto do quadro em `revisoes/pins/<id>.png`.
+4. Quando juntar alguns pins, diga ao Claude Code: **"resolva as revisões abertas"**
+   (ou clique em *Copiar pedido para o Claude Code* na aba Revisões e cole).
+   O Claude lê cada pin e a foto, corrige, confere e marca como **feito** — o pin fica verde no editor.
+5. Renderize: botão **Final 1080p** no editor ou `npm run render`.
+
+## Como reportar um erro
+
+Pelo editor é só apertar **C**. Se for por mensagem, use este modelo (uma linha por problema):
+
+```
+Cena/tempo:   Cena 5 · 01:21.5   (ou o quadro: 2444)
+O que está errado:  o card do herdeiro corta o texto "carência"
+O que eu quero:     texto em duas linhas, sem cortar
+(print):            anexe a captura de tela, se tiver
+```
+
+## O Estúdio de Revisão (`npm run editor`)
+
+| Área | O que faz |
+|---|---|
+| **Centro** | Player com play/pausa, ±1 quadro, ±1 s, volume, repetir a cena, velocidade 0,25–2×, tempo + quadro, grade da margem de segurança (80 px). |
+| **Esquerda** | Cenas com miniatura (clique = vai para a cena e abre no inspetor), *Projeto* (equipe, marca, cores) e *Áudio*. |
+| **Direita · Inspetor** | Edita o que estiver selecionado: textos da cena (`*palavra*` = destaque), duração, fundos, tela/recorte do protótipo; legenda; efeito sonoro (som, volume, quadro, ouvir); níveis de voz/trilha/efeitos; equipe e cores. |
+| **Direita · Revisões** | Pins com foto, filtros, caixa "feito", apagar, *Copiar pedido para o Claude Code*. |
+| **Embaixo · Timeline** | Régua, linhas da batida, cabeça arrastável, Ctrl+roda = zoom. Faixas Cenas / Legendas / Voz (onda) / SFX / Trilha (onda + ducking) / Comentários, com mudo (M) e solo (S). |
+
+- **Duração de cena**: arraste a borda direita do bloco. Encaixa na batida (16 q); **Shift** = livre.
+  Nunca passa de 180 s e nunca fica menor que a fala da cena. A cena arrastada fica "travada" (o `npm run sync` respeita).
+- **Legenda**: arraste para mover, puxe as pontas para ajustar; editar o texto redistribui as palavras.
+- **Efeito sonoro**: arraste o losango; no inspetor troque o som, o volume ou crie um novo na posição da cabeça.
+- **Mudo/solo** só valem para o preview, não mudam o vídeo final.
+- **Validação ao vivo**: se o projeto ficar inválido (mais de 180 s, texto vazio, tela inexistente) o editor mostra
+  o erro em vermelho e **não salva** até corrigir.
+- **Desfazer/refazer** sem limite durante a sessão; cada salvamento guarda uma cópia em `revisoes/historico/`
+  (as 50 últimas) — para voltar a uma versão antiga, copie o arquivo por cima de `src/data/project.json`.
+- O selo amarelo **⚠ N campos [PREENCHER]** mostra quantos placeholders faltam (clique para abrir a equipe).
+
+### Atalhos
+
+| Tecla | Ação |
+|---|---|
+| Espaço | play / pausa |
+| ← / → | −1 / +1 quadro |
+| Shift + ← / → | −1 / +1 segundo |
+| J / K / L | volta 1 s / pausa / play (L de novo acelera) |
+| C | comentar o quadro atual (pin) |
+| M | mudo |
+| Ctrl+Z / Ctrl+Shift+Z | desfazer / refazer |
+| Ctrl+S | salvar agora |
+| S | não divide cena (cada cena é uma animação própria) — mostra um aviso |
+
+### O que o editor **não** faz (de propósito)
+
+Não muda **animação, movimento, ordem das cenas nem efeitos visuais**: isso é código (`src/cenas/S*.tsx`). O editor
+mostra "Animação: peça ao Claude" — deixe um pin. Também não grava voz (veja abaixo) nem troca a trilha.
+
+## Remotion Studio (`npm run dev`)
+
+O schema Zod está registrado na composição, então o painel **Props** do Studio mostra os campos do projeto com
+preview ao vivo e botão de salvar. Como o Studio só consegue salvar quando as props estão escritas no próprio arquivo
+da composição, `npm run dev` gera `src/studio/Composicao.gerada.tsx` a partir do `project.json` e fica observando:
+o que for salvo no Studio é validado e copiado de volta para o `project.json`. **Não edite o `.gerada.tsx` à mão.**
 
 ## Voz (o vídeo inteiro se ajusta a ela)
 
 O texto da narração está em **`src/data/narracao.ts`** (uma frase por `id`). A timeline é **guiada pelo áudio**:
 cada cena dura o que as frases dela duram (+ respiros na grade da batida), e as animações estão presas às
-**palavras** (ex.: o cofre congela quando a voz diz "congelado"). Se o total passar de 180 s, o pipeline encurta
-respiros e, com voz sintética, acelera a fala até +8 %.
+**palavras** (ex.: o cofre congela quando a voz diz "congelado").
 
-**A) Voz do grupo (recomendado).** Siga **`docs/ROTEIRO_GRAVACAO.md`** (guia + tabela com dica de entonação).
-Salve cada frase como `video/gravacoes/<id>.m4a|wav|mp3` (ex.: `s01_01.m4a`) e rode:
+**A) Voz do grupo (recomendado).** Siga **`docs/ROTEIRO_GRAVACAO.md`**. Salve cada frase como
+`video/gravacoes/<id>.m4a|wav|mp3` (ex.: `s01_01.m4a`) e rode:
 ```bash
-npm run voz:importar   # corta silêncio, remove cliques, normaliza −16 LUFS, alinha palavra a palavra (whisper) e refaz tudo
+npm run voz:importar   # corta silêncio, normaliza, alinha palavra a palavra (whisper) e refaz o project.json
 npm run render
 ```
-Frases sem gravação continuam com a voz sintética. O alinhamento usa **whisper.cpp** (já instalado em `whisper.cpp/`;
-se apagar, `npm run whisper:instalar`).
-
 **B) Voz sintética** (está no vídeo agora): `npm run voz:sintetica` — edge-tts, `pt-BR-AntonioNeural`, +8 %.
-Trocar de voz: `TTS_VOZ=pt-BR-FranciscaNeural npm run voz:sintetica` (ou `pt-BR-ThalitaMultilingualNeural`).
-Não havia `ELEVENLABS_API_KEY` nem `OPENAI_API_KEY` nesta máquina, então usei a opção 3 do PROMPT (edge-tts).
-Pronúncias especiais (MVP, UC HUB…) em `src/data/pronuncia.ts`.
 
-Depois de mudar texto/voz: `npm run sync` (refaz timings, timeline, legendas, efeitos e trilha) e `npm run roteiro`.
+Depois de mudar texto/voz: `npm run sync`. O sync **preserva** o que foi editado à mão no editor (textos da tela,
+fundos, telas, durações travadas, legendas e efeitos marcados como manuais).
 
 ## Trilha e efeitos
 
-- **Trilha**: `scripts/make_music.py` gera `public/audio/trilha.wav` a partir da timeline (Am–F–C–G, 112,5 BPM,
-  arco de energia por cena, −26 LUFS). Para usar uma trilha do grupo (livre de direitos), substitua o arquivo,
-  ajuste `BPM` em `src/data/music.ts` e **não** rode o `make_music.py`.
-- **Efeitos**: `npm run sfx` gera 15 sons sintetizados em `public/audio/sfx/`. Os disparos saem dos mesmos tempos das
-  animações (`sfxSx()` em cada cena → `src/data/sfx-cues.ts`). Pacote próprio? Coloque wavs com os mesmos nomes.
-- **Mixagem** (`src/components/v2/Mix.tsx`): voz −16 LUFS; trilha −26 LUFS e −6 dB extra sob a voz (rampa de 9 q);
-  SFX −11 a −22 dB, antecipando a imagem em 2–3 q, com variação de ±3 % de pitch e ±1 dB. Final: loudnorm −14 LUFS.
+- **Trilha**: `scripts/make_music.py` gera `public/audio/trilha.wav` (112,5 BPM, arco de energia por cena).
+  Para usar uma trilha livre de direitos do grupo, substitua o arquivo e não rode o `make_music.py`.
+- **Efeitos**: `npm run sfx` gera 15 sons sintetizados em `public/audio/sfx/`.
+- **Mixagem**: voz −16 LUFS; trilha −26 LUFS com ducking sob a voz; SFX −11 a −22 dB; final loudnorm −14 LUFS.
+  Os níveis ficam em `project.json → audio` (editáveis no editor, aba *Áudio*).
 
-## O que preencher (aparece em AMARELO)
+## O que preencher (aparece em AMARELO no vídeo)
 
-`src/data/config.ts`: `NOME_DO_GRUPO`, `MEMBROS` (nome + função de todos), `CONTATO`, e o logo real em
-`public/brand/` + `LOGO_SIMBOLO`. Depois de mudar o nome do grupo, rode `npm run voz:sintetica` (a voz sintética
-pula o nome enquanto ele for placeholder) e `npm run render`. `npm run check` lista o que falta.
+No editor, item **Projeto**: nome do grupo, membros (nome + função), contato e o logo (`public/brand/` +
+campo do logo). `npm run check` lista o que falta. Depois de mudar o nome do grupo com voz sintética, rode
+`npm run voz:sintetica` (a voz pula o nome enquanto for placeholder).
 
 ## Estrutura
 
 ```
-src/data/        narracao.ts · pronuncia.ts · music.ts · timeline.json (gerado) · voice-timings.json (gerado)
-                 timeline.ts · legendas.ts · sfx.ts · sfx-cues.ts · config.ts · theme.ts
-src/components/fx/   biblioteca de movimento (KineticText, Counter, Roleta, ScrambleText, CameraRig, Tilt3D, Shake,
-                     Wipe, Flash, LightSweep, Glitch, DrawPath, Stamp, Particles, Burst, Orbit, UIBlock, ScreenAssembly, Cursor)
-src/components/v2/   Fundo · Legendas · Transicoes · Mix · kit
-src/cenas/           S1Abertura … S9Fechamento (cada uma exporta a cena e seus efeitos sonoros)
-public/screens/regions.json   blocos reais de cada tela (recortados e animados pelo UIBlock)
-scripts/  sync.mjs · voz_sintetica.py · make_sfx.py · make_music.py · render-final.mjs · audit.py · render-stills.mjs
-          medir_referencias.py · transcrever-ref.mjs · gen-roteiro.mjs · check-placeholders.mjs
+src/data/project.json     FONTE ÚNICA do vídeo (editada pelo editor, pelo Studio e pelo npm run sync)
+src/data/schema.ts        schema Zod (limites, telas, falas dentro da cena…)
+src/data/projeto.ts       leitura do projeto + tempos absolutos (derivado)
+src/cenas/                S1Abertura … S9Fechamento (animação; textos/fundos/telas vêm do projeto)
+src/components/fx, v2     biblioteca de movimento, fundo, legendas, transições, mixagem
+src/studio/               composição gerada para o Studio (não editar)
+editor/                   Estúdio de Revisão (Vite + React + @remotion/player) e API local (api.ts)
+revisoes/                 revisoes.json · pins/<id>.png · historico/ · auto-revisao.md
+scripts/                  sync, render-final, render-stills, gerar-studio, validar-projeto, revisoes, áudio…
+docs/                     RECEITA_DE_MOVIMENTO · ROTEIRO_GRAVACAO · PROGRESSO_V2 · PROGRESSO_V3
 ```
 
-## Decisões (ambiguidades do PROMPT_V2)
+## Decisões
 
-- **BPM 112,5** (16 q/batida) em vez de 120: é o medido na ref2 (112,3) e dá número inteiro de quadros.
-- Cortes de cena na **meia batida** (8 q) para não desperdiçar até 15 q por cena.
-- Voz sintética em **frases separadas** com o silêncio final cortado (o edge-tts deixa ~0,8 s em cada uma).
-- Enquanto `NOME_DO_GRUPO` for placeholder, a voz sintética **não fala** o nome (a legenda mostra o placeholder).
-- Ícones da abertura são **genéricos** (câmera, envelope, ₿, nuvem…), sem logos reais. Concorrência continua
-  **conceitual**, parcerias sempre **"previstas"**, nomes nas telas são fictícios (PROMPT.md §2).
-- Ritmo de fala ~170 palavras/min (a ref2 tem ~280; seria ilegível para conteúdo técnico).
+- **BPM 112,5** (16 q/batida) em vez de 120: é o medido na referência e dá número inteiro de quadros. O
+  "encaixe na batida" do editor usa esses 16 q.
+- Cortes de cena na **meia batida** (8 q).
+- **Dividir cena (S)** não existe: cada cena é uma animação escrita à mão, então dividir é trabalho de código → pin.
+- O editor salva sozinho 0,8 s depois de cada mudança válida (mais simples que lembrar de salvar);
+  o histórico em `revisoes/historico/` cobre o "voltar atrás".
+- O **rascunho 540p** do editor renderiza o que está no editor (mesmo sem salvar); o **final** salva antes.
+- Texto só com espaços conta como vazio (inválido).
+- Ícones da abertura são genéricos, concorrência é **conceitual**, parcerias são sempre **"previstas"** e os nomes
+  nas telas são fictícios (PROMPT.md §2).

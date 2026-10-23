@@ -1,14 +1,32 @@
-# Progresso da v3 (PROMPT_V3_EDITOR_REVISAO.md)
+# Progresso da v3 (PROMPT_V3_EDITOR_REVISAO.md) — concluída
 
-O projeto **compila e renderiza** (`npm run render`, `npm run check`, `npm run stills`, `npm run sync` funcionando). Commit: "v3 fase 0+1".
+## Fase 0 — autorrevisão
+357 stills a cada 0,5 s revisados; 20 problemas, 16 corrigidos e conferidos em stills, 4 deixados como decisão do
+grupo. Lista completa em `revisoes/auto-revisao.md`.
 
-## Feito
-- **Fase 0 (autorrevisão)**: 357 stills a cada 0,5 s revisados; 20 problemas, 16 corrigidos e conferidos em stills. Lista completa em `revisoes/auto-revisao.md`.
-- **Fase 1 (dados)**: `src/data/project.json` é a fonte única (cenas, durações, textos, fundos, telas/recortes, falas, legendas, efeitos, níveis de áudio, equipe, tema), validado pelo schema Zod (`src/data/schema.ts`). A composição lê o projeto via props; o schema está registrado na `<Composition>`. `npm run sync` regenera o projeto a partir da voz e preserva as edições manuais. Destaque no texto: `*palavra*`.
-- **Editor (início)**: API local em `editor/api.ts` (projeto, revisões com still, render, abrir out/), `editor/vite.config.ts`, `npm run revisoes`. Dependências instaladas: zod 4.5.4, @remotion/zod-types, @remotion/player, vite 7, tsx.
+## Fase 1 — dados
+`src/data/project.json` é a fonte única (cenas, durações, textos, fundos, telas/recortes, falas, legendas, efeitos,
+níveis de áudio, equipe, tema), validado por `src/data/schema.ts`. Schema registrado na `<Composition>`; o Studio
+salva via `src/studio/Composicao.gerada.tsx` + ponte (`scripts/gerar-studio.mjs --observar`). `npm run sync`
+preserva edições manuais.
 
-## Falta
-1. **Salvar pelo Studio**: o Studio só grava quando `defaultProps` está escrito direto no arquivo da composição. Plano: `scripts/gerar-studio.mjs` gera `src/studio/Composicao.gerada.tsx` a partir do `project.json`, e o `npm run dev` passa a observar esse arquivo e copiar as mudanças de volta (validando com Zod).
-2. **Interface do Estúdio de Revisão** (`editor/index.html`, `main.tsx`, `App.tsx`, `Timeline.tsx`, `Inspector.tsx`, `Revisoes.tsx`), na ordem de prioridade: pins com still e painel → inspetor de textos → timeline de cenas → trilhas de áudio. Também falta servir `../public` pelo middleware (com suporte a range), em vez de usar o `publicDir`.
-3. Script `npm run editor`, histórico e desfazer, validação ao vivo e contador de placeholders.
-4. Verificar no navegador (screenshots), atualizar o README (ciclo de trabalho + "Como reportar um erro"), render final e auditoria.
+## Fase 2 — Estúdio de Revisão (`npm run editor`)
+`editor/`: `App.tsx` (player, controles, atalhos, pins, render), `Timeline.tsx`, `Inspector.tsx`, `Revisoes.tsx`,
+`store.ts` (desfazer/refazer, autosave, validação), `api.ts` (projeto, revisões com still, render, abrir out/).
+
+### Verificado (23/10)
+- Editor abre sem erros no console; screenshots conferidos (player, timeline com ondas, inspetor, revisões).
+- Texto da S3 alterado → preview mudou na hora → `project.json` e `.gerada.tsx` atualizados → still renderizado pela
+  CLI mostra o texto novo → Ctrl+Z desfez a digitação inteira → arquivo idêntico ao commit.
+- **C** → diálogo → clique no vídeo → Ctrl+Enter: `revisoes/revisoes.json` + `revisoes/pins/1.png` criados, pin aparece no
+  vídeo e na faixa Comentários; "feito" pelo painel grava `status: "feito"`; `npm run revisoes` lista certo. Pin de
+  teste apagado depois.
+- Borda da S3 arrastada: 544 → 592 q (múltiplo de 16), cenas seguintes deslocadas, parou em 5400 q com o aviso
+  "Limite de 180 s". Desfeito.
+- API recusa (422) projeto com mais de 180 s, tela inexistente e texto vazio/só espaços (este último corrigido no
+  teste: o schema aceitava espaços).
+- Remotion Studio abre com o painel Default Props (Schema/JSON).
+- Botão "Rascunho 540p" renderiza com barra de progresso.
+
+## Fase 3 — documentação
+README reescrito: ciclo de trabalho, modelo "Como reportar um erro", atalhos, limites do editor, Studio, decisões.
