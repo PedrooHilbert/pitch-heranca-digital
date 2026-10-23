@@ -33,8 +33,8 @@
     "vite": "^7.3.7"
   },
   "scripts": {
-    "dev": "remotion studio",
-    "studio": "remotion studio",
+    "dev": "node scripts/studio.mjs",
+    "studio": "node scripts/studio.mjs",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
     "lint": "eslint src && tsc",
@@ -48,7 +48,10 @@
     "render": "node scripts/check-placeholders.mjs && node --no-warnings scripts/render-final.mjs",
     "render:draft": "node --no-warnings scripts/render-final.mjs --draft",
     "stills": "node scripts/render-stills.mjs",
-    "audit": "python scripts/audit.py"
+    "audit": "python scripts/audit.py",
+    "revisoes": "node scripts/revisoes.mjs",
+    "editor": "node scripts/gerar-studio.mjs && vite --config editor/vite.config.ts",
+    "validar": "npx tsx scripts/validar-projeto.mts"
   },
   "allowScripts": {
     "esbuild": false

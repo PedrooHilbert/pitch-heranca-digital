@@ -1,25 +1,36 @@
 // API local do Estúdio de Revisão (roda dentro do servidor do Vite — sem nuvem, sem login, sem telemetria).
 //   GET  /api/projeto               → src/data/project.json
-//   PUT  /api/projeto               → valida (Zod), salva e guarda cópia em revisoes/historico/ (últimas 50)
+//   PUT  /api/projeto               → valida (Zod), guarda cópia em revisoes/historico/ (últimas 50), salva
+//                                     e regenera a composição do Studio
 //   GET  /api/revisoes              → revisoes/revisoes.json
 //   POST /api/revisoes              → cria pin (+ still do quadro em revisoes/pins/<id>.png)
 //   PATCH/DELETE /api/revisoes/:id  → muda status/texto · apaga
-//   POST /api/still                 → { frame, projeto } → PNG (usa o MESMO código das cenas)
+//   POST /api/still                 → { frame, projeto, escala? } → PNG (usa o MESMO código das cenas)
 //   POST /api/render                → { tipo: "rascunho" | "final", projeto } ; GET /api/render → progresso
 //   POST /api/abrir-out             → abre a pasta out/ no Explorer
+//   GET  /screens/… /audio/… /brand/… → arquivos de public/ (com suporte a Range, para o áudio)
+//   GET  /revisoes/…                → stills dos pins
 import fs from "node:fs";
 import path from "node:path";
 import { spawn } from "node:child_process";
+import { pathToFileURL } from "node:url";
 import type { Plugin, ViteDevServer } from "vite";
 import type { IncomingMessage, ServerResponse } from "node:http";
 
 const ROOT = path.resolve(__dirname, "..");
+const PUB = path.join(ROOT, "public");
 const PROJ = path.join(ROOT, "src", "data", "project.json");
 const REVDIR = path.join(ROOT, "revisoes");
 const REV = path.join(REVDIR, "revisoes.json");
 const PINS = path.join(REVDIR, "pins");
 const HIST = path.join(REVDIR, "historico");
 const OUT = path.join(ROOT, "out");
+
+const TIPOS: Record<string, string> = {
+  ".png": "image/png", ".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".svg": "image/svg+xml", ".webp": "image/webp",
+  ".mp3": "audio/mpeg", ".wav": "audio/wav", ".m4a": "audio/mp4", ".json": "application/json; charset=utf-8",
+  ".woff2": "font/woff2", ".woff": "font/woff", ".ttf": "font/ttf", ".mp4": "video/mp4",
+};
 
 const lerJSON = (f: string, padrao: unknown) => (fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : padrao);
 const gravar = (f: string, obj: unknown) => {
@@ -44,6 +55,30 @@ const enviar = (res: ServerResponse, status: number, obj: unknown) => {
   res.end(JSON.stringify(obj));
 };
 
+/** Arquivo estático com suporte a Range (o <audio> do navegador precisa para pular no tempo). */
+function servirArquivo(req: IncomingMessage, res: ServerResponse, f: string) {
+  const st = fs.statSync(f);
+  res.setHeader("Content-Type", TIPOS[path.extname(f).toLowerCase()] ?? "application/octet-stream");
+  res.setHeader("Accept-Ranges", "bytes");
+  res.setHeader("Cache-Control", "no-cache");
+  const r = req.headers.range?.match(/bytes=(\d*)-(\d*)/);
+  if (r) {
+    const ini = r[1] ? Number(r[1]) : 0;
+    const fim = r[2] ? Math.min(Number(r[2]), st.size - 1) : st.size - 1;
+    if (ini >= st.size) {
+      res.statusCode = 416;
+      res.setHeader("Content-Range", `bytes */${st.size}`);
+      return res.end();
+    }
+    res.statusCode = 206;
+    res.setHeader("Content-Range", `bytes ${ini}-${fim}/${st.size}`);
+    res.setHeader("Content-Length", String(fim - ini + 1));
+    return fs.createReadStream(f, { start: ini, end: fim }).pipe(res);
+  }
+  res.setHeader("Content-Length", String(st.size));
+  fs.createReadStream(f).pipe(res);
+}
+
 const carimbo = () => {
   const d = new Date();
   const p = (n: number) => String(n).padStart(2, "0");
@@ -58,74 +93,94 @@ function salvarHistorico() {
   for (const velho of todos.slice(0, Math.max(0, todos.length - 50))) fs.unlinkSync(path.join(HIST, velho));
 }
 
-// ---------- still (bundle reaproveitado; recriado se o código das cenas mudar) ----------
+async function regenerarStudio() {
+  try {
+    const m = await import(pathToFileURL(path.join(ROOT, "scripts", "gerar-studio.mjs")).href);
+    m.gerarStudio();
+  } catch (e) {
+    console.error("[estúdio] não consegui regenerar a composição do Studio:", e);
+  }
+}
+
+// ---------- still (bundle reaproveitado; refeito se o código das cenas mudar) ----------
 let bundleP: Promise<string> | null = null;
 let bundleCarimbo = 0;
-const codigoMudou = () => {
+const ultimaMudanca = () => {
   let ultimo = 0;
   const varre = (d: string) => {
     for (const f of fs.readdirSync(d, { withFileTypes: true })) {
       const p = path.join(d, f.name);
       if (f.isDirectory()) varre(p);
-      else if (/\.(tsx?|css)$/.test(f.name)) ultimo = Math.max(ultimo, fs.statSync(p).mtimeMs);
+      else if (/\.(tsx?|css)$/.test(f.name) && !f.name.endsWith(".gerada.tsx")) ultimo = Math.max(ultimo, fs.statSync(p).mtimeMs);
     }
   };
   varre(path.join(ROOT, "src"));
   return ultimo;
 };
 async function serveUrl() {
-  const m = codigoMudou();
+  const m = ultimaMudanca();
   if (!bundleP || m > bundleCarimbo) {
     bundleCarimbo = m;
     const { bundle } = await import("@remotion/bundler");
     bundleP = bundle({ entryPoint: path.join(ROOT, "src", "index.ts") });
+    bundleP.catch(() => {
+      bundleP = null;
+    });
   }
   return bundleP;
 }
 async function renderStillPNG(frame: number, projeto: unknown, saida: string, escala = 0.5) {
   const { renderStill, selectComposition } = await import("@remotion/renderer");
   const url = await serveUrl();
-  const composition = await selectComposition({ serveUrl: url, id: "PitchHerancaDigital", inputProps: projeto as Record<string, unknown> });
+  const props = projeto as Record<string, unknown>;
+  const composition = await selectComposition({ serveUrl: url, id: "PitchHerancaDigital", inputProps: props });
   fs.mkdirSync(path.dirname(saida), { recursive: true });
-  await renderStill({ serveUrl: url, composition, frame, output: saida, overwrite: true, scale: escala, inputProps: projeto as Record<string, unknown> });
+  await renderStill({ serveUrl: url, composition, frame, output: saida, overwrite: true, scale: escala, inputProps: props });
 }
 
-// ---------- render (rascunho / final) ----------
-type Job = { tipo: string; status: "rodando" | "ok" | "erro"; progresso: number; log: string; saida: string; inicio: number };
+// ---------- render (rascunho 540p / final 1080p) ----------
+type Job = { tipo: string; status: "rodando" | "ok" | "erro"; progresso: number; etapa: string; log: string; saida: string; inicio: number };
 let job: Job | null = null;
 function iniciarRender(tipo: "rascunho" | "final", projeto: unknown) {
   const cache = path.join(OUT, ".cache");
   fs.mkdirSync(cache, { recursive: true });
-  let cmd: string;
   let args: string[];
   let saida: string;
   if (tipo === "rascunho") {
     const props = path.join(cache, "props-editor.json");
     fs.writeFileSync(props, JSON.stringify(projeto));
     saida = path.join(OUT, "rascunho-540p.mp4");
-    cmd = "npx";
-    args = ["remotion", "render", "PitchHerancaDigital", saida, "--scale=0.5", "--crf=28", `--props=${props}`];
+    args = ["remotion", "render", "PitchHerancaDigital", JSON.stringify(saida), "--scale=0.5", "--crf=28", `--props=${JSON.stringify(props)}`];
   } else {
     saida = path.join(OUT, "pitch-v2.mp4");
-    cmd = "node";
     args = ["--no-warnings", "scripts/render-final.mjs"];
   }
-  job = { tipo, status: "rodando", progresso: 0, log: "", saida, inicio: Date.now() };
-  const p = spawn(cmd, args, { cwd: ROOT, shell: true });
+  job = { tipo, status: "rodando", progresso: 0, etapa: "preparando", log: "", saida, inicio: Date.now() };
+  const p = spawn(tipo === "rascunho" ? "npx" : "node", args, { cwd: ROOT, shell: true });
   const atual = job;
   const ler = (b: Buffer) => {
     const s = b.toString();
     atual.log = (atual.log + s).slice(-4000);
-    const m = [...s.matchAll(/(\d+)\s*\/\s*(\d+)/g)].pop();
-    if (m && Number(m[2]) > 0) atual.progresso = Math.min(0.99, Number(m[1]) / Number(m[2]));
-    const etapa = s.match(/▶ (\d)\/4/);
-    if (etapa) atual.progresso = Math.max(atual.progresso, (Number(etapa[1]) - 1) / 4);
+    const etapa = s.match(/▶ (\d)\/4 ([^\n…]+)/);
+    if (etapa) {
+      atual.etapa = etapa[2].trim();
+      atual.progresso = Math.max(atual.progresso, (Number(etapa[1]) - 1) / 4);
+    }
+    const m = [...s.matchAll(/Rendered (\d+)\/(\d+)/g)].pop();
+    if (m && Number(m[2]) > 0) {
+      const f = Number(m[1]) / Number(m[2]);
+      atual.progresso = tipo === "rascunho" ? Math.min(0.99, f) : Math.max(atual.progresso, Math.min(0.99, (Math.floor(atual.progresso * 4) + f) / 4));
+      if (tipo === "rascunho") atual.etapa = "renderizando";
+    }
   };
   p.stdout.on("data", ler);
   p.stderr.on("data", ler);
   p.on("close", (code) => {
     atual.status = code === 0 ? "ok" : "erro";
-    if (code === 0) atual.progresso = 1;
+    if (code === 0) {
+      atual.progresso = 1;
+      atual.etapa = "pronto";
+    }
   });
 }
 
@@ -139,19 +194,24 @@ export function apiPlugin(): Plugin {
     name: "estudio-api",
     configureServer(s) {
       server = s;
+      // aquece o bundle do Remotion (primeiro still/pin fica rápido)
+      setTimeout(() => serveUrl().catch((e) => console.error("[estúdio] bundle:", e)), 1500);
       s.middlewares.use(async (req, res, next) => {
         const url = new URL(req.url ?? "/", "http://x");
+        const rota = `${req.method} ${url.pathname}`;
         try {
-          if (url.pathname.startsWith("/revisoes/")) {
+          // arquivos de public/ (telas, áudio, marca)
+          if (req.method === "GET" && /^\/(screens|audio|brand)\//.test(url.pathname)) {
+            const f = path.join(PUB, decodeURIComponent(url.pathname));
+            if (f.startsWith(PUB) && fs.existsSync(f) && fs.statSync(f).isFile()) return servirArquivo(req, res, f);
+            res.statusCode = 404;
+            return res.end("não encontrado");
+          }
+          if (req.method === "GET" && url.pathname.startsWith("/revisoes/")) {
             const f = path.join(REVDIR, decodeURIComponent(url.pathname.slice("/revisoes/".length)));
-            if (f.startsWith(REVDIR) && fs.existsSync(f)) {
-              res.setHeader("Content-Type", f.endsWith(".png") ? "image/png" : "application/octet-stream");
-              res.setHeader("Cache-Control", "no-store");
-              return fs.createReadStream(f).pipe(res);
-            }
+            if (f.startsWith(REVDIR) && fs.existsSync(f)) return servirArquivo(req, res, f);
           }
           if (!url.pathname.startsWith("/api/")) return next();
-          const rota = `${req.method} ${url.pathname}`;
 
           if (rota === "GET /api/projeto") return enviar(res, 200, lerJSON(PROJ, null));
           if (rota === "PUT /api/projeto") {
@@ -160,6 +220,7 @@ export function apiPlugin(): Plugin {
             if (!v.success) return enviar(res, 422, { erros: v.error.issues.map((i: any) => ({ caminho: i.path.join("."), msg: i.message })) });
             salvarHistorico();
             gravar(PROJ, p);
+            await regenerarStudio();
             return enviar(res, 200, { ok: true, salvoEm: new Date().toISOString() });
           }
 
@@ -167,18 +228,16 @@ export function apiPlugin(): Plugin {
           if (rota === "POST /api/revisoes") {
             const { pin, projeto } = await corpo(req);
             const lista = lerJSON(REV, []) as any[];
-            const id = (lista.reduce((m, r) => Math.max(m, Number(r.id) || 0), 0) || 0) + 1;
-            const still = `revisoes/pins/${id}.png`;
-            const novo = { id, ...pin, still, status: "aberto", criadoEm: new Date().toISOString() };
-            lista.push(novo);
-            gravar(REV, lista);
+            const id = lista.reduce((m, r) => Math.max(m, Number(r.id) || 0), 0) + 1;
+            const novo: any = { id, ...pin, still: `revisoes/pins/${id}.png`, status: "aberto", criadoEm: new Date().toISOString() };
             try {
               await renderStillPNG(pin.frame, projeto, path.join(PINS, `${id}.png`), 1);
             } catch (e) {
               novo.still = null;
               novo.erroStill = String(e).slice(0, 300);
-              gravar(REV, lista);
             }
+            lista.push(novo);
+            gravar(REV, lista);
             return enviar(res, 200, novo);
           }
           const mRev = url.pathname.match(/^\/api\/revisoes\/(\d+)$/);
@@ -186,28 +245,37 @@ export function apiPlugin(): Plugin {
             const lista = lerJSON(REV, []) as any[];
             const i = lista.findIndex((r) => String(r.id) === mRev[1]);
             if (i < 0) return enviar(res, 404, { erro: "não encontrado" });
-            if (req.method === "DELETE") lista.splice(i, 1);
-            else lista[i] = { ...lista[i], ...(await corpo(req)), atualizadoEm: new Date().toISOString() };
+            if (req.method === "DELETE") {
+              const [rem] = lista.splice(i, 1);
+              if (rem?.still) fs.rmSync(path.join(ROOT, rem.still), { force: true });
+              gravar(REV, lista);
+              return enviar(res, 200, { ok: true });
+            }
+            lista[i] = { ...lista[i], ...(await corpo(req)), atualizadoEm: new Date().toISOString() };
             gravar(REV, lista);
-            return enviar(res, 200, lista[i] ?? { ok: true });
+            return enviar(res, 200, lista[i]);
           }
 
           if (rota === "POST /api/still") {
-            const { frame, projeto } = await corpo(req);
-            const f = path.join(OUT, ".cache", "still-editor.png");
-            await renderStillPNG(frame, projeto, f, 0.5);
+            const { frame, projeto, escala } = await corpo(req);
+            const f = path.join(OUT, ".cache", `still-editor-${frame}.png`);
+            await renderStillPNG(frame, projeto, f, escala ?? 0.25);
             res.setHeader("Content-Type", "image/png");
-            return fs.createReadStream(f).pipe(res);
+            res.setHeader("Cache-Control", "no-store");
+            const st = fs.createReadStream(f);
+            st.on("close", () => fs.rmSync(f, { force: true }));
+            return st.pipe(res);
           }
 
           if (rota === "POST /api/render") {
             if (job?.status === "rodando") return enviar(res, 409, { erro: "já há um render rodando" });
             const { tipo, projeto } = await corpo(req);
+            const v = await validar(projeto);
+            if (!v.success) return enviar(res, 422, { erro: "projeto inválido — corrija os erros em vermelho antes de renderizar" });
             if (tipo === "final") {
-              const v = await validar(projeto);
-              if (!v.success) return enviar(res, 422, { erro: "projeto inválido" });
               salvarHistorico();
               gravar(PROJ, projeto);
+              await regenerarStudio();
             }
             iniciarRender(tipo, projeto);
             return enviar(res, 200, { ok: true });

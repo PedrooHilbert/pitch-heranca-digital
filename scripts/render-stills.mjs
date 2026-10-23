@@ -6,6 +6,9 @@ import { bundle } from "@remotion/bundler";
 import { renderStill, selectComposition } from "@remotion/renderer";
 import { P } from "./lib/projeto.mjs";
 import { linhaDoTempo } from "./lib/projeto-json.mjs";
+import { gerarStudio } from "./gerar-studio.mjs";
+
+gerarStudio();
 
 const tl = linhaDoTempo();
 const args = process.argv.slice(2);

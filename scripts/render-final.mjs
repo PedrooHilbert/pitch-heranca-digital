@@ -7,6 +7,9 @@
 import fs from "node:fs";
 import { spawnSync } from "node:child_process";
 import { P, ffLog } from "./lib/projeto.mjs";
+import { gerarStudio } from "./gerar-studio.mjs";
+
+gerarStudio(); // composição sempre igual ao project.json
 
 const draft = process.argv.includes("--draft");
 const OUT = P("out");

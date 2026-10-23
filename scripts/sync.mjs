@@ -164,6 +164,7 @@ function projeto() {
   log("▶ project.json (durações, falas, legendas, efeitos; preserva edições manuais)…");
   const r = spawnSync("npx", ["tsx", "scripts/projeto-sync.mts"], { stdio: "inherit", shell: true, cwd: P() });
   if (r.status !== 0) throw new Error("projeto-sync falhou");
+  spawnSync("node", ["scripts/gerar-studio.mjs"], { stdio: "inherit", shell: true, cwd: P() });
 }
 
 function musica() {

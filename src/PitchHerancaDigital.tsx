@@ -21,12 +21,15 @@ const CENAS: Record<CenaId, React.FC<{ dur: number }>> = {
 };
 
 /** Props da composição = o projeto inteiro (project.json). `semVoz` gera a versão para gravar por cima. */
-export type PitchProps = Projeto & { semVoz?: boolean };
+export type PitchProps = Projeto & { semVoz?: boolean; semLegendas?: boolean };
 
-/** v3: tudo vem do projeto — cenas, textos, cores, telas, falas, legendas, efeitos e níveis de áudio. */
-export const PitchHerancaDigital: React.FC<PitchProps> = ({ semVoz = false, ...projeto }) => {
-  setProjeto(projeto as Projeto);
-  const d = derivado(projeto as Projeto);
+/** v3: tudo vem do projeto — cenas, textos, cores, telas, falas, legendas, efeitos e níveis de áudio.
+ *  `semLegendas` só é usado pelo editor (trilha Legendas em mudo). */
+export const PitchHerancaDigital: React.FC<PitchProps> = (props) => {
+  const { semVoz = false, semLegendas = false } = props;
+  const projeto: Projeto = props; // mesmo objeto → o cache de derivado() acerta entre quadros
+  setProjeto(projeto);
+  const d = derivado(projeto);
   return (
     <AbsoluteFill style={{ background: "#000" }}>
       {d.cenas.map((c) => {
@@ -38,7 +41,7 @@ export const PitchHerancaDigital: React.FC<PitchProps> = ({ semVoz = false, ...p
         );
       })}
       <Transicoes />
-      <Legendas />
+      {semLegendas ? null : <Legendas />}
       <Mix semVoz={semVoz} />
     </AbsoluteFill>
   );

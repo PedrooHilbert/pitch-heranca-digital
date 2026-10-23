@@ -120,7 +120,7 @@ const legendas = [...geradas, ...manuaisLeg.map(({ id: _i, ...r }) => r)]
 const manuaisSfx = (antigo.sfx ?? []).filter((s) => s.manual);
 const sfx = [...gerarCues(), ...manuaisSfx]
   .sort((a, b) => inicio[a.cena] + a.frame - (inicio[b.cena] + b.frame))
-  .map((s, i) => ({ ...s, id: s.manual ? s.id : `x${String(i + 1).padStart(3, "0")}` }));
+  .map((s, i) => ({ ...s, id: "manual" in s && s.manual ? s.id : `x${String(i + 1).padStart(3, "0")}` }));
 
 const projeto = { ...base, legendas, sfx };
 const v = projetoSchema.safeParse(projeto);
