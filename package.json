@@ -9,7 +9,12 @@
   },
   "private": true,
   "dependencies": {
+    "@remotion/captions": "^4.0.538",
     "@remotion/cli": "4.0.538",
+    "@remotion/google-fonts": "^4.0.538",
+    "@remotion/install-whisper-cpp": "^4.0.538",
+    "@remotion/transitions": "^4.0.538",
+    "lucide-react": "^1.61.0",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "remotion": "4.0.538"
@@ -20,13 +25,26 @@
     "@types/web": "0.0.166",
     "eslint": "10.12.0",
     "prettier": "3.8.1",
+    "tsx": "^4.23.15",
     "typescript": "5.9.3"
   },
   "scripts": {
     "dev": "remotion studio",
+    "studio": "remotion studio",
     "build": "remotion bundle",
     "upgrade": "remotion upgrade",
-    "lint": "eslint src && tsc"
+    "lint": "eslint src && tsc",
+    "check": "node scripts/check-placeholders.mjs",
+    "voz:sintetica": "node --no-warnings scripts/sync.mjs --sintetica",
+    "voz:importar": "node --no-warnings scripts/sync.mjs --importar",
+    "sync": "node --no-warnings scripts/sync.mjs",
+    "sfx": "python scripts/make_sfx.py",
+    "roteiro": "node --no-warnings scripts/gen-roteiro.mjs",
+    "whisper:instalar": "node scripts/install-whisper.mjs",
+    "render": "node scripts/check-placeholders.mjs && node --no-warnings scripts/render-final.mjs",
+    "render:draft": "node --no-warnings scripts/render-final.mjs --draft",
+    "stills": "node scripts/render-stills.mjs",
+    "audit": "python scripts/audit.py"
   },
   "allowScripts": {
     "esbuild": false
