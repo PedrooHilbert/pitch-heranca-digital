@@ -11,6 +11,8 @@ import { fontFamily } from "../fonts";
 import { Fundo } from "../components/v2/Fundo";
 import { PhoneFrame } from "../components/PhoneFrame";
 import { Tilt3D, ScreenAssembly, Cursor, Counter, Roleta, Stamp, Shake, DrawPath, Flash, KineticText, UIBlock, vidro, CameraRig, regiao } from "../components/fx";
+import type { Sobre } from "../components/fx/ui";
+import { BrandLogo } from "../components/BrandLogo";
 import type { Cue } from "../data/sfx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -67,6 +69,19 @@ const SX = 340;
 const SY = 118;
 const SW = 1240;
 const SH = 742;
+
+// Inventário: o logo real do X por cima da caixinha "X" do painel (revisão #4). A tabela da captura não tem
+// linhas, então essa é a única caixinha com inicial na tela. Medido no PNG: lógico (1003, 357), 52×52.
+const LOGOS_INVENTARIO: Sobre[] = [
+  {
+    x: 1003, y: 357, w: 52, h: 52,
+    conteudo: (
+      <div style={{ width: "100%", height: "100%", borderRadius: "20%", background: colors.teal900, display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <BrandLogo nome="x" tamanho={Math.round(52 * (SW / 1360) * 0.52)} />
+      </div>
+    ),
+  },
+];
 const ESC = SW / 1360;
 const tela = (x: number, y: number, rol = 0): [number, number] => [SX + x * ESC, SY + (y - rol) * ESC];
 
@@ -326,7 +341,7 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.C} fim={t.C2} de={tela(360, 640)} para={tela(1139, 420)}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.C} assenta={t.C + 18} rotY={-10}>
-              <ScreenAssembly tela={TL5("ativos").tela} largura={SW} altura={SH} inicio={t.C + 2} ordem={TL5("ativos").regioes} stagger={5} pops={[{ regiao: 7, at: t.ativo + 6, ate: t.C2 - 10, escala: 1.06 }]} />
+              <ScreenAssembly tela={TL5("ativos").tela} largura={SW} altura={SH} inicio={t.C + 2} ordem={TL5("ativos").regioes} stagger={5} pops={[{ regiao: 7, at: t.ativo + 6, ate: t.C2 - 10, escala: 1.06 }]} sobre={LOGOS_INVENTARIO} />
             </Tilt3D>
           </div>
           {[tx("tipo1"), tx("tipo2"), tx("tipo3"), tx("tipo4")].map((n, i) => (

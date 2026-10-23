@@ -51,7 +51,7 @@ export const ComposicaoPitch: React.FC = () => (
             "funcao": ""
           }
         ],
-        "logoSimbolo": null,
+        "logoSimbolo": "brand/logo-simbolo-menta-fundo-escuro.png",
         "slogan": "Seus dados, sua história, seu futuro."
       },
       "tema": {
@@ -3800,8 +3800,8 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L13",
           "cena": "s3",
           "fraseId": "s03_03",
-          "de": 354,
-          "ate": 526,
+          "de": 347,
+          "ate": 519,
           "palavras": [
             {
               "w": "e",
@@ -5818,16 +5818,16 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x014",
           "cena": "s1",
-          "frame": 184,
-          "som": "whoosh_long",
-          "ganhoDb": -16
+          "frame": 183,
+          "som": "pop",
+          "ganhoDb": -20
         },
         {
           "id": "x015",
           "cena": "s1",
           "frame": 184,
-          "som": "pop",
-          "ganhoDb": -20
+          "som": "whoosh_long",
+          "ganhoDb": -16
         },
         {
           "id": "x016",
@@ -5846,14 +5846,14 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x018",
           "cena": "s1",
-          "frame": 188,
+          "frame": 189,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x019",
           "cena": "s1",
-          "frame": 190,
+          "frame": 192,
           "som": "pop",
           "ganhoDb": -20
         },

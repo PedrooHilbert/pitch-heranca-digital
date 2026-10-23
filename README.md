@@ -136,6 +136,16 @@ No editor, item **Projeto**: nome do grupo, membros (nome + função), contato e
 campo do logo). `npm run check` lista o que falta. Depois de mudar o nome do grupo com voz sintética, rode
 `npm run voz:sintetica` (a voz pula o nome enquanto for placeholder).
 
+## Logos de plataformas
+
+Logos são marcas de seus respectivos donos, usadas apenas para identificar as plataformas. Sem parceria nem apoio.
+
+Arquivos em `public/brand/marcas/svg` (PNG em `png/` como reserva), mapeados em `src/data/marcas.ts` e desenhados
+por `src/components/BrandLogo.tsx` (props `nome`, `tamanho`, `glow`): cores originais, sem deformar, X e Apple na
+versão branca no fundo escuro, Netflix dentro de um quadrado arredondado. Domínio, banco digital e Ledger não têm
+logo e usam ícone genérico. Onde aparecem: S1 (perguntas e órbita), S2 (grade, órbita e cobranças), S5 (caixinha
+do X no inventário) e S7 (acima dos cabeçalhos).
+
 ## Estrutura
 
 ```

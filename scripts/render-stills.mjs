@@ -17,6 +17,8 @@ const qArg = args.find((a) => a.startsWith("--quadros="));
 // --a-cada=15 → um still a cada 15 quadros do vídeo inteiro (revisão completa)
 const cadaArg = args.find((a) => a.startsWith("--a-cada="));
 const dirArg = args.find((a) => a.startsWith("--dir="));
+// --escala=1 → 1920×1080 (padrão 0,5, mais rápido)
+const ESCALA = parseFloat(args.find((a) => a.startsWith("--escala="))?.slice(9) ?? "0.5");
 const so = args.filter((a) => !a.startsWith("--"));
 const fr = (id) => tl.frases.find((f) => f.id === id);
 const quadros = [];
@@ -53,6 +55,6 @@ console.log("Empacotando…");
 const serveUrl = await bundle({ entryPoint: P("src", "index.ts") });
 const composition = await selectComposition({ serveUrl, id: "PitchHerancaDigital" });
 for (const [nome, frame] of quadros) {
-  await renderStill({ serveUrl, composition, output: path.join(out, `${nome}.png`), frame, overwrite: true, scale: 0.5 });
+  await renderStill({ serveUrl, composition, output: path.join(out, `${nome}.png`), frame, overwrite: true, scale: ESCALA });
   console.log("✓", nome, "@", frame);
 }

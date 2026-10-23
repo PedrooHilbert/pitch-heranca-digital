@@ -2,6 +2,8 @@
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { Check, X } from "lucide-react";
+import { BrandLogo } from "../components/BrandLogo";
+import type { MarcaId } from "../data/marcas";
 import { relogio } from "../data/timeline";
 import { colors } from "../data/theme";
 import { fontFamily } from "../fonts";
@@ -41,6 +43,8 @@ const CW = 300;
 const X0 = (1920 - (LW + 3 * CW)) / 2;
 const Y0 = 250;
 const RH = 104;
+/** logos acima dos cabeçalhos (revisão #4) — só identificam as plataformas citadas no subtítulo */
+const LOGOS_COL: MarcaId[][] = [["bitwarden", "1password"], ["google", "apple", "meta"], []];
 
 const T = () => {
   const r = relogio("s7");
@@ -113,6 +117,11 @@ export const S7Concorrencia: React.FC<{ dur: number }> = ({ dur }) => {
           const o = interpolate(frame, [t.col[ci], t.col[ci] + 8], [0, 1], clampOpt);
           return (
             <div key={ci} style={{ position: "absolute", left: X0 + LW + ci * CW, top: Y0, width: CW, textAlign: "center", opacity: o * (1 - dim(ci)), transform: `translateY(${(1 - o) * -20}px)` }}>
+              {LOGOS_COL[ci].length ? (
+                <div style={{ position: "absolute", left: 0, right: 0, top: -50, display: "flex", justifyContent: "center", alignItems: "center", gap: 14 }}>
+                  {LOGOS_COL[ci].map((m) => <BrandLogo key={m} nome={m} tamanho={m === "google" ? 56 : 34} fundo="claro" />)}
+                </div>
+              ) : null}
               <div style={{ fontFamily, fontWeight: 800, fontSize: 26, color: ci === 2 ? colors.teal700 : colors.ink, lineHeight: 1.15 }}>{c.t}</div>
               <div style={{ fontFamily, fontWeight: 600, fontSize: 17, color: colors.ink3, marginTop: 4 }}>{c.s}</div>
             </div>

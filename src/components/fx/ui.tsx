@@ -26,6 +26,8 @@ export const regiao = (nome: string, r: number | string): Regiao => {
 const src = (nome: string) => staticFile(`screens/${nome.replace(/\.png$/, "")}.png`);
 
 type Pop = { at: number; ate?: number; escala?: number };
+/** Algo desenhado POR CIMA da captura, em px LÓGICOS da tela (ex.: o logo real sobre a caixinha "X"). */
+export type Sobre = { x: number; y: number; w: number; h: number; conteudo: React.ReactNode };
 
 /** Recorta UMA região real de uma tela e anima a entrada (sobe + escala + desfoque). */
 export const UIBlock: React.FC<{
@@ -41,7 +43,8 @@ export const UIBlock: React.FC<{
   pop?: Pop;
   margem?: number;
   style?: React.CSSProperties;
-}> = ({ tela: nome, regiao: r, escala, x = 0, y = 0, inicio, entrada = "sobe", raio = 14, sombra = true, pop, margem = 0, style }) => {
+  sobre?: Sobre[];
+}> = ({ tela: nome, regiao: r, escala, x = 0, y = 0, inicio, entrada = "sobe", raio = 14, sombra = true, pop, margem = 0, style, sobre = [] }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = tela(nome);
@@ -81,6 +84,13 @@ export const UIBlock: React.FC<{
         src={src(nome)}
         style={{ position: "absolute", left: -gx * escala, top: -gy * escala, width: t.logical_size[0] * escala, height: t.logical_size[1] * escala, maxWidth: "none" }}
       />
+      {sobre
+        .filter((o) => o.x < gx + gw && o.x + o.w > gx && o.y < gy + gh && o.y + o.h > gy)
+        .map((o, i) => (
+          <div key={i} style={{ position: "absolute", left: (o.x - gx) * escala, top: (o.y - gy) * escala, width: o.w * escala, height: o.h * escala }}>
+            {o.conteudo}
+          </div>
+        ))}
     </div>
   );
 };
@@ -100,7 +110,8 @@ export const ScreenAssembly: React.FC<{
   /** rolagem vertical em px LÓGICOS: [de, até] entre os frames [f0, f1] */
   rolagem?: { de: number; ate: number; f0: number; f1: number };
   raio?: number;
-}> = ({ tela: nome, largura, altura, inicio, ordem, stagger = 8, pops = [], rolagem, raio = 18 }) => {
+  sobre?: Sobre[];
+}> = ({ tela: nome, largura, altura, inicio, ordem, stagger = 8, pops = [], rolagem, raio = 18, sobre = [] }) => {
   const frame = useCurrentFrame();
   const t = tela(nome);
   const esc = largura / t.logical_size[0];
@@ -121,14 +132,14 @@ export const ScreenAssembly: React.FC<{
         <Img src={src(nome)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", opacity: fundo }} />
         {ordem.map((ri, k) => {
           const g = t.regions[ri];
-          return <UIBlock key={ri} tela={nome} regiao={ri} escala={esc} x={g.x * esc} y={g.y * esc} inicio={inicio + k * stagger} raio={10} sombra={fundo < 0.9} />;
+          return <UIBlock key={ri} tela={nome} regiao={ri} escala={esc} x={g.x * esc} y={g.y * esc} inicio={inicio + k * stagger} raio={10} sombra={fundo < 0.9} sobre={sobre} />;
         })}
         {dim > 0 ? <div style={{ position: "absolute", inset: 0, background: `rgba(7,48,47,${dim})`, zIndex: 15 }} /> : null}
         {popAtivo ? (() => {
           const g = t.regions[popAtivo.regiao];
           return (
             <UIBlock tela={nome} regiao={popAtivo.regiao} escala={esc} x={g.x * esc} y={g.y * esc} inicio={0} entrada="nenhuma"
-              pop={{ at: popAtivo.at, ate: popAtivo.ate, escala: popAtivo.escala ?? 1.05 }} raio={12} style={{ zIndex: 20 }} />
+              pop={{ at: popAtivo.at, ate: popAtivo.ate, escala: popAtivo.escala ?? 1.05 }} raio={12} style={{ zIndex: 20 }} sobre={sobre} />
           );
         })() : null}
       </div>

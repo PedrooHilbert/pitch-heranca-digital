@@ -8,7 +8,9 @@
 // Textos e fundos: project.json → cenas[s1] (editáveis no Estúdio de Revisão). *palavra* = destaque.
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { Camera, Mail, Bitcoin, Cloud, Play, Globe, Landmark, Lock } from "lucide-react";
+import { Lock } from "lucide-react";
+import { BrandLogo } from "../components/BrandLogo";
+import { MARCAS, type MarcaId } from "../data/marcas";
 import { cena, frase, relogio } from "../data/timeline";
 import { colors, sloganCaixaAlta } from "../data/theme";
 import { config } from "../data/config";
@@ -40,11 +42,16 @@ const MEIA_BATIDA = 8; // 16 q por batida (112,5 BPM, a trilha) — ver README "
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 const PERGUNTAS = [
-  { fala: "s01_02", texto: "pergunta1", Icone: Camera },
-  { fala: "s01_03", texto: "pergunta2", Icone: Mail },
-  { fala: "s01_04", texto: "pergunta3", Icone: Bitcoin },
+  { fala: "s01_02", texto: "pergunta1", marca: "instagram" },
+  { fala: "s01_03", texto: "pergunta2", marca: "gmail" },
+  { fala: "s01_04", texto: "pergunta3", marca: "bitcoin" },
 ] as const;
-const ORBITA = [Camera, Mail, Bitcoin, Cloud, Play, Globe, Landmark];
+// logos reais (revisão #4) — domínio e banco digital não têm logo: ícone genérico
+const ORBITA: MarcaId[] = [
+  "instagram", "gmail", "bitcoin", "facebook", "linkedin", "x", "netflix",
+  "spotify", "google-drive", "icloud", "binance", "dominio", "banco",
+];
+const THUNKS = 7; // um cadeado a cada meia batida; cada batida tranca 2 tiles (i e i + 7)
 
 /** Quadro local de cada palavra dita (pela ordem), para sincronizar texto ↔ voz. Sobra → última + 3. */
 const temposDa = (fraseId: string, n: number, antes = 3) => {
@@ -71,12 +78,13 @@ const T = () => {
   const logo = r.em("s01_05", "Somos", 6);
   const blackout = logo - 6;
   const glitch = logo - 9;
-  const entradas = ORBITA.map((_, i) => climax + (i < 3 ? 0 : (i - 2) * 2));
-  const travas = ORBITA.map((_, i) => Math.min(glitch - 2, climax + 4 + i * MEIA_BATIDA));
+  const entradas = ORBITA.map((_, i) => climax + (i < 3 ? 0 : i - 2));
+  const batidas = Array.from({ length: THUNKS }, (_, k) => Math.min(glitch - 2, climax + 4 + k * MEIA_BATIDA));
+  const travas = ORBITA.map((_, i) => batidas[i % THUNKS]);
   const chip = r.apos("s01_05", "grupo");
   const titulo = logo + 10;
   const slogan = Math.max(chip + 24, r.em("s01_05", "Herança", 2));
-  return { r, impacto, gancho, perguntas, climax, logo, blackout, glitch, entradas, travas, chip, titulo, slogan, whip: r.dur - 9 };
+  return { r, impacto, gancho, perguntas, climax, logo, blackout, glitch, entradas, travas, batidas, chip, titulo, slogan, whip: r.dur - 9 };
 };
 
 /** Janelas de silêncio total (locais) — o Mix zera a trilha nelas. */
@@ -98,8 +106,8 @@ export const sfxS1 = (): Cue[] => {
       { f: p.estouro + 1, som: "impact_low" as const, ganho: dB(-17) },
     ]),
     { f: t.climax + 2, som: "whoosh_long" as const },
-    ...t.entradas.slice(3).map((f) => ({ f, som: "pop" as const, ganho: dB(-20) })),
-    ...t.travas.map((f) => ({ f, som: "thunk" as const, ganho: dB(-13) })),
+    ...t.entradas.slice(3).filter((_, i) => i % 3 === 0).map((f) => ({ f, som: "pop" as const, ganho: dB(-20) })),
+    ...t.batidas.map((f) => ({ f, som: "thunk" as const, ganho: dB(-13) })),
     { f: t.blackout - 2, som: "riser" }, // o riser termina quando começa o blackout
     { f: t.glitch - 3, som: "glitch_zap", ganho: dB(-14) }, // 8 q de som: termina antes do blackout
     { f: t.logo + 2, som: "impact_low", ganho: dB(-9) },
@@ -162,7 +170,7 @@ const Slam: React.FC<{ texto: string; tempos: number[]; tamanho: number; fim?: n
 };
 
 /** Ícone ENORME que estoura no centro: mola com overshoot, brilho e anel de choque. */
-const Estouro: React.FC<{ at: number; Icone: React.FC<{ size?: number; strokeWidth?: number }>; tamanho?: number }> = ({ at, Icone, tamanho = 300 }) => {
+const Estouro: React.FC<{ at: number; marca: MarcaId; tamanho?: number }> = ({ at, marca, tamanho = 300 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const k = frame - at;
@@ -171,30 +179,31 @@ const Estouro: React.FC<{ at: number; Icone: React.FC<{ size?: number; strokeWid
   const anel = interpolate(k, [0, 16], [0, 1], { ...clampOpt, easing: Easing.out(Easing.cubic) });
   const glow = interpolate(k, [0, 3, 20], [1.6, 1.2, 0.7], clampOpt);
   const flut = Math.sin(k / 9) * 6;
+  const cor = MARCAS[marca].glow;
   return (
     <div style={{ position: "relative", width: tamanho, height: tamanho, transform: `translateY(${flut}px) scale(${s})` }}>
       <div
         style={{
           position: "absolute", inset: -tamanho * 0.18, borderRadius: "50%",
-          border: `6px solid ${colors.mint}`, opacity: 1 - anel, transform: `scale(${0.7 + anel * 1.1})`,
+          border: `6px solid ${cor[0]}`, opacity: 1 - anel, transform: `scale(${0.7 + anel * 1.1})`,
         }}
       />
       <div
         style={{
           width: "100%", height: "100%", borderRadius: tamanho * 0.26, display: "flex", alignItems: "center", justifyContent: "center",
           background: "linear-gradient(160deg, rgba(127,209,197,0.22), rgba(255,255,255,0.06))",
-          border: `3px solid rgba(127,209,197,0.7)`, color: colors.mint,
-          boxShadow: `0 0 ${80 * glow}px rgba(127,209,197,${0.45 * glow}), inset 0 0 40px rgba(127,209,197,0.15)`,
+          border: `3px solid rgba(127,209,197,0.7)`,
+          boxShadow: `0 0 ${70 * glow}px ${cor[0]}88, 0 0 ${110 * glow}px ${(cor[1] ?? cor[0])}55, inset 0 0 40px rgba(127,209,197,0.15)`,
         }}
       >
-        <Icone size={tamanho * 0.56} strokeWidth={1.7} />
+        <BrandLogo nome={marca} tamanho={Math.round(tamanho * 0.66)} glow={glow * 0.6} />
       </div>
     </div>
   );
 };
 
 /** Tile da órbita do clímax: o cadeado âmbar bate em cima dele no quadro `tranca`. */
-const TileTrava: React.FC<{ Icone: React.FC<{ size?: number; strokeWidth?: number }>; tranca: number; tamanho: number }> = ({ Icone, tranca, tamanho }) => {
+const TileTrava: React.FC<{ marca: MarcaId; tranca: number; tamanho: number }> = ({ marca, tranca, tamanho }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const k = frame - tranca;
@@ -206,23 +215,23 @@ const TileTrava: React.FC<{ Icone: React.FC<{ size?: number; strokeWidth?: numbe
       <div
         style={{
           width: "100%", height: "100%", borderRadius: tamanho * 0.24, display: "flex", alignItems: "center", justifyContent: "center",
-          background: trancado ? "rgba(245,200,107,0.10)" : "rgba(255,255,255,0.08)",
+          background: trancado ? "rgba(245,200,107,0.12)" : "rgba(255,255,255,0.08)",
           border: `3px solid ${trancado ? colors.amberBorder : "rgba(127,209,197,0.55)"}`,
-          color: trancado ? "rgba(245,200,107,0.6)" : colors.mint, boxShadow: "0 18px 40px rgba(0,0,0,0.45)",
+          boxShadow: `0 18px 40px rgba(0,0,0,0.45)${trancado ? `, 0 0 26px rgba(245,200,107,0.35)` : ""}`,
         }}
       >
-        <Icone size={tamanho * 0.5} strokeWidth={1.8} />
+        <BrandLogo nome={marca} tamanho={Math.round(tamanho * 0.56)} glow={trancado ? 0 : 0.35} />
       </div>
       {trancado ? (
         <div
           style={{
-            position: "absolute", left: "50%", top: "50%", width: tamanho * 0.62, height: tamanho * 0.62, marginLeft: -tamanho * 0.31, marginTop: -tamanho * 0.31,
+            position: "absolute", right: -tamanho * 0.16, bottom: -tamanho * 0.16, width: tamanho * 0.5, height: tamanho * 0.5,
             borderRadius: 999, background: colors.amberBg, border: `4px solid ${colors.amberBorder}`, color: colors.amber,
             display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 10px 30px rgba(0,0,0,.45)",
             transform: `translateY(${(1 - t) * -120}px) scale(${1.6 - 0.6 * t})`, opacity: Math.min(1, k / 2 + 0.3),
           }}
         >
-          <Lock size={tamanho * 0.32} strokeWidth={2.8} />
+          <Lock size={tamanho * 0.26} strokeWidth={2.8} />
         </div>
       ) : null}
     </div>
@@ -242,7 +251,7 @@ export const S1Abertura: React.FC<{ dur: number }> = ({ dur }) => {
     frame < t.impacto ? "preto" : frame < t.perguntas[0].ini ? "gancho" : frame < t.climax ? "perguntas" : frame < t.blackout ? "climax" : frame < t.logo ? "blackout" : "logo";
   const tremidas = [
     ...t.gancho.map((at) => ({ at, amp: 5, dur: 5 })),
-    ...t.travas.map((at) => ({ at, amp: 7, dur: 5 })),
+    ...t.batidas.map((at) => ({ at, amp: 7, dur: 5 })),
     { at: t.glitch, amp: 22, dur: 6 },
     { at: t.logo, amp: 14, dur: 8 },
   ];
@@ -271,7 +280,7 @@ export const S1Abertura: React.FC<{ dur: number }> = ({ dur }) => {
                     <Slam key={pergunta.fala} texto={tx(pergunta.texto)} tempos={pergunta.tempos} tamanho={124} />
                   </AbsoluteFill>
                   <AbsoluteFill style={{ alignItems: "center", paddingTop: 440 }}>
-                    <Estouro key={pergunta.fala} at={pergunta.estouro} Icone={pergunta.Icone} tamanho={320} />
+                    <Estouro key={pergunta.fala} at={pergunta.estouro} marca={pergunta.marca} tamanho={320} />
                   </AbsoluteFill>
                 </>
               ) : null}
@@ -279,8 +288,8 @@ export const S1Abertura: React.FC<{ dur: number }> = ({ dur }) => {
               {fase === "climax" ? (
                 <>
                   <Orbit
-                    itens={ORBITA.map((Ic, i) => <TileTrava key={i} Icone={Ic} tranca={t.travas[i]} tamanho={190} />)}
-                    cx={960} cy={480} raio={600} achata={0.4} periodo={150} entradas={t.entradas} tamanho={190} corAnel={colors.mint}
+                    itens={ORBITA.map((m, i) => <TileTrava key={i} marca={m} tranca={t.travas[i]} tamanho={150} />)}
+                    cx={960} cy={470} raio={700} achata={0.46} periodo={170} entradas={t.entradas} tamanho={150} corAnel={colors.mint}
                   />
                   <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingBottom: 120 }}>
                     <div

@@ -3,7 +3,9 @@
 // Cada bloco troca o fundo (interruptor de padrão).
 import React from "react";
 import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
-import { Mail, Share2, Landmark, Bitcoin, Images, RefreshCw, Globe, Lock, Gem, Receipt, ShieldAlert, User } from "lucide-react";
+import { Lock, Gem, Receipt, ShieldAlert, User } from "lucide-react";
+import { BrandLogo } from "../components/BrandLogo";
+import type { MarcaId } from "../data/marcas";
 import { relogio } from "../data/timeline";
 import { colors } from "../data/theme";
 import { textos, fundo } from "../data/projeto";
@@ -44,15 +46,30 @@ export const PADRAO_S2 = {
   telas: {},
 } as const;
 
-const ATIVOS = [
-  { Ic: Mail, w: "e-mail" },
-  { Ic: Share2, w: "redes" },
-  { Ic: Landmark, w: "banco" },
-  { Ic: Bitcoin, w: "criptomoedas" },
-  { Ic: Images, w: "fotos" },
-  { Ic: RefreshCw, w: "assinaturas" },
-  { Ic: Globe, w: "" },
+// logos reais das plataformas de cada tipo de ativo (revisão #4); banco e domínio: ícone genérico
+const ATIVOS: { marcas: MarcaId[]; w: string }[] = [
+  { marcas: ["gmail", "outlook"], w: "e-mail" },
+  { marcas: ["instagram", "facebook"], w: "redes" },
+  { marcas: ["banco"], w: "banco" },
+  { marcas: ["bitcoin", "ethereum", "binance"], w: "criptomoedas" },
+  { marcas: ["google-fotos", "icloud"], w: "fotos" },
+  { marcas: ["netflix", "spotify"], w: "assinaturas" },
+  { marcas: ["dominio"], w: "" },
 ];
+
+/** 1 a 3 logos dentro de um tile (sem deformar: cada um no seu quadrado). */
+const Logos: React.FC<{ marcas: MarcaId[]; caixa: number }> = ({ marcas, caixa }) => {
+  const n = marcas.length;
+  const tam = Math.round(caixa * (n === 1 ? 0.56 : n === 2 ? 0.4 : 0.34));
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", alignItems: "center", gap: caixa * 0.05, width: caixa * 0.86 }}>
+      {marcas.map((m) => <BrandLogo key={m} nome={m} tamanho={tam} fundo="claro" />)}
+    </div>
+  );
+};
+
+/** Item da lista de cobranças → logo da plataforma (as outras linhas ficam sem logo). */
+const LOGO_COBRANCA: [RegExp, MarcaId][] = [[/stream/i, "netflix"], [/m[uú]sica/i, "spotify"], [/armazen|nuvem/i, "icloud"]];
 
 const T = () => {
   const r = relogio("s2");
@@ -180,7 +197,13 @@ const Cobrancas: React.FC<{ at: number }> = ({ at }) => {
       <div style={{ transform: `translateY(${y}px)` }}>
         {[...itens, ...itens].map((it, i) => (
           <div key={i} style={{ height: 36, display: "flex", justifyContent: "space-between", fontFamily, fontSize: 22, color: colors.ink2 }}>
-            <span>{it}</span>
+            <span style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              {(() => {
+                const m = LOGO_COBRANCA.find(([re]) => re.test(it))?.[1];
+                return m ? <BrandLogo nome={m} tamanho={26} fundo="claro" /> : <span style={{ width: 26 }} />;
+              })()}
+              {it}
+            </span>
             <span style={{ color: colors.red, fontWeight: 700 }}>{tx("card2Rotulo")}</span>
           </div>
         ))}
@@ -215,7 +238,7 @@ export const S2Problema: React.FC<{ dur: number }> = ({ dur }) => {
               <div style={{ display: "flex", gap: 36 }}>
                 {ATIVOS.map((a, i) => (
                   <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 18, width: 140 }}>
-                    <Tile entra={t.pops[i]} escuro={false} tamanho={120} icone={<a.Ic size={56} strokeWidth={1.8} />} />
+                    <Tile entra={t.pops[i]} escuro={false} tamanho={120} icone={<Logos marcas={a.marcas} caixa={120} />} />
                     <div style={{ fontFamily, fontWeight: 700, fontSize: 21, color: colors.ink2, textAlign: "center", opacity: interpolate(frame, [t.pops[i] + 3, t.pops[i] + 9], [0, 1], clampOpt) }}>{nomes[i]}</div>
                   </div>
                 ))}
@@ -235,7 +258,7 @@ export const S2Problema: React.FC<{ dur: number }> = ({ dur }) => {
               entradas={ATIVOS.map((_, i) => t.b1 + i * 3)} tamanho={96}
               itens={ATIVOS.map((a, i) => (
                 <div key={i} style={{ width: 96, height: 96, borderRadius: 24, background: colors.white, border: `2px solid ${colors.cardBorder}`, display: "flex", alignItems: "center", justifyContent: "center", color: colors.teal700, boxShadow: "0 14px 30px rgba(11,63,61,.15)" }}>
-                  <a.Ic size={46} strokeWidth={1.8} />
+                  <BrandLogo nome={a.marcas[0]} tamanho={54} fundo="claro" />
                 </div>
               ))}
             />
