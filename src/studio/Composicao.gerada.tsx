@@ -3257,70 +3257,6 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L06",
           "cena": "s2",
           "fraseId": "s02_01",
-          "de": 5,
-          "ate": 156,
-          "palavras": [
-            {
-              "w": "Hoje",
-              "de": 9,
-              "ate": 17
-            },
-            {
-              "w": "quase",
-              "de": 17,
-              "ate": 26
-            },
-            {
-              "w": "todo",
-              "de": 26,
-              "ate": 32
-            },
-            {
-              "w": "mundo",
-              "de": 32,
-              "ate": 41
-            },
-            {
-              "w": "tem",
-              "de": 41,
-              "ate": 45
-            },
-            {
-              "w": "e-mail,",
-              "de": 45,
-              "ate": 58
-            },
-            {
-              "w": "redes",
-              "de": 63,
-              "ate": 71
-            },
-            {
-              "w": "sociais,",
-              "de": 71,
-              "ate": 91
-            },
-            {
-              "w": "banco",
-              "de": 95,
-              "ate": 106
-            },
-            {
-              "w": "digital,",
-              "de": 106,
-              "ate": 124
-            },
-            {
-              "w": "criptomoedas,",
-              "de": 128,
-              "ate": 154
-            }
-          ]
-        },
-        {
-          "id": "L07",
-          "cena": "s2",
-          "fraseId": "s02_01",
           "de": 156,
           "ate": 228,
           "palavras": [
@@ -3353,10 +3289,10 @@ export const ComposicaoPitch: React.FC = () => (
           "manual": true
         },
         {
-          "id": "L08",
+          "id": "L07",
           "cena": "s2",
           "fraseId": "s02_02",
-          "de": 228,
+          "de": 217,
           "ate": 366,
           "palavras": [
             {
@@ -3437,7 +3373,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L09",
+          "id": "L08",
           "cena": "s2",
           "fraseId": "s02_02",
           "de": 366,
@@ -3481,7 +3417,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L10",
+          "id": "L09",
           "cena": "s2",
           "fraseId": "s02_03",
           "de": 415,
@@ -3565,7 +3501,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L11",
+          "id": "L10",
           "cena": "s3",
           "fraseId": "s03_01",
           "de": -4,
@@ -3664,7 +3600,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L12",
+          "id": "L11",
           "cena": "s3",
           "fraseId": "s03_02",
           "de": 188,
@@ -3738,7 +3674,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L13",
+          "id": "L12",
           "cena": "s3",
           "fraseId": "s03_03",
           "de": 357,
@@ -3792,7 +3728,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L14",
+          "id": "L13",
           "cena": "s3",
           "fraseId": "s03_03",
           "de": 450,
@@ -3831,7 +3767,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L15",
+          "id": "L14",
           "cena": "s4",
           "fraseId": "s04_01",
           "de": 0,
@@ -3910,7 +3846,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L16",
+          "id": "L15",
           "cena": "s4",
           "fraseId": "s04_02",
           "de": 149,
@@ -3949,7 +3885,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L17",
+          "id": "L16",
           "cena": "s4",
           "fraseId": "s04_03",
           "de": 232,
@@ -4043,7 +3979,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L18",
+          "id": "L17",
           "cena": "s5",
           "fraseId": "s05_01",
           "de": 5,
@@ -4072,7 +4008,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L19",
+          "id": "L18",
           "cena": "s5",
           "fraseId": "s05_02",
           "de": 54,
@@ -4181,7 +4117,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L20",
+          "id": "L19",
           "cena": "s5",
           "fraseId": "s05_03",
           "de": 221,
@@ -4250,7 +4186,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L21",
+          "id": "L20",
           "cena": "s5",
           "fraseId": "s05_03",
           "de": 407,
@@ -4279,7 +4215,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L22",
+          "id": "L21",
           "cena": "s5",
           "fraseId": "s05_04",
           "de": 490,
@@ -4333,7 +4269,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L23",
+          "id": "L22",
           "cena": "s5",
           "fraseId": "s05_04",
           "de": 592,
@@ -4372,7 +4308,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L24",
+          "id": "L23",
           "cena": "s5",
           "fraseId": "s05_05",
           "de": 685,
@@ -4451,7 +4387,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L25",
+          "id": "L24",
           "cena": "s5",
           "fraseId": "s05_05",
           "de": 823,
@@ -4515,7 +4451,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L26",
+          "id": "L25",
           "cena": "s5",
           "fraseId": "s05_06",
           "de": 945,
@@ -4569,7 +4505,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L27",
+          "id": "L26",
           "cena": "s5",
           "fraseId": "s05_07",
           "de": 1046,
@@ -4668,7 +4604,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L28",
+          "id": "L27",
           "cena": "s6",
           "fraseId": "s06_01",
           "de": 5,
@@ -4707,7 +4643,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L29",
+          "id": "L28",
           "cena": "s6",
           "fraseId": "s06_02",
           "de": 80,
@@ -4756,7 +4692,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L30",
+          "id": "L29",
           "cena": "s6",
           "fraseId": "s06_03",
           "de": 172,
@@ -4840,7 +4776,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L31",
+          "id": "L30",
           "cena": "s6",
           "fraseId": "s06_03",
           "de": 326,
@@ -4889,7 +4825,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L32",
+          "id": "L31",
           "cena": "s6",
           "fraseId": "s06_04",
           "de": 404,
@@ -4943,7 +4879,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L33",
+          "id": "L32",
           "cena": "s6",
           "fraseId": "s06_04",
           "de": 515,
@@ -4972,7 +4908,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L34",
+          "id": "L33",
           "cena": "s7",
           "fraseId": "s07_01",
           "de": 5,
@@ -5036,7 +4972,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L35",
+          "id": "L34",
           "cena": "s7",
           "fraseId": "s07_02",
           "de": 131,
@@ -5115,7 +5051,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L36",
+          "id": "L35",
           "cena": "s7",
           "fraseId": "s07_03",
           "de": 284,
@@ -5194,7 +5130,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L37",
+          "id": "L36",
           "cena": "s8",
           "fraseId": "s08_01",
           "de": -6,
@@ -5273,7 +5209,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L38",
+          "id": "L37",
           "cena": "s8",
           "fraseId": "s08_02",
           "de": 146,
@@ -5352,7 +5288,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L39",
+          "id": "L38",
           "cena": "s8",
           "fraseId": "s08_03",
           "de": 339,
@@ -5406,7 +5342,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L40",
+          "id": "L39",
           "cena": "s9",
           "fraseId": "s09_01",
           "de": 5,
@@ -5485,7 +5421,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L41",
+          "id": "L40",
           "cena": "s9",
           "fraseId": "s09_02",
           "de": 214,
@@ -5564,7 +5500,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L42",
+          "id": "L41",
           "cena": "s9",
           "fraseId": "s09_03",
           "de": 406,
@@ -5713,93 +5649,93 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x014",
           "cena": "s1",
-          "frame": 174,
+          "frame": 191,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x015",
           "cena": "s1",
-          "frame": 175,
+          "frame": 192,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
           "id": "x016",
           "cena": "s1",
-          "frame": 177,
+          "frame": 194,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x017",
           "cena": "s1",
-          "frame": 177,
+          "frame": 194,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x018",
           "cena": "s1",
-          "frame": 180,
+          "frame": 197,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x019",
           "cena": "s1",
-          "frame": 183,
+          "frame": 200,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x020",
           "cena": "s1",
-          "frame": 185,
+          "frame": 200,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x021",
           "cena": "s1",
-          "frame": 193,
+          "frame": 206,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x022",
           "cena": "s1",
-          "frame": 201,
+          "frame": 212,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x023",
           "cena": "s1",
-          "frame": 209,
+          "frame": 218,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x024",
           "cena": "s1",
-          "frame": 217,
+          "frame": 224,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x025",
           "cena": "s1",
-          "frame": 225,
-          "som": "thunk",
-          "ganhoDb": -13
+          "frame": 229,
+          "som": "glitch_zap",
+          "ganhoDb": -14
         },
         {
           "id": "x026",
           "cena": "s1",
-          "frame": 229,
-          "som": "glitch_zap",
-          "ganhoDb": -14
+          "frame": 230,
+          "som": "thunk",
+          "ganhoDb": -13
         },
         {
           "id": "x027",

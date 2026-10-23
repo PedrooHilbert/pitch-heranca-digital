@@ -67,9 +67,11 @@
   "categoria": "Visual",
   "gravidade": "Média",
   "still": "revisoes/pins/4.png",
-  "status": "aberto",
+  "status": "feito",
   "criadoEm": "2026-10-23T16:40:54.171Z",
-  "atualizadoEm": "2026-10-23T16:42:27.752Z"
+  "atualizadoEm": "2026-10-23T16:42:27.752Z",
+  "resolvidoEm": "2026-10-23T17:17:53.563Z",
+  "resolucao": "S1: o clímax espera \"criptomoedas\" terminar (o ₿ fica ~29 q, antes 12) e a pergunta voa para a câmera em 6 q enquanto a órbita aparece — sem corte seco. Stills: out/revisao/pins-4-6/folha-s1.png"
  },
  {
   "id": 5,
@@ -84,8 +86,10 @@
   "categoria": "Visual",
   "gravidade": "Média",
   "still": "revisoes/pins/5.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-23T16:47:53.479Z"
+  "status": "feito",
+  "criadoEm": "2026-10-23T16:47:53.479Z",
+  "resolvidoEm": "2026-10-23T17:17:53.563Z",
+  "resolucao": "S5: conteúdo do celular centralizado na escala real da tela (16 px de margem dos dois lados), cantos arredondados, fundo do app e abaixo do notch. Still: out/revisao/pins-4-6/s5-celular.png"
  },
  {
   "id": 6,
@@ -100,7 +104,9 @@
   "categoria": "Visual",
   "gravidade": "Média",
   "still": "revisoes/pins/6.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-23T16:50:05.418Z"
+  "status": "feito",
+  "criadoEm": "2026-10-23T16:50:05.418Z",
+  "resolvidoEm": "2026-10-23T17:17:53.563Z",
+  "resolucao": "S6: a parte da plataforma entra uma vez só e fica na fechadura; a do custodiante sai devagar e apaga em \"nem a empresa\"; depois 1 de 3 ✗. Stills: out/revisao/pins-4-6/folha-s6.png"
  }
 ]

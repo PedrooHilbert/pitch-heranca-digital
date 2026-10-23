@@ -496,9 +496,22 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
             return (
               <div style={{ position: "absolute", left: 1500 + (1 - s) * 520, top: 130, transform: `rotate(${(1 - s) * 12}deg)`, zIndex: 33 }}>
                 <PhoneFrame width={PW} height={PH}>
-                  <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden" }}>
-                    <UIBlock tela={cel.tela} regiao={cel.regioes[0] ?? 0} escala={(PW - 20) / 390} x={0} y={0} inicio={t.G + 14} entrada="sobe" raio={0} sombra={false} />
-                    {cel.regioes[1] != null ? <UIBlock tela={cel.tela} regiao={cel.regioes[1]} escala={(PW - 20) / 390} x={0} y={(regiao(cel.tela, cel.regioes[0] ?? 0).h + 16) * ((PW - 20) / 390)} inicio={t.G + 20} raio={0} sombra={false} /> : null}
+                  {/* revisão #5: a tela útil é PW − 2×moldura (390 px lógicos); cada bloco vai na posição x real dele
+                      (16 px de margem dos dois lados) sobre o fundo do app, com cantos arredondados como no protótipo */}
+                  <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden", background: "#F2F5F3" }}>
+                    {(() => {
+                      const esc = (PW - 2 * Math.round(PW * 0.03)) / 390;
+                      const g0 = regiao(cel.tela, cel.regioes[0] ?? 0);
+                      const topo = 34; // abaixo do notch da moldura (6 + 20 px)
+                      return (
+                        <>
+                          <UIBlock tela={cel.tela} regiao={cel.regioes[0] ?? 0} escala={esc} x={g0.x * esc} y={topo} inicio={t.G + 14} entrada="sobe" raio={14 * esc} sombra={false} />
+                          {cel.regioes[1] != null ? (
+                            <UIBlock tela={cel.tela} regiao={cel.regioes[1]} escala={esc} x={regiao(cel.tela, cel.regioes[1]).x * esc} y={topo + (g0.h + 16) * esc} inicio={t.G + 20} raio={14 * esc} sombra={false} />
+                          ) : null}
+                        </>
+                      );
+                    })()}
                   </div>
                 </PhoneFrame>
               </div>

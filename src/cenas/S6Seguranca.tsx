@@ -185,19 +185,21 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
                   let y = 470 + (p.y - 470 + Math.sin(orb) * 20) * sai;
                   // duas partes encaixam na fechadura (a 1ª e a 2ª); a 3ª fica de fora
                   const encaixa = i < 2 ? interpolate(frame, [t.duas + i * 5, t.duas + i * 5 + 10], [0, 1], { ...clampOpt, easing: Easing.in(Easing.cubic) }) : 0;
-                  // depois: a parte da plataforma tenta sozinha e falha
-                  const tenta = i === 0 ? interpolate(frame, [t.nem, t.nem + 12, t.sozinha + 4, t.sozinha + 14], [0, 1, 1, 0], clampOpt) : 0;
+                  // "nem a empresa consegue sozinha": a 1ª parte FICA na fechadura (entra uma vez só — revisão #6) e
+                  // a 2ª sai devagar e apaga; com uma parte só a fechadura volta a trancar (t.sozinha)
+                  const solta = i === 1 ? interpolate(frame, [t.nem, t.nem + 14], [0, 1], { ...clampOpt, easing: Easing.out(Easing.cubic) }) : 0;
+                  const dentro = encaixa * (1 - solta);
                   const alvoX = 960;
                   const alvoY = 650;
-                  x = x + (alvoX - x) * Math.max(encaixa * (frame < t.nem ? 1 : 0), tenta);
-                  y = y + (alvoY - y) * Math.max(encaixa * (frame < t.nem ? 1 : 0), tenta);
-                  const sumida = i === 1 && frame >= t.nem ? 0.25 : 1;
+                  x = x + (alvoX - x) * dentro;
+                  y = y + (alvoY - y) * dentro;
+                  const sumida = 1 - 0.75 * solta;
                   return (
                     <div key={i} style={{ position: "absolute", left: x - 70, top: y - 70, width: 140, display: "flex", flexDirection: "column", alignItems: "center", gap: 10, opacity: sumida }}>
                       <div style={{ width: 120, height: 120, borderRadius: 30, ...vidro(true), color: "#F5C86B", display: "flex", alignItems: "center", justifyContent: "center", transform: `rotate(${(i - 1) * 25 + Math.sin(frame / 8 + i) * 6}deg)` }}>
                         <KeyRound size={64} />
                       </div>
-                      {frame >= t.partes + i * 6 && encaixa < 0.5 && tenta < 0.5 ? (
+                      {frame >= t.partes + i * 6 && dentro < 0.5 ? (
                         <div style={{ fontFamily, fontWeight: 800, fontSize: 24, color: "#fff", whiteSpace: "nowrap", textAlign: "center", opacity: interpolate(frame, [t.partes + i * 6, t.partes + i * 6 + 6], [0, 1], clampOpt) }}>{tx(`parte${i + 1}`)}</div>
                       ) : null}
                     </div>

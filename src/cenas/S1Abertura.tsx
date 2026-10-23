@@ -39,6 +39,7 @@ export const PADRAO_S1 = {
 /** Logo pedido na revisão #1 (versão menta para fundo escuro). */
 const LOGO_ESCURO = "brand/logo-simbolo-menta-fundo-escuro.png";
 const MEIA_BATIDA = 8; // 16 q por batida (112,5 BPM, a trilha) — ver README "Decisões"
+const TRANSICAO = 6; // quadros da passagem pergunta → órbita
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 const PERGUNTAS = [
@@ -72,14 +73,16 @@ const T = () => {
     // a pergunta entra quando a 1ª palavra dela bate (a anterior fica até lá: nenhum quadro vazio)
     return { ...p, ini: tempos[0], tempos, estouro: tempos[tempos.length - 1] - 1 };
   });
-  // o clímax começa 12 q depois do ₿ estourar (ainda no fim de "criptomoedas"); a pausa de 42 q antes de
-  // "Somos" (narracao.ts) cobre os cadeados + glitch (3 q) + blackout (6 q); "Somos" vem 6 q depois do logo
-  const climax = perguntas[2].estouro + 12;
+  // o clímax espera "criptomoedas" quase acabar (revisão #4: o ₿ sumia 12 q depois de estourar, no meio da palavra —
+  // corte seco); a pausa de 42 q antes de "Somos" (narracao.ts) cobre os cadeados + glitch (3 q) + blackout (6 q)
+  const climax = Math.max(perguntas[2].estouro + 12, r.apos("s01_04", "criptomoedas") - 10);
   const logo = r.em("s01_05", "Somos", 6);
   const blackout = logo - 6;
   const glitch = logo - 9;
   const entradas = ORBITA.map((_, i) => climax + (i < 3 ? 0 : i - 2));
-  const batidas = Array.from({ length: THUNKS }, (_, k) => Math.min(glitch - 2, climax + 4 + k * MEIA_BATIDA));
+  // 7 cadeados: na meia batida se couber; senão mais juntos (mínimo 4 q), sempre antes do glitch
+  const passo = Math.max(4, Math.min(MEIA_BATIDA, Math.floor((glitch - 2 - (climax + 4)) / (THUNKS - 1))));
+  const batidas = Array.from({ length: THUNKS }, (_, k) => Math.min(glitch - 2, climax + 4 + k * passo));
   const travas = ORBITA.map((_, i) => batidas[i % THUNKS]);
   const chip = r.apos("s01_05", "grupo");
   const titulo = logo + 10;
@@ -274,19 +277,28 @@ export const S1Abertura: React.FC<{ dur: number }> = ({ dur }) => {
                 </AbsoluteFill>
               ) : null}
 
-              {fase === "perguntas" && pergunta ? (
-                <>
+              {/* revisão #4: sem corte seco — a última pergunta "voa" para a câmera (cresce e apaga em 6 q)
+                  enquanto a órbita do clímax aparece por baixo */}
+              {(fase === "perguntas" || (fase === "climax" && frame < t.climax + TRANSICAO)) && pergunta ? (
+                <AbsoluteFill
+                  style={{
+                    opacity: interpolate(frame, [t.climax, t.climax + TRANSICAO], [1, 0], clampOpt),
+                    transform: `scale(${interpolate(frame, [t.climax, t.climax + TRANSICAO], [1, 1.45], { ...clampOpt, easing: Easing.in(Easing.cubic) })})`,
+                    filter: frame > t.climax ? `blur(${interpolate(frame, [t.climax, t.climax + TRANSICAO], [0, 8], clampOpt)}px)` : undefined,
+                    zIndex: 2,
+                  }}
+                >
                   <AbsoluteFill style={{ alignItems: "center", paddingTop: 96 }}>
                     <Slam key={pergunta.fala} texto={tx(pergunta.texto)} tempos={pergunta.tempos} tamanho={124} />
                   </AbsoluteFill>
                   <AbsoluteFill style={{ alignItems: "center", paddingTop: 440 }}>
                     <Estouro key={pergunta.fala} at={pergunta.estouro} marca={pergunta.marca} tamanho={320} />
                   </AbsoluteFill>
-                </>
+                </AbsoluteFill>
               ) : null}
 
               {fase === "climax" ? (
-                <>
+                <AbsoluteFill style={{ opacity: interpolate(frame, [t.climax, t.climax + TRANSICAO], [0, 1], clampOpt) }}>
                   <Orbit
                     itens={ORBITA.map((m, i) => <TileTrava key={i} marca={m} tranca={t.travas[i]} tamanho={150} />)}
                     cx={960} cy={470} raio={700} achata={0.46} periodo={170} entradas={t.entradas} tamanho={150} corAnel={colors.mint}
@@ -303,7 +315,7 @@ export const S1Abertura: React.FC<{ dur: number }> = ({ dur }) => {
                       TUDO TRANCADO
                     </div>
                   </AbsoluteFill>
-                </>
+                </AbsoluteFill>
               ) : null}
             </Glitch>
           ) : (
