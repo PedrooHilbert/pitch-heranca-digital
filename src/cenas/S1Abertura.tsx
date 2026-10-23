@@ -42,7 +42,8 @@ export const PADRAO_S1 = {
 const LOGO_ESCURO = "brand/logo-simbolo-menta-fundo-escuro.png";
 const MEIA_BATIDA = 8; // 16 q por batida (112,5 BPM, a trilha) — ver README "Decisões"
 const TRANSICAO = 6; // quadros da passagem pergunta → órbita
-const IMPLOSAO = 12; // quadros da órbita sendo sugada até virar o cadeado do logo
+const IMPLOSAO = 12;
+const LOGO_ANTES = 18; // quadros entre o impacto do logo (drop da trilha) e o "Somos" // quadros da órbita sendo sugada até virar o cadeado do logo
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 const PERGUNTAS = [
@@ -79,7 +80,7 @@ const T = () => {
   // o clímax entra no fim de "criptomoedas" (revisão #4: antes o ₿ sumia 12 q depois de estourar); a pausa de 42 q
   // antes de "Somos" (narracao.ts) cobre cadeados + glitch + implosão (12 q) até o logo
   const climax = Math.max(perguntas[2].estouro + 12, r.apos("s01_04", "criptomoedas") - 14);
-  const logo = r.em("s01_05", "Somos", 6);
+  const logo = r.em("s01_05", "Somos", LOGO_ANTES); // revisão #12: o logo bate e a voz espera 0,6 s
   const implosao = logo - IMPLOSAO;
   const glitch = implosao - 4;
   const entradas = ORBITA.map((_, i) => climax + (i < 3 ? 0 : i - 2));
@@ -87,7 +88,7 @@ const T = () => {
   const passo = Math.max(4, Math.min(MEIA_BATIDA, Math.floor((glitch - 2 - (climax + 4)) / (THUNKS - 1))));
   const batidas = Array.from({ length: THUNKS }, (_, k) => Math.min(glitch - 2, climax + 4 + k * passo));
   const travas = ORBITA.map((_, i) => batidas[i % THUNKS]);
-  const chip = r.apos("s01_05", "grupo");
+  const chip = r.apos("s01_05", "Somos") + 2; // revisão #9/#11: a fala não tem mais "grupo"
   const titulo = logo + 10;
   const slogan = Math.max(chip + 24, r.em("s01_05", "Herança", 2));
   return { r, impacto, gancho, perguntas, climax, logo, implosao, glitch, entradas, travas, batidas, chip, titulo, slogan, whip: r.dur - 9 };
@@ -97,6 +98,12 @@ const T = () => {
 export const silenciosS1 = (): [number, number][] => {
   const t = T();
   return [[0, t.impacto]];
+};
+
+/** Realce da trilha (locais): o drop da revelação do logo sobe +4 dB até a voz entrar (revisão #12). */
+export const realcesS1 = (): [number, number, number][] => {
+  const t = T();
+  return [[t.logo, t.logo + LOGO_ANTES, Math.pow(10, 4 / 20)]];
 };
 
 export const sfxS1 = (): Cue[] => {
@@ -117,8 +124,9 @@ export const sfxS1 = (): Cue[] => {
     { f: t.logo - 2, som: "riser" }, // o riser sobe até o logo
     { f: t.glitch - 3, som: "glitch_zap", ganho: dB(-14) },
     { f: t.implosao + 2, som: "rewind", ganho: dB(-15) }, // a órbita sendo sugada
-    { f: t.logo + 2, som: "impact_low", ganho: dB(-9) },
-    { f: t.logo + 2, som: "stinger_logo" },
+    { f: t.logo + 2, som: "impact_low", ganho: dB(-7) }, // revisão #12: revelação com mais peso
+    { f: t.logo + 2, som: "stinger_logo", ganho: dB(-9) },
+    { f: t.logo + 4, som: "whoosh_long", ganho: dB(-18) },
     { f: t.chip, som: "pop" },
     ...Array.from({ length: 6 }, (_, k) => ({ f: t.slogan + k * 3, som: "type" as const })),
   ];

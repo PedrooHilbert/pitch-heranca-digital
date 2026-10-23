@@ -158,8 +158,10 @@
   "categoria": "Visual",
   "gravidade": "Média",
   "still": "revisoes/pins/9.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-23T21:27:16.577Z"
+  "status": "feito",
+  "criadoEm": "2026-10-23T21:27:16.577Z",
+  "resolvidoEm": "2026-10-23T22:13:04.360Z",
+  "resolucao": "Fala da S1 agora é \"Somos o EternaByte, e esta é a Herança Digital.\" (sem \"grupo\"); legenda e voz regeneradas."
  },
  {
   "id": 10,
@@ -191,8 +193,10 @@
   "categoria": "Áudio/Voz",
   "gravidade": "Média",
   "still": "revisoes/pins/11.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-23T21:29:33.191Z"
+  "status": "feito",
+  "criadoEm": "2026-10-23T21:29:33.191Z",
+  "resolvidoEm": "2026-10-23T22:13:04.360Z",
+  "resolucao": "Mesma correção do #9: \"Somos o EternaByte\" (voz da s01_05 regenerada)."
  },
  {
   "id": 12,
@@ -207,8 +211,10 @@
   "categoria": "Áudio/Voz",
   "gravidade": "Média",
   "still": "revisoes/pins/12.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-23T21:32:20.497Z"
+  "status": "feito",
+  "criadoEm": "2026-10-23T21:32:20.497Z",
+  "resolvidoEm": "2026-10-23T22:13:04.360Z",
+  "resolucao": "Revelação do logo com drop na trilha (bumbo/baixo/palmas no máximo, +4 dB) e 0,6 s antes da voz entrar; impacto e stinger mais fortes. Medido: a mixagem sobe de -22 para -13 dB no logo."
  },
  {
   "id": 13,
@@ -223,9 +229,11 @@
   "categoria": "Áudio/Voz",
   "gravidade": "Média",
   "still": "revisoes/pins/13.png",
-  "status": "aberto",
+  "status": "feito",
   "criadoEm": "2026-10-23T21:33:11.143Z",
-  "atualizadoEm": "2026-10-23T21:33:21.452Z"
+  "atualizadoEm": "2026-10-23T21:33:21.452Z",
+  "resolvidoEm": "2026-10-23T22:13:04.360Z",
+  "resolucao": "Pronúncia \"sabe, o\" (o \"o\" estava sendo engolido: 37 ms → 62 ms com micro-pausa). Só a voz muda; legenda igual."
  },
  {
   "id": 14,
@@ -240,8 +248,10 @@
   "categoria": "Áudio/Voz",
   "gravidade": "Média",
   "still": "revisoes/pins/14.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-23T21:38:15.422Z"
+  "status": "feito",
+  "criadoEm": "2026-10-23T21:38:15.422Z",
+  "resolvidoEm": "2026-10-23T22:13:04.360Z",
+  "resolucao": "Pronúncia \"nem a, empresa\": o \"a\" passou de 50 ms (engolido) para 200 ms. Pode soar com uma micro-pausa antes de \"empresa\" — conferir de ouvido."
  },
  {
   "id": 15,
@@ -256,7 +266,9 @@
   "categoria": "Áudio/Voz",
   "gravidade": "Média",
   "still": "revisoes/pins/15.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-23T21:40:02.672Z"
+  "status": "feito",
+  "criadoEm": "2026-10-23T21:40:02.672Z",
+  "resolvidoEm": "2026-10-23T22:13:04.360Z",
+  "resolucao": "Pronúncia \"Dês-fazer\" (e fechado). Não dá para medir a vogal — conferir de ouvido."
  }
 ]

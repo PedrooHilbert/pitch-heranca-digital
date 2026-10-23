@@ -47,6 +47,8 @@ NIVEIS = {
     "tensao": dict(pad=1.0, kick=0.55, bass=0.35, hat=0.0, clap=0.0, arp=0.0, heart=0.0, clock=0.0, filt=1.0),
     "groove": dict(pad=0.8, kick=0.85, bass=0.8, hat=0.7, clap=0.6, arp=0.35, heart=0.0, clock=0.0, filt=1.0),
     "pleno": dict(pad=0.75, kick=0.95, bass=0.9, hat=0.85, clap=0.75, arp=0.8, heart=0.0, clock=0.0, filt=1.0),
+    # revelação do logo da S1 (revisão #12): tudo no máximo, por cima da tensão
+    "drop": dict(pad=1.0, kick=1.25, bass=1.2, hat=0.95, clap=1.0, arp=1.0, heart=0.0, clock=0.0, filt=1.0),
     "respiro": dict(pad=1.0, kick=0.0, bass=0.35, hat=0.0, clap=0.0, arp=0.15, heart=0.9, clock=0.7, filt=0.0),
     "final": dict(pad=0.0, kick=0.0, bass=0.0, hat=0.0, clap=0.0, arp=0.0, heart=0.0, clock=0.0, filt=1.0),
 }
@@ -55,6 +57,10 @@ SECAO = {"s1": "tensao", "s2": "tensao", "s3": "groove", "s4": "groove", "s5": "
 inicio_cena = {c["id"]: c["from"] / FPS for c in TL["cenas"]}
 fim_logo = next(f["from"] for f in TL["frases"] if f["id"] == "s09_03") / FPS - 0.1  # acorde final
 fronteiras = [(round(inicio_cena[c] / BEAT) * BEAT, SECAO[c]) for c in inicio_cena] + [(fim_logo, "final")]
+# revisão #12: "drop" na revelação do logo da S1 (logo = 6 q antes de "Somos"): a tensão vira energia plena até a S2
+# (o "Somos" vem 18 q depois do logo; a fala começa ~1 q antes da 1ª palavra)
+_logo_s1 = (next(f["from"] for f in TL["frases"] if f["id"] == "s01_05") + 1 - 18) / FPS
+fronteiras = sorted(fronteiras + [(_logo_s1, "drop")])
 
 
 def curva(camada):

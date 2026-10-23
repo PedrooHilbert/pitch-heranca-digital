@@ -11,4 +11,8 @@ export const PRONUNCIA: Pronuncia[] = [
   { de: "gov.br", para: "gov ponto bê érre" },
   { de: "LGPD", para: "éle gê pê dê" },
   { de: "EternaByte", para: "Eterna Báite" }, // nome do grupo
+  // revisões #13–#15 (medido: sem a vírgula o "o" de "sabe o" durava 37 ms e o "a" de "nem a" 50 ms — engolidos)
+  { de: "sabe o", para: "sabe, o" },
+  { de: "nem a", para: "nem a," }, // "nem, a" ainda deixava o "a" com 37 ms; assim ele dura ~200 ms
+  { de: "Desfazer", para: "Dês-fazer" }, // a voz dizia "Disfaizer"
 ];

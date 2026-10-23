@@ -55,7 +55,7 @@ export const FRASES: Record<string, { marcado?: string; delta?: Delta }> = {
   s01_02: { marcado: "quem fica com o seu *Instagram?*", delta: { pitch: 2 } },
   s01_03: { marcado: "Com o seu *e-mail?*", delta: { pitch: 7, volumeDb: 0.5 } },
   s01_04: { marcado: "Com as suas *criptomoedas?*", delta: { pitch: 12, volumeDb: 1 } },
-  s01_05: { marcado: "Somos o grupo [NOME DO GRUPO], e esta é a *Herança Digital.*", delta: { pitch: 5, volumeDb: 1 } },
+  s01_05: { marcado: "Somos o [NOME DO GRUPO], e esta é a *Herança Digital.*", delta: { pitch: 5, volumeDb: 1 } },
   // S2 — sombria; acelera de leve na lista final
   s02_02: { marcado: "Quando a pessoa morre, a família *não sabe* o que existe, *não tem* as senhas, e não sabe o que ela queria." },
   s02_03: { marcado: "Resultado: bens com valor perdidos, assinaturas cobrando *para sempre* e perfis virando alvo de *golpe.*", delta: { rate: 5 } },
