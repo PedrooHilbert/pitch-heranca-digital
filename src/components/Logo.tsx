@@ -2,7 +2,7 @@ import React from "react";
 import { Img, staticFile } from "remotion";
 import { colors } from "../data/theme";
 import { fontFamily } from "../fonts";
-import { config } from "../data/config";
+import { config, marcaPartes } from "../data/config";
 
 // Símbolo = nuvem + cadeado. Usa o arquivo real (public/brand/) se config.LOGO_SIMBOLO
 // estiver preenchido; caso contrário desenha um placeholder SVG simples (§4 do PROMPT).
@@ -58,7 +58,7 @@ export const LogoSymbol: React.FC<{
   );
 };
 
-// Logo completo: símbolo + wordmark "Herança Digital".
+// Logo completo: símbolo + wordmark (nome do produto vem do projeto → equipe.marca).
 export const Logo: React.FC<{
   size?: number;
   variant?: "dark" | "light";
@@ -67,6 +67,7 @@ export const Logo: React.FC<{
   const dark = variant === "dark";
   const base = dark ? colors.white : colors.ink;
   const accent = dark ? colors.mint : colors.teal700;
+  const [ini, fim] = marcaPartes();
   return (
     <div style={{ display: "flex", alignItems: "center", gap: size * 0.28 }}>
       <LogoSymbol size={size} variant={variant} />
@@ -81,7 +82,8 @@ export const Logo: React.FC<{
             whiteSpace: "nowrap",
           }}
         >
-          Herança <span style={{ color: accent }}>Digital</span>
+          {ini}
+          <span style={{ color: accent }}>{fim}</span>
         </div>
       ) : null}
     </div>

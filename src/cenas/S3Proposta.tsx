@@ -7,10 +7,37 @@ import { colors } from "../data/theme";
 import { fontFamily } from "../fonts";
 import { Fundo } from "../components/v2/Fundo";
 import { Eyebrow } from "../components/v2/kit";
+import { textos, fundo, telaDe } from "../data/projeto";
+import { config } from "../data/config";
 import { CameraRig, KineticText, Counter, Tilt3D, ScreenAssembly, UIBlock, ScrambleText, LightSweep, Flash, vidro } from "../components/fx";
 import type { Cue } from "../data/sfx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+
+/** Valores iniciais (semente do project.json). Em tempo de render vale o que está no projeto. */
+export const PADRAO_S3 = {
+  textos: {
+    abertura: "Um *cofre* para a sua vida digital",
+    pilares: "pilares numa plataforma só",
+    t1Titulo: "Inventário digital",
+    t1Sub: "A lista do que existe e o destino de cada item.",
+    t2Titulo: "Cofre de acessos",
+    t2Sub: "Senhas cifradas. Ninguém lê — nem a empresa.",
+    t3Titulo: "Liberação pela via legal",
+    t3Sub: "Só depois do inventário — na justiça ou em cartório.",
+    fecho: "Uma plataforma. Três *pilares.*",
+    card1: "Inventário digital",
+    card2: "Cofre de acessos",
+    card3: "Liberação via legal",
+  },
+  fundos: { abertura: "escuro", t1: "claro", t2: "escuro", t3: "claro", fecho: "claro" },
+  telas: {
+    t1: { tela: "Inventario", regioes: [0, 2, 3, 5, 6, 7] },
+    t2: { tela: "Confirmar", regioes: [0] },
+    t3: { tela: "Regras", regioes: [0, 2, 3, 4, 5, 6] },
+  },
+} as const;
+const telaPadrao = (k: "t1" | "t2" | "t3") => ({ tela: PADRAO_S3.telas[k].tela as string, regioes: [...PADRAO_S3.telas[k].regioes] as number[] });
 const ICONES = [Mail, Share2, Landmark, Bitcoin, Images, RefreshCw, Globe];
 
 const T = () => {
@@ -83,10 +110,11 @@ const Cifrado: React.FC<{ at: number; cripto: number }> = ({ at, cripto }) => {
   const { fps } = useVideoConfig();
   const fecha = spring({ frame: frame - cripto - 18, fps, config: { damping: 10, stiffness: 240 } });
   const fechado = frame >= cripto + 18;
+  const tl = telaDe("s3", "t2", telaPadrao("t2"));
   return (
     <div style={{ position: "relative", width: 900, height: 640 }}>
-      <UIBlock tela="Confirmar" regiao={0} escala={1.35} x={0} y={0} inicio={at} entrada="zoom" />
-      <div style={{ position: "absolute", left: 120, top: 470, width: 660, ...vidro(true), padding: "20px 26px", display: "flex", alignItems: "center", gap: 18 }}>
+      <UIBlock tela={tl.tela} regiao={tl.regioes[0] ?? 0} escala={1.35} x={0} y={0} inicio={at} entrada="zoom" />
+      <div style={{ position: "absolute", left: 0, top: 612, width: 594, zIndex: 5, ...vidro(true), background: colors.teal900, padding: "20px 26px", display: "flex", alignItems: "center", gap: 18 }}>
         <div style={{ transform: `scale(${1 + (fechado ? (1 - fecha) * 0.4 : 0)})`, color: fechado ? colors.mint : "#fff" }}>
           {fechado ? <Lock size={44} /> : <LockOpen size={44} />}
         </div>
@@ -105,7 +133,12 @@ export const S3Proposta: React.FC<{ dur: number }> = ({ dur }) => {
   const { fps } = useVideoConfig();
   const t = T();
   const fase = frame < t.t1 ? 0 : frame < t.t2 ? 1 : frame < t.t3 ? 2 : frame < t.fecho ? 3 : 4;
-  const cofreS = spring({ frame: frame - t.cofre, fps, config: { damping: 10, stiffness: 160 } });
+  const cofreS = spring({ frame: frame - 8, fps, config: { damping: 10, stiffness: 160 } });
+  const tx = textos("s3");
+  const nAbertura = tx("abertura").split(/\s+/).filter(Boolean).length;
+  const temposAbertura = [8, ...Array.from({ length: Math.max(0, nAbertura - 1) }, (_, k) => t.cofre + k * 5)];
+  const T1 = telaDe("s3", "t1", telaPadrao("t1"));
+  const T3 = telaDe("s3", "t3", telaPadrao("t3"));
   const suga = interpolate(frame, [t.tudo, t.tudo + 18], [0, 1], { ...clampOpt });
 
   return (
@@ -113,9 +146,9 @@ export const S3Proposta: React.FC<{ dur: number }> = ({ dur }) => {
       <CameraRig dur={dur} zoom={[1, 1.06]} socos={[t.t1, t.t2, t.t3, t.fecho].map((at) => ({ at, para: 1.05 }))} tremidas={[{ at: t.cofre, amp: 10 }, { at: t.tudo + 18, amp: 8 }]}>
         {fase === 0 ? (
           <>
-            <Fundo tema="escuro" seed="s3a" />
+            <Fundo tema={fundo("s3", "abertura", "escuro")} seed="s3a" />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 110 }}>
-              <KineticText texto="Um cofre para a sua vida digital" inicio={t.cofre - 4} stagger={5} destaque={["cofre"]} tamanho={84} />
+              <KineticText texto={tx("abertura")} inicio={8} tempos={temposAbertura} tamanho={84} />
             </AbsoluteFill>
             {/* cofre + ativos sendo sugados para dentro */}
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 330 }}>
@@ -140,7 +173,7 @@ export const S3Proposta: React.FC<{ dur: number }> = ({ dur }) => {
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 700, opacity: interpolate(frame, [t.tres - 4, t.tres + 2], [0, 1], clampOpt) }}>
               <div style={{ display: "flex", alignItems: "baseline", gap: 22, fontFamily, color: "#fff" }}>
                 <Counter de={0} ate={3} inicio={t.tres} dur={27} style={{ fontSize: 120, fontWeight: 900, color: colors.mint }} />
-                <span style={{ fontSize: 56, fontWeight: 800 }}>pilares numa plataforma só</span>
+                <span style={{ fontSize: 56, fontWeight: 800 }}>{tx("pilares")}</span>
               </div>
             </AbsoluteFill>
           </>
@@ -148,10 +181,10 @@ export const S3Proposta: React.FC<{ dur: number }> = ({ dur }) => {
 
         {fase === 1 ? (
           <>
-            <Fundo tema="claro" seed="s3b" />
-            <Tomada n="01" at={t.t1} titulo="Inventário digital" sub="A lista do que existe e o destino de cada item.">
+            <Fundo tema={fundo("s3", "t1", "claro")} seed="s3b" />
+            <Tomada n="01" at={t.t1} titulo={tx("t1Titulo")} sub={tx("t1Sub")} escuro={fundo("s3", "t1", "claro") !== "claro"}>
               <Tilt3D inicio={t.t1} assenta={t.t1 + 22} rotY={-12}>
-                <ScreenAssembly tela="Inventario" largura={980} altura={640} inicio={t.t1 + 2} ordem={[0, 2, 3, 5, 6, 7]} stagger={6} />
+                <ScreenAssembly tela={T1.tela} largura={980} altura={640} inicio={t.t1 + 2} ordem={T1.regioes} stagger={6} />
               </Tilt3D>
             </Tomada>
           </>
@@ -159,8 +192,8 @@ export const S3Proposta: React.FC<{ dur: number }> = ({ dur }) => {
 
         {fase === 2 ? (
           <>
-            <Fundo tema="escuro" seed="s3c" />
-            <Tomada n="02" at={t.t2} titulo="Cofre de acessos" sub="Senhas cifradas. Ninguém lê — nem a empresa." escuro>
+            <Fundo tema={fundo("s3", "t2", "escuro")} seed="s3c" />
+            <Tomada n="02" at={t.t2} titulo={tx("t2Titulo")} sub={tx("t2Sub")} escuro={fundo("s3", "t2", "escuro") !== "claro"}>
               <Tilt3D inicio={t.t2} assenta={t.t2 + 20} rotY={12}>
                 <Cifrado at={t.t2 + 2} cripto={t.cripto} />
               </Tilt3D>
@@ -170,11 +203,11 @@ export const S3Proposta: React.FC<{ dur: number }> = ({ dur }) => {
 
         {fase === 3 ? (
           <>
-            <Fundo tema="claro" seed="s3d" />
-            <Tomada n="03" at={t.t3} titulo="Liberação pela via legal" sub="Só depois do inventário — na justiça ou em cartório.">
+            <Fundo tema={fundo("s3", "t3", "claro")} seed="s3d" />
+            <Tomada n="03" at={t.t3} titulo={tx("t3Titulo")} sub={tx("t3Sub")} escuro={fundo("s3", "t3", "claro") !== "claro"}>
               <Tilt3D inicio={t.t3} assenta={t.t3 + 22} rotY={-12}>
                 <ScreenAssembly
-                  tela="Regras" largura={980} altura={640} inicio={t.t3 + 2} ordem={[0, 2, 3, 4, 5, 6]} stagger={5}
+                  tela={T3.tela} largura={980} altura={640} inicio={t.t3 + 2} ordem={T3.regioes} stagger={5}
                   rolagem={{ de: 100, ate: 560, f0: t.t3 + 30, f1: t.justica + 6 }}
                   pops={[{ regiao: 3, at: t.legal, ate: t.cartorio - 2 }, { regiao: 6, at: t.cartorio, ate: t.fecho }]}
                 />
@@ -185,18 +218,18 @@ export const S3Proposta: React.FC<{ dur: number }> = ({ dur }) => {
 
         {fase === 4 ? (
           <>
-            <Fundo tema="claro" seed="s3e" />
+            <Fundo tema={fundo("s3", "fecho", "claro")} seed="s3e" />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 170 }}>
-              <Eyebrow texto="HERANÇA DIGITAL" at={t.fecho} />
+              <Eyebrow texto={config.MARCA.toLocaleUpperCase("pt-BR")} at={t.fecho} />
               <div style={{ height: 22 }} />
-              <KineticText texto="Uma plataforma. Três pilares." inicio={t.fecho + 4} stagger={4} destaque={["pilares"]} cor={colors.ink} tamanho={86} />
+              <KineticText texto={tx("fecho")} inicio={t.fecho + 4} stagger={4} cor={colors.ink} tamanho={86} />
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 470 }}>
               <div style={{ position: "relative", display: "flex", gap: 34, overflow: "hidden", padding: 16 }}>
                 {[
-                  { Ic: ClipboardList, n: "01", t: "Inventário digital" },
-                  { Ic: ShieldCheck, n: "02", t: "Cofre de acessos" },
-                  { Ic: Scale, n: "03", t: "Liberação via legal" },
+                  { Ic: ClipboardList, n: "01", t: tx("card1") },
+                  { Ic: ShieldCheck, n: "02", t: tx("card2") },
+                  { Ic: Scale, n: "03", t: tx("card3") },
                 ].map((c, i) => {
                   const s = spring({ frame: frame - (t.fecho + 8 + i * 6), fps, config: { damping: 12, stiffness: 200 } });
                   return (

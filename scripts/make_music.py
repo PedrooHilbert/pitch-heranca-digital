@@ -23,9 +23,18 @@ from scipy.signal import butter, sosfilt
 
 SR = 44100
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-TL = json.load(open(os.path.join(ROOT, "src", "data", "timeline.json"), encoding="utf-8"))
-FPS = TL["fps"]
-BPM = TL["bpm"]
+# Lê o projeto (fonte única): durações das cenas podem ter sido ajustadas no editor.
+PJ = json.load(open(os.path.join(ROOT, "src", "data", "project.json"), encoding="utf-8"))
+FPS = PJ["fps"]
+BPM = PJ["bpm"]
+_acc = 0
+TL = {"cenas": [], "frases": []}
+for _c in PJ["cenas"]:
+    TL["cenas"].append({"id": _c["id"], "from": _acc, "dur": _c["dur"]})
+    _acc += _c["dur"]
+TL["total"] = _acc
+_ini = {c["id"]: c["from"] for c in TL["cenas"]}
+TL["frases"] = [{"id": f["id"], "from": _ini[f["cena"]] + f["inicio"]} for f in PJ["frases"]]
 BEAT = 60.0 / BPM
 BAR = 4 * BEAT
 DUR = TL["total"] / FPS + 1.0

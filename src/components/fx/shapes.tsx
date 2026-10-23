@@ -74,12 +74,14 @@ export const LightSweep: React.FC<{ at: number; dur?: number; largura?: number; 
   const frame = useCurrentFrame();
   if (frame < at || frame > at + dur) return null;
   const p = interpolate(frame, [at, at + dur], [-0.35, 1.35], { ...clampOpt, easing: Easing.inOut(Easing.quad) });
+  // máscara radial: o brilho some nas bordas do container (sem "retângulo" visível sobre fundo escuro)
+  const mascara = "radial-gradient(ellipse 50% 50% at 50% 50%, #000 45%, transparent 100%)";
   return (
-    <AbsoluteFill style={{ pointerEvents: "none", overflow: "hidden", mixBlendMode: "screen" }}>
+    <AbsoluteFill style={{ pointerEvents: "none", overflow: "hidden", mixBlendMode: "screen", WebkitMaskImage: mascara, maskImage: mascara }}>
       <div
         style={{
           position: "absolute", top: "-50%", height: "200%", width: largura, left: `${p * 100}%`,
-          transform: "rotate(18deg)",
+          transform: "rotate(18deg)", filter: "blur(10px)",
           background: `linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,${intensidade}) 50%, rgba(255,255,255,0) 100%)`,
         }}
       />

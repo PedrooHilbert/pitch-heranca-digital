@@ -5,6 +5,7 @@ import { Lock } from "lucide-react";
 import { colors } from "../../data/theme";
 import { fontFamily } from "../../fonts";
 import { LogoSymbol } from "../Logo";
+import { marcaPartes } from "../../data/config";
 import { LightSweep } from "../fx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
@@ -61,6 +62,7 @@ export const LogoRevela: React.FC<{ at: number; tamanho?: number; variante?: "da
   const resp = 1 + 0.025 * Math.sin(((frame - at) / fps) * Math.PI * 0.9);
   const wm = spring({ frame: frame - at - 8, fps, config: { damping: 14, stiffness: 160 } });
   const dark = variante === "dark";
+  const [ini, fim] = marcaPartes();
   return (
     <div style={{ position: "relative", display: "flex", alignItems: "center", gap: tamanho * 0.22, transform: `scale(${(0.55 + 0.45 * s) * resp})`, opacity: Math.min(1, s * 1.5) }}>
       <div style={{ filter: `drop-shadow(0 0 ${24 * s}px ${colors.mint})` }}>
@@ -68,11 +70,12 @@ export const LogoRevela: React.FC<{ at: number; tamanho?: number; variante?: "da
       </div>
       {wordmark ? (
         <div style={{ fontFamily, fontWeight: 800, fontSize: tamanho * 0.5, color: dark ? "#fff" : colors.ink, letterSpacing: "-0.02em", whiteSpace: "nowrap", clipPath: `inset(0 ${(1 - wm) * 100}% 0 0)` }}>
-          Herança <span style={{ color: dark ? colors.mint : colors.teal700 }}>Digital</span>
+          {ini}
+          <span style={{ color: dark ? colors.mint : colors.teal700 }}>{fim}</span>
         </div>
       ) : null}
       <div style={{ position: "absolute", inset: -20, overflow: "hidden" }}>
-        <LightSweep at={at + 6} dur={24} largura={160} />
+        <LightSweep at={at + 6} dur={24} largura={160} intensidade={0.55} />
       </div>
     </div>
   );

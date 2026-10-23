@@ -6,6 +6,7 @@ import { AbsoluteFill, interpolate, spring, useCurrentFrame, useVideoConfig } fr
 import { Mail, Share2, Landmark, Bitcoin, Images, RefreshCw, Globe, Lock, Gem, Receipt, ShieldAlert, User } from "lucide-react";
 import { relogio } from "../data/timeline";
 import { colors } from "../data/theme";
+import { textos, fundo } from "../data/projeto";
 import { fontFamily } from "../fonts";
 import { Fundo } from "../components/v2/Fundo";
 import { Tile, Eyebrow } from "../components/v2/kit";
@@ -14,14 +15,43 @@ import type { Cue } from "../data/sfx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
+/** Valores iniciais (semente do project.json). Em tempo de render vale o que está no projeto. */
+export const PADRAO_S2 = {
+  textos: {
+    chamada: "HOJE, QUASE TODO MUNDO TEM",
+    frase: "uma vida inteira no *digital*",
+    ativo1: "E-mail", ativo2: "Redes sociais", ativo3: "Banco digital", ativo4: "Cripto",
+    ativo5: "Fotos na nuvem", ativo6: "Assinaturas", ativo7: "Domínios",
+    semLista: "Sem *lista.*",
+    semSenhas: "Sem *senhas.*",
+    campoSenha: "Senha do Gmail da mãe",
+    digitando: "digitando…",
+    senhaErro: "Senha incorreta. Conta bloqueada.",
+    carimbo: "TRANCADO",
+    semInstrucoes: "Sem *instruções.*",
+    resultado: "Resultado:",
+    card1Titulo: "Bens com valor perdidos",
+    card1Texto: "Cripto, milhas, perfis que geram renda — sem ninguém saber que existem.",
+    card2Titulo: "Assinaturas cobrando para sempre",
+    card2Itens: "Streaming, Armazenamento, Música, App de treino, Jornal",
+    card2Rotulo: "cobrando…",
+    card3Titulo: "Perfis abandonados",
+    card3Texto: "Ninguém mais cuida da conta.",
+    card3TituloAlerta: "Perfil virou alvo de golpe",
+    card3TextoAlerta: "⚠ Mensagens pedindo dinheiro em nome de quem já partiu.",
+  },
+  fundos: { lista: "claro", semLista: "claro", semSenhas: "escuro", semInstrucoes: "claro", resultado: "ambar" },
+  telas: {},
+} as const;
+
 const ATIVOS = [
-  { Ic: Mail, nome: "E-mail", w: "e-mail" },
-  { Ic: Share2, nome: "Redes sociais", w: "redes" },
-  { Ic: Landmark, nome: "Banco digital", w: "banco" },
-  { Ic: Bitcoin, nome: "Cripto", w: "criptomoedas" },
-  { Ic: Images, nome: "Fotos na nuvem", w: "fotos" },
-  { Ic: RefreshCw, nome: "Assinaturas", w: "assinaturas" },
-  { Ic: Globe, nome: "Domínios", w: "" },
+  { Ic: Mail, w: "e-mail" },
+  { Ic: Share2, w: "redes" },
+  { Ic: Landmark, w: "banco" },
+  { Ic: Bitcoin, w: "criptomoedas" },
+  { Ic: Images, w: "fotos" },
+  { Ic: RefreshCw, w: "assinaturas" },
+  { Ic: Globe, w: "" },
 ];
 
 const T = () => {
@@ -71,17 +101,18 @@ export const sfxS2 = (): Cue[] => {
 
 const CampoSenha: React.FC<{ inicio: number; tranca: number }> = ({ inicio, tranca }) => {
   const frame = useCurrentFrame();
+  const tx = textos("s2");
   const n = Math.max(0, Math.min(10, Math.floor((frame - inicio) / 3)));
   return (
     <Shake tremidas={[{ at: tranca, amp: 18, dur: 9 }]}>
       <div style={{ ...vidro(true), width: 760, padding: "34px 40px", display: "flex", flexDirection: "column", gap: 16 }}>
-        <div style={{ fontFamily, fontWeight: 600, fontSize: 26, color: colors.mintSoft }}>Senha do Gmail da mãe</div>
+        <div style={{ fontFamily, fontWeight: 600, fontSize: 26, color: colors.mintSoft }}>{tx("campoSenha")}</div>
         <div style={{ display: "flex", alignItems: "center", gap: 18, height: 84, borderRadius: 16, padding: "0 26px", background: "rgba(0,0,0,0.25)", border: `2px solid ${frame >= tranca ? colors.red : "rgba(127,209,197,0.4)"}` }}>
           <Lock size={34} color={frame >= tranca ? colors.red : colors.mint} />
           <div style={{ fontFamily, fontSize: 56, letterSpacing: "0.18em", color: "#fff" }}>{"•".repeat(n)}</div>
         </div>
         <div style={{ fontFamily, fontWeight: 600, fontSize: 22, color: frame >= tranca ? "#FF9A8F" : colors.mintSoft2, opacity: frame >= tranca ? 1 : 0.6 }}>
-          {frame >= tranca ? "Senha incorreta. Conta bloqueada." : "digitando…"}
+          {frame >= tranca ? tx("senhaErro") : tx("digitando")}
         </div>
       </div>
     </Shake>
@@ -140,15 +171,17 @@ const Card: React.FC<{ at: number; icone: React.ReactNode; titulo: string; child
 
 const Cobrancas: React.FC<{ at: number }> = ({ at }) => {
   const frame = useCurrentFrame();
-  const itens = ["Streaming", "Armazenamento", "Música", "App de treino", "Jornal", "Streaming"];
-  const y = -((Math.max(0, frame - at) * 2.2) % 216);
+  const tx = textos("s2");
+  const base = tx("card2Itens").split(",").map((s) => s.trim()).filter(Boolean);
+  const itens = [...base, base[0]];
+  const y = -((Math.max(0, frame - at) * 2.2) % (36 * itens.length));
   return (
     <div style={{ height: 150, overflow: "hidden", maskImage: "linear-gradient(transparent, #000 25%, #000 75%, transparent)" }}>
       <div style={{ transform: `translateY(${y}px)` }}>
         {[...itens, ...itens].map((it, i) => (
           <div key={i} style={{ height: 36, display: "flex", justifyContent: "space-between", fontFamily, fontSize: 22, color: colors.ink2 }}>
             <span>{it}</span>
-            <span style={{ color: colors.red, fontWeight: 700 }}>cobrando…</span>
+            <span style={{ color: colors.red, fontWeight: 700 }}>{tx("card2Rotulo")}</span>
           </div>
         ))}
       </div>
@@ -160,28 +193,30 @@ export const S2Problema: React.FC<{ dur: number }> = ({ dur }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = T();
+  const tx = textos("s2");
   const bloco = frame < t.b1 ? 0 : frame < t.b2 ? 1 : frame < t.b3 ? 2 : frame < t.b4 ? 3 : 4;
-  // whip-pan de entrada (continua o movimento da S1)
+  // whip-pan de entrada (continua o movimento da S1): desliza + escala, sem descobrir o fundo preto
   const whip = interpolate(frame, [0, 9], [1, 0], clampOpt);
   const pulsoQ = 1 + 0.05 * Math.sin((frame / fps) * Math.PI * 2 * 1.875);
+  const nomes = [1, 2, 3, 4, 5, 6, 7].map((k) => tx(`ativo${k}`));
 
   return (
-    <AbsoluteFill style={{ transform: `translateX(${whip * 520}px)`, filter: whip > 0.02 ? `blur(${whip * 22}px)` : undefined }}>
+    <AbsoluteFill style={{ transform: `translateX(${whip * 110}px) scale(${1 + whip * 0.12})`, filter: whip > 0.02 ? `blur(${whip * 22}px)` : undefined }}>
       <CameraRig dur={dur} zoom={[1, 1.05]} socos={[t.b1, t.b2, t.b3, t.b4].map((at) => ({ at, para: 1.05, dur: 12 }))}>
         {bloco === 0 ? (
           <>
-            <Fundo tema="claro" seed="s2a" />
+            <Fundo tema={fundo("s2", "lista", "claro")} seed="s2a" />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 150 }}>
-              <Eyebrow texto="HOJE, QUASE TODO MUNDO TEM" at={6} />
+              <Eyebrow texto={tx("chamada")} at={6} />
               <div style={{ height: 34 }} />
-              <KineticText texto="uma vida inteira no digital" inicio={14} stagger={5} destaque={["digital"]} cor={colors.ink} tamanho={70} />
+              <KineticText texto={tx("frase")} inicio={14} stagger={5} cor={colors.ink} tamanho={70} />
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 480 }}>
               <div style={{ display: "flex", gap: 36 }}>
                 {ATIVOS.map((a, i) => (
                   <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 18, width: 140 }}>
                     <Tile entra={t.pops[i]} escuro={false} tamanho={120} icone={<a.Ic size={56} strokeWidth={1.8} />} />
-                    <div style={{ fontFamily, fontWeight: 700, fontSize: 21, color: colors.ink2, textAlign: "center", opacity: interpolate(frame, [t.pops[i] + 3, t.pops[i] + 9], [0, 1], clampOpt) }}>{a.nome}</div>
+                    <div style={{ fontFamily, fontWeight: 700, fontSize: 21, color: colors.ink2, textAlign: "center", opacity: interpolate(frame, [t.pops[i] + 3, t.pops[i] + 9], [0, 1], clampOpt) }}>{nomes[i]}</div>
                   </div>
                 ))}
               </div>
@@ -191,7 +226,7 @@ export const S2Problema: React.FC<{ dur: number }> = ({ dur }) => {
 
         {bloco === 1 ? (
           <>
-            <Fundo tema="claro" seed="s2b" />
+            <Fundo tema={fundo("s2", "semLista", "claro")} seed="s2b" />
             <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingBottom: 60 }}>
               <div style={{ fontFamily, fontWeight: 900, fontSize: 380, color: colors.teal700, transform: `scale(${pulsoQ})`, textShadow: "0 20px 60px rgba(14,90,87,.25)" }}>?</div>
             </AbsoluteFill>
@@ -205,31 +240,31 @@ export const S2Problema: React.FC<{ dur: number }> = ({ dur }) => {
               ))}
             />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 90 }}>
-              <KineticText texto="Sem lista." inicio={t.existe - 4} stagger={6} destaque={["lista"]} cor={colors.ink} tamanho={110} />
+              <KineticText texto={tx("semLista")} inicio={t.existe - 4} stagger={6} cor={colors.ink} tamanho={110} />
             </AbsoluteFill>
           </>
         ) : null}
 
         {bloco === 2 ? (
           <>
-            <Fundo tema="escuro" seed="s2c" />
+            <Fundo tema={fundo("s2", "semSenhas", "escuro")} seed="s2c" />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 110 }}>
-              <KineticText texto="Sem senhas." inicio={t.b2 + 2} stagger={6} destaque={["senhas"]} tamanho={110} />
+              <KineticText texto={tx("semSenhas")} inicio={t.b2 + 2} stagger={6} tamanho={110} />
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 360 }}>
               <CampoSenha inicio={t.b2 + 4} tranca={t.senhas} />
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 610, paddingLeft: 420 }}>
-              <Stamp texto="TRANCADO" at={t.senhas + 4} cor={colors.amberBorder} tamanho={58} />
+              <Stamp texto={tx("carimbo")} at={t.senhas + 4} cor={colors.amberBorder} tamanho={58} />
             </AbsoluteFill>
           </>
         ) : null}
 
         {bloco === 3 ? (
           <>
-            <Fundo tema="claro" seed="s2d" />
+            <Fundo tema={fundo("s2", "semInstrucoes", "claro")} seed="s2d" />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 100 }}>
-              <KineticText texto="Sem instruções." inicio={t.b3 + 2} stagger={6} destaque={["instruções"]} cor={colors.ink} tamanho={110} />
+              <KineticText texto={tx("semInstrucoes")} inicio={t.b3 + 2} stagger={6} cor={colors.ink} tamanho={110} />
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 330 }}>
               <Bilhete inicio={t.b3 + 4} amassa={t.queria + 2} />
@@ -239,21 +274,21 @@ export const S2Problema: React.FC<{ dur: number }> = ({ dur }) => {
 
         {bloco === 4 ? (
           <>
-            <Fundo tema="ambar" seed="s2e" />
+            <Fundo tema={fundo("s2", "resultado", "ambar")} seed="s2e" />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 80 }}>
-              <KineticText texto="Resultado:" inicio={t.b4 + 2} stagger={5} tamanho={96} cor="#FFF4DF" />
+              <KineticText texto={tx("resultado")} inicio={t.b4 + 2} stagger={5} tamanho={96} cor="#FFF4DF" />
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 270 }}>
               <div style={{ display: "flex", gap: 40 }}>
-                <Card at={t.perdidos - 4} icone={<Gem size={56} />} titulo="Bens com valor perdidos">
-                  <div style={{ fontFamily, fontSize: 22, color: colors.ink2 }}>Cripto, milhas, perfis que geram renda — sem ninguém saber que existem.</div>
+                <Card at={t.perdidos - 4} icone={<Gem size={56} />} titulo={tx("card1Titulo")}>
+                  <div style={{ fontFamily, fontSize: 22, color: colors.ink2 }}>{tx("card1Texto")}</div>
                 </Card>
-                <Card at={t.assinaturas - 4} icone={<Receipt size={56} />} titulo="Assinaturas cobrando para sempre">
+                <Card at={t.assinaturas - 4} icone={<Receipt size={56} />} titulo={tx("card2Titulo")}>
                   <Cobrancas at={t.assinaturas} />
                 </Card>
-                <Card at={t.perfis - 4} alerta={t.golpe} icone={frame >= t.golpe ? <ShieldAlert size={56} /> : <User size={56} />} titulo={frame >= t.golpe ? "Perfil virou alvo de golpe" : "Perfis abandonados"}>
+                <Card at={t.perfis - 4} alerta={t.golpe} icone={frame >= t.golpe ? <ShieldAlert size={56} /> : <User size={56} />} titulo={frame >= t.golpe ? tx("card3TituloAlerta") : tx("card3Titulo")}>
                   <div style={{ fontFamily, fontSize: 22, color: frame >= t.golpe ? "#FFD0CA" : colors.ink2 }}>
-                    {frame >= t.golpe ? "⚠ Mensagens pedindo dinheiro em nome de quem já partiu." : "Ninguém mais cuida da conta."}
+                    {frame >= t.golpe ? tx("card3TextoAlerta") : tx("card3Texto")}
                   </div>
                 </Card>
               </div>

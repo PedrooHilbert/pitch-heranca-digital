@@ -3,6 +3,7 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { ShieldCheck, Smartphone, Server, KeyRound, Lock, LockOpen, X, UserRound, RotateCcw, Check } from "lucide-react";
 import { relogio } from "../data/timeline";
+import { textos, fundo, telaDe } from "../data/projeto";
 import { colors } from "../data/theme";
 import { fontFamily } from "../fonts";
 import { Fundo } from "../components/v2/Fundo";
@@ -58,20 +59,48 @@ export const sfxS6 = (): Cue[] => {
   ];
 };
 
+
+/** Valores iniciais (semente do project.json). Em tempo de render vale o que está no projeto. */
+export const PADRAO_S6 = {
+  textos: {
+    titulo: "Segurança é o *coração* do produto.",
+    cifrado: "*Cifrado* no aparelho.",
+    aparelho: "Aparelho do titular",
+    linha1: "Gmail: maria@exemplo",
+    linha2: "Senha: ••••••••",
+    linha3: "Instruções: memorial",
+    servidor: "Servidor",
+    ilegivel: "só conteúdo ilegível",
+    chave: "A *chave* de sucessão",
+    sozinha: "Nem a empresa abre *sozinha.*",
+    parte1: "Plataforma (HSM)",
+    parte2: "Custodiante independente",
+    parte3: "Cópia offline",
+    deTres: "de 3",
+    alerta: "Mudança crítica? *Alerta* na hora.",
+    herdeira: "Ana Souza",
+    herdeiraSub: "herdeira · 2 ativos",
+    restaurada: "restaurada",
+  },
+  fundos: { seguranca: "escuro" },
+  telas: { alerta: { tela: "Seguranca", regioes: [5] } },
+} as const;
+
 const POS = [{ x: 560, y: 470 }, { x: 960, y: 300 }, { x: 1360, y: 470 }];
-const ROTULOS = ["Plataforma (HSM)", "Custodiante independente", "Cópia offline"];
 
 export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = T();
+  const tx = textos("s6");
+  const alertaTela = telaDe("s6", "alerta", { tela: "Seguranca", regioes: [5] });
   const fase = frame < t.B ? 0 : frame < t.C ? 1 : frame < t.D ? 2 : 3;
   const bat = (k: number) => 1 + 0.12 * Math.max(0, Math.sin(((frame - t.coracao - k) / 14) * Math.PI)) * (frame > t.coracao + k ? 1 : 0);
 
   return (
     <AbsoluteFill>
       <CameraRig dur={dur} zoom={[1, 1.06]} socos={[t.B, t.C, t.D].map((at) => ({ at, para: 1.05 }))} tremidas={[{ at: t.tres, amp: 20, dur: 9 }, { at: t.sozinha, amp: 12 }, { at: t.desfazer, amp: 10 }]}>
-        <Fundo tema="escuro" seed="s6" />
+        <Fundo tema={fundo("s6", "seguranca", "escuro")} seed="s6" />
 
         {fase === 0 ? (
           <>
@@ -81,7 +110,7 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
               </div>
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 470 }}>
-              <KineticText texto="Segurança é o coração do produto." inicio={6} stagger={5} destaque={["coração"]} tamanho={92} />
+              <KineticText texto={tx("titulo")} inicio={6} stagger={5} tamanho={92} />
             </AbsoluteFill>
           </>
         ) : null}
@@ -89,12 +118,12 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
         {fase === 1 ? (
           <>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 110 }}>
-              <KineticText texto="Cifrado no aparelho." inicio={t.B + 4} stagger={5} destaque={["cifrado"]} tamanho={80} />
+              <KineticText texto={tx("cifrado")} inicio={t.B + 4} stagger={5} tamanho={80} />
             </AbsoluteFill>
             <div style={{ position: "absolute", left: 260, top: 330, ...vidro(true), width: 420, height: 400, padding: 30, boxSizing: "border-box" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, color: colors.mint, fontFamily, fontWeight: 800, fontSize: 26 }}><Smartphone size={34} /> Aparelho do titular</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, color: colors.mint, fontFamily, fontWeight: 800, fontSize: 26 }}><Smartphone size={34} /> {tx("aparelho")}</div>
               <div style={{ marginTop: 26, display: "flex", flexDirection: "column", gap: 14 }}>
-                {["Gmail: maria@exemplo", "Senha: ••••••••", "Instruções: memorial"].map((l, i) => (
+                {[tx("linha1"), tx("linha2"), tx("linha3")].map((l, i) => (
                   <ScrambleText key={i} texto={l} inicio={t.cifrado + i * 3} dur={14} modo="cifrar" seed={`c${i}`} style={{ fontSize: 26, color: "#fff" }} />
                 ))}
               </div>
@@ -109,11 +138,11 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
               return p < 1 ? <div style={{ position: "absolute", left: x - 30, top: y - 30, width: 60, height: 60, borderRadius: 14, background: colors.mint, color: colors.teal900, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 0 30px ${colors.mint}` }}><Lock size={32} /></div> : null;
             })() : null}
             <div style={{ position: "absolute", left: 1240, top: 330, ...vidro(true), width: 420, height: 400, padding: 30, boxSizing: "border-box" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 12, color: colors.mint, fontFamily, fontWeight: 800, fontSize: 26 }}><Server size={34} /> Servidor</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 12, color: colors.mint, fontFamily, fontWeight: 800, fontSize: 26 }}><Server size={34} /> {tx("servidor")}</div>
               {frame >= t.voa + 14 ? (
                 <div style={{ marginTop: 26, display: "flex", flexDirection: "column", gap: 14 }}>
                   {[0, 1, 2].map((i) => <ScrambleText key={i} texto="x9#Q@7f%2L!k0zR" inicio={10000} seed={`sv${i}-${Math.floor(frame / 3)}`} style={{ fontSize: 26, color: colors.mintSoft2 }} />)}
-                  <div style={{ marginTop: 10, fontFamily, fontWeight: 800, fontSize: 30, color: colors.amberBorder, opacity: interpolate(frame, [t.ilegivel, t.ilegivel + 6], [0, 1], clampOpt) }}>só conteúdo ilegível</div>
+                  <div style={{ marginTop: 10, fontFamily, fontWeight: 800, fontSize: 30, color: colors.amberBorder, opacity: interpolate(frame, [t.ilegivel, t.ilegivel + 6], [0, 1], clampOpt) }}>{tx("ilegivel")}</div>
                 </div>
               ) : null}
             </div>
@@ -124,9 +153,9 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
           <>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 90 }}>
               {frame < t.nem ? (
-                <KineticText texto="A chave de sucessão" inicio={t.C + 4} stagger={4} destaque={["chave"]} tamanho={72} />
+                <KineticText texto={tx("chave")} inicio={t.C + 4} stagger={4} tamanho={72} />
               ) : (
-                <KineticText texto="Nem a empresa abre sozinha." inicio={t.nem} stagger={4} destaque={["sozinha"]} tamanho={72} />
+                <KineticText texto={tx("sozinha")} inicio={t.nem} stagger={4} tamanho={72} />
               )}
             </AbsoluteFill>
             {/* chave inteira → quebra em 3 */}
@@ -169,7 +198,7 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
                         <KeyRound size={64} />
                       </div>
                       {frame >= t.partes + i * 6 && encaixa < 0.5 && tenta < 0.5 ? (
-                        <div style={{ fontFamily, fontWeight: 800, fontSize: 24, color: "#fff", whiteSpace: "nowrap", textAlign: "center", opacity: interpolate(frame, [t.partes + i * 6, t.partes + i * 6 + 6], [0, 1], clampOpt) }}>{ROTULOS[i]}</div>
+                        <div style={{ fontFamily, fontWeight: 800, fontSize: 24, color: "#fff", whiteSpace: "nowrap", textAlign: "center", opacity: interpolate(frame, [t.partes + i * 6, t.partes + i * 6 + 6], [0, 1], clampOpt) }}>{tx(`parte${i + 1}`)}</div>
                       ) : null}
                     </div>
                   );
@@ -177,9 +206,9 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
                 {frame >= t.duas + 14 ? (
                   <div style={{ position: "absolute", left: 1110, top: 600, fontFamily, fontWeight: 900, fontSize: 84, color: frame >= t.sozinha ? colors.red : colors.mint, display: "flex", alignItems: "baseline", gap: 14 }}>
                     {frame >= t.sozinha ? (
-                      <Shake tremidas={[{ at: t.sozinha, amp: 14 }]}><span style={{ display: "flex", alignItems: "center", gap: 10 }}>1 de 3 <X size={70} strokeWidth={3.4} /></span></Shake>
+                      <Shake tremidas={[{ at: t.sozinha, amp: 14 }]}><span style={{ display: "flex", alignItems: "center", gap: 10 }}>1 {tx("deTres")} <X size={70} strokeWidth={3.4} /></span></Shake>
                     ) : (
-                      <><Counter ate={2} inicio={t.duas + 14} dur={14} /> <span>de 3</span></>
+                      <><Counter ate={2} inicio={t.duas + 14} dur={14} /> <span>{tx("deTres")}</span></>
                     )}
                   </div>
                 ) : null}
@@ -191,7 +220,7 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
         {fase === 3 ? (
           <>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 100 }}>
-              <KineticText texto="Mudança crítica? Alerta na hora." inicio={t.D + 4} stagger={4} destaque={["alerta"]} tamanho={70} />
+              <KineticText texto={tx("alerta")} inicio={t.D + 4} stagger={4} tamanho={70} />
             </AbsoluteFill>
             {/* herdeira sendo removida e depois "rebobinada" */}
             {(() => {
@@ -202,15 +231,15 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
               return (
                 <>
                   {rebob ? [0.25, 0.5, 0.75].map((g) => (
-                    <div key={g} style={{ position: "absolute", left: 640 + (k + g * 0.3) * 900, top: 420, width: 640, height: 130, borderRadius: 22, border: `2px solid ${colors.mint}`, opacity: 0.25 * (1 - g) }} />
+                    <div key={g} style={{ position: "absolute", left: 640 + (k + g * 0.3) * 420, top: 420, width: 640, height: 130, borderRadius: 22, border: `2px solid ${colors.mint}`, opacity: 0.25 * (1 - g) }} />
                   )) : null}
-                  <div style={{ position: "absolute", left: 640 + k * 900, top: 420, width: 640, ...vidro(true), padding: "24px 28px", display: "flex", alignItems: "center", gap: 18, opacity: 1 - k * 0.8, filter: rebob ? "hue-rotate(60deg) blur(1px)" : undefined }}>
+                  <div style={{ position: "absolute", left: 640 + k * 420, top: 420, width: 640, ...vidro(true), padding: "24px 28px", display: "flex", alignItems: "center", gap: 18, opacity: 1 - k * 0.65, transform: `scale(${1 - k * 0.12})`, filter: rebob ? "hue-rotate(60deg) blur(1px)" : undefined }}>
                     <div style={{ width: 70, height: 70, borderRadius: 999, background: "rgba(127,209,197,.2)", color: colors.mint, display: "flex", alignItems: "center", justifyContent: "center" }}><UserRound size={40} /></div>
                     <div style={{ flex: 1 }}>
-                      <div style={{ fontFamily, fontWeight: 800, fontSize: 30, color: "#fff", textDecoration: k > 0.2 ? "line-through" : "none" }}>Ana Souza</div>
-                      <div style={{ fontFamily, fontWeight: 600, fontSize: 20, color: colors.mintSoft }}>herdeira · 2 ativos</div>
+                      <div style={{ fontFamily, fontWeight: 800, fontSize: 30, color: "#fff", textDecoration: k > 0.2 ? "line-through" : "none" }}>{tx("herdeira")}</div>
+                      <div style={{ fontFamily, fontWeight: 600, fontSize: 20, color: colors.mintSoft }}>{tx("herdeiraSub")}</div>
                     </div>
-                    {frame >= t.desfazer + 22 ? <div style={{ display: "flex", alignItems: "center", gap: 8, color: colors.mint, fontFamily, fontWeight: 800, fontSize: 22 }}><Check size={26} strokeWidth={3} /> restaurada</div> : null}
+                    {frame >= t.desfazer + 22 ? <div style={{ display: "flex", alignItems: "center", gap: 8, color: colors.mint, fontFamily, fontWeight: 800, fontSize: 22 }}><Check size={26} strokeWidth={3} /> {tx("restaurada")}</div> : null}
                   </div>
                 </>
               );
@@ -220,7 +249,7 @@ export const S6Seguranca: React.FC<{ dur: number }> = ({ dur }) => {
               const s = spring({ frame: frame - t.alerta, fps, config: { damping: 12, stiffness: 170 } });
               return (
                 <div style={{ position: "absolute", left: 260, top: 640 + (1 - s) * -520, width: 1400, height: 124, opacity: Math.min(1, s * 1.5) }}>
-                  <UIBlock tela="Seguranca" regiao={5} escala={1400 / 1008} x={0} y={0} inicio={t.alerta} entrada="nenhuma" raio={18} />
+                  <UIBlock tela={alertaTela.tela} regiao={alertaTela.regioes[0] ?? 0} escala={1400 / 1008} x={0} y={0} inicio={t.alerta} entrada="nenhuma" raio={18} />
                 </div>
               );
             })() : null}

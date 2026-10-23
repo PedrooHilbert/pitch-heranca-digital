@@ -6,12 +6,34 @@ import { Lock, LockOpen, Camera, Mail, Bitcoin, UserRound, FileText, ShieldCheck
 import { relogio } from "../data/timeline";
 import { colors } from "../data/theme";
 import { fontFamily } from "../fonts";
+import { textos, fundo, telaDe } from "../data/projeto";
 import { Fundo } from "../components/v2/Fundo";
 import { Stamp, DrawPath, UIBlock, Roleta, Counter, Shake, vidro } from "../components/fx";
 import type { Cue } from "../data/sfx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 const W = 1920;
+
+/** Valores iniciais (semente do project.json). Em tempo de render vale o que está no projeto. */
+export const PADRAO_S4 = {
+  textos: {
+    estacao1: "Em vida",
+    estacao2: "Falecimento",
+    estacao3: "Liberação",
+    ativo1: "Instagram", destino1: "Memorial",
+    ativo2: "E-mail", destino2: "Entregar ao Lucas",
+    ativo3: "Criptomoedas", destino3: "Conforme a partilha",
+    carimbo: "COFRE CONGELADO",
+    passo1: "Pedido", passo2: "Validação", passo3: "Carência", passo4: "Liberação",
+    carencia: "Carência:",
+    dias: "dias para contestar",
+    herdeiro1: "Lucas", herdeiro2: "Ana", herdeiro3: "Carlos",
+    suaParte: "só a sua parte",
+    diasOk: "dias ✓",
+  },
+  fundos: { trilho: "claro" },
+  telas: { aviso: { tela: "AvisoObito", regioes: [0, 1] } },
+} as const;
 
 const T = () => {
   const r = relogio("s4");
@@ -22,7 +44,7 @@ const T = () => {
   const e3 = r.ini(c) - 6;
   return {
     r, e2, e3,
-    cadastra: r.em(a, "cadastra"),
+    cadastra: Math.min(r.em(a, "cadastra"), r.em(a, "vida") + 6),
     destino: r.em(a, "destino"),
     falec: r.em(b, "falecimento"),
     congelado: r.em(b, "congelado"),
@@ -89,11 +111,12 @@ const Linha: React.FC<{ at: number; destinoAt: number; icone: React.ReactNode; n
 const Stepper: React.FC<{ tempos: number[] }> = ({ tempos }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
+  const tx = textos("s4");
   const passos = [
-    { t: "Pedido", Ic: FileText },
-    { t: "Validação", Ic: ShieldCheck },
-    { t: "Carência", Ic: Clock },
-    { t: "Liberação", Ic: KeyRound },
+    { t: tx("passo1"), Ic: FileText },
+    { t: tx("passo2"), Ic: ShieldCheck },
+    { t: tx("passo3"), Ic: Clock },
+    { t: tx("passo4"), Ic: KeyRound },
   ];
   return (
     <div style={{ position: "relative", display: "flex", gap: 120 }}>
@@ -121,6 +144,8 @@ export const S4ComoFunciona: React.FC<{ dur: number }> = ({ dur }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = T();
+  const tx = textos("s4");
+  const aviso = telaDe("s4", "aviso", { tela: "AvisoObito", regioes: [0, 1] });
   const ease = { ...clampOpt, easing: Easing.inOut(Easing.cubic) };
   const camX = interpolate(frame, [t.e2, t.e2 + 14, t.e3, t.e3 + 14], [0, W, W, 2 * W], ease);
   const velocidade = Math.abs(interpolate(frame, [t.e2, t.e2 + 7, t.e2 + 14], [0, 1, 0], clampOpt)) + Math.abs(interpolate(frame, [t.e3, t.e3 + 7, t.e3 + 14], [0, 1, 0], clampOpt));
@@ -134,7 +159,7 @@ export const S4ComoFunciona: React.FC<{ dur: number }> = ({ dur }) => {
 
   return (
     <AbsoluteFill>
-      <Fundo tema="claro" seed="s4" />
+      <Fundo tema={fundo("s4", "trilho", "claro")} seed="s4" />
       <AbsoluteFill style={{ filter: `${velocidade > 0.05 ? `blur(${velocidade * 10}px)` : ""} ${congela > 0 ? `grayscale(${congela * 0.85}) hue-rotate(${congela * -20}deg) brightness(${1 - congela * 0.06})` : ""}`.trim() || undefined }}>
         <div style={{ position: "absolute", left: -camX, top: 0, width: 3 * W, height: 1080, transform: `scale(${1 + frame / dur * 0.04})`, transformOrigin: `${camX + 960}px 540px` }}>
           {/* trilho */}
@@ -143,24 +168,24 @@ export const S4ComoFunciona: React.FC<{ dur: number }> = ({ dur }) => {
           </svg>
 
           <div style={{ position: "absolute", left: 0 }}>
-            <Estacao n={1} titulo="Em vida" at={2}>
+            <Estacao n={1} titulo={tx("estacao1")} at={2}>
               <div style={{ height: 60 }} />
               <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-                <Linha at={t.cadastra} destinoAt={t.destino} icone={<Camera size={40} />} nome="Instagram" destino="Memorial" cor={colors.teal600} />
-                <Linha at={t.cadastra + 8} destinoAt={t.destino + 6} icone={<Mail size={40} />} nome="E-mail" destino="Entregar ao Lucas" cor={colors.blue} />
-                <Linha at={t.cadastra + 16} destinoAt={t.destino + 12} icone={<Bitcoin size={40} />} nome="Criptomoedas" destino="Conforme a partilha" cor={colors.amber} />
+                <Linha at={t.cadastra} destinoAt={t.destino} icone={<Camera size={40} />} nome={tx("ativo1")} destino={tx("destino1")} cor={colors.teal600} />
+                <Linha at={t.cadastra + 8} destinoAt={t.destino + 6} icone={<Mail size={40} />} nome={tx("ativo2")} destino={tx("destino2")} cor={colors.blue} />
+                <Linha at={t.cadastra + 16} destinoAt={t.destino + 12} icone={<Bitcoin size={40} />} nome={tx("ativo3")} destino={tx("destino3")} cor={colors.amber} />
               </div>
             </Estacao>
           </div>
 
           <div style={{ position: "absolute", left: W }}>
-            <Estacao n={2} titulo="Falecimento" at={t.e2 + 10} cor={colors.ink2}>
+            <Estacao n={2} titulo={tx("estacao2")} at={t.e2 + 10} cor={colors.ink2}>
               <div style={{ height: 60 }} />
               <Shake tremidas={[{ at: t.congelado, amp: 16, dur: 9 }]}>
                 <div style={{ position: "relative" }}>
-                  <UIBlock tela="AvisoObito" regiao={0} escala={1.6} inicio={t.falec} entrada="zoom" style={{ position: "relative" }} />
+                  <UIBlock tela={aviso.tela} regiao={aviso.regioes[0] ?? 0} escala={1.6} inicio={t.falec} entrada="zoom" style={{ position: "relative" }} />
                   <div style={{ height: 24 }} />
-                  <UIBlock tela="AvisoObito" regiao={1} escala={1.6} inicio={t.falec + 8} style={{ position: "relative" }} />
+                  {aviso.regioes[1] != null ? <UIBlock tela={aviso.tela} regiao={aviso.regioes[1]} escala={1.6} inicio={t.falec + 8} style={{ position: "relative" }} /> : null}
                 </div>
               </Shake>
               <svg width={W} height={1080} style={{ position: "absolute", left: 0, top: 0, pointerEvents: "none" }}>
@@ -169,35 +194,35 @@ export const S4ComoFunciona: React.FC<{ dur: number }> = ({ dur }) => {
                 ))}
               </svg>
               <div style={{ position: "absolute", top: 660, left: 1180 }}>
-                <Stamp texto="COFRE CONGELADO" at={t.congelado + 4} cor={colors.blue} tamanho={46} rot={-7} />
+                <Stamp texto={tx("carimbo")} at={t.congelado + 4} cor={colors.blue} tamanho={46} rot={-7} />
               </div>
             </Estacao>
           </div>
 
           <div style={{ position: "absolute", left: 2 * W }}>
-            <Estacao n={3} titulo="Liberação" at={t.e3 + 10}>
+            <Estacao n={3} titulo={tx("estacao3")} at={t.e3 + 10}>
               <div style={{ height: 70 }} />
               <Stepper tempos={[t.pedido, t.validacao, t.prazo, t.libera]} />
               <div style={{ height: 40 }} />
               <div style={{ display: "flex", alignItems: "center", gap: 26, opacity: interpolate(frame, [t.prazo - 4, t.prazo + 4], [0, 1], clampOpt) }}>
-                <span style={{ fontFamily, fontWeight: 700, fontSize: 30, color: colors.ink2 }}>Carência:</span>
+                <span style={{ fontFamily, fontWeight: 700, fontSize: 30, color: colors.ink2 }}>{tx("carencia")}</span>
                 <Roleta
                   valores={["15", "30", "60", "90", "30"]} tempos={[t.prazo, t.prazo + 6, t.prazo + 12, t.prazo + 18, t.contest + 6]} altura={78}
                   style={{ width: 120 }}
                   itemStyle={(ativo) => ({ fontFamily, fontWeight: 900, fontSize: 64, color: ativo ? colors.teal700 : colors.ink3 })}
                 />
-                <span style={{ fontFamily, fontWeight: 700, fontSize: 30, color: colors.ink2 }}>dias para contestar</span>
+                <span style={{ fontFamily, fontWeight: 700, fontSize: 30, color: colors.ink2 }}>{tx("dias")}</span>
               </div>
               <div style={{ height: 34 }} />
               <div style={{ display: "flex", gap: 70 }}>
-                {[{ Ic: Camera, n: "Lucas" }, { Ic: Mail, n: "Ana" }, { Ic: Bitcoin, n: "Carlos" }].map((h, i) => {
+                {[{ Ic: Camera, n: tx("herdeiro1") }, { Ic: Mail, n: tx("herdeiro2") }, { Ic: Bitcoin, n: tx("herdeiro3") }].map((h, i) => {
                   const s = spring({ frame: frame - (t.herdeiro + i * 8), fps, config: { damping: 9, stiffness: 220 } });
                   return (
                     <div key={i} style={{ display: "flex", alignItems: "center", gap: 14, transform: `scale(${s})`, opacity: Math.min(1, s * 2) }}>
                       <div style={{ width: 70, height: 70, borderRadius: 999, background: colors.tealTint, color: colors.teal700, display: "flex", alignItems: "center", justifyContent: "center" }}><UserRound size={38} /></div>
                       <div style={{ display: "flex", flexDirection: "column" }}>
                         <span style={{ fontFamily, fontWeight: 800, fontSize: 26, color: colors.ink }}>{h.n}</span>
-                        <span style={{ display: "flex", alignItems: "center", gap: 6, fontFamily, fontWeight: 700, fontSize: 18, color: colors.teal600 }}><h.Ic size={18} /> só a sua parte</span>
+                        <span style={{ display: "flex", alignItems: "center", gap: 6, fontFamily, fontWeight: 700, fontSize: 18, color: colors.teal600 }}><h.Ic size={18} /> {tx("suaParte")}</span>
                       </div>
                     </div>
                   );
@@ -214,7 +239,7 @@ export const S4ComoFunciona: React.FC<{ dur: number }> = ({ dur }) => {
       </div>
       {abre ? (
         <div style={{ position: "absolute", left: tokenX + 70, top: 795, fontFamily, fontWeight: 800, fontSize: 30, color: colors.teal700 }}>
-          <Counter de={0} ate={30} inicio={t.contest} dur={20} formato={(n) => `${Math.round(n)} dias ✓`} />
+          <Counter de={0} ate={30} inicio={t.contest} dur={20} formato={(n) => `${Math.round(n)} ${tx("diasOk")}`} />
         </div>
       ) : null}
     </AbsoluteFill>

@@ -1,38 +1,38 @@
-// Tudo que ainda precisa ser preenchido pelo grupo mora aqui (§10 do PROMPT).
-// Qualquer texto que contenha "[" aparece DESTACADO EM AMARELO no vídeo
-// (componente <Placeholder>), para não esquecer antes da renderização final.
+// Dados da equipe e liga/desliga de áudio — lidos do projeto (project.json → equipe / audio).
+// Qualquer texto que contenha "[" aparece DESTACADO EM AMARELO no vídeo (<Placeholder>).
+import { getProjeto } from "./projeto";
 
 export type Membro = { nome: string; funcao: string };
 
+/** Nome do produto dividido para o wordmark: [início, última palavra em destaque]. */
+export const marcaPartes = (): [string, string] => {
+  const m = getProjeto().equipe.marca.trim();
+  const i = m.lastIndexOf(" ");
+  return i < 0 ? ["", m] : [m.slice(0, i) + " ", m.slice(i + 1)];
+};
+
 export const config = {
-  // Nome da squad / grupo.
-  NOME_DO_GRUPO: "[NOME DO GRUPO]",
-
-  // Integrantes — confirmar com o grupo quem são todos e a função de cada um.
-  MEMBROS: [
-    { nome: "Walison Librelon", funcao: "[FUNÇÃO]" },
-    { nome: "Pedro Morais Hilbert", funcao: "[FUNÇÃO]" },
-    { nome: "[DEMAIS INTEGRANTES]", funcao: "[FUNÇÃO]" },
-  ] as Membro[],
-
-  // Contato do grupo (e-mail / @ Instagram) — opcional.
-  CONTATO: "[E-MAIL / @ DO GRUPO]",
-
-  // Rodapé opcional da abertura.
-  DISCIPLINA: "Projeto UC HUB · Sprint 2",
-
-  // Caminho do logo real (símbolo nuvem + cadeado), se o grupo fornecer.
-  // Coloque o arquivo em public/brand/ e aponte aqui (ex.: "brand/logo-simbolo.png").
-  // Enquanto for null, o componente <Logo> desenha um placeholder SVG.
-  LOGO_SIMBOLO: null as string | null,
-
-  // Áudio opcional. Depois de colocar os arquivos em public/audio/, mude para true.
-  // (O Remotion não consegue checar a existência do arquivo em tempo de render,
-  // por isso usamos flags — veja o README.)
-  AUDIO: {
-    voz: true, // narração por frase em public/audio/voz/<id>.mp3 (sintética ou gravada — ver README)
-    trilha: true, // public/audio/trilha.wav (gerada por scripts/make_music.py, ou a do grupo)
-    sfx: true, // efeitos em public/audio/sfx/*.wav (scripts/make_sfx.py)
+  get MARCA() {
+    return getProjeto().equipe.marca;
+  },
+  get NOME_DO_GRUPO() {
+    return getProjeto().equipe.nomeDoGrupo;
+  },
+  get MEMBROS(): Membro[] {
+    return getProjeto().equipe.membros;
+  },
+  get CONTATO() {
+    return getProjeto().equipe.contato;
+  },
+  get DISCIPLINA() {
+    return getProjeto().equipe.disciplina;
+  },
+  get LOGO_SIMBOLO() {
+    return getProjeto().equipe.logoSimbolo;
+  },
+  get AUDIO() {
+    const a = getProjeto().audio;
+    return { voz: a.voz.ativo, trilha: a.trilha.ativo, sfx: a.sfx.ativo };
   },
 };
 

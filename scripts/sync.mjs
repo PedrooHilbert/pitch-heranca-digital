@@ -160,6 +160,12 @@ function timeline(frases) {
   return tl;
 }
 
+function projeto() {
+  log("▶ project.json (durações, falas, legendas, efeitos; preserva edições manuais)…");
+  const r = spawnSync("npx", ["tsx", "scripts/projeto-sync.mts"], { stdio: "inherit", shell: true, cwd: P() });
+  if (r.status !== 0) throw new Error("projeto-sync falhou");
+}
+
 function musica() {
   if (!fs.existsSync(P("scripts", "make_music.py"))) return;
   log("▶ trilha (make_music.py)…");
@@ -182,5 +188,6 @@ while (tl.estourou && args.has("--sintetica") && rate < RATE0 + 8) {
   tl = timeline(frases);
 }
 if (tl.estourou) log("\n⚠ Ainda passa de 180 s. Enxugue frases em src/data/narracao.ts (registre no README) ou acelere a gravação.");
+projeto();
 if (!args.has("--sem-musica")) musica();
 log("\n✓ sync concluído.");

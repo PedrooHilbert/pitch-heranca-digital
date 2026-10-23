@@ -41,7 +41,25 @@ export const KineticText: React.FC<KTProps> = ({
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
-  const palavras = texto.split(/\s+/).filter(Boolean);
+  // *palavra* (ou *várias palavras*) no texto = destaque; os asteriscos não aparecem.
+  let dentro = false;
+  const itens = texto.split(/\s+/).filter(Boolean).map((tok) => {
+    let t = tok;
+    let d = dentro;
+    if (t.startsWith("*")) {
+      d = true;
+      dentro = true;
+      t = t.slice(1);
+    }
+    const fecha = /\*([.,!?…:;]*)$/.exec(t);
+    if (fecha) {
+      t = t.slice(0, fecha.index) + fecha[1];
+      dentro = false;
+      d = true;
+    }
+    return { t, d };
+  });
+  const palavras = itens.map((x) => x.t);
   const dest = new Set(destaque.map(normW));
   return (
     <div
@@ -57,7 +75,7 @@ export const KineticText: React.FC<KTProps> = ({
         const s = spring({ frame: frame - t0, fps, config: MOLA });
         const blur = interpolate(frame - t0, [0, 3, 8], [8, 3, 0], clampOpt);
         const sai = fim != null ? interpolate(frame, [fim + i * 1, fim + i * 1 + 7], [0, 1], clampOpt) : 0;
-        const ehDest = dest.has(normW(p));
+        const ehDest = itens[i].d || dest.has(normW(p));
         const caixa = ehDest && estilo === "caixa" ? spring({ frame: frame - t0 - 4, fps, config: { damping: 18, stiffness: 160 } }) : 0;
         if (frame < t0 - 1) return <span key={i} style={{ opacity: 0 }}>{p}</span>;
         return (

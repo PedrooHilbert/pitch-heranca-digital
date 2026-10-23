@@ -5,14 +5,64 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { Check, Fingerprint, Bell, Lock, Copy, Eye, UserRound, ScanFace, FileCheck2, AlertTriangle, Camera, Share2, Mail, Globe } from "lucide-react";
 import { relogio } from "../data/timeline";
+import { textos, fundo, telaDe } from "../data/projeto";
 import { colors } from "../data/theme";
 import { fontFamily } from "../fonts";
 import { Fundo } from "../components/v2/Fundo";
 import { PhoneFrame } from "../components/PhoneFrame";
-import { Tilt3D, ScreenAssembly, Cursor, Counter, Roleta, Stamp, Shake, DrawPath, Flash, KineticText, UIBlock, vidro, CameraRig } from "../components/fx";
+import { Tilt3D, ScreenAssembly, Cursor, Counter, Roleta, Stamp, Shake, DrawPath, Flash, KineticText, UIBlock, vidro, CameraRig, regiao } from "../components/fx";
 import type { Cue } from "../data/sfx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+
+/** Valores iniciais (semente do project.json). Em tempo de render vale o que está no projeto. */
+export const PADRAO_S5 = {
+  textos: {
+    abertura: "Este é o *protótipo.*",
+    selo: "PROTÓTIPO",
+    etapa: "etapa {n} de 7",
+    digitalOk: "Digital reconhecida",
+    anel: "itens\nconcluídos",
+    contador1: "ativos", contador2: "herdeiros", contador3: "com destino", contador4: "sem destino",
+    donut1: "Entrega direta", donut2: "Conforme a partilha", donut3: "Encerrar ou apagar", donut4: "Sem destino",
+    alertaSemDestino: "2 ativos sem destino",
+    tipo1: "Redes sociais", tipo2: "E-mails", tipo3: "Cripto", tipo4: "Assinaturas",
+    rotulo: "X (Twitter): sem destino",
+    destino1: "Pessoal", destino1Sub: "memorial, apagar, entregar",
+    destino2: "Patrimonial", destino2Sub: "tem valor: entra no inventário",
+    destino3: "Encerrar", destino3Sub: "fechar a conta",
+    herdeiro1: "Lucas Souza", parentesco1: "Filho",
+    herdeiro2: "Ana Souza", parentesco2: "Filha",
+    herdeiro3: "Carlos Souza", parentesco3: "Irmão",
+    herdeiroRotulo: "herdeiro",
+    carencia: "Carência", dias: "dias",
+    check1: "Certidão de óbito", check2: "Documento do inventário", check3: "Identidade confirmada",
+    selfie: "selfie",
+    aviso1: "Lucas foi avisado", aviso2: "Ana foi avisada", aviso3: "Carlos foi avisado",
+    carimbo: "LIBERAÇÃO SUSPENSA",
+    senha: "Senha:", senhaValor: "exemplo-1234", copiar: "Copiar", copiado: "Copiado",
+    item1: "Instagram", item1Sub: "manter como memorial",
+    item2: "Item de outro herdeiro", item2Sub: "só a parte dele",
+    item3: "Item de outro herdeiro", item3Sub: "só a parte dele",
+    item4: "Domínio", item4Sub: "conforme a partilha",
+  },
+  fundos: { demo: "claro" },
+  telas: {
+    login: { tela: "Main", regioes: [0, 1] },
+    inicio: { tela: "Dashboard", regioes: [0, 2, 3, 5, 6, 8, 9] },
+    ativos: { tela: "Inventario", regioes: [0, 2, 3, 4, 7] },
+    novo: { tela: "NovoAtivo", regioes: [0, 2, 3, 4] },
+    herdeiros: { tela: "Herdeiros", regioes: [0, 2, 3, 4, 6, 7] },
+    regras: { tela: "Regras", regioes: [0, 2, 3, 4, 5, 6] },
+    pedido: { tela: "AbrirPedido", regioes: [0, 1, 2, 3] },
+    acompanhar: { tela: "Solicitacao", regioes: [0, 1, 2, 3] },
+    contestar: { tela: "Contestacao", regioes: [0, 1] },
+    acesso: { tela: "AcessoLiberado", regioes: [0, 1, 2] },
+    celular: { tela: "Mobile-Acesso", regioes: [1, 2] },
+  },
+} as const;
+type PlanoS5 = keyof typeof PADRAO_S5.telas;
+const TL5 = (k: PlanoS5) => telaDe("s5", k, { tela: PADRAO_S5.telas[k].tela as string, regioes: [...PADRAO_S5.telas[k].regioes] as number[] });
 const SX = 340;
 const SY = 118;
 const SW = 1240;
@@ -135,7 +185,7 @@ const Anel: React.FC<{ at: number; de: number; ate: number; total: number }> = (
         <circle cx={65} cy={65} r={52} fill="none" stroke={colors.teal400} strokeWidth={14} strokeLinecap="round" strokeDasharray={C} strokeDashoffset={C * (1 - v / total)} transform="rotate(-90 65 65)" />
         <text x={65} y={76} textAnchor="middle" fontFamily={fontFamily} fontWeight={900} fontSize={34} fill={colors.ink}>{`${Math.round(v)}/${total}`}</text>
       </svg>
-      <div style={{ fontFamily, fontWeight: 800, fontSize: 26, color: colors.ink, lineHeight: 1.15 }}>itens<br />concluídos</div>
+      <div style={{ fontFamily, fontWeight: 800, fontSize: 26, color: colors.ink, lineHeight: 1.15, whiteSpace: "pre-line" }}>{textos("s5")("anel")}</div>
     </div>
   );
 };
@@ -143,10 +193,10 @@ const Anel: React.FC<{ at: number; de: number; ate: number; total: number }> = (
 const Donut: React.FC<{ at: number }> = ({ at }) => {
   const frame = useCurrentFrame();
   const fatias = [
-    { v: 5, c: colors.teal900, t: "Entrega direta" },
-    { v: 3, c: colors.teal400, t: "Conforme a partilha" },
-    { v: 2, c: colors.mint, t: "Encerrar ou apagar" },
-    { v: 2, c: colors.amberBorder, t: "Sem destino" },
+    { v: 5, c: colors.teal900, t: textos("s5")("donut1") },
+    { v: 3, c: colors.teal400, t: textos("s5")("donut2") },
+    { v: 2, c: colors.mint, t: textos("s5")("donut3") },
+    { v: 2, c: colors.amberBorder, t: textos("s5")("donut4") },
   ];
   const C = 2 * Math.PI * 60;
   let acc = 0;
@@ -174,12 +224,12 @@ const Donut: React.FC<{ at: number }> = ({ at }) => {
 };
 
 const Etapa: React.FC<{ n: number }> = ({ n }) => (
-  <div style={{ position: "absolute", left: SX, top: 46, width: SW, display: "flex", alignItems: "center", gap: 18, zIndex: 40 }}>
-    <div style={{ padding: "6px 14px", borderRadius: 999, background: colors.greenBg, color: colors.green, border: "1px solid #BFE6CB", fontFamily, fontWeight: 800, fontSize: 16, letterSpacing: "0.1em" }}>PROTÓTIPO</div>
+  <div style={{ position: "absolute", left: SX, top: 82, width: SW, display: "flex", alignItems: "center", gap: 18, zIndex: 40 }}>
+    <div style={{ padding: "6px 14px", borderRadius: 999, background: colors.greenBg, color: colors.green, border: "1px solid #BFE6CB", fontFamily, fontWeight: 800, fontSize: 16, letterSpacing: "0.1em" }}>{textos("s5")("selo")}</div>
     <div style={{ flex: 1, height: 6, borderRadius: 999, background: colors.cardBorder, overflow: "hidden" }}>
       <div style={{ width: `${(n / 7) * 100}%`, height: "100%", background: colors.teal600, borderRadius: 999 }} />
     </div>
-    <div style={{ fontFamily, fontWeight: 700, fontSize: 18, color: colors.ink3 }}>etapa {n} de 7</div>
+    <div style={{ fontFamily, fontWeight: 700, fontSize: 18, color: colors.ink3 }}>{textos("s5")("etapa").replace("{n}", String(n))}</div>
   </div>
 );
 
@@ -205,6 +255,8 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = T();
+  const tx = textos("s5");
+  const cel = TL5("celular");
   const botaoChave = tela(1044, 289);
   const etapa = frame < t.B ? 1 : frame < t.C ? 2 : frame < t.D ? 3 : frame < t.E ? 4 : frame < t.F ? 5 : frame < t.G ? 6 : 7;
   const rolRegras = 430;
@@ -212,12 +264,12 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
 
   return (
     <AbsoluteFill>
-      <Fundo tema="claro" seed="s5" />
+      <Fundo tema={fundo("s5", "demo", "claro")} seed="s5" />
       <CameraRig dur={dur} zoom={[1, 1.04]}>
         {/* abertura: "Este é o protótipo." */}
         {frame < t.telaEntra + 8 ? (
           <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", opacity: interpolate(frame, [t.telaEntra, t.telaEntra + 8], [1, 0], clampOpt) }}>
-            <KineticText texto="Este é o protótipo." inicio={t.prototipo} stagger={5} destaque={["protótipo"]} cor={colors.ink} tamanho={120} />
+            <KineticText texto={tx("abertura")} inicio={t.prototipo} stagger={5} cor={colors.ink} tamanho={120} />
           </AbsoluteFill>
         ) : null}
 
@@ -227,7 +279,7 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.telaEntra} fim={t.B} para={botaoChave}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.telaEntra} assenta={t.telaEntra + 20} rotY={-14} rotX={8}>
-              <ScreenAssembly tela="Main" largura={SW} altura={SH} inicio={t.telaEntra + 2} ordem={[0, 1]} stagger={6} />
+              <ScreenAssembly tela={TL5("login").tela} largura={SW} altura={SH} inicio={t.telaEntra + 2} ordem={TL5("login").regioes} stagger={6} />
             </Tilt3D>
           </div>
           {[0, 6, 12].map((d) => {
@@ -238,7 +290,7 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
           })}
           <Widget at={t.chave + 8} x={botaoChave[0] - 120} y={botaoChave[1] + 70}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, fontFamily, fontWeight: 800, fontSize: 24, color: colors.teal700 }}>
-              <Fingerprint size={36} /> Digital reconhecida
+              <Fingerprint size={36} /> {tx("digitalOk")}
             </div>
           </Widget>
           <Cursor pontos={[{ f: t.telaEntra + 14, x: 820, y: 760 }, { f: t.chave, x: botaoChave[0] - 20, y: botaoChave[1] }]} cliques={[t.chave + 6]} />
@@ -248,13 +300,13 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.B} fim={t.C} de={botaoChave} para={tela(360, 640)}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.B} assenta={t.B + 16} rotY={10}>
-              <ScreenAssembly tela="Dashboard" largura={SW} altura={SH} inicio={t.B + 2} ordem={[0, 2, 3, 5, 6, 8, 9]} stagger={3} rolagem={{ de: 0, ate: 70, f0: t.B, f1: t.C }} />
+              <ScreenAssembly tela={TL5("inicio").tela} largura={SW} altura={SH} inicio={t.B + 2} ordem={TL5("inicio").regioes} stagger={3} rolagem={{ de: 0, ate: 70, f0: t.B, f1: t.C }} />
             </Tilt3D>
           </div>
           <Widget at={t.falta} x={1290} y={150}><Anel at={t.falta} de={0} ate={3} total={6} /></Widget>
-          <Widget at={t.plano} x={60} y={330} w={300}>
+          <Widget at={t.plano} x={92} y={330} w={300}>
             {[
-              { n: 12, t: "ativos" }, { n: 3, t: "herdeiros" }, { n: 10, t: "com destino" }, { n: 2, t: "sem destino" },
+              { n: 12, t: tx("contador1") }, { n: 3, t: tx("contador2") }, { n: 10, t: tx("contador3") }, { n: 2, t: tx("contador4") },
             ].map((k, i) => (
               <div key={i} style={{ display: "flex", alignItems: "baseline", gap: 12, fontFamily, color: i === 3 ? colors.amber : colors.ink }}>
                 <Counter ate={k.n} inicio={t.plano + i * 3} dur={22} style={{ fontSize: 46, fontWeight: 900, minWidth: 60 }} />
@@ -265,7 +317,7 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
           <Widget at={t.completo - 12} x={1250} y={470}><Donut at={t.completo - 12} /></Widget>
           <Widget at={t.completo + 6} x={560} y={690} ambar tremeAt={t.completo + 14}>
             <div style={{ display: "flex", alignItems: "center", gap: 12, fontFamily, fontWeight: 800, fontSize: 24, color: colors.amber }}>
-              <AlertTriangle size={30} /> 2 ativos sem destino
+              <AlertTriangle size={30} /> {tx("alertaSemDestino")}
             </div>
           </Widget>
         </Sub>
@@ -274,28 +326,28 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.C} fim={t.C2} de={tela(360, 640)} para={tela(1139, 420)}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.C} assenta={t.C + 18} rotY={-10}>
-              <ScreenAssembly tela="Inventario" largura={SW} altura={SH} inicio={t.C + 2} ordem={[0, 2, 3, 4, 7]} stagger={5} pops={[{ regiao: 7, at: t.ativo + 6, ate: t.C2 - 10, escala: 1.06 }]} />
+              <ScreenAssembly tela={TL5("ativos").tela} largura={SW} altura={SH} inicio={t.C + 2} ordem={TL5("ativos").regioes} stagger={5} pops={[{ regiao: 7, at: t.ativo + 6, ate: t.C2 - 10, escala: 1.06 }]} />
             </Tilt3D>
           </div>
-          {["Redes sociais", "E-mails", "Cripto", "Assinaturas"].map((n, i) => (
-            <Widget key={n} at={t.tipos[i]} x={40} y={190 + i * 110} w={270}>
+          {[tx("tipo1"), tx("tipo2"), tx("tipo3"), tx("tipo4")].map((n, i) => (
+            <Widget key={i} at={t.tipos[i]} x={88} y={190 + i * 110} w={232}>
               <div style={{ fontFamily, fontWeight: 800, fontSize: 24, color: colors.teal700 }}>{n}</div>
             </Widget>
           ))}
-          <Rotulo at={t.ativo + 12} x={1700} y={180} texto="X (Twitter): sem destino" para={tela(1139, 420)} />
+          <Rotulo at={t.ativo + 12} x={1560} y={180} texto={tx("rotulo")} para={tela(1139, 420)} />
         </Sub>
         <Sub ini={t.C2} fim={t.D} de={tela(1139, 420)} para={tela(700, 520)}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.C2} assenta={t.C2 + 16} rotY={10}>
-              <ScreenAssembly tela="NovoAtivo" largura={SW} altura={SH} inicio={t.C2 + 2} ordem={[0, 2, 3, 4]} stagger={4} />
+              <ScreenAssembly tela={TL5("novo").tela} largura={SW} altura={SH} inicio={t.C2 + 2} ordem={TL5("novo").regioes} stagger={4} />
             </Tilt3D>
           </div>
           <AbsoluteFill style={{ alignItems: "center", paddingTop: 560, zIndex: 32 }}>
             <div style={{ display: "flex", gap: 30 }}>
               {[
-                { at: t.pessoal, n: "Pessoal", c: colors.teal600, d: "memorial, apagar, entregar" },
-                { at: t.patrimonial, n: "Patrimonial", c: colors.blue, d: "tem valor: entra no inventário" },
-                { at: t.encerrar, n: "Encerrar", c: colors.amber, d: "fechar a conta" },
+                { at: t.pessoal, n: tx("destino1"), c: colors.teal600, d: tx("destino1Sub") },
+                { at: t.patrimonial, n: tx("destino2"), c: colors.blue, d: tx("destino2Sub") },
+                { at: t.encerrar, n: tx("destino3"), c: colors.amber, d: tx("destino3Sub") },
               ].map((x, i) => {
                 const s = spring({ frame: frame - x.at, fps, config: { damping: 8, stiffness: 230, mass: 0.6 } });
                 if (frame < x.at) return <div key={i} style={{ width: 360 }} />;
@@ -314,19 +366,20 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.D} fim={t.D2} de={tela(700, 520)} para={tela(800, 720)}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.D} assenta={t.D + 18} rotY={-10}>
-              <ScreenAssembly tela="Herdeiros" largura={SW} altura={SH} inicio={t.D + 2} ordem={[0, 2, 3, 4, 6, 7]} stagger={4} pops={[{ regiao: 4, at: t.herdeiros, ate: t.D2 }]} />
+              <ScreenAssembly tela={TL5("herdeiros").tela} largura={SW} altura={SH} inicio={t.D + 2} ordem={TL5("herdeiros").regioes} stagger={4} pops={[{ regiao: 4, at: t.herdeiros, ate: t.D2 }]} />
             </Tilt3D>
           </div>
-          {[{ n: "Lucas Souza", p: "Filho" }, { n: "Ana Souza", p: "Filha" }, { n: "Carlos Souza", p: "Irmão" }].map((h, i) => {
+          {[1, 2, 3].map((k) => ({ n: tx(`herdeiro${k}`), p: tx(`parentesco${k}`) })).map((h, i) => {
             const s = spring({ frame: frame - (t.herdeiros + i * 6), fps, config: { damping: 11, stiffness: 200 } });
             if (frame < t.herdeiros + i * 6) return null;
-            const ang = (i - 1) * 14 * s;
+            const ang = (i - 1) * 5 * s;
+            const dx = (i - 1) * 440 * s;
             return (
-              <div key={i} style={{ position: "absolute", left: 760, top: 610, width: 400, transformOrigin: "50% 260%", transform: `rotate(${ang}deg) translateY(${(1 - s) * 60}px)`, zIndex: 33 - i, ...vidro(false), padding: "18px 22px", display: "flex", alignItems: "center", gap: 14 }}>
+              <div key={i} style={{ position: "absolute", left: 760, top: 640, width: 400, transformOrigin: "50% 100%", transform: `translateX(${dx}px) rotate(${ang}deg) translateY(${(1 - s) * 60}px)`, zIndex: 33 - i, ...vidro(false), padding: "18px 22px", display: "flex", alignItems: "center", gap: 14 }}>
                 <div style={{ width: 54, height: 54, borderRadius: 999, background: colors.tealTint, color: colors.teal700, display: "flex", alignItems: "center", justifyContent: "center" }}><UserRound size={30} /></div>
                 <div>
                   <div style={{ fontFamily, fontWeight: 800, fontSize: 24, color: colors.ink }}>{h.n}</div>
-                  <div style={{ fontFamily, fontWeight: 600, fontSize: 18, color: colors.ink3 }}>{h.p} · herdeiro</div>
+                  <div style={{ fontFamily, fontWeight: 600, fontSize: 18, color: colors.ink3 }}>{h.p} · {tx("herdeiroRotulo")}</div>
                 </div>
               </div>
             );
@@ -335,14 +388,14 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.D2} fim={t.E} de={tela(800, 720, rolRegras)} para={tela(800, 720, rolRegras)}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.D2} assenta={t.D2 + 16} rotY={10}>
-              <ScreenAssembly tela="Regras" largura={SW} altura={SH} inicio={t.D2 + 2} ordem={[0, 2, 3, 4, 5, 6]} stagger={3} rolagem={{ de: rolRegras, ate: rolRegras, f0: 0, f1: 1 }} pops={[{ regiao: 4, at: t.numeros[0] - 6 }]} />
+              <ScreenAssembly tela={TL5("regras").tela} largura={SW} altura={SH} inicio={t.D2 + 2} ordem={TL5("regras").regioes} stagger={3} rolagem={{ de: rolRegras, ate: rolRegras, f0: 0, f1: 1 }} pops={[{ regiao: 4, at: t.numeros[0] - 6 }]} />
             </Tilt3D>
           </div>
           <Widget at={t.numeros[0] - 4} x={1330} y={300}>
-            <div style={{ fontFamily, fontWeight: 700, fontSize: 22, color: colors.ink2, textAlign: "center" }}>Carência</div>
+            <div style={{ fontFamily, fontWeight: 700, fontSize: 22, color: colors.ink2, textAlign: "center" }}>{tx("carencia")}</div>
             <Roleta valores={["15", "30", "60", "90", "30"]} tempos={[t.numeros[0], t.numeros[1], t.numeros[2], t.numeros[3], clique30]} altura={110}
               style={{ width: 200 }} itemStyle={(a) => ({ fontFamily, fontWeight: 900, fontSize: 92, color: a ? colors.teal700 : colors.ink3 })} />
-            <div style={{ fontFamily, fontWeight: 700, fontSize: 22, color: colors.ink2, textAlign: "center" }}>dias</div>
+            <div style={{ fontFamily, fontWeight: 700, fontSize: 22, color: colors.ink2, textAlign: "center" }}>{tx("dias")}</div>
           </Widget>
           <Cursor pontos={[{ f: t.numeros[2], x: 1100, y: 760 }, { f: clique30 - 2, x: 1430, y: 470 }]} cliques={[clique30]} />
         </Sub>
@@ -351,14 +404,14 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.E} fim={t.F} de={tela(800, 720, rolRegras)} para={tela(700, 500)}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.E} assenta={t.E + 18} rotY={-10}>
-              <ScreenAssembly tela="AbrirPedido" largura={SW} altura={SH} inicio={t.E + 2} ordem={[0, 1, 2, 3]} stagger={5} rolagem={{ de: 0, ate: 260, f0: t.E + 20, f1: t.F }} />
+              <ScreenAssembly tela={TL5("pedido").tela} largura={SW} altura={SH} inicio={t.E + 2} ordem={TL5("pedido").regioes} stagger={5} rolagem={{ de: 0, ate: 260, f0: t.E + 20, f1: t.F }} />
             </Tilt3D>
           </div>
           <Widget at={t.certidao - 10} x={1240} y={150} w={560}>
             {[
-              { at: t.certidao, txt: "Certidão de óbito", Ic: FileCheck2 },
-              { at: t.documento, txt: "Documento do inventário", Ic: FileCheck2 },
-              { at: t.identidade, txt: "Identidade confirmada", Ic: ScanFace },
+              { at: t.certidao, txt: tx("check1"), Ic: FileCheck2 },
+              { at: t.documento, txt: tx("check2"), Ic: FileCheck2 },
+              { at: t.identidade, txt: tx("check3"), Ic: ScanFace },
             ].map((c, i) => {
               const ok = frame >= c.at;
               const s = spring({ frame: frame - c.at, fps, config: { damping: 9, stiffness: 260 } });
@@ -379,7 +432,7 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
                 <div style={{ position: "absolute", left: 20, right: 20, height: 4, background: colors.mint, boxShadow: `0 0 16px ${colors.mint}`, top: 20 + ((frame - t.selfie) * 9) % 220 }} />
                 <div style={{ position: "absolute", inset: 14, border: `3px dashed ${frame >= t.identidade ? colors.green : colors.mint}`, borderRadius: 20 }} />
                 {frame >= t.identidade ? <div style={{ position: "absolute", inset: 0, background: "rgba(21,128,61,.35)", display: "flex", alignItems: "center", justifyContent: "center", color: "#fff" }}><Check size={110} strokeWidth={3.4} /></div> : null}
-                <div style={{ position: "absolute", top: 10, left: 12, color: colors.mint, display: "flex", gap: 6, fontFamily, fontWeight: 800, fontSize: 16 }}><Camera size={18} /> selfie</div>
+                <div style={{ position: "absolute", top: 10, left: 12, color: colors.mint, display: "flex", gap: 6, fontFamily, fontWeight: 800, fontSize: 16 }}><Camera size={18} /> {tx("selfie")}</div>
               </div>
             </Widget>
           ) : null}
@@ -390,10 +443,10 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.F} fim={t.F2} de={tela(700, 500)} para={tela(680, 540)}>
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Tilt3D inicio={t.F} assenta={t.F + 16} rotY={10}>
-              <ScreenAssembly tela="Solicitacao" largura={SW} altura={SH} inicio={t.F + 2} ordem={[0, 1, 2, 3]} stagger={3} rolagem={{ de: 60, ate: 300, f0: t.F + 8, f1: t.F2 }} pops={[{ regiao: 2, at: t.valida }]} />
+              <ScreenAssembly tela={TL5("acompanhar").tela} largura={SW} altura={SH} inicio={t.F + 2} ordem={TL5("acompanhar").regioes} stagger={3} rolagem={{ de: 60, ate: 300, f0: t.F + 8, f1: t.F2 }} pops={[{ regiao: 2, at: t.valida }]} />
             </Tilt3D>
           </div>
-          {["Lucas foi avisado", "Ana foi avisada", "Carlos foi avisado"].map((n, i) => (
+          {[tx("aviso1"), tx("aviso2"), tx("aviso3")].map((n, i) => (
             <Widget key={n} at={t.avisados + i * 8} x={1380} y={140 + i * 96} w={420}>
               <div style={{ display: "flex", alignItems: "center", gap: 12, fontFamily, fontWeight: 700, fontSize: 22, color: colors.ink }}>
                 <Bell size={26} color={colors.teal600} /> {n}
@@ -405,12 +458,12 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
           <div style={{ position: "absolute", left: SX, top: SY }}>
             <Shake tremidas={[{ at: t.F2 + 6, amp: 16, dur: 10 }]}>
               <Tilt3D inicio={t.F2} assenta={t.F2 + 10} rotY={-8}>
-                <ScreenAssembly tela="Contestacao" largura={SW} altura={SH} inicio={t.F2 + 1} ordem={[0, 1]} stagger={3} />
+                <ScreenAssembly tela={TL5("contestar").tela} largura={SW} altura={SH} inicio={t.F2 + 1} ordem={TL5("contestar").regioes} stagger={3} />
               </Tilt3D>
             </Shake>
           </div>
           <AbsoluteFill style={{ alignItems: "center", paddingTop: 420, zIndex: 36 }}>
-            <Stamp texto="LIBERAÇÃO SUSPENSA" at={t.F2 + 6} cor={colors.red} tamanho={64} rot={-9} style={{ background: "rgba(255,255,255,0.9)" }} />
+            <Stamp texto={tx("carimbo")} at={t.F2 + 6} cor={colors.red} tamanho={64} rot={-9} style={{ background: "rgba(255,255,255,0.9)" }} />
           </AbsoluteFill>
         </Sub>
 
@@ -418,7 +471,7 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
         <Sub ini={t.G} fim={dur + 10} de={tela(680, 400)}>
           <div style={{ position: "absolute", left: SX - 160, top: SY }}>
             <Tilt3D inicio={t.G} assenta={t.G + 18} rotY={-12}>
-              <ScreenAssembly tela="AcessoLiberado" largura={SW - 120} altura={SH} inicio={t.G + 2} ordem={[0, 1, 2]} stagger={5} rolagem={{ de: 40, ate: 420, f0: t.G + 20, f1: dur }} />
+              <ScreenAssembly tela={TL5("acesso").tela} largura={SW - 120} altura={SH} inicio={t.G + 2} ordem={TL5("acesso").regioes} stagger={5} rolagem={{ de: 40, ate: 420, f0: t.G + 20, f1: dur }} />
             </Tilt3D>
           </div>
           {(() => {
@@ -429,8 +482,8 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
               <div style={{ position: "absolute", left: 1500 + (1 - s) * 520, top: 130, transform: `rotate(${(1 - s) * 12}deg)`, zIndex: 33 }}>
                 <PhoneFrame width={PW} height={PH}>
                   <div style={{ position: "relative", width: "100%", height: "100%", overflow: "hidden" }}>
-                    <UIBlock tela="Mobile-Acesso" regiao={1} escala={(PW - 20) / 390} x={0} y={0} inicio={t.G + 14} entrada="sobe" raio={0} sombra={false} />
-                    <UIBlock tela="Mobile-Acesso" regiao={2} escala={(PW - 20) / 390} x={0} y={(136 + 16) * ((PW - 20) / 390)} inicio={t.G + 20} raio={0} sombra={false} />
+                    <UIBlock tela={cel.tela} regiao={cel.regioes[0] ?? 0} escala={(PW - 20) / 390} x={0} y={0} inicio={t.G + 14} entrada="sobe" raio={0} sombra={false} />
+                    {cel.regioes[1] != null ? <UIBlock tela={cel.tela} regiao={cel.regioes[1]} escala={(PW - 20) / 390} x={0} y={(regiao(cel.tela, cel.regioes[0] ?? 0).h + 16) * ((PW - 20) / 390)} inicio={t.G + 20} raio={0} sombra={false} /> : null}
                   </div>
                 </PhoneFrame>
               </div>
@@ -440,18 +493,18 @@ export const S5Demo: React.FC<{ dur: number }> = ({ dur }) => {
           <Widget at={t.prazo} x={150} y={530} w={1000}>
             <div style={{ display: "flex", alignItems: "center", gap: 18, fontFamily }}>
               <Eye size={30} color={colors.teal700} />
-              <span style={{ fontWeight: 700, fontSize: 24, color: colors.ink2 }}>Senha:</span>
-              <span style={{ fontSize: 30, fontWeight: 800, color: colors.ink, letterSpacing: "0.04em", filter: `blur(${interpolate(frame, [t.prazo + 14, t.prazo + 30], [9, 0], clampOpt)}px)` }}>exemplo-1234</span>
+              <span style={{ fontWeight: 700, fontSize: 24, color: colors.ink2 }}>{tx("senha")}</span>
+              <span style={{ fontSize: 30, fontWeight: 800, color: colors.ink, letterSpacing: "0.04em", filter: `blur(${interpolate(frame, [t.prazo + 14, t.prazo + 30], [9, 0], clampOpt)}px)` }}>{tx("senhaValor")}</span>
               <span style={{ marginLeft: "auto", display: "flex", alignItems: "center", gap: 8, fontWeight: 800, fontSize: 22, color: frame >= t.so - 6 ? colors.green : colors.teal700 }}>
-                {frame >= t.so - 6 ? <Check size={24} strokeWidth={3} /> : <Copy size={22} />} {frame >= t.so - 6 ? "Copiado" : "Copiar"}
+                {frame >= t.so - 6 ? <Check size={24} strokeWidth={3} /> : <Copy size={22} />} {frame >= t.so - 6 ? tx("copiado") : tx("copiar")}
               </span>
             </div>
           </Widget>
           {[
-            { Ic: Camera, n: "Instagram", d: "manter como memorial", meu: true },
-            { Ic: Share2, n: "Item de outro herdeiro", d: "só a parte dele", meu: false },
-            { Ic: Mail, n: "Item de outro herdeiro", d: "só a parte dele", meu: false },
-            { Ic: Globe, n: "Domínio", d: "conforme a partilha", meu: true },
+            { Ic: Camera, n: tx("item1"), d: tx("item1Sub"), meu: true },
+            { Ic: Share2, n: tx("item2"), d: tx("item2Sub"), meu: false },
+            { Ic: Mail, n: tx("item3"), d: tx("item3Sub"), meu: false },
+            { Ic: Globe, n: tx("item4"), d: tx("item4Sub"), meu: true },
           ].map((it, i) => (
             <Widget key={i} at={t.so + i * 5} x={150 + (i % 2) * 520} y={650 + Math.floor(i / 2) * 104} w={480}>
               <div style={{ display: "flex", alignItems: "center", gap: 14, fontFamily, opacity: it.meu ? 1 : 0.5, filter: it.meu ? undefined : "grayscale(1)" }}>

@@ -4,23 +4,36 @@ import fs from "node:fs";
 import path from "node:path";
 import { bundle } from "@remotion/bundler";
 import { renderStill, selectComposition } from "@remotion/renderer";
-import { P, lerJSON } from "./lib/projeto.mjs";
+import { P } from "./lib/projeto.mjs";
+import { linhaDoTempo } from "./lib/projeto-json.mjs";
 
-const tl = lerJSON(P("src", "data", "timeline.json"));
+const tl = linhaDoTempo();
 const args = process.argv.slice(2);
 // --quadros=s1:175,s2:315  → quadros LOCAIS específicos (para conferir um momento)
 const qArg = args.find((a) => a.startsWith("--quadros="));
+// --a-cada=15 → um still a cada 15 quadros do vídeo inteiro (revisão completa)
+const cadaArg = args.find((a) => a.startsWith("--a-cada="));
+const dirArg = args.find((a) => a.startsWith("--dir="));
 const so = args.filter((a) => !a.startsWith("--"));
 const fr = (id) => tl.frases.find((f) => f.id === id);
 const quadros = [];
-if (qArg) {
+if (cadaArg) {
+  const passo = Number(cadaArg.slice(9));
+  for (let f = 0; f < tl.total; f += passo) {
+    const c = tl.cenas.find((x) => f >= x.from && f < x.from + x.dur);
+    const s = f / 30;
+    const mm = String(Math.floor(s / 60)).padStart(2, "0");
+    const ss = (s % 60).toFixed(1).padStart(4, "0");
+    quadros.push([`f${String(f).padStart(4, "0")}_${mm}-${ss.replace(".", "_")}_${c.id}`, f]);
+  }
+} else if (qArg) {
   for (const par of qArg.slice(10).split(",")) {
     const [cid, loc] = par.split(":");
     const c = tl.cenas.find((x) => x.id === cid);
     quadros.push([`${cid}-q${loc}`, c.from + Number(loc)]);
   }
 }
-for (const c of qArg ? [] : tl.cenas) {
+for (const c of qArg || cadaArg ? [] : tl.cenas) {
   if (so.length && !so.includes(c.id)) continue;
   quadros.push([`${c.id}-a-inicio`, c.from + Math.round(c.dur * 0.18)]);
   quadros.push([`${c.id}-b-climax`, c.from + Math.round(c.dur * 0.72)]);
@@ -31,7 +44,7 @@ for (const c of qArg ? [] : tl.cenas) {
     }
   }
 }
-const out = P("out", "stills-v2");
+const out = dirArg ? P(...dirArg.slice(6).split("/")) : P("out", "stills-v2");
 fs.mkdirSync(out, { recursive: true });
 console.log("Empacotando…");
 const serveUrl = await bundle({ entryPoint: P("src", "index.ts") });

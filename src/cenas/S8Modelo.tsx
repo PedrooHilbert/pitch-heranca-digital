@@ -6,12 +6,29 @@ import { CalendarClock, HandCoins, Briefcase, Landmark, Building2 } from "lucide
 import { relogio } from "../data/timeline";
 import { colors } from "../data/theme";
 import { fontFamily } from "../fonts";
+import { textos, fundo } from "../data/projeto";
 import { Fundo } from "../components/v2/Fundo";
 import { LogoRevela, Eyebrow } from "../components/v2/kit";
 import { CameraRig, Stamp, TypeText, Burst } from "../components/fx";
 import type { Cue } from "../data/sfx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+
+/** Valores iniciais (semente do project.json). Em tempo de render vale o que está no projeto. */
+export const PADRAO_S8 = {
+  textos: {
+    chamada: "COMO O PROJETO SE SUSTENTA",
+    pilula1: "Assinatura anual do titular", pilula1Sub: "plano grátis + plano completo",
+    pilula2: "Taxa na liberação", pilula2Sub: "paga pelo espólio / herdeiros",
+    pilula3: "Plano para escritórios", pilula3Sub: "advogados de sucessões",
+    pilula4: "Parceria com cartórios", pilula4Sub: "repasse por cofre ativo",
+    pilula5: "Bancos, seguradoras, planos funerários", pilula5Sub: "canais de venda",
+    previsto: "PREVISTO",
+    valores: "Valores a definir após pesquisa com usuários.",
+  },
+  fundos: { negocio: "escuro" },
+  telas: {},
+} as const;
 const CX = 960;
 const CY = 480;
 
@@ -20,7 +37,7 @@ const PILULAS = [
   { Ic: HandCoins, t: "Taxa na liberação", s: "paga pelo espólio / herdeiros", x: 1500, y: 380, w: "taxa", f: "s08_01", previsto: false },
   { Ic: Briefcase, t: "Plano para escritórios", s: "advogados de sucessões", x: 1340, y: 720, w: "Escritórios", f: "s08_02", previsto: false },
   { Ic: Landmark, t: "Parceria com cartórios", s: "repasse por cofre ativo", x: 580, y: 720, w: "cartórios", f: "s08_02", previsto: true },
-  { Ic: Building2, t: "Bancos, seguradoras, funerárias", s: "canais de venda", x: 420, y: 380, w: "bancos", f: "s08_02", previsto: true },
+  { Ic: Building2, t: "Bancos, seguradoras, planos funerários", s: "canais de venda", x: 420, y: 380, w: "bancos", f: "s08_02", previsto: true },
 ];
 
 const T = () => {
@@ -48,6 +65,7 @@ export const S8Modelo: React.FC<{ dur: number }> = ({ dur }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = T();
+  const tx = textos("s8");
   return (
     <AbsoluteFill>
       <CameraRig
@@ -55,9 +73,9 @@ export const S8Modelo: React.FC<{ dur: number }> = ({ dur }) => {
         tremidas={[...t.pilulas.map((at) => ({ at: at + 10, amp: 7, dur: 6 })), { at: t.previstos, amp: 10 }, { at: t.previstos + 5, amp: 8 }]}
         socos={[...t.pilulas.map((at) => ({ at: at + 10, para: 1.04, dur: 10 })), { at: t.valores, para: 1.07, dur: 14 }]}
       >
-        <Fundo tema="escuro" seed="s8" />
-        <AbsoluteFill style={{ paddingLeft: 90, paddingTop: 70 }}>
-          <Eyebrow texto="COMO O PROJETO SE SUSTENTA" at={2} cor={colors.mint} />
+        <Fundo tema={fundo("s8", "negocio", "escuro")} seed="s8" />
+        <AbsoluteFill style={{ paddingLeft: 150, paddingTop: 112 }}>
+          <Eyebrow texto={tx("chamada")} at={2} cor={colors.mint} />
         </AbsoluteFill>
         <Burst at={4} x={CX} y={CY} n={34} raio={420} />
         <div style={{ position: "absolute", left: CX - 150, top: CY - 150, width: 300, height: 300, borderRadius: 999, background: "rgba(255,255,255,0.06)", border: "2px solid rgba(127,209,197,.45)", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 0 ${50 + 20 * Math.sin(frame / 10)}px rgba(127,209,197,.35)` }}>
@@ -86,12 +104,12 @@ export const S8Modelo: React.FC<{ dur: number }> = ({ dur }) => {
                   <p.Ic size={34} strokeWidth={1.8} />
                 </div>
                 <div>
-                  <div style={{ fontFamily, fontWeight: 800, fontSize: 25, color: "#fff", lineHeight: 1.15 }}>{p.t}</div>
-                  <div style={{ fontFamily, fontWeight: 600, fontSize: 18, color: colors.mintSoft }}>{p.s}</div>
+                  <div style={{ fontFamily, fontWeight: 800, fontSize: 25, color: "#fff", lineHeight: 1.15 }}>{tx(`pilula${i + 1}`)}</div>
+                  <div style={{ fontFamily, fontWeight: 600, fontSize: 18, color: colors.mintSoft }}>{tx(`pilula${i + 1}Sub`)}</div>
                 </div>
                 {p.previsto ? (
                   <div style={{ position: "absolute", right: -26, top: -24 }}>
-                    <Stamp texto="PREVISTO" at={t.previstos + (i === 4 ? 5 : 0)} cor="#F5C86B" tamanho={22} rot={8} />
+                    <Stamp texto={tx("previsto")} at={t.previstos + (i === 4 ? 5 : 0)} cor="#F5C86B" tamanho={22} rot={8} />
                   </div>
                 ) : null}
               </div>
@@ -102,7 +120,7 @@ export const S8Modelo: React.FC<{ dur: number }> = ({ dur }) => {
         <AbsoluteFill style={{ alignItems: "center", paddingTop: 845 }}>
           {frame >= t.valores ? (
             <div style={{ padding: "10px 26px", borderRadius: 999, background: "rgba(245,200,107,0.14)", border: "1.5px solid #F5C86B" }}>
-              <TypeText texto="Valores a definir após pesquisa com usuários." inicio={t.valores} cps={1.6} style={{ fontFamily, fontWeight: 700, fontSize: 26, color: "#FCE7B8" }} />
+              <TypeText texto={tx("valores")} inicio={t.valores} cps={1.6} style={{ fontFamily, fontWeight: 700, fontSize: 26, color: "#FCE7B8" }} />
             </div>
           ) : null}
         </AbsoluteFill>

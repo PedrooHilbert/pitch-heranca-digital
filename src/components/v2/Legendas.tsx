@@ -21,7 +21,7 @@ export const Legendas: React.FC = () => {
   const entra = interpolate(frame, [b.from, b.from + 5], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   const sai = interpolate(frame, [b.to - 5, b.to], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   return (
-    <div style={{ position: "absolute", left: 0, right: 0, bottom: 34, display: "flex", justifyContent: "center", pointerEvents: "none", zIndex: 100 }}>
+    <div style={{ position: "absolute", left: 0, right: 0, bottom: 46, display: "flex", justifyContent: "center", pointerEvents: "none", zIndex: 100 }}>
       <div
         style={{
           maxWidth: 1500, margin: "0 80px", padding: "10px 26px", borderRadius: 16,

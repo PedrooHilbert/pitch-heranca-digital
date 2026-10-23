@@ -3,9 +3,10 @@ import React from "react";
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { Briefcase, Landmark, ScanFace, Scale, Users, Hammer } from "lucide-react";
 import { relogio } from "../data/timeline";
-import { colors, SLOGAN_SPACED } from "../data/theme";
+import { colors, sloganCaixaAlta } from "../data/theme";
 import { config, isPlaceholder } from "../data/config";
 import { fontFamily } from "../fonts";
+import { textos, fundo } from "../data/projeto";
 import { Fundo } from "../components/v2/Fundo";
 import { LogoRevela, Chip } from "../components/v2/kit";
 import { CameraRig, KineticText, Stamp, DrawPath, Burst, Flash, TypeText, LightSweep, vidro } from "../components/fx";
@@ -13,6 +14,25 @@ import { Placeholder } from "../components/Placeholder";
 import type { Cue } from "../data/sfx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
+
+/** Valores iniciais (semente do project.json). Em tempo de render vale o que está no projeto.
+ *  Nomes da equipe e contato ficam em equipe (project.json → equipe). */
+export const PADRAO_S9 = {
+  textos: {
+    quemSomos: "Quem somos",
+    chip: "Projeto de faculdade · UC HUB · Sprint 2",
+    parceiro1: "Escritórios", parceiro2: "Cartórios", parceiro3: "Verificação de identidade",
+    previsto: "PREVISTO",
+    passosTitulo: "Próximos *passos*",
+    passo1: "Validar com um advogado de sucessões", passo1Sub: "a lista de pontos legais em aberto",
+    passo2: "Ouvir usuários", passo2Sub: "preço, carência e primeiro público",
+    passo3: "Construir o MVP", passo3Sub: "login, inventário, cofre cifrado, herdeiros, liberação, auditoria",
+    slogan: "Seus dados, sua história, seu *futuro.*",
+    obrigado: "Obrigado!",
+  },
+  fundos: { equipe: "claro", passos: "claro", fim: "escuro" },
+  telas: {},
+} as const;
 
 const iniciais = (n: string) => (isPlaceholder(n) ? "+" : n.split(/\s+/).slice(0, 2).map((p) => p[0]).join("").toUpperCase());
 
@@ -58,6 +78,7 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = T();
+  const tx = textos("s9");
   const fase = frame < t.B ? 0 : frame < t.logo ? 1 : 2;
   const suga = interpolate(frame, [t.implode, t.logo], [0, 1], { ...clampOpt, easing: Easing.in(Easing.cubic) });
   const preto = interpolate(frame, [t.preto, dur], [0, 1], clampOpt);
@@ -71,9 +92,9 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
       >
         {fase === 0 ? (
           <>
-            <Fundo tema="claro" seed="s9a" />
+            <Fundo tema={fundo("s9", "equipe", "claro")} seed="s9a" />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 90 }}>
-              <KineticText texto="Quem somos" inicio={t.somos - 4} stagger={5} cor={colors.ink} tamanho={70} />
+              <KineticText texto={tx("quemSomos")} inicio={t.somos - 4} stagger={5} cor={colors.ink} tamanho={70} />
             </AbsoluteFill>
             {config.MEMBROS.map((m, i) => {
               const n = config.MEMBROS.length;
@@ -91,12 +112,12 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
                 </div>
               );
             })}
-            <AbsoluteFill style={{ alignItems: "center", paddingTop: 585 }}>
-              <Chip at={t.faculdade} escuro={false}>Projeto de faculdade · UC HUB · Sprint 2</Chip>
+            <AbsoluteFill style={{ alignItems: "center", paddingTop: 640 }}>
+              <Chip at={t.faculdade} escuro={false}>{tx("chip")}</Chip>
             </AbsoluteFill>
-            <AbsoluteFill style={{ alignItems: "center", paddingTop: 690 }}>
+            <AbsoluteFill style={{ alignItems: "center", paddingTop: 748 }}>
               <div style={{ display: "flex", gap: 40 }}>
-                {[{ Ic: Briefcase, t: "Escritórios" }, { Ic: Landmark, t: "Cartórios" }, { Ic: ScanFace, t: "Verificação de identidade" }].map((p, i) => {
+                {[{ Ic: Briefcase, t: tx("parceiro1") }, { Ic: Landmark, t: tx("parceiro2") }, { Ic: ScanFace, t: tx("parceiro3") }].map((p, i) => {
                   const s = spring({ frame: frame - t.parceiros[i], fps, config: { damping: 10, stiffness: 230 } });
                   if (frame < t.parceiros[i]) return <div key={i} style={{ width: 300 }} />;
                   return (
@@ -104,7 +125,7 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
                       <p.Ic size={30} color={colors.teal700} />
                       <span style={{ fontFamily, fontWeight: 800, fontSize: 24, color: colors.ink }}>{p.t}</span>
                       <div style={{ position: "absolute", right: -22, top: -26 }}>
-                        <Stamp texto="PREVISTO" at={t.previstos + i * 4} cor={colors.amber} tamanho={20} rot={8} />
+                        <Stamp texto={tx("previsto")} at={t.previstos + i * 4} cor={colors.amber} tamanho={20} rot={8} />
                       </div>
                     </div>
                   );
@@ -116,21 +137,30 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
 
         {fase === 1 ? (
           <>
-            <Fundo tema="claro" seed="s9b" />
+            <Fundo tema={fundo("s9", "passos", "claro")} seed="s9b" />
             <AbsoluteFill style={{ transform: `scale(${1 - suga * 0.95}) rotate(${suga * 25}deg)`, opacity: 1 - suga * 0.9, filter: suga > 0 ? `blur(${suga * 10}px)` : undefined }}>
               <AbsoluteFill style={{ alignItems: "center", paddingTop: 110 }}>
-                <KineticText texto="Próximos passos" inicio={t.B + 4} stagger={5} destaque={["passos"]} cor={colors.ink} tamanho={84} />
+                <KineticText texto={tx("passosTitulo")} inicio={t.B + 4} stagger={5} cor={colors.ink} tamanho={84} />
               </AbsoluteFill>
               <AbsoluteFill style={{ alignItems: "center", paddingTop: 300 }}>
                 <div style={{ display: "flex", flexDirection: "column", gap: 22 }}>
                   {[
-                    { Ic: Scale, t: "Validar com um advogado de sucessões", s: "a lista de pontos legais em aberto" },
-                    { Ic: Users, t: "Ouvir usuários", s: "preço, carência e primeiro público" },
-                    { Ic: Hammer, t: "Construir o MVP", s: "login, inventário, cofre cifrado, herdeiros, liberação, auditoria" },
+                    { Ic: Scale, t: tx("passo1"), s: tx("passo1Sub") },
+                    { Ic: Users, t: tx("passo2"), s: tx("passo2Sub") },
+                    { Ic: Hammer, t: tx("passo3"), s: tx("passo3Sub") },
                   ].map((p, i) => {
                     const at = t.passos[i];
                     const s = spring({ frame: frame - at, fps, config: { damping: 12, stiffness: 200 } });
-                    if (frame < at - 2) return <div key={i} style={{ height: 112 }} />;
+                    if (frame < at - 2) {
+                      const g = interpolate(frame, [t.B + 10 + i * 5, t.B + 18 + i * 5], [0, 1], clampOpt);
+                      return (
+                        <div key={i} style={{ width: 1100, height: 108, boxSizing: "border-box", borderRadius: 22, border: `2px dashed ${colors.cardBorder}`, background: "rgba(255,255,255,0.45)", opacity: g, transform: `translateY(${(1 - g) * 20}px)`, display: "flex", alignItems: "center", gap: 24, padding: "0 28px" }}>
+                          <div style={{ width: 64, height: 64, borderRadius: 999, border: `3px dashed ${colors.cardBorder}` }} />
+                          <p.Ic size={36} color={colors.cardBorder} />
+                          <div style={{ fontFamily, fontWeight: 800, fontSize: 32, color: colors.ink3, opacity: 0.45 }}>{p.t}</div>
+                        </div>
+                      );
+                    }
                     return (
                       <div key={i} style={{ ...vidro(false), width: 1100, padding: "20px 28px", display: "flex", alignItems: "center", gap: 24, transform: `translateX(${(1 - s) * -160}px)`, opacity: Math.min(1, s * 1.5) }}>
                         <svg width={64} height={64} viewBox="0 0 64 64">
@@ -153,7 +183,7 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
 
         {fase === 2 ? (
           <>
-            <Fundo tema="escuro" seed="s9c" />
+            <Fundo tema={fundo("s9", "fim", "escuro")} seed="s9c" />
             <Burst at={t.logo} x={960} y={330} n={80} raio={900} />
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 220 }}>
               <div style={{ position: "relative", overflow: "hidden", padding: 20 }}>
@@ -162,15 +192,15 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
               </div>
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 480 }}>
-              <KineticText texto="Seus dados, sua história, seu futuro." inicio={t.slogan[0]} tempos={t.slogan} destaque={["futuro"]} estilo="cor" tamanho={64} peso={700} />
+              <KineticText texto={tx("slogan")} inicio={t.slogan[0]} tempos={t.slogan} estilo="cor" tamanho={64} peso={700} />
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 610 }}>
-              <KineticText texto="Obrigado!" inicio={t.obrigado} stagger={4} tamanho={110} />
+              <KineticText texto={tx("obrigado")} inicio={t.obrigado} stagger={4} tamanho={110} />
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 780 }}>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14, opacity: interpolate(frame, [t.obrigado + 10, t.obrigado + 18], [0, 1], clampOpt) }}>
                 <div style={{ fontFamily, fontWeight: 600, fontSize: 24, color: colors.mintSoft }}><Placeholder>{config.CONTATO}</Placeholder></div>
-                <div style={{ fontFamily, fontWeight: 600, fontSize: 17, letterSpacing: "0.14em", color: colors.mintSoft2 }}>{SLOGAN_SPACED}</div>
+                <div style={{ fontFamily, fontWeight: 600, fontSize: 17, letterSpacing: "0.14em", color: colors.mintSoft2 }}>{sloganCaixaAlta()}</div>
               </div>
             </AbsoluteFill>
           </>

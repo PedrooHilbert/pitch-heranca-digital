@@ -22,7 +22,14 @@ sys.stdout.reconfigure(encoding="utf-8")
 FF = imageio_ffmpeg.get_ffmpeg_exe()
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VIDEO = os.path.join(ROOT, sys.argv[1]) if len(sys.argv) > 1 else os.path.join(ROOT, "out", "pitch-v2.mp4")
-TL = json.load(open(os.path.join(ROOT, "src", "data", "timeline.json"), encoding="utf-8"))
+_PJ = json.load(open(os.path.join(ROOT, "src", "data", "project.json"), encoding="utf-8"))
+TL = {"cenas": [], "frases": []}
+_acc = 0
+for _c in _PJ["cenas"]:
+    TL["cenas"].append({"id": _c["id"], "from": _acc, "dur": _c["dur"]})
+    _acc += _c["dur"]
+TL["total"] = _acc
+TL["frases"] = [{"id": f["id"]} for f in _PJ["frases"]]
 W, H = 320, 180
 res = {"video": os.path.relpath(VIDEO, ROOT)}
 

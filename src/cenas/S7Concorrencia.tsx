@@ -5,23 +5,37 @@ import { Check, X } from "lucide-react";
 import { relogio } from "../data/timeline";
 import { colors } from "../data/theme";
 import { fontFamily } from "../fonts";
+import { textos, fundo } from "../data/projeto";
 import { Fundo } from "../components/v2/Fundo";
 import { CameraRig, KineticText, LightSweep } from "../components/fx";
 import type { Cue } from "../data/sfx";
 
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 type Marca = "sim" | "parcial" | "nao";
-const LINHAS: { t: string; m: [Marca, Marca, Marca] }[] = [
-  { t: "Inventário de todos os ativos", m: ["parcial", "nao", "sim"] },
-  { t: "Funciona entre plataformas", m: ["sim", "nao", "sim"] },
-  { t: "Segue o rito legal brasileiro", m: ["nao", "nao", "sim"] },
-  { t: "Entrega por herdeiro, com auditoria", m: ["nao", "parcial", "sim"] },
-];
-const COLS = [
-  { t: "Gerenciadores de senha", s: "Bitwarden, 1Password" },
-  { t: "Contatos de legado", s: "Google · Apple · Meta" },
-  { t: "Herança Digital", s: "nossa proposta" },
-];
+
+/** Valores iniciais (semente do project.json). Em tempo de render vale o que está no projeto.
+ *  Marcas de cada linha: "sim", "parcial" ou "nao" para [gerenciadores, legado, Herança Digital]. */
+export const PADRAO_S7 = {
+  textos: {
+    titulo: "Por que não só um *gerenciador* de senhas?",
+    col1: "Gerenciadores de senha", col1Sub: "Bitwarden, 1Password",
+    col2: "Contatos de legado", col2Sub: "Google · Apple · Meta",
+    col3: "Herança Digital", col3Sub: "nossa proposta",
+    linha1: "Inventário de todos os ativos", linha1Marcas: "parcial, nao, sim",
+    linha2: "Funciona entre plataformas", linha2Marcas: "sim, nao, sim",
+    linha3: "Segue o rito legal brasileiro", linha3Marcas: "nao, nao, sim",
+    linha4: "Entrega por herdeiro, com auditoria", linha4Marcas: "nao, parcial, sim",
+    rodape: "Comparação conceitual — a validar com pesquisa de mercado.",
+  },
+  fundos: { tabela: "claro" },
+  telas: {},
+} as const;
+
+const marcas = (txt: string): [Marca, Marca, Marca] => {
+  const m = txt.split(",").map((x) => x.trim().toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, ""));
+  const ok = (x: string): Marca => (x === "sim" || x === "parcial" ? x : "nao");
+  return [ok(m[0] ?? ""), ok(m[1] ?? ""), ok(m[2] ?? "")];
+};
 const LW = 560;
 const CW = 300;
 const X0 = (1920 - (LW + 3 * CW)) / 2;
@@ -73,6 +87,9 @@ export const S7Concorrencia: React.FC<{ dur: number }> = ({ dur }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = T();
+  const tx = textos("s7");
+  const LINHAS = [1, 2, 3, 4].map((k) => ({ t: tx(`linha${k}`), m: marcas(tx(`linha${k}Marcas`)) }));
+  const COLS = [1, 2, 3].map((k) => ({ t: tx(`col${k}`), s: tx(`col${k}Sub`) }));
   const dim = (ci: number) => (ci === 0 ? interpolate(frame, [t.dim1, t.dim1 + 10], [0, 0.55], clampOpt) : ci === 1 ? interpolate(frame, [t.dim2, t.dim2 + 10], [0, 0.55], clampOpt) : 0);
   const brilho = spring({ frame: frame - t.brilho, fps, config: { damping: 14, stiffness: 160 } });
 
@@ -82,9 +99,9 @@ export const S7Concorrencia: React.FC<{ dur: number }> = ({ dur }) => {
         dur={dur} zoom={[1, 1.06]} panX={[30, -30]}
         socos={[...t.col, ...t.marcas, t.dim1, t.dim2, t.brilho, t.rito].map((at) => ({ at, para: 1.035, dur: 10 }))}
       >
-        <Fundo tema="claro" seed="s7" />
-        <AbsoluteFill style={{ alignItems: "center", paddingTop: 80 }}>
-          <KineticText texto="Por que não só um gerenciador de senhas?" inicio={2} stagger={3} destaque={["gerenciador"]} cor={colors.ink} tamanho={58} />
+        <Fundo tema={fundo("s7", "tabela", "claro")} seed="s7" />
+        <AbsoluteFill style={{ alignItems: "center", paddingTop: 110 }}>
+          <KineticText texto={tx("titulo")} inicio={2} stagger={3} cor={colors.ink} tamanho={58} />
         </AbsoluteFill>
 
         {/* coluna Herança Digital com brilho e borda */}
@@ -118,7 +135,7 @@ export const S7Concorrencia: React.FC<{ dur: number }> = ({ dur }) => {
         })}
 
         <div style={{ position: "absolute", top: Y0 + 96 + 4 * RH + 34, left: 0, right: 0, textAlign: "center", fontFamily, fontWeight: 600, fontSize: 20, color: colors.ink3 }}>
-          Comparação conceitual — a validar com pesquisa de mercado.
+          {tx("rodape")}
         </div>
       </CameraRig>
     </AbsoluteFill>
