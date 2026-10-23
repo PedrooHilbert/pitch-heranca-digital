@@ -120,7 +120,22 @@ cada cena dura o que as frases dela duram (+ respiros na grade da batida), e as 
 npm run voz:importar   # corta silêncio, normaliza, alinha palavra a palavra (whisper) e refaz o project.json
 npm run render
 ```
-**B) Voz sintética** (está no vídeo agora): `npm run voz:sintetica` — edge-tts, `pt-BR-AntonioNeural`, +8 %.
+**B) Voz sintética** (está no vídeo agora) — ⚠ **voz provisória — aguardando escolha do grupo**:
+**Thalita** (`pt-BR-ThalitaMultilingualNeural`, edge-tts), feminina, **velocidade natural** (rate +0 %).
+
+- **Escolher a voz:** abra `out/voz-teste/index.html` (as mesmas 3 frases em 8 vozes), escolha e mude
+  `VOZ_ESCOLHIDA` em `src/data/voz.ts` (re-exportada em `config.ts`). Depois: `npm run voz` (regenera a narração
+  inteira e roda o sync: timeline, legendas, efeitos e trilha). `npm run voz:teste` refaz o banco de testes.
+- **Motores que rodam aqui:** edge-tts (Thalita, Francisca, Ava e Emma multilíngues) e **Kokoro** local (Dora,
+  `pf_dora`; o tempo de cada palavra vem do whisper). **Sem chave nesta máquina:** ElevenLabs, OpenAI TTS e
+  Google Chirp 3 HD — com uma chave dá para acrescentar. O edge-tts não aceita SSML próprio nem estilos de emoção.
+- **Sem aceleração:** a velocidade é a natural da voz (no máximo ±3 %). Se passar de 180 s, o `npm run voz` para
+  e pede para enxugar o texto — ele não acelera mais a voz.
+- **Tratamento:** filtro de graves (80 Hz), de-esser leve, compressão 2,2:1, fade de 20 ms nas pontas, −16 LUFS;
+  pausa real entre frases ≈ 0,35–0,4 s. `npm run voz:conferir` confere duração, sample rate, LUFS, pico e
+  silêncios dentro das frases.
+- **Texto enxugado para caber em 180 s na velocidade natural** (só conectivos, nenhum fato): s03_03, s06_04
+  ("E…" e "com o botão" saíram), s08_02, s09_01 e s09_02.
 
 Depois de mudar texto/voz: `npm run sync`. O sync **preserva** o que foi editado à mão no editor (textos da tela,
 fundos, telas, durações travadas, legendas e efeitos marcados como manuais).

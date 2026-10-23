@@ -107,13 +107,19 @@ const base = {
 setProjeto(base);
 const d = derivado(base);
 const inicio = d.inicioDe;
-// legenda manual só sobrevive se a fala dela não mudou de texto (fala reescrita → legenda gerada de novo)
-const textoAntigo = new Map((antigo.frases ?? []).map((f) => [f.id, f.texto]));
+// legenda manual só sobrevive se a fala dela não mudou de texto NEM de áudio (voz nova → tempos novos →
+// legenda gerada de novo, senão ela sai de sincronia)
+const falaAntiga = new Map((antigo.frases ?? []).map((f) => [f.id, f]));
 const manuaisLeg = (antigo.legendas ?? []).filter((l) => {
   if (!l.manual) return false;
   const nova = d.frases.find((f) => f.id === l.fraseId);
-  const ok = !!nova && nova.texto === textoAntigo.get(l.fraseId);
-  if (!ok) console.log(`  legenda manual ${l.id} (${l.fraseId}) descartada: a fala mudou de texto`);
+  const velha = falaAntiga.get(l.fraseId);
+  // cada palavra no mesmo lugar (±2 q, relativo à cena) — mesma duração por coincidência não basta
+  const mesmosTempos =
+    !!nova && !!velha && nova.palavras.length === velha.palavras.length &&
+    nova.palavras.every((p, i) => Math.abs(p.from - inicio[nova.cena] - velha.palavras[i].de) <= 2);
+  const ok = !!nova && !!velha && nova.texto === velha.texto && Math.abs(nova.dur - velha.dur) <= 1 && mesmosTempos;
+  if (!ok) console.log(`  legenda manual ${l.id} (${l.fraseId}) descartada: a fala mudou (texto ou voz)`);
   return ok;
 });
 const fraseManual = new Set(manuaisLeg.map((l) => l.fraseId));

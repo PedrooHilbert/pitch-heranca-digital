@@ -5,7 +5,7 @@
  "altura": 1080,
  "bpm": 112.5,
  "framesPorBatida": 16,
- "vozSintetica": "pt-BR-AntonioNeural",
+ "vozSintetica": "pt-BR-ThalitaMultilingualNeural",
  "equipe": {
   "marca": "Herança Digital",
   "nomeDoGrupo": "EternaByte",
@@ -194,7 +194,7 @@
   {
    "id": "s4",
    "nome": "Como funciona",
-   "dur": 416,
+   "dur": 432,
    "fundos": {
     "trilho": "claro"
    },
@@ -234,7 +234,7 @@
   {
    "id": "s5",
    "nome": "Demo do protótipo",
-   "dur": 1216,
+   "dur": 1240,
    "fundos": {
     "demo": "claro"
    },
@@ -400,7 +400,7 @@
   {
    "id": "s6",
    "nome": "Segurança",
-   "dur": 632,
+   "dur": 608,
    "fundos": {
     "seguranca": "escuro"
    },
@@ -436,7 +436,7 @@
   {
    "id": "s7",
    "nome": "Concorrência",
-   "dur": 432,
+   "dur": 456,
    "fundos": {
     "tabela": "claro"
    },
@@ -463,7 +463,7 @@
   {
    "id": "s8",
    "nome": "Modelo de negócio",
-   "dur": 464,
+   "dur": 480,
    "fundos": {
     "negocio": "escuro"
    },
@@ -487,7 +487,7 @@
   {
    "id": "s9",
    "nome": "Equipe e fechamento",
-   "dur": 688,
+   "dur": 656,
    "fundos": {
     "equipe": "claro",
     "passos": "claro",
@@ -520,23 +520,23 @@
    "texto": "Quando você morrer…",
    "fonte": "sintetica",
    "src": "audio/voz/s01_01.mp3",
-   "dur": 40,
+   "dur": 36,
    "inicio": 14,
    "palavras": [
     {
      "w": "Quando",
-     "de": 17,
-     "ate": 26
+     "de": 16,
+     "ate": 23
     },
     {
      "w": "você",
-     "de": 26,
-     "ate": 35
+     "de": 23,
+     "ate": 31
     },
     {
      "w": "morrer…",
-     "de": 36,
-     "ate": 47
+     "de": 31,
+     "ate": 46
     }
    ]
   },
@@ -546,38 +546,38 @@
    "texto": "quem fica com o seu Instagram?",
    "fonte": "sintetica",
    "src": "audio/voz/s01_02.mp3",
-   "dur": 53,
-   "inicio": 57,
+   "dur": 51,
+   "inicio": 53,
    "palavras": [
     {
      "w": "quem",
-     "de": 60,
-     "ate": 67
+     "de": 55,
+     "ate": 60
     },
     {
      "w": "fica",
-     "de": 67,
-     "ate": 77
+     "de": 60,
+     "ate": 72
     },
     {
      "w": "com",
-     "de": 77,
-     "ate": 82
+     "de": 72,
+     "ate": 76
     },
     {
      "w": "o",
-     "de": 82,
-     "ate": 83
+     "de": 76,
+     "ate": 77
     },
     {
      "w": "seu",
-     "de": 84,
-     "ate": 89
+     "de": 77,
+     "ate": 84
     },
     {
      "w": "Instagram?",
-     "de": 90,
-     "ate": 104
+     "de": 84,
+     "ate": 101
     }
    ]
   },
@@ -588,27 +588,27 @@
    "fonte": "sintetica",
    "src": "audio/voz/s01_03.mp3",
    "dur": 36,
-   "inicio": 113,
+   "inicio": 107,
    "palavras": [
     {
      "w": "Com",
-     "de": 116,
-     "ate": 122
+     "de": 109,
+     "ate": 115
     },
     {
      "w": "o",
-     "de": 122,
-     "ate": 124
+     "de": 115,
+     "ate": 116
     },
     {
      "w": "seu",
-     "de": 124,
-     "ate": 130
+     "de": 116,
+     "ate": 123
     },
     {
      "w": "e-mail?",
-     "de": 130,
-     "ate": 143
+     "de": 123,
+     "ate": 139
     }
    ]
   },
@@ -618,28 +618,28 @@
    "texto": "Com as suas criptomoedas?",
    "fonte": "sintetica",
    "src": "audio/voz/s01_04.mp3",
-   "dur": 56,
-   "inicio": 152,
+   "dur": 58,
+   "inicio": 146,
    "palavras": [
     {
      "w": "Com",
-     "de": 155,
-     "ate": 163
+     "de": 148,
+     "ate": 154
     },
     {
      "w": "as",
-     "de": 163,
-     "ate": 167
+     "de": 154,
+     "ate": 158
     },
     {
      "w": "suas",
-     "de": 167,
-     "ate": 174
+     "de": 158,
+     "ate": 166
     },
     {
      "w": "criptomoedas?",
-     "de": 174,
-     "ate": 202
+     "de": 166,
+     "ate": 200
     }
    ]
   },
@@ -649,58 +649,58 @@
    "texto": "Somos o grupo EternaByte, e esta é a Herança Digital.",
    "fonte": "sintetica",
    "src": "audio/voz/s01_05.mp3",
-   "dur": 105,
-   "inicio": 250,
+   "dur": 110,
+   "inicio": 246,
    "palavras": [
     {
      "w": "Somos",
-     "de": 253,
-     "ate": 264
+     "de": 248,
+     "ate": 259
     },
     {
      "w": "o",
-     "de": 265,
-     "ate": 268
+     "de": 259,
+     "ate": 263
     },
     {
      "w": "grupo",
-     "de": 269,
-     "ate": 275
+     "de": 263,
+     "ate": 273
     },
     {
      "w": "EternaByte,",
-     "de": 276,
+     "de": 273,
      "ate": 299
     },
     {
      "w": "e",
-     "de": 306,
+     "de": 304,
      "ate": 307
     },
     {
      "w": "esta",
      "de": 307,
-     "ate": 315
+     "ate": 317
     },
     {
      "w": "é",
-     "de": 316,
-     "ate": 319
+     "de": 317,
+     "ate": 320
     },
     {
      "w": "a",
-     "de": 319,
-     "ate": 321
+     "de": 320,
+     "ate": 323
     },
     {
      "w": "Herança",
-     "de": 321,
-     "ate": 333
+     "de": 323,
+     "ate": 336
     },
     {
      "w": "Digital.",
-     "de": 333,
-     "ate": 348
+     "de": 336,
+     "ate": 352
     }
    ]
   },
@@ -710,88 +710,88 @@
    "texto": "Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas.",
    "fonte": "sintetica",
    "src": "audio/voz/s02_01.mp3",
-   "dur": 218,
+   "dur": 217,
    "inicio": 8,
    "palavras": [
     {
      "w": "Hoje",
-     "de": 11,
-     "ate": 20
+     "de": 10,
+     "ate": 17
     },
     {
      "w": "quase",
-     "de": 20,
-     "ate": 31
+     "de": 17,
+     "ate": 27
     },
     {
      "w": "todo",
-     "de": 32,
-     "ate": 39
+     "de": 27,
+     "ate": 32
     },
     {
      "w": "mundo",
-     "de": 40,
-     "ate": 48
+     "de": 32,
+     "ate": 41
     },
     {
      "w": "tem",
-     "de": 48,
-     "ate": 52
+     "de": 41,
+     "ate": 46
     },
     {
      "w": "e-mail,",
-     "de": 53,
-     "ate": 62
+     "de": 46,
+     "ate": 59
     },
     {
      "w": "redes",
-     "de": 69,
-     "ate": 78
+     "de": 64,
+     "ate": 71
     },
     {
      "w": "sociais,",
-     "de": 79,
-     "ate": 95
+     "de": 71,
+     "ate": 91
     },
     {
      "w": "banco",
-     "de": 101,
-     "ate": 112
+     "de": 96,
+     "ate": 106
     },
     {
      "w": "digital,",
-     "de": 112,
-     "ate": 128
+     "de": 106,
+     "ate": 125
     },
     {
      "w": "criptomoedas,",
-     "de": 134,
-     "ate": 161
+     "de": 129,
+     "ate": 155
     },
     {
      "w": "fotos",
-     "de": 168,
-     "ate": 179
+     "de": 161,
+     "ate": 172
     },
     {
      "w": "na",
-     "de": 179,
-     "ate": 182
+     "de": 172,
+     "ate": 178
     },
     {
      "w": "nuvem",
-     "de": 182,
-     "ate": 194
+     "de": 178,
+     "ate": 193
     },
     {
      "w": "e",
-     "de": 195,
+     "de": 193,
      "ate": 196
     },
     {
      "w": "assinaturas.",
      "de": 196,
-     "ate": 219
+     "ate": 221
     }
    ]
   },
@@ -801,118 +801,118 @@
    "texto": "Quando a pessoa morre, a família não sabe o que existe, não tem as senhas, e não sabe o que ela queria.",
    "fonte": "sintetica",
    "src": "audio/voz/s02_02.mp3",
-   "dur": 171,
-   "inicio": 236,
+   "dur": 167,
+   "inicio": 231,
    "palavras": [
     {
      "w": "Quando",
-     "de": 239,
-     "ate": 245
+     "de": 233,
+     "ate": 238
     },
     {
      "w": "a",
-     "de": 246,
-     "ate": 247
+     "de": 238,
+     "ate": 239
     },
     {
      "w": "pessoa",
-     "de": 247,
-     "ate": 257
+     "de": 239,
+     "ate": 249
     },
     {
      "w": "morre,",
-     "de": 257,
-     "ate": 269
+     "de": 249,
+     "ate": 261
     },
     {
      "w": "a",
-     "de": 275,
-     "ate": 276
+     "de": 267,
+     "ate": 269
     },
     {
      "w": "família",
-     "de": 277,
-     "ate": 288
+     "de": 269,
+     "ate": 280
     },
     {
      "w": "não",
-     "de": 288,
-     "ate": 292
+     "de": 280,
+     "ate": 285
     },
     {
      "w": "sabe",
-     "de": 293,
-     "ate": 301
+     "de": 285,
+     "ate": 295
     },
     {
      "w": "o",
-     "de": 301,
-     "ate": 302
+     "de": 295,
+     "ate": 296
     },
     {
      "w": "que",
-     "de": 302,
-     "ate": 305
+     "de": 297,
+     "ate": 299
     },
     {
      "w": "existe,",
-     "de": 305,
-     "ate": 319
+     "de": 299,
+     "ate": 314
     },
     {
      "w": "não",
-     "de": 327,
-     "ate": 332
+     "de": 320,
+     "ate": 326
     },
     {
      "w": "tem",
-     "de": 333,
-     "ate": 337
+     "de": 326,
+     "ate": 334
     },
     {
      "w": "as",
-     "de": 337,
-     "ate": 341
+     "de": 334,
+     "ate": 337
     },
     {
      "w": "senhas,",
-     "de": 341,
-     "ate": 355
+     "de": 337,
+     "ate": 350
     },
     {
      "w": "e",
-     "de": 362,
-     "ate": 364
+     "de": 356,
+     "ate": 358
     },
     {
      "w": "não",
-     "de": 364,
-     "ate": 370
+     "de": 358,
+     "ate": 365
     },
     {
      "w": "sabe",
-     "de": 370,
-     "ate": 379
+     "de": 365,
+     "ate": 375
     },
     {
      "w": "o",
-     "de": 380,
-     "ate": 381
+     "de": 375,
+     "ate": 376
     },
     {
      "w": "que",
-     "de": 381,
-     "ate": 384
+     "de": 376,
+     "ate": 378
     },
     {
      "w": "ela",
-     "de": 384,
-     "ate": 388
+     "de": 378,
+     "ate": 382
     },
     {
      "w": "queria.",
-     "de": 389,
-     "ate": 400
+     "de": 382,
+     "ate": 395
     }
    ]
   },
@@ -922,83 +922,83 @@
    "texto": "Resultado: bens com valor perdidos, assinaturas cobrando para sempre e perfis virando alvo de golpe.",
    "fonte": "sintetica",
    "src": "audio/voz/s02_03.mp3",
-   "dur": 178,
-   "inicio": 417,
+   "dur": 191,
+   "inicio": 404,
    "palavras": [
     {
      "w": "Resultado:",
-     "de": 420,
-     "ate": 439
+     "de": 406,
+     "ate": 427
     },
     {
      "w": "bens",
-     "de": 446,
-     "ate": 454
+     "de": 435,
+     "ate": 445
     },
     {
      "w": "com",
-     "de": 454,
-     "ate": 458
+     "de": 445,
+     "ate": 449
     },
     {
      "w": "valor",
-     "de": 458,
-     "ate": 467
+     "de": 449,
+     "ate": 458
     },
     {
      "w": "perdidos,",
-     "de": 467,
-     "ate": 486
+     "de": 458,
+     "ate": 479
     },
     {
      "w": "assinaturas",
-     "de": 491,
-     "ate": 509
+     "de": 484,
+     "ate": 503
     },
     {
      "w": "cobrando",
-     "de": 509,
-     "ate": 522
+     "de": 503,
+     "ate": 516
     },
     {
      "w": "para",
-     "de": 523,
-     "ate": 528
+     "de": 516,
+     "ate": 522
     },
     {
      "w": "sempre",
-     "de": 529,
-     "ate": 540
+     "de": 522,
+     "ate": 536
     },
     {
      "w": "e",
-     "de": 540,
-     "ate": 541
+     "de": 536,
+     "ate": 537
     },
     {
      "w": "perfis",
-     "de": 541,
-     "ate": 554
+     "de": 536,
+     "ate": 553
     },
     {
      "w": "virando",
-     "de": 554,
-     "ate": 564
+     "de": 553,
+     "ate": 566
     },
     {
      "w": "alvo",
-     "de": 565,
-     "ate": 573
+     "de": 566,
+     "ate": 575
     },
     {
      "w": "de",
-     "de": 573,
-     "ate": 576
+     "de": 575,
+     "ate": 578
     },
     {
      "w": "golpe.",
-     "de": 576,
-     "ate": 588
+     "de": 578,
+     "ate": 591
     }
    ]
   },
@@ -1008,38 +1008,38 @@
    "texto": "A Herança Digital é um cofre onde você organiza, em vida, tudo o que tem no mundo digital.",
    "fonte": "sintetica",
    "src": "audio/voz/s03_01.mp3",
-   "dur": 161,
+   "dur": 164,
    "inicio": 10,
    "palavras": [
     {
      "w": "A",
-     "de": 13,
+     "de": 12,
      "ate": 16
     },
     {
      "w": "Herança",
-     "de": 17,
+     "de": 16,
      "ate": 27
     },
     {
      "w": "Digital",
-     "de": 28,
-     "ate": 43
+     "de": 27,
+     "ate": 46
     },
     {
      "w": "é",
-     "de": 43,
-     "ate": 45
-    },
-    {
-     "w": "um",
-     "de": 45,
+     "de": 46,
      "ate": 48
     },
     {
+     "w": "um",
+     "de": 48,
+     "ate": 52
+    },
+    {
      "w": "cofre",
-     "de": 49,
-     "ate": 60
+     "de": 52,
+     "ate": 61
     },
     {
      "w": "onde",
@@ -1053,53 +1053,53 @@
     },
     {
      "w": "organiza,",
-     "de": 76,
-     "ate": 92
+     "de": 75,
+     "ate": 97
     },
     {
      "w": "em",
-     "de": 98,
-     "ate": 103
+     "de": 102,
+     "ate": 107
     },
     {
      "w": "vida,",
-     "de": 103,
-     "ate": 114
+     "de": 107,
+     "ate": 120
     },
     {
      "w": "tudo",
-     "de": 119,
-     "ate": 126
+     "de": 125,
+     "ate": 132
     },
     {
      "w": "o",
-     "de": 127,
-     "ate": 128
+     "de": 132,
+     "ate": 133
     },
     {
      "w": "que",
-     "de": 128,
-     "ate": 131
+     "de": 132,
+     "ate": 136
     },
     {
      "w": "tem",
-     "de": 132,
-     "ate": 135
+     "de": 136,
+     "ate": 141
     },
     {
      "w": "no",
-     "de": 136,
-     "ate": 138
+     "de": 141,
+     "ate": 143
     },
     {
      "w": "mundo",
-     "de": 139,
-     "ate": 149
+     "de": 143,
+     "ate": 154
     },
     {
      "w": "digital.",
-     "de": 149,
-     "ate": 165
+     "de": 154,
+     "ate": 171
     }
    ]
   },
@@ -1109,23 +1109,23 @@
    "texto": "Juntamos três coisas: um inventário dos seus ativos, um cofre de acessos criptografado,",
    "fonte": "sintetica",
    "src": "audio/voz/s03_02.mp3",
-   "dur": 170,
+   "dur": 175,
    "inicio": 180,
    "palavras": [
     {
      "w": "Juntamos",
-     "de": 183,
-     "ate": 202
+     "de": 182,
+     "ate": 198
     },
     {
      "w": "três",
-     "de": 202,
-     "ate": 211
+     "de": 198,
+     "ate": 209
     },
     {
      "w": "coisas:",
-     "de": 211,
-     "ate": 225
+     "de": 209,
+     "ate": 224
     },
     {
      "w": "um",
@@ -1135,138 +1135,133 @@
     {
      "w": "inventário",
      "de": 236,
-     "ate": 251
+     "ate": 254
     },
     {
      "w": "dos",
-     "de": 251,
-     "ate": 256
+     "de": 254,
+     "ate": 257
     },
     {
      "w": "seus",
      "de": 257,
-     "ate": 260
+     "ate": 261
     },
     {
      "w": "ativos,",
      "de": 261,
-     "ate": 277
+     "ate": 279
     },
     {
      "w": "um",
-     "de": 287,
-     "ate": 292
+     "de": 285,
+     "ate": 289
     },
     {
      "w": "cofre",
-     "de": 292,
-     "ate": 302
+     "de": 289,
+     "ate": 301
     },
     {
      "w": "de",
-     "de": 302,
-     "ate": 304
+     "de": 301,
+     "ate": 303
     },
     {
      "w": "acessos",
-     "de": 305,
-     "ate": 319
+     "de": 303,
+     "ate": 318
     },
     {
      "w": "criptografado,",
-     "de": 319,
-     "ate": 344
+     "de": 318,
+     "ate": 351
     }
    ]
   },
   {
    "id": "s03_03",
    "cena": "s3",
-   "texto": "e uma liberação que só acontece pelo caminho legal, com inventário em cartório ou na justiça.",
+   "texto": "e uma liberação que só vale pelo caminho legal: inventário em cartório ou na justiça.",
    "fonte": "sintetica",
    "src": "audio/voz/s03_03.mp3",
-   "dur": 155,
-   "inicio": 359,
+   "dur": 153,
+   "inicio": 361,
    "palavras": [
     {
      "w": "e",
-     "de": 362,
-     "ate": 365
+     "de": 363,
+     "ate": 366
     },
     {
      "w": "uma",
-     "de": 365,
-     "ate": 370
+     "de": 366,
+     "ate": 369
     },
     {
      "w": "liberação",
-     "de": 370,
-     "ate": 386
+     "de": 369,
+     "ate": 389
     },
     {
      "w": "que",
-     "de": 387,
-     "ate": 390
+     "de": 389,
+     "ate": 391
     },
     {
      "w": "só",
-     "de": 390,
-     "ate": 395
+     "de": 391,
+     "ate": 397
     },
     {
-     "w": "acontece",
-     "de": 395,
-     "ate": 412
+     "w": "vale",
+     "de": 397,
+     "ate": 407
     },
     {
      "w": "pelo",
-     "de": 412,
-     "ate": 418
+     "de": 407,
+     "ate": 412
     },
     {
      "w": "caminho",
-     "de": 418,
-     "ate": 427
+     "de": 412,
+     "ate": 421
     },
     {
-     "w": "legal,",
-     "de": 427,
-     "ate": 439
-    },
-    {
-     "w": "com",
-     "de": 447,
-     "ate": 451
+     "w": "legal:",
+     "de": 421,
+     "ate": 434
     },
     {
      "w": "inventário",
-     "de": 452,
-     "ate": 467
+     "de": 441,
+     "ate": 460
     },
     {
      "w": "em",
-     "de": 468,
-     "ate": 469
+     "de": 460,
+     "ate": 462
     },
     {
      "w": "cartório",
-     "de": 470,
-     "ate": 484
+     "de": 462,
+     "ate": 483
     },
     {
      "w": "ou",
-     "de": 485,
-     "ate": 487
+     "de": 483,
+     "ate": 488
     },
     {
      "w": "na",
      "de": 488,
-     "ate": 491
+     "ate": 492
     },
     {
      "w": "justiça.",
-     "de": 491,
-     "ate": 508
+     "de": 492,
+     "ate": 511
     }
    ]
   },
@@ -1276,78 +1271,78 @@
    "texto": "Em vida, o titular cadastra os ativos e escolhe o destino de cada um.",
    "fonte": "sintetica",
    "src": "audio/voz/s04_01.mp3",
-   "dur": 121,
+   "dur": 138,
    "inicio": 8,
    "palavras": [
     {
      "w": "Em",
-     "de": 11,
-     "ate": 17
+     "de": 10,
+     "ate": 16
     },
     {
      "w": "vida,",
-     "de": 17,
-     "ate": 27
+     "de": 16,
+     "ate": 28
     },
     {
      "w": "o",
-     "de": 33,
-     "ate": 34
+     "de": 34,
+     "ate": 36
     },
     {
      "w": "titular",
-     "de": 35,
-     "ate": 47
+     "de": 36,
+     "ate": 52
     },
     {
      "w": "cadastra",
-     "de": 48,
-     "ate": 62
+     "de": 52,
+     "ate": 67
     },
     {
      "w": "os",
-     "de": 63,
-     "ate": 64
+     "de": 67,
+     "ate": 68
     },
     {
      "w": "ativos",
-     "de": 63,
-     "ate": 76
+     "de": 67,
+     "ate": 85
     },
     {
      "w": "e",
-     "de": 76,
-     "ate": 79
-    },
-    {
-     "w": "escolhe",
-     "de": 79,
-     "ate": 90
-    },
-    {
-     "w": "o",
-     "de": 90,
+     "de": 85,
      "ate": 91
     },
     {
+     "w": "escolhe",
+     "de": 91,
+     "ate": 104
+    },
+    {
+     "w": "o",
+     "de": 104,
+     "ate": 106
+    },
+    {
      "w": "destino",
-     "de": 92,
-     "ate": 105
+     "de": 106,
+     "ate": 121
     },
     {
      "w": "de",
-     "de": 105,
-     "ate": 108
+     "de": 121,
+     "ate": 125
     },
     {
      "w": "cada",
-     "de": 109,
-     "ate": 116
+     "de": 125,
+     "ate": 136
     },
     {
      "w": "um.",
-     "de": 117,
-     "ate": 123
+     "de": 136,
+     "ate": 143
     }
    ]
   },
@@ -1358,37 +1353,37 @@
    "fonte": "sintetica",
    "src": "audio/voz/s04_02.mp3",
    "dur": 77,
-   "inicio": 140,
+   "inicio": 152,
    "palavras": [
     {
      "w": "No",
-     "de": 143,
-     "ate": 147
+     "de": 154,
+     "ate": 158
     },
     {
      "w": "falecimento,",
-     "de": 147,
-     "ate": 169
+     "de": 158,
+     "ate": 183
     },
     {
      "w": "o",
-     "de": 177,
-     "ate": 179
+     "de": 188,
+     "ate": 191
     },
     {
      "w": "cofre",
-     "de": 179,
-     "ate": 190
+     "de": 191,
+     "ate": 202
     },
     {
      "w": "é",
-     "de": 191,
-     "ate": 192
+     "de": 202,
+     "ate": 203
     },
     {
      "w": "congelado.",
-     "de": 193,
-     "ate": 211
+     "de": 203,
+     "ate": 225
     }
    ]
   },
@@ -1398,93 +1393,93 @@
    "texto": "Só depois do inventário e de um prazo para contestação, cada herdeiro recebe apenas a sua parte.",
    "fonte": "sintetica",
    "src": "audio/voz/s04_03.mp3",
-   "dur": 164,
-   "inicio": 228,
+   "dur": 174,
+   "inicio": 235,
    "palavras": [
     {
      "w": "Só",
-     "de": 231,
-     "ate": 237
+     "de": 237,
+     "ate": 243
     },
     {
      "w": "depois",
-     "de": 237,
-     "ate": 247
+     "de": 243,
+     "ate": 253
     },
     {
      "w": "do",
-     "de": 248,
-     "ate": 250
+     "de": 253,
+     "ate": 255
     },
     {
      "w": "inventário",
-     "de": 250,
-     "ate": 268
+     "de": 255,
+     "ate": 279
     },
     {
      "w": "e",
-     "de": 268,
-     "ate": 270
+     "de": 279,
+     "ate": 281
     },
     {
      "w": "de",
-     "de": 270,
-     "ate": 273
+     "de": 281,
+     "ate": 284
     },
     {
      "w": "um",
-     "de": 273,
-     "ate": 276
+     "de": 284,
+     "ate": 287
     },
     {
      "w": "prazo",
-     "de": 276,
-     "ate": 286
+     "de": 287,
+     "ate": 298
     },
     {
      "w": "para",
-     "de": 286,
-     "ate": 291
+     "de": 298,
+     "ate": 303
     },
     {
      "w": "contestação,",
-     "de": 291,
-     "ate": 313
+     "de": 303,
+     "ate": 330
     },
     {
      "w": "cada",
-     "de": 320,
-     "ate": 327
+     "de": 334,
+     "ate": 341
     },
     {
      "w": "herdeiro",
-     "de": 327,
-     "ate": 339
+     "de": 341,
+     "ate": 354
     },
     {
      "w": "recebe",
-     "de": 340,
-     "ate": 351
+     "de": 354,
+     "ate": 367
     },
     {
      "w": "apenas",
-     "de": 351,
-     "ate": 362
+     "de": 367,
+     "ate": 381
     },
     {
      "w": "a",
-     "de": 362,
-     "ate": 366
+     "de": 381,
+     "ate": 384
     },
     {
      "w": "sua",
-     "de": 366,
-     "ate": 374
+     "de": 384,
+     "ate": 390
     },
     {
      "w": "parte.",
-     "de": 374,
-     "ate": 386
+     "de": 390,
+     "ate": 405
     }
    ]
   },
@@ -1494,28 +1489,28 @@
    "texto": "Este é o protótipo.",
    "fonte": "sintetica",
    "src": "audio/voz/s05_01.mp3",
-   "dur": 40,
+   "dur": 41,
    "inicio": 10,
    "palavras": [
     {
      "w": "Este",
-     "de": 13,
-     "ate": 23
+     "de": 12,
+     "ate": 22
     },
     {
      "w": "é",
-     "de": 23,
-     "ate": 24
+     "de": 22,
+     "ate": 23
     },
     {
      "w": "o",
-     "de": 25,
-     "ate": 26
+     "de": 23,
+     "ate": 25
     },
     {
      "w": "protótipo.",
-     "de": 26,
-     "ate": 44
+     "de": 25,
+     "ate": 48
     }
    ]
   },
@@ -1525,108 +1520,108 @@
    "texto": "O titular entra com a chave de acesso do celular e vê o que falta para o plano ficar completo.",
    "fonte": "sintetica",
    "src": "audio/voz/s05_02.mp3",
-   "dur": 149,
-   "inicio": 59,
+   "dur": 147,
+   "inicio": 57,
    "palavras": [
     {
      "w": "O",
-     "de": 62,
-     "ate": 65
+     "de": 59,
+     "ate": 61
     },
     {
      "w": "titular",
-     "de": 65,
-     "ate": 80
+     "de": 61,
+     "ate": 77
     },
     {
      "w": "entra",
-     "de": 80,
-     "ate": 87
+     "de": 77,
+     "ate": 84
     },
     {
      "w": "com",
-     "de": 87,
-     "ate": 92
+     "de": 84,
+     "ate": 88
     },
     {
      "w": "a",
-     "de": 92,
-     "ate": 93
+     "de": 88,
+     "ate": 89
     },
     {
      "w": "chave",
-     "de": 94,
-     "ate": 103
+     "de": 89,
+     "ate": 98
     },
     {
      "w": "de",
-     "de": 103,
-     "ate": 105
+     "de": 98,
+     "ate": 101
     },
     {
      "w": "acesso",
-     "de": 106,
-     "ate": 118
+     "de": 101,
+     "ate": 113
     },
     {
      "w": "do",
-     "de": 118,
-     "ate": 121
+     "de": 113,
+     "ate": 116
     },
     {
      "w": "celular",
-     "de": 121,
-     "ate": 136
+     "de": 116,
+     "ate": 133
     },
     {
      "w": "e",
-     "de": 136,
-     "ate": 138
+     "de": 133,
+     "ate": 139
     },
     {
      "w": "vê",
      "de": 139,
-     "ate": 143
-    },
-    {
-     "w": "o",
-     "de": 143,
      "ate": 145
     },
     {
-     "w": "que",
+     "w": "o",
      "de": 145,
-     "ate": 149
+     "ate": 147
+    },
+    {
+     "w": "que",
+     "de": 147,
+     "ate": 150
     },
     {
      "w": "falta",
-     "de": 149,
-     "ate": 160
+     "de": 150,
+     "ate": 162
     },
     {
      "w": "para",
-     "de": 160,
-     "ate": 164
+     "de": 162,
+     "ate": 167
     },
     {
      "w": "o",
-     "de": 165,
-     "ate": 166
+     "de": 167,
+     "ate": 168
     },
     {
      "w": "plano",
-     "de": 166,
+     "de": 167,
      "ate": 175
     },
     {
      "w": "ficar",
      "de": 175,
-     "ate": 184
+     "ate": 183
     },
     {
      "w": "completo.",
-     "de": 184,
-     "ate": 202
+     "de": 183,
+     "ate": 200
     }
    ]
   },
@@ -1636,88 +1631,88 @@
    "texto": "No inventário, cada ativo (redes sociais, e-mails, cripto, assinaturas) recebe um destino: pessoal, patrimonial ou encerrar.",
    "fonte": "sintetica",
    "src": "audio/voz/s05_03.mp3",
-   "dur": 266,
-   "inicio": 217,
+   "dur": 278,
+   "inicio": 210,
    "palavras": [
     {
      "w": "No",
-     "de": 220,
-     "ate": 223
+     "de": 212,
+     "ate": 216
     },
     {
      "w": "inventário,",
-     "de": 224,
-     "ate": 242
+     "de": 216,
+     "ate": 238
     },
     {
      "w": "cada",
-     "de": 250,
-     "ate": 257
+     "de": 243,
+     "ate": 250
     },
     {
      "w": "ativo",
-     "de": 257,
-     "ate": 270
+     "de": 250,
+     "ate": 264
     },
     {
      "w": "(redes",
-     "de": 275,
-     "ate": 285
+     "de": 271,
+     "ate": 282
     },
     {
      "w": "sociais,",
-     "de": 286,
-     "ate": 301
+     "de": 282,
+     "ate": 300
     },
     {
      "w": "e-mails,",
-     "de": 308,
-     "ate": 322
+     "de": 306,
+     "ate": 324
     },
     {
      "w": "cripto,",
-     "de": 328,
-     "ate": 341
+     "de": 329,
+     "ate": 342
     },
     {
      "w": "assinaturas)",
      "de": 347,
-     "ate": 370
+     "ate": 371
     },
     {
      "w": "recebe",
-     "de": 376,
-     "ate": 389
+     "de": 377,
+     "ate": 388
     },
     {
      "w": "um",
-     "de": 389,
-     "ate": 391
+     "de": 388,
+     "ate": 389
     },
     {
      "w": "destino:",
-     "de": 391,
+     "de": 389,
      "ate": 405
     },
     {
      "w": "pessoal,",
-     "de": 413,
-     "ate": 429
+     "de": 411,
+     "ate": 430
     },
     {
      "w": "patrimonial",
-     "de": 437,
-     "ate": 458
+     "de": 435,
+     "ate": 462
     },
     {
      "w": "ou",
-     "de": 459,
-     "ate": 463
+     "de": 462,
+     "ate": 468
     },
     {
      "w": "encerrar.",
-     "de": 463,
-     "ate": 477
+     "de": 468,
+     "ate": 484
     }
    ]
   },
@@ -1727,83 +1722,83 @@
    "texto": "Depois, ele escolhe os herdeiros e define a carência: quinze, trinta, sessenta ou noventa dias.",
    "fonte": "sintetica",
    "src": "audio/voz/s05_04.mp3",
-   "dur": 174,
-   "inicio": 492,
+   "dur": 189,
+   "inicio": 494,
    "palavras": [
     {
      "w": "Depois,",
-     "de": 495,
-     "ate": 511
+     "de": 496,
+     "ate": 512
     },
     {
      "w": "ele",
      "de": 519,
-     "ate": 522
+     "ate": 523
     },
     {
      "w": "escolhe",
      "de": 523,
-     "ate": 534
+     "ate": 533
     },
     {
      "w": "os",
-     "de": 534,
-     "ate": 535
+     "de": 533,
+     "ate": 534
     },
     {
      "w": "herdeiros",
-     "de": 536,
-     "ate": 549
+     "de": 534,
+     "ate": 551
     },
     {
      "w": "e",
-     "de": 549,
-     "ate": 552
+     "de": 551,
+     "ate": 554
     },
     {
      "w": "define",
-     "de": 552,
-     "ate": 563
-    },
-    {
-     "w": "a",
-     "de": 563,
+     "de": 554,
      "ate": 565
     },
     {
-     "w": "carência:",
+     "w": "a",
      "de": 565,
-     "ate": 579
+     "ate": 566
+    },
+    {
+     "w": "carência:",
+     "de": 566,
+     "ate": 581
     },
     {
      "w": "quinze,",
-     "de": 584,
-     "ate": 596
+     "de": 588,
+     "ate": 602
     },
     {
      "w": "trinta,",
-     "de": 600,
-     "ate": 611
+     "de": 607,
+     "ate": 619
     },
     {
      "w": "sessenta",
-     "de": 617,
-     "ate": 632
+     "de": 626,
+     "ate": 646
     },
     {
      "w": "ou",
-     "de": 633,
-     "ate": 635
+     "de": 646,
+     "ate": 649
     },
     {
      "w": "noventa",
-     "de": 635,
-     "ate": 647
+     "de": 649,
+     "ate": 664
     },
     {
      "w": "dias.",
-     "de": 648,
-     "ate": 661
+     "de": 664,
+     "ate": 679
     }
    ]
   },
@@ -1813,133 +1808,133 @@
    "texto": "Quando o titular falece, o herdeiro abre o pedido com a certidão de óbito, o documento do inventário e uma selfie para confirmar a identidade.",
    "fonte": "sintetica",
    "src": "audio/voz/s05_05.mp3",
-   "dur": 236,
-   "inicio": 675,
+   "dur": 240,
+   "inicio": 689,
    "palavras": [
     {
      "w": "Quando",
-     "de": 678,
-     "ate": 686
+     "de": 691,
+     "ate": 696
     },
     {
      "w": "o",
-     "de": 687,
-     "ate": 688
+     "de": 696,
+     "ate": 697
     },
     {
      "w": "titular",
-     "de": 688,
-     "ate": 699
+     "de": 697,
+     "ate": 708
     },
     {
      "w": "falece,",
-     "de": 700,
-     "ate": 715
+     "de": 708,
+     "ate": 726
     },
     {
      "w": "o",
-     "de": 722,
-     "ate": 725
+     "de": 731,
+     "ate": 734
     },
     {
      "w": "herdeiro",
-     "de": 725,
-     "ate": 736
+     "de": 734,
+     "ate": 748
     },
     {
      "w": "abre",
-     "de": 737,
-     "ate": 742
+     "de": 748,
+     "ate": 756
     },
     {
      "w": "o",
-     "de": 743,
-     "ate": 744
+     "de": 756,
+     "ate": 757
     },
     {
      "w": "pedido",
-     "de": 744,
-     "ate": 754
+     "de": 757,
+     "ate": 769
     },
     {
      "w": "com",
-     "de": 755,
-     "ate": 758
+     "de": 769,
+     "ate": 772
     },
     {
      "w": "a",
-     "de": 758,
-     "ate": 759
-    },
-    {
-     "w": "certidão",
-     "de": 760,
+     "de": 772,
      "ate": 774
     },
     {
-     "w": "de",
+     "w": "certidão",
      "de": 774,
-     "ate": 778
+     "ate": 792
+    },
+    {
+     "w": "de",
+     "de": 792,
+     "ate": 796
     },
     {
      "w": "óbito,",
-     "de": 778,
-     "ate": 790
+     "de": 796,
+     "ate": 809
     },
     {
      "w": "o",
-     "de": 800,
-     "ate": 802
+     "de": 814,
+     "ate": 816
     },
     {
      "w": "documento",
-     "de": 803,
-     "ate": 819
+     "de": 816,
+     "ate": 832
     },
     {
      "w": "do",
-     "de": 819,
-     "ate": 821
+     "de": 832,
+     "ate": 834
     },
     {
      "w": "inventário",
-     "de": 822,
-     "ate": 840
-    },
-    {
-     "w": "e",
-     "de": 841,
-     "ate": 842
-    },
-    {
-     "w": "uma",
-     "de": 842,
-     "ate": 847
-    },
-    {
-     "w": "selfie",
-     "de": 847,
+     "de": 834,
      "ate": 859
     },
     {
+     "w": "e",
+     "de": 859,
+     "ate": 862
+    },
+    {
+     "w": "uma",
+     "de": 862,
+     "ate": 866
+    },
+    {
+     "w": "selfie",
+     "de": 866,
+     "ate": 881
+    },
+    {
      "w": "para",
-     "de": 860,
-     "ate": 865
+     "de": 881,
+     "ate": 887
     },
     {
      "w": "confirmar",
-     "de": 866,
-     "ate": 882
+     "de": 887,
+     "ate": 903
     },
     {
      "w": "a",
-     "de": 882,
-     "ate": 885
+     "de": 903,
+     "ate": 904
     },
     {
      "w": "identidade.",
-     "de": 885,
-     "ate": 905
+     "de": 904,
+     "ate": 925
     }
    ]
   },
@@ -1949,53 +1944,53 @@
    "texto": "A equipe valida, todos são avisados e podem contestar.",
    "fonte": "sintetica",
    "src": "audio/voz/s05_06.mp3",
-   "dur": 100,
-   "inicio": 920,
+   "dur": 109,
+   "inicio": 935,
    "palavras": [
     {
      "w": "A",
-     "de": 923,
-     "ate": 927
+     "de": 937,
+     "ate": 941
     },
     {
      "w": "equipe",
-     "de": 927,
-     "ate": 937
+     "de": 941,
+     "ate": 953
     },
     {
      "w": "valida,",
-     "de": 937,
-     "ate": 951
+     "de": 953,
+     "ate": 968
     },
     {
      "w": "todos",
-     "de": 956,
-     "ate": 966
+     "de": 975,
+     "ate": 984
     },
     {
      "w": "são",
-     "de": 966,
-     "ate": 970
+     "de": 984,
+     "ate": 989
     },
     {
      "w": "avisados",
-     "de": 971,
-     "ate": 986
+     "de": 989,
+     "ate": 1006
     },
     {
      "w": "e",
-     "de": 986,
-     "ate": 990
+     "de": 1006,
+     "ate": 1010
     },
     {
      "w": "podem",
-     "de": 990,
-     "ate": 998
+     "de": 1010,
+     "ate": 1020
     },
     {
      "w": "contestar.",
-     "de": 999,
-     "ate": 1014
+     "de": 1020,
+     "ate": 1040
     }
    ]
   },
@@ -2005,98 +2000,98 @@
    "texto": "Terminado o prazo, cada herdeiro vê só o que foi destinado a ele, com instruções para cada ativo.",
    "fonte": "sintetica",
    "src": "audio/voz/s05_07.mp3",
-   "dur": 164,
-   "inicio": 1029,
+   "dur": 171,
+   "inicio": 1050,
    "palavras": [
     {
      "w": "Terminado",
-     "de": 1032,
-     "ate": 1046
+     "de": 1052,
+     "ate": 1066
     },
     {
      "w": "o",
-     "de": 1047,
-     "ate": 1048
+     "de": 1066,
+     "ate": 1068
     },
     {
      "w": "prazo,",
-     "de": 1048,
-     "ate": 1059
+     "de": 1068,
+     "ate": 1082
     },
     {
      "w": "cada",
-     "de": 1067,
-     "ate": 1074
+     "de": 1086,
+     "ate": 1093
     },
     {
      "w": "herdeiro",
-     "de": 1074,
-     "ate": 1086
+     "de": 1093,
+     "ate": 1106
     },
     {
      "w": "vê",
-     "de": 1086,
-     "ate": 1091
+     "de": 1106,
+     "ate": 1115
     },
     {
      "w": "só",
-     "de": 1092,
-     "ate": 1097
-    },
-    {
-     "w": "o",
-     "de": 1098,
-     "ate": 1099
-    },
-    {
-     "w": "que",
-     "de": 1099,
-     "ate": 1103
-    },
-    {
-     "w": "foi",
-     "de": 1103,
-     "ate": 1107
-    },
-    {
-     "w": "destinado",
-     "de": 1108,
-     "ate": 1123
-    },
-    {
-     "w": "a",
-     "de": 1123,
+     "de": 1115,
      "ate": 1126
     },
     {
-     "w": "ele,",
+     "w": "o",
      "de": 1126,
-     "ate": 1134
+     "ate": 1127
+    },
+    {
+     "w": "que",
+     "de": 1127,
+     "ate": 1130
+    },
+    {
+     "w": "foi",
+     "de": 1130,
+     "ate": 1135
+    },
+    {
+     "w": "destinado",
+     "de": 1135,
+     "ate": 1152
+    },
+    {
+     "w": "a",
+     "de": 1152,
+     "ate": 1155
+    },
+    {
+     "w": "ele,",
+     "de": 1155,
+     "ate": 1165
     },
     {
      "w": "com",
-     "de": 1141,
-     "ate": 1145
+     "de": 1169,
+     "ate": 1173
     },
     {
      "w": "instruções",
-     "de": 1146,
-     "ate": 1162
+     "de": 1173,
+     "ate": 1190
     },
     {
      "w": "para",
-     "de": 1163,
-     "ate": 1168
+     "de": 1190,
+     "ate": 1196
     },
     {
      "w": "cada",
-     "de": 1169,
-     "ate": 1175
+     "de": 1196,
+     "ate": 1203
     },
     {
      "w": "ativo.",
-     "de": 1176,
-     "ate": 1187
+     "de": 1203,
+     "ate": 1217
     }
    ]
   },
@@ -2106,38 +2101,38 @@
    "texto": "Segurança é o coração do produto.",
    "fonte": "sintetica",
    "src": "audio/voz/s06_01.mp3",
-   "dur": 64,
+   "dur": 69,
    "inicio": 8,
    "palavras": [
     {
      "w": "Segurança",
-     "de": 11,
-     "ate": 31
-    },
-    {
-     "w": "é",
-     "de": 31,
+     "de": 10,
      "ate": 32
     },
     {
-     "w": "o",
-     "de": 33,
+     "w": "é",
+     "de": 32,
      "ate": 34
     },
     {
-     "w": "coração",
+     "w": "o",
      "de": 34,
-     "ate": 48
+     "ate": 36
+    },
+    {
+     "w": "coração",
+     "de": 36,
+     "ate": 54
     },
     {
      "w": "do",
-     "de": 49,
-     "ate": 52
+     "de": 54,
+     "ate": 57
     },
     {
      "w": "produto.",
-     "de": 52,
-     "ate": 66
+     "de": 57,
+     "ate": 74
     }
    ]
   },
@@ -2147,48 +2142,48 @@
    "texto": "O conteúdo é cifrado no aparelho do titular.",
    "fonte": "sintetica",
    "src": "audio/voz/s06_02.mp3",
-   "dur": 81,
-   "inicio": 82,
+   "dur": 80,
+   "inicio": 83,
    "palavras": [
     {
      "w": "O",
      "de": 85,
-     "ate": 88
+     "ate": 87
     },
     {
      "w": "conteúdo",
-     "de": 88,
-     "ate": 106
-    },
-    {
-     "w": "é",
-     "de": 106,
+     "de": 87,
      "ate": 107
     },
     {
-     "w": "cifrado",
+     "w": "é",
      "de": 107,
-     "ate": 123
+     "ate": 108
+    },
+    {
+     "w": "cifrado",
+     "de": 108,
+     "ate": 124
     },
     {
      "w": "no",
-     "de": 123,
-     "ate": 125
+     "de": 124,
+     "ate": 126
     },
     {
      "w": "aparelho",
      "de": 126,
-     "ate": 139
+     "ate": 141
     },
     {
      "w": "do",
-     "de": 139,
-     "ate": 143
+     "de": 141,
+     "ate": 144
     },
     {
      "w": "titular.",
-     "de": 143,
-     "ate": 157
+     "de": 144,
+     "ate": 159
     }
    ]
   },
@@ -2198,219 +2193,199 @@
    "texto": "A chave de sucessão é dividida em três partes, e duas são necessárias para abri-la: nem a empresa consegue abrir o cofre sozinha.",
    "fonte": "sintetica",
    "src": "audio/voz/s06_03.mp3",
-   "dur": 213,
-   "inicio": 173,
+   "dur": 219,
+   "inicio": 169,
    "palavras": [
     {
      "w": "A",
-     "de": 176,
-     "ate": 179
+     "de": 171,
+     "ate": 174
     },
     {
      "w": "chave",
-     "de": 180,
-     "ate": 189
+     "de": 174,
+     "ate": 185
     },
     {
      "w": "de",
-     "de": 189,
-     "ate": 192
+     "de": 185,
+     "ate": 188
     },
     {
      "w": "sucessão",
-     "de": 193,
-     "ate": 208
+     "de": 188,
+     "ate": 206
     },
     {
      "w": "é",
-     "de": 208,
-     "ate": 210
+     "de": 206,
+     "ate": 208
     },
     {
      "w": "dividida",
-     "de": 210,
-     "ate": 222
+     "de": 208,
+     "ate": 221
     },
     {
      "w": "em",
-     "de": 222,
-     "ate": 225
+     "de": 221,
+     "ate": 224
     },
     {
      "w": "três",
-     "de": 225,
-     "ate": 233
+     "de": 224,
+     "ate": 234
     },
     {
      "w": "partes,",
-     "de": 233,
-     "ate": 248
+     "de": 234,
+     "ate": 249
     },
     {
      "w": "e",
-     "de": 257,
-     "ate": 260
+     "de": 256,
+     "ate": 258
     },
     {
      "w": "duas",
-     "de": 260,
-     "ate": 269
+     "de": 258,
+     "ate": 268
     },
     {
      "w": "são",
-     "de": 269,
+     "de": 268,
      "ate": 272
     },
     {
      "w": "necessárias",
      "de": 272,
-     "ate": 289
+     "ate": 292
     },
     {
      "w": "para",
-     "de": 289,
-     "ate": 293
+     "de": 292,
+     "ate": 297
     },
     {
      "w": "abri-la:",
-     "de": 293,
-     "ate": 304
+     "de": 297,
+     "ate": 307
     },
     {
      "w": "nem",
-     "de": 311,
-     "ate": 317
+     "de": 317,
+     "ate": 322
     },
     {
      "w": "a",
-     "de": 317,
-     "ate": 318
+     "de": 322,
+     "ate": 323
     },
     {
      "w": "empresa",
-     "de": 318,
-     "ate": 330
+     "de": 323,
+     "ate": 337
     },
     {
      "w": "consegue",
-     "de": 331,
-     "ate": 344
+     "de": 337,
+     "ate": 349
     },
     {
      "w": "abrir",
-     "de": 344,
-     "ate": 352
+     "de": 349,
+     "ate": 357
     },
     {
      "w": "o",
-     "de": 352,
-     "ate": 353
+     "de": 357,
+     "ate": 358
     },
     {
      "w": "cofre",
-     "de": 354,
-     "ate": 363
+     "de": 358,
+     "ate": 366
     },
     {
      "w": "sozinha.",
-     "de": 363,
-     "ate": 379
+     "de": 366,
+     "ate": 384
     }
    ]
   },
   {
    "id": "s06_04",
    "cena": "s6",
-   "texto": "E mudanças críticas, como remover um herdeiro, geram um alerta com o botão: Não foi você? Desfazer.",
+   "texto": "Mudanças críticas, como remover um herdeiro, geram um alerta: Não foi você? Desfazer.",
    "fonte": "sintetica",
    "src": "audio/voz/s06_04.mp3",
-   "dur": 210,
-   "inicio": 396,
+   "dur": 191,
+   "inicio": 394,
    "palavras": [
     {
-     "w": "E",
-     "de": 399,
-     "ate": 402
-    },
-    {
-     "w": "mudanças",
-     "de": 402,
-     "ate": 418
+     "w": "Mudanças",
+     "de": 396,
+     "ate": 415
     },
     {
      "w": "críticas,",
-     "de": 418,
-     "ate": 434
+     "de": 415,
+     "ate": 433
     },
     {
      "w": "como",
-     "de": 440,
-     "ate": 448
+     "de": 437,
+     "ate": 443
     },
     {
      "w": "remover",
-     "de": 448,
-     "ate": 461
+     "de": 443,
+     "ate": 459
     },
     {
      "w": "um",
-     "de": 462,
-     "ate": 465
+     "de": 459,
+     "ate": 462
     },
     {
      "w": "herdeiro,",
-     "de": 466,
-     "ate": 477
+     "de": 462,
+     "ate": 476
     },
     {
      "w": "geram",
-     "de": 486,
+     "de": 483,
      "ate": 494
     },
     {
      "w": "um",
      "de": 494,
-     "ate": 497
+     "ate": 496
     },
     {
-     "w": "alerta",
-     "de": 497,
-     "ate": 508
-    },
-    {
-     "w": "com",
-     "de": 508,
-     "ate": 512
-    },
-    {
-     "w": "o",
-     "de": 512,
-     "ate": 513
-    },
-    {
-     "w": "botão:",
-     "de": 513,
-     "ate": 526
+     "w": "alerta:",
+     "de": 496,
+     "ate": 511
     },
     {
      "w": "Não",
-     "de": 532,
-     "ate": 538
+     "de": 521,
+     "ate": 527
     },
     {
      "w": "foi",
-     "de": 539,
-     "ate": 544
+     "de": 527,
+     "ate": 532
     },
     {
      "w": "você?",
-     "de": 544,
-     "ate": 556
+     "de": 532,
+     "ate": 546
     },
     {
      "w": "Desfazer.",
-     "de": 580,
-     "ate": 599
+     "de": 557,
+     "ate": 581
     }
    ]
   },
@@ -2420,63 +2395,63 @@
    "texto": "Gerenciadores de senha resolvem o dia a dia, não a sucessão.",
    "fonte": "sintetica",
    "src": "audio/voz/s07_01.mp3",
-   "dur": 110,
+   "dur": 120,
    "inicio": 8,
    "palavras": [
     {
      "w": "Gerenciadores",
-     "de": 11,
+     "de": 10,
      "ate": 34
     },
     {
      "w": "de",
-     "de": 35,
-     "ate": 38
+     "de": 34,
+     "ate": 37
     },
     {
      "w": "senha",
-     "de": 38,
-     "ate": 46
+     "de": 37,
+     "ate": 48
     },
     {
      "w": "resolvem",
-     "de": 47,
-     "ate": 63
+     "de": 48,
+     "ate": 66
     },
     {
      "w": "o",
-     "de": 63,
-     "ate": 64
+     "de": 66,
+     "ate": 69
     },
     {
      "w": "dia",
-     "de": 65,
-     "ate": 70
+     "de": 69,
+     "ate": 76
     },
     {
      "w": "a",
-     "de": 70,
-     "ate": 72
+     "de": 76,
+     "ate": 77
     },
     {
      "w": "dia,",
-     "de": 72,
-     "ate": 81
+     "de": 77,
+     "ate": 87
     },
     {
      "w": "não",
-     "de": 86,
-     "ate": 95
+     "de": 94,
+     "ate": 104
     },
     {
      "w": "a",
-     "de": 95,
-     "ate": 96
+     "de": 104,
+     "ate": 105
     },
     {
      "w": "sucessão.",
-     "de": 96,
-     "ate": 112
+     "de": 104,
+     "ate": 125
     }
    ]
   },
@@ -2486,78 +2461,78 @@
    "texto": "Os contatos de legado de Google, Apple e Meta cobrem só a própria plataforma.",
    "fonte": "sintetica",
    "src": "audio/voz/s07_02.mp3",
-   "dur": 141,
-   "inicio": 127,
+   "dur": 147,
+   "inicio": 134,
    "palavras": [
     {
      "w": "Os",
-     "de": 130,
-     "ate": 134
+     "de": 136,
+     "ate": 139
     },
     {
      "w": "contatos",
-     "de": 135,
-     "ate": 152
+     "de": 139,
+     "ate": 156
     },
     {
      "w": "de",
-     "de": 152,
-     "ate": 155
+     "de": 156,
+     "ate": 158
     },
     {
      "w": "legado",
-     "de": 155,
-     "ate": 166
-    },
-    {
-     "w": "de",
-     "de": 166,
+     "de": 158,
      "ate": 169
     },
     {
-     "w": "Google,",
+     "w": "de",
      "de": 169,
-     "ate": 181
+     "ate": 173
+    },
+    {
+     "w": "Google,",
+     "de": 173,
+     "ate": 188
     },
     {
      "w": "Apple",
-     "de": 189,
-     "ate": 198
+     "de": 193,
+     "ate": 209
     },
     {
      "w": "e",
-     "de": 198,
-     "ate": 199
+     "de": 209,
+     "ate": 212
     },
     {
      "w": "Meta",
-     "de": 199,
-     "ate": 208
+     "de": 212,
+     "ate": 223
     },
     {
      "w": "cobrem",
-     "de": 208,
-     "ate": 219
+     "de": 223,
+     "ate": 236
     },
     {
      "w": "só",
-     "de": 220,
-     "ate": 226
+     "de": 236,
+     "ate": 243
     },
     {
      "w": "a",
-     "de": 226,
-     "ate": 228
+     "de": 243,
+     "ate": 245
     },
     {
      "w": "própria",
-     "de": 228,
-     "ate": 239
+     "de": 245,
+     "ate": 257
     },
     {
      "w": "plataforma.",
-     "de": 240,
-     "ate": 261
+     "de": 257,
+     "ate": 277
     }
    ]
   },
@@ -2567,78 +2542,78 @@
    "texto": "A Herança Digital reúne tudo em um só lugar, seguindo o rito legal brasileiro.",
    "fonte": "sintetica",
    "src": "audio/voz/s07_03.mp3",
-   "dur": 131,
-   "inicio": 277,
+   "dur": 147,
+   "inicio": 287,
    "palavras": [
     {
      "w": "A",
-     "de": 280,
-     "ate": 283
+     "de": 289,
+     "ate": 293
     },
     {
      "w": "Herança",
-     "de": 284,
-     "ate": 294
+     "de": 293,
+     "ate": 304
     },
     {
      "w": "Digital",
-     "de": 295,
-     "ate": 306
+     "de": 304,
+     "ate": 320
     },
     {
      "w": "reúne",
-     "de": 307,
-     "ate": 318
+     "de": 320,
+     "ate": 333
     },
     {
      "w": "tudo",
-     "de": 319,
-     "ate": 326
+     "de": 333,
+     "ate": 341
     },
     {
      "w": "em",
-     "de": 327,
-     "ate": 329
+     "de": 341,
+     "ate": 344
     },
     {
      "w": "um",
-     "de": 329,
-     "ate": 332
+     "de": 344,
+     "ate": 347
     },
     {
      "w": "só",
-     "de": 332,
-     "ate": 337
+     "de": 347,
+     "ate": 355
     },
     {
      "w": "lugar,",
-     "de": 338,
-     "ate": 348
+     "de": 355,
+     "ate": 367
     },
     {
      "w": "seguindo",
-     "de": 358,
-     "ate": 369
+     "de": 375,
+     "ate": 390
     },
     {
      "w": "o",
-     "de": 369,
-     "ate": 370
+     "de": 390,
+     "ate": 391
     },
     {
      "w": "rito",
-     "de": 370,
-     "ate": 377
+     "de": 391,
+     "ate": 401
     },
     {
      "w": "legal",
-     "de": 378,
-     "ate": 386
+     "de": 401,
+     "ate": 412
     },
     {
      "w": "brasileiro.",
-     "de": 387,
-     "ate": 402
+     "de": 412,
+     "ate": 430
     }
    ]
   },
@@ -2648,164 +2623,159 @@
    "texto": "A receita vem da assinatura anual do titular e de uma taxa na liberação.",
    "fonte": "sintetica",
    "src": "audio/voz/s08_01.mp3",
-   "dur": 118,
+   "dur": 131,
    "inicio": 8,
    "palavras": [
     {
      "w": "A",
-     "de": 11,
-     "ate": 14
+     "de": 10,
+     "ate": 13
     },
     {
      "w": "receita",
-     "de": 15,
-     "ate": 29
+     "de": 13,
+     "ate": 32
     },
     {
      "w": "vem",
-     "de": 29,
-     "ate": 34
+     "de": 32,
+     "ate": 38
     },
     {
      "w": "da",
-     "de": 35,
-     "ate": 37
+     "de": 38,
+     "ate": 41
     },
     {
      "w": "assinatura",
-     "de": 37,
-     "ate": 52
+     "de": 41,
+     "ate": 58
     },
     {
      "w": "anual",
-     "de": 52,
-     "ate": 60
+     "de": 58,
+     "ate": 68
     },
     {
      "w": "do",
-     "de": 61,
-     "ate": 63
+     "de": 68,
+     "ate": 71
     },
     {
      "w": "titular",
-     "de": 63,
-     "ate": 78
-    },
-    {
-     "w": "e",
-     "de": 79,
-     "ate": 80
-    },
-    {
-     "w": "de",
-     "de": 81,
-     "ate": 83
-    },
-    {
-     "w": "uma",
-     "de": 83,
+     "de": 71,
      "ate": 88
     },
     {
+     "w": "e",
+     "de": 88,
+     "ate": 92
+    },
+    {
+     "w": "de",
+     "de": 92,
+     "ate": 95
+    },
+    {
+     "w": "uma",
+     "de": 95,
+     "ate": 100
+    },
+    {
      "w": "taxa",
-     "de": 89,
-     "ate": 99
+     "de": 100,
+     "ate": 112
     },
     {
      "w": "na",
-     "de": 99,
-     "ate": 102
+     "de": 112,
+     "ate": 114
     },
     {
      "w": "liberação.",
-     "de": 102,
-     "ate": 120
+     "de": 114,
+     "ate": 135
     }
    ]
   },
   {
    "id": "s08_02",
    "cena": "s8",
-   "texto": "Escritórios de advocacia, cartórios, bancos e seguradoras entram como parceiros previstos e canais de venda.",
+   "texto": "Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda.",
    "fonte": "sintetica",
    "src": "audio/voz/s08_02.mp3",
-   "dur": 189,
-   "inicio": 135,
+   "dur": 191,
+   "inicio": 145,
    "palavras": [
     {
      "w": "Escritórios",
-     "de": 138,
-     "ate": 157
+     "de": 147,
+     "ate": 168
     },
     {
      "w": "de",
-     "de": 157,
-     "ate": 159
+     "de": 168,
+     "ate": 171
     },
     {
      "w": "advocacia,",
-     "de": 159,
-     "ate": 181
+     "de": 171,
+     "ate": 196
     },
     {
      "w": "cartórios,",
-     "de": 186,
-     "ate": 205
+     "de": 201,
+     "ate": 222
     },
     {
      "w": "bancos",
-     "de": 212,
-     "ate": 223
+     "de": 227,
+     "ate": 240
     },
     {
      "w": "e",
-     "de": 224,
-     "ate": 226
+     "de": 240,
+     "ate": 244
     },
     {
      "w": "seguradoras",
-     "de": 227,
-     "ate": 245
+     "de": 244,
+     "ate": 265
     },
     {
-     "w": "entram",
-     "de": 245,
-     "ate": 254
-    },
-    {
-     "w": "como",
-     "de": 254,
-     "ate": 260
+     "w": "são",
+     "de": 265,
+     "ate": 269
     },
     {
      "w": "parceiros",
-     "de": 261,
-     "ate": 275
+     "de": 269,
+     "ate": 283
     },
     {
      "w": "previstos",
-     "de": 275,
-     "ate": 289
+     "de": 283,
+     "ate": 303
     },
     {
      "w": "e",
-     "de": 290,
-     "ate": 293
+     "de": 303,
+     "ate": 306
     },
     {
      "w": "canais",
-     "de": 293,
-     "ate": 304
+     "de": 306,
+     "ate": 317
     },
     {
      "w": "de",
-     "de": 304,
-     "ate": 307
+     "de": 317,
+     "ate": 320
     },
     {
      "w": "venda.",
-     "de": 307,
-     "ate": 318
+     "de": 320,
+     "ate": 332
     }
    ]
   },
@@ -2815,240 +2785,215 @@
    "texto": "Os valores serão definidos depois da pesquisa com usuários.",
    "fonte": "sintetica",
    "src": "audio/voz/s08_03.mp3",
-   "dur": 102,
-   "inicio": 333,
+   "dur": 110,
+   "inicio": 342,
    "palavras": [
     {
      "w": "Os",
-     "de": 336,
-     "ate": 340
+     "de": 344,
+     "ate": 348
     },
     {
      "w": "valores",
-     "de": 341,
-     "ate": 355
+     "de": 348,
+     "ate": 364
     },
     {
      "w": "serão",
-     "de": 355,
-     "ate": 361
+     "de": 364,
+     "ate": 371
     },
     {
      "w": "definidos",
-     "de": 361,
-     "ate": 377
+     "de": 371,
+     "ate": 388
     },
     {
      "w": "depois",
-     "de": 378,
-     "ate": 387
+     "de": 388,
+     "ate": 399
     },
     {
      "w": "da",
-     "de": 388,
-     "ate": 390
+     "de": 399,
+     "ate": 403
     },
     {
      "w": "pesquisa",
-     "de": 391,
-     "ate": 405
+     "de": 403,
+     "ate": 421
     },
     {
      "w": "com",
-     "de": 405,
-     "ate": 411
+     "de": 421,
+     "ate": 428
     },
     {
      "w": "usuários.",
-     "de": 411,
-     "ate": 429
+     "de": 428,
+     "ate": 448
     }
    ]
   },
   {
    "id": "s09_01",
    "cena": "s9",
-   "texto": "Somos um projeto de faculdade, e as parcerias com escritórios, cartórios e verificação de identidade são parceiros previstos.",
+   "texto": "Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos.",
    "fonte": "sintetica",
    "src": "audio/voz/s09_01.mp3",
-   "dur": 220,
+   "dur": 203,
    "inicio": 8,
    "palavras": [
     {
      "w": "Somos",
-     "de": 11,
-     "ate": 22
+     "de": 10,
+     "ate": 21
     },
     {
      "w": "um",
-     "de": 22,
+     "de": 21,
      "ate": 25
     },
     {
      "w": "projeto",
-     "de": 26,
+     "de": 25,
+     "ate": 38
+    },
+    {
+     "w": "de",
+     "de": 38,
      "ate": 40
     },
     {
-     "w": "de",
-     "de": 41,
-     "ate": 44
-    },
-    {
-     "w": "faculdade,",
-     "de": 44,
-     "ate": 63
-    },
-    {
-     "w": "e",
-     "de": 72,
-     "ate": 74
-    },
-    {
-     "w": "as",
-     "de": 74,
-     "ate": 78
-    },
-    {
-     "w": "parcerias",
-     "de": 79,
-     "ate": 94
-    },
-    {
-     "w": "com",
-     "de": 95,
-     "ate": 98
+     "w": "faculdade;",
+     "de": 40,
+     "ate": 62
     },
     {
      "w": "escritórios,",
-     "de": 99,
-     "ate": 118
+     "de": 68,
+     "ate": 91
     },
     {
      "w": "cartórios",
-     "de": 123,
-     "ate": 137
+     "de": 96,
+     "ate": 115
     },
     {
      "w": "e",
-     "de": 138,
-     "ate": 141
+     "de": 115,
+     "ate": 121
     },
     {
      "w": "verificação",
-     "de": 141,
-     "ate": 161
+     "de": 121,
+     "ate": 144
     },
     {
      "w": "de",
-     "de": 161,
-     "ate": 164
+     "de": 144,
+     "ate": 146
     },
     {
      "w": "identidade",
-     "de": 164,
-     "ate": 182
+     "de": 146,
+     "ate": 166
     },
     {
      "w": "são",
-     "de": 182,
-     "ate": 188
+     "de": 166,
+     "ate": 171
     },
     {
      "w": "parceiros",
-     "de": 188,
-     "ate": 202
+     "de": 171,
+     "ate": 185
     },
     {
      "w": "previstos.",
-     "de": 203,
-     "ate": 222
+     "de": 185,
+     "ate": 207
     }
    ]
   },
   {
    "id": "s09_02",
    "cena": "s9",
-   "texto": "Nossos próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP.",
+   "texto": "Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP.",
    "fonte": "sintetica",
    "src": "audio/voz/s09_02.mp3",
-   "dur": 193,
-   "inicio": 237,
+   "dur": 187,
+   "inicio": 217,
    "palavras": [
     {
-     "w": "Nossos",
-     "de": 240,
-     "ate": 253
-    },
-    {
-     "w": "próximos",
-     "de": 253,
-     "ate": 267
+     "w": "Próximos",
+     "de": 219,
+     "ate": 233
     },
     {
      "w": "passos:",
-     "de": 267,
-     "ate": 282
+     "de": 233,
+     "ate": 249
     },
     {
      "w": "validar",
-     "de": 289,
-     "ate": 304
+     "de": 257,
+     "ate": 271
     },
     {
      "w": "com",
-     "de": 304,
-     "ate": 309
+     "de": 271,
+     "ate": 275
     },
     {
      "w": "um",
-     "de": 309,
-     "ate": 311
+     "de": 275,
+     "ate": 277
     },
     {
      "w": "advogado",
-     "de": 312,
-     "ate": 328
+     "de": 277,
+     "ate": 295
     },
     {
      "w": "de",
-     "de": 328,
-     "ate": 331
+     "de": 295,
+     "ate": 298
     },
     {
      "w": "sucessões,",
-     "de": 331,
-     "ate": 351
+     "de": 298,
+     "ate": 321
     },
     {
      "w": "ouvir",
-     "de": 358,
-     "ate": 369
+     "de": 326,
+     "ate": 338
     },
     {
      "w": "usuários",
-     "de": 369,
-     "ate": 382
+     "de": 338,
+     "ate": 354
     },
     {
      "w": "e",
-     "de": 383,
-     "ate": 386
+     "de": 354,
+     "ate": 358
     },
     {
      "w": "construir",
-     "de": 386,
-     "ate": 401
+     "de": 358,
+     "ate": 375
     },
     {
      "w": "o",
-     "de": 401,
-     "ate": 404
+     "de": 375,
+     "ate": 378
     },
     {
      "w": "MVP.",
-     "de": 405,
-     "ate": 424
+     "de": 378,
+     "ate": 400
     }
    ]
   },
@@ -3058,53 +3003,53 @@
    "texto": "Herança Digital: seus dados, sua história, seu futuro. Obrigado!",
    "fonte": "sintetica",
    "src": "audio/voz/s09_03.mp3",
-   "dur": 165,
-   "inicio": 439,
+   "dur": 160,
+   "inicio": 410,
    "palavras": [
     {
      "w": "Herança",
-     "de": 442,
-     "ate": 455
+     "de": 412,
+     "ate": 425
     },
     {
      "w": "Digital:",
-     "de": 456,
-     "ate": 471
+     "de": 425,
+     "ate": 442
     },
     {
      "w": "seus",
-     "de": 480,
-     "ate": 487
+     "de": 449,
+     "ate": 458
     },
     {
      "w": "dados,",
-     "de": 488,
-     "ate": 500
+     "de": 458,
+     "ate": 475
     },
     {
      "w": "sua",
-     "de": 507,
-     "ate": 513
+     "de": 480,
+     "ate": 486
     },
     {
      "w": "história,",
-     "de": 513,
-     "ate": 527
+     "de": 486,
+     "ate": 501
     },
     {
      "w": "seu",
-     "de": 533,
-     "ate": 538
+     "de": 507,
+     "ate": 515
     },
     {
      "w": "futuro.",
-     "de": 539,
-     "ate": 552
+     "de": 515,
+     "ate": 532
     },
     {
      "w": "Obrigado!",
-     "de": 576,
-     "ate": 598
+     "de": 542,
+     "ate": 566
     }
    ]
   }
@@ -3114,23 +3059,23 @@
    "id": "L01",
    "cena": "s1",
    "fraseId": "s01_01",
-   "de": 13,
-   "ate": 56,
+   "de": 12,
+   "ate": 51,
    "palavras": [
     {
      "w": "Quando",
-     "de": 17,
-     "ate": 26
+     "de": 16,
+     "ate": 23
     },
     {
      "w": "você",
-     "de": 26,
-     "ate": 35
+     "de": 23,
+     "ate": 31
     },
     {
      "w": "morrer…",
-     "de": 36,
-     "ate": 47
+     "de": 31,
+     "ate": 46
     }
    ]
   },
@@ -3138,38 +3083,38 @@
    "id": "L02",
    "cena": "s1",
    "fraseId": "s01_02",
-   "de": 56,
-   "ate": 126,
+   "de": 51,
+   "ate": 119,
    "palavras": [
     {
      "w": "quem",
-     "de": 60,
-     "ate": 67
+     "de": 55,
+     "ate": 60
     },
     {
      "w": "fica",
-     "de": 67,
-     "ate": 77
+     "de": 60,
+     "ate": 72
     },
     {
      "w": "com",
-     "de": 77,
-     "ate": 82
+     "de": 72,
+     "ate": 76
     },
     {
      "w": "o",
-     "de": 82,
-     "ate": 83
+     "de": 76,
+     "ate": 77
     },
     {
      "w": "seu",
-     "de": 84,
-     "ate": 89
+     "de": 77,
+     "ate": 84
     },
     {
      "w": "Instagram?",
-     "de": 90,
-     "ate": 104
+     "de": 84,
+     "ate": 101
     }
    ]
   },
@@ -3177,28 +3122,28 @@
    "id": "L03",
    "cena": "s1",
    "fraseId": "s01_03",
-   "de": 126,
-   "ate": 165,
+   "de": 119,
+   "ate": 158,
    "palavras": [
     {
      "w": "Com",
-     "de": 116,
-     "ate": 122
+     "de": 109,
+     "ate": 115
     },
     {
      "w": "o",
-     "de": 122,
-     "ate": 124
+     "de": 115,
+     "ate": 116
     },
     {
      "w": "seu",
-     "de": 124,
-     "ate": 130
+     "de": 116,
+     "ate": 123
     },
     {
      "w": "e-mail?",
-     "de": 130,
-     "ate": 143
+     "de": 123,
+     "ate": 139
     }
    ]
   },
@@ -3206,28 +3151,28 @@
    "id": "L04",
    "cena": "s1",
    "fraseId": "s01_04",
-   "de": 165,
-   "ate": 217,
+   "de": 158,
+   "ate": 210,
    "palavras": [
     {
      "w": "Com",
-     "de": 155,
-     "ate": 163
+     "de": 148,
+     "ate": 154
     },
     {
      "w": "as",
-     "de": 163,
-     "ate": 167
+     "de": 154,
+     "ate": 158
     },
     {
      "w": "suas",
-     "de": 167,
-     "ate": 174
+     "de": 158,
+     "ate": 166
     },
     {
      "w": "criptomoedas?",
-     "de": 174,
-     "ate": 202
+     "de": 166,
+     "ate": 200
     }
    ]
   },
@@ -3235,58 +3180,58 @@
    "id": "L05",
    "cena": "s1",
    "fraseId": "s01_05",
-   "de": 246,
-   "ate": 358,
+   "de": 244,
+   "ate": 362,
    "palavras": [
     {
      "w": "Somos",
-     "de": 253,
-     "ate": 264
+     "de": 248,
+     "ate": 259
     },
     {
      "w": "o",
-     "de": 265,
-     "ate": 268
+     "de": 259,
+     "ate": 263
     },
     {
      "w": "grupo",
-     "de": 269,
-     "ate": 275
+     "de": 263,
+     "ate": 273
     },
     {
      "w": "EternaByte,",
-     "de": 276,
+     "de": 273,
      "ate": 299
     },
     {
      "w": "e",
-     "de": 306,
+     "de": 304,
      "ate": 307
     },
     {
      "w": "esta",
      "de": 307,
-     "ate": 315
+     "ate": 317
     },
     {
      "w": "é",
-     "de": 316,
-     "ate": 319
+     "de": 317,
+     "ate": 320
     },
     {
      "w": "a",
-     "de": 319,
-     "ate": 321
+     "de": 320,
+     "ate": 323
     },
     {
      "w": "Herança",
-     "de": 321,
-     "ate": 333
+     "de": 323,
+     "ate": 336
     },
     {
      "w": "Digital.",
-     "de": 333,
-     "ate": 348
+     "de": 336,
+     "ate": 352
     }
    ]
   },
@@ -3294,183 +3239,181 @@
    "id": "L06",
    "cena": "s2",
    "fraseId": "s02_01",
-   "de": 7,
-   "ate": 164,
+   "de": 6,
+   "ate": 157,
    "palavras": [
     {
      "w": "Hoje",
-     "de": 11,
-     "ate": 20
+     "de": 10,
+     "ate": 17
     },
     {
      "w": "quase",
-     "de": 20,
-     "ate": 31
+     "de": 17,
+     "ate": 27
     },
     {
      "w": "todo",
-     "de": 32,
-     "ate": 39
+     "de": 27,
+     "ate": 32
     },
     {
      "w": "mundo",
-     "de": 40,
-     "ate": 48
+     "de": 32,
+     "ate": 41
     },
     {
      "w": "tem",
-     "de": 48,
-     "ate": 52
+     "de": 41,
+     "ate": 46
     },
     {
      "w": "e-mail,",
-     "de": 53,
-     "ate": 62
+     "de": 46,
+     "ate": 59
     },
     {
      "w": "redes",
-     "de": 69,
-     "ate": 78
+     "de": 64,
+     "ate": 71
     },
     {
      "w": "sociais,",
-     "de": 79,
-     "ate": 95
+     "de": 71,
+     "ate": 91
     },
     {
      "w": "banco",
-     "de": 101,
-     "ate": 112
+     "de": 96,
+     "ate": 106
     },
     {
      "w": "digital,",
-     "de": 112,
-     "ate": 128
+     "de": 106,
+     "ate": 125
     },
     {
      "w": "criptomoedas,",
-     "de": 134,
-     "ate": 161
+     "de": 129,
+     "ate": 155
     }
-   ],
-   "manual": true
+   ]
   },
   {
    "id": "L07",
    "cena": "s2",
    "fraseId": "s02_01",
-   "de": 164,
+   "de": 157,
    "ate": 229,
    "palavras": [
     {
      "w": "fotos",
-     "de": 168,
-     "ate": 179
+     "de": 161,
+     "ate": 172
     },
     {
      "w": "na",
-     "de": 179,
-     "ate": 182
+     "de": 172,
+     "ate": 178
     },
     {
      "w": "nuvem",
-     "de": 182,
-     "ate": 194
+     "de": 178,
+     "ate": 193
     },
     {
      "w": "e",
-     "de": 195,
+     "de": 193,
      "ate": 196
     },
     {
      "w": "assinaturas.",
      "de": 196,
-     "ate": 219
+     "ate": 221
     }
-   ],
-   "manual": true
+   ]
   },
   {
    "id": "L08",
    "cena": "s2",
    "fraseId": "s02_02",
    "de": 229,
-   "ate": 372,
+   "ate": 366,
    "palavras": [
     {
      "w": "Quando",
-     "de": 239,
-     "ate": 245
+     "de": 233,
+     "ate": 238
     },
     {
      "w": "a",
-     "de": 246,
-     "ate": 247
+     "de": 238,
+     "ate": 239
     },
     {
      "w": "pessoa",
-     "de": 247,
-     "ate": 257
+     "de": 239,
+     "ate": 249
     },
     {
      "w": "morre,",
-     "de": 257,
-     "ate": 269
+     "de": 249,
+     "ate": 261
     },
     {
      "w": "a",
-     "de": 275,
-     "ate": 276
+     "de": 267,
+     "ate": 269
     },
     {
      "w": "família",
-     "de": 277,
-     "ate": 288
+     "de": 269,
+     "ate": 280
     },
     {
      "w": "não",
-     "de": 288,
-     "ate": 292
+     "de": 280,
+     "ate": 285
     },
     {
      "w": "sabe",
-     "de": 293,
-     "ate": 301
+     "de": 285,
+     "ate": 295
     },
     {
      "w": "o",
-     "de": 301,
-     "ate": 302
+     "de": 295,
+     "ate": 296
     },
     {
      "w": "que",
-     "de": 302,
-     "ate": 305
+     "de": 297,
+     "ate": 299
     },
     {
      "w": "existe,",
-     "de": 305,
-     "ate": 319
+     "de": 299,
+     "ate": 314
     },
     {
      "w": "não",
-     "de": 327,
-     "ate": 332
+     "de": 320,
+     "ate": 326
     },
     {
      "w": "tem",
-     "de": 333,
-     "ate": 337
+     "de": 326,
+     "ate": 334
     },
     {
      "w": "as",
-     "de": 337,
-     "ate": 341
+     "de": 334,
+     "ate": 337
     },
     {
      "w": "senhas,",
-     "de": 341,
-     "ate": 355
+     "de": 337,
+     "ate": 350
     }
    ]
   },
@@ -3478,43 +3421,43 @@
    "id": "L09",
    "cena": "s2",
    "fraseId": "s02_02",
-   "de": 372,
-   "ate": 430,
+   "de": 366,
+   "ate": 416,
    "palavras": [
     {
      "w": "e",
-     "de": 362,
-     "ate": 364
+     "de": 356,
+     "ate": 358
     },
     {
      "w": "não",
-     "de": 364,
-     "ate": 370
+     "de": 358,
+     "ate": 365
     },
     {
      "w": "sabe",
-     "de": 370,
-     "ate": 379
+     "de": 365,
+     "ate": 375
     },
     {
      "w": "o",
-     "de": 380,
-     "ate": 381
+     "de": 375,
+     "ate": 376
     },
     {
      "w": "que",
-     "de": 381,
-     "ate": 384
+     "de": 376,
+     "ate": 378
     },
     {
      "w": "ela",
-     "de": 384,
-     "ate": 388
+     "de": 378,
+     "ate": 382
     },
     {
      "w": "queria.",
-     "de": 389,
-     "ate": 400
+     "de": 382,
+     "ate": 395
     }
    ]
   },
@@ -3522,83 +3465,83 @@
    "id": "L10",
    "cena": "s2",
    "fraseId": "s02_03",
-   "de": 430,
-   "ate": 598,
+   "de": 416,
+   "ate": 601,
    "palavras": [
     {
      "w": "Resultado:",
-     "de": 420,
-     "ate": 439
+     "de": 406,
+     "ate": 427
     },
     {
      "w": "bens",
-     "de": 446,
-     "ate": 454
+     "de": 435,
+     "ate": 445
     },
     {
      "w": "com",
-     "de": 454,
-     "ate": 458
+     "de": 445,
+     "ate": 449
     },
     {
      "w": "valor",
-     "de": 458,
-     "ate": 467
+     "de": 449,
+     "ate": 458
     },
     {
      "w": "perdidos,",
-     "de": 467,
-     "ate": 486
+     "de": 458,
+     "ate": 479
     },
     {
      "w": "assinaturas",
-     "de": 491,
-     "ate": 509
+     "de": 484,
+     "ate": 503
     },
     {
      "w": "cobrando",
-     "de": 509,
-     "ate": 522
+     "de": 503,
+     "ate": 516
     },
     {
      "w": "para",
-     "de": 523,
-     "ate": 528
+     "de": 516,
+     "ate": 522
     },
     {
      "w": "sempre",
-     "de": 529,
-     "ate": 540
+     "de": 522,
+     "ate": 536
     },
     {
      "w": "e",
-     "de": 540,
-     "ate": 541
+     "de": 536,
+     "ate": 537
     },
     {
      "w": "perfis",
-     "de": 541,
-     "ate": 554
+     "de": 536,
+     "ate": 553
     },
     {
      "w": "virando",
-     "de": 554,
-     "ate": 564
+     "de": 553,
+     "ate": 566
     },
     {
      "w": "alvo",
-     "de": 565,
-     "ate": 573
+     "de": 566,
+     "ate": 575
     },
     {
      "w": "de",
-     "de": 573,
-     "ate": 576
+     "de": 575,
+     "ate": 578
     },
     {
      "w": "golpe.",
-     "de": 576,
-     "ate": 588
+     "de": 578,
+     "ate": 591
     }
    ]
   },
@@ -3606,38 +3549,38 @@
    "id": "L11",
    "cena": "s3",
    "fraseId": "s03_01",
-   "de": -2,
-   "ate": 190,
+   "de": -3,
+   "ate": 189,
    "palavras": [
     {
      "w": "A",
-     "de": 13,
+     "de": 12,
      "ate": 16
     },
     {
      "w": "Herança",
-     "de": 17,
+     "de": 16,
      "ate": 27
     },
     {
      "w": "Digital",
-     "de": 28,
-     "ate": 43
+     "de": 27,
+     "ate": 46
     },
     {
      "w": "é",
-     "de": 43,
-     "ate": 45
-    },
-    {
-     "w": "um",
-     "de": 45,
+     "de": 46,
      "ate": 48
     },
     {
+     "w": "um",
+     "de": 48,
+     "ate": 52
+    },
+    {
      "w": "cofre",
-     "de": 49,
-     "ate": 60
+     "de": 52,
+     "ate": 61
     },
     {
      "w": "onde",
@@ -3651,53 +3594,53 @@
     },
     {
      "w": "organiza,",
-     "de": 76,
-     "ate": 92
+     "de": 75,
+     "ate": 97
     },
     {
      "w": "em",
-     "de": 98,
-     "ate": 103
+     "de": 102,
+     "ate": 107
     },
     {
      "w": "vida,",
-     "de": 103,
-     "ate": 114
+     "de": 107,
+     "ate": 120
     },
     {
      "w": "tudo",
-     "de": 119,
-     "ate": 126
+     "de": 125,
+     "ate": 132
     },
     {
      "w": "o",
-     "de": 127,
-     "ate": 128
+     "de": 132,
+     "ate": 133
     },
     {
      "w": "que",
-     "de": 128,
-     "ate": 131
+     "de": 132,
+     "ate": 136
     },
     {
      "w": "tem",
-     "de": 132,
-     "ate": 135
+     "de": 136,
+     "ate": 141
     },
     {
      "w": "no",
-     "de": 136,
-     "ate": 138
+     "de": 141,
+     "ate": 143
     },
     {
      "w": "mundo",
-     "de": 139,
-     "ate": 149
+     "de": 143,
+     "ate": 154
     },
     {
      "w": "digital.",
-     "de": 149,
-     "ate": 165
+     "de": 154,
+     "ate": 171
     }
    ]
   },
@@ -3705,23 +3648,23 @@
    "id": "L12",
    "cena": "s3",
    "fraseId": "s03_02",
-   "de": 190,
-   "ate": 354,
+   "de": 189,
+   "ate": 359,
    "palavras": [
     {
      "w": "Juntamos",
-     "de": 183,
-     "ate": 202
+     "de": 182,
+     "ate": 198
     },
     {
      "w": "três",
-     "de": 202,
-     "ate": 211
+     "de": 198,
+     "ate": 209
     },
     {
      "w": "coisas:",
-     "de": 211,
-     "ate": 225
+     "de": 209,
+     "ate": 224
     },
     {
      "w": "um",
@@ -3731,556 +3674,490 @@
     {
      "w": "inventário",
      "de": 236,
-     "ate": 251
+     "ate": 254
     },
     {
      "w": "dos",
-     "de": 251,
-     "ate": 256
+     "de": 254,
+     "ate": 257
     },
     {
      "w": "seus",
      "de": 257,
-     "ate": 260
+     "ate": 261
     },
     {
      "w": "ativos,",
      "de": 261,
-     "ate": 277
+     "ate": 279
     },
     {
      "w": "um",
-     "de": 287,
-     "ate": 292
+     "de": 285,
+     "ate": 289
     },
     {
      "w": "cofre",
-     "de": 292,
-     "ate": 302
+     "de": 289,
+     "ate": 301
     },
     {
      "w": "de",
-     "de": 302,
-     "ate": 304
+     "de": 301,
+     "ate": 303
     },
     {
      "w": "acessos",
-     "de": 305,
-     "ate": 319
+     "de": 303,
+     "ate": 318
     },
     {
      "w": "criptografado,",
-     "de": 319,
-     "ate": 344
+     "de": 318,
+     "ate": 351
     }
-   ],
-   "manual": true
+   ]
   },
   {
    "id": "L13",
    "cena": "s3",
    "fraseId": "s03_03",
-   "de": 347,
-   "ate": 519,
+   "de": 359,
+   "ate": 451,
    "palavras": [
     {
      "w": "e",
-     "de": 362,
-     "ate": 365
+     "de": 363,
+     "ate": 366
     },
     {
      "w": "uma",
-     "de": 365,
-     "ate": 370
+     "de": 366,
+     "ate": 369
     },
     {
      "w": "liberação",
-     "de": 370,
-     "ate": 386
+     "de": 369,
+     "ate": 389
     },
     {
      "w": "que",
-     "de": 387,
-     "ate": 390
+     "de": 389,
+     "ate": 391
     },
     {
      "w": "só",
-     "de": 390,
-     "ate": 395
+     "de": 391,
+     "ate": 397
     },
     {
-     "w": "acontece",
-     "de": 395,
-     "ate": 412
+     "w": "vale",
+     "de": 397,
+     "ate": 407
     },
     {
      "w": "pelo",
-     "de": 412,
-     "ate": 418
+     "de": 407,
+     "ate": 412
     },
     {
      "w": "caminho",
-     "de": 418,
-     "ate": 427
+     "de": 412,
+     "ate": 421
     },
     {
-     "w": "legal,",
-     "de": 427,
-     "ate": 439
-    },
-    {
-     "w": "com",
-     "de": 447,
-     "ate": 451
-    },
-    {
-     "w": "inventário",
-     "de": 452,
-     "ate": 467
-    },
-    {
-     "w": "em",
-     "de": 468,
-     "ate": 469
-    },
-    {
-     "w": "cartório",
-     "de": 470,
-     "ate": 484
-    },
-    {
-     "w": "ou",
-     "de": 485,
-     "ate": 487
-    },
-    {
-     "w": "na",
-     "de": 488,
-     "ate": 491
-    },
-    {
-     "w": "justiça.",
-     "de": 491,
-     "ate": 508
+     "w": "legal:",
+     "de": 421,
+     "ate": 434
     }
    ]
   },
   {
    "id": "L14",
-   "cena": "s4",
-   "fraseId": "s04_01",
-   "de": -4,
-   "ate": 148,
+   "cena": "s3",
+   "fraseId": "s03_03",
+   "de": 451,
+   "ate": 523,
    "palavras": [
     {
-     "w": "Em",
-     "de": 11,
-     "ate": 17
+     "w": "inventário",
+     "de": 441,
+     "ate": 460
     },
     {
-     "w": "vida,",
-     "de": 17,
-     "ate": 27
+     "w": "em",
+     "de": 460,
+     "ate": 462
     },
     {
-     "w": "o",
-     "de": 33,
-     "ate": 34
+     "w": "cartório",
+     "de": 462,
+     "ate": 483
     },
     {
-     "w": "titular",
-     "de": 35,
-     "ate": 47
+     "w": "ou",
+     "de": 483,
+     "ate": 488
     },
     {
-     "w": "cadastra",
-     "de": 48,
-     "ate": 62
+     "w": "na",
+     "de": 488,
+     "ate": 492
     },
     {
-     "w": "os",
-     "de": 63,
-     "ate": 64
-    },
-    {
-     "w": "ativos",
-     "de": 63,
-     "ate": 76
-    },
-    {
-     "w": "e",
-     "de": 76,
-     "ate": 79
-    },
-    {
-     "w": "escolhe",
-     "de": 79,
-     "ate": 90
-    },
-    {
-     "w": "o",
-     "de": 90,
-     "ate": 91
-    },
-    {
-     "w": "destino",
-     "de": 92,
-     "ate": 105
-    },
-    {
-     "w": "de",
-     "de": 105,
-     "ate": 108
-    },
-    {
-     "w": "cada",
-     "de": 109,
-     "ate": 116
-    },
-    {
-     "w": "um.",
-     "de": 117,
-     "ate": 123
+     "w": "justiça.",
+     "de": 492,
+     "ate": 511
     }
    ]
   },
   {
    "id": "L15",
    "cena": "s4",
-   "fraseId": "s04_02",
-   "de": 148,
-   "ate": 221,
+   "fraseId": "s04_01",
+   "de": 1,
+   "ate": 150,
    "palavras": [
     {
-     "w": "No",
-     "de": 143,
-     "ate": 147
+     "w": "Em",
+     "de": 10,
+     "ate": 16
     },
     {
-     "w": "falecimento,",
-     "de": 147,
-     "ate": 169
+     "w": "vida,",
+     "de": 16,
+     "ate": 28
     },
     {
      "w": "o",
-     "de": 177,
-     "ate": 179
+     "de": 34,
+     "ate": 36
     },
     {
-     "w": "cofre",
-     "de": 179,
-     "ate": 190
+     "w": "titular",
+     "de": 36,
+     "ate": 52
     },
     {
-     "w": "é",
-     "de": 191,
-     "ate": 192
+     "w": "cadastra",
+     "de": 52,
+     "ate": 67
     },
     {
-     "w": "congelado.",
-     "de": 193,
-     "ate": 211
+     "w": "os",
+     "de": 67,
+     "ate": 68
+    },
+    {
+     "w": "ativos",
+     "de": 67,
+     "ate": 85
+    },
+    {
+     "w": "e",
+     "de": 85,
+     "ate": 91
+    },
+    {
+     "w": "escolhe",
+     "de": 91,
+     "ate": 104
+    },
+    {
+     "w": "o",
+     "de": 104,
+     "ate": 106
+    },
+    {
+     "w": "destino",
+     "de": 106,
+     "ate": 121
+    },
+    {
+     "w": "de",
+     "de": 121,
+     "ate": 125
+    },
+    {
+     "w": "cada",
+     "de": 125,
+     "ate": 136
+    },
+    {
+     "w": "um.",
+     "de": 136,
+     "ate": 143
     }
    ]
   },
   {
    "id": "L16",
    "cena": "s4",
-   "fraseId": "s04_03",
-   "de": 221,
-   "ate": 403,
+   "fraseId": "s04_02",
+   "de": 150,
+   "ate": 233,
    "palavras": [
     {
-     "w": "Só",
-     "de": 231,
-     "ate": 237
+     "w": "No",
+     "de": 154,
+     "ate": 158
     },
     {
-     "w": "depois",
-     "de": 237,
-     "ate": 247
+     "w": "falecimento,",
+     "de": 158,
+     "ate": 183
     },
     {
-     "w": "do",
-     "de": 248,
-     "ate": 250
+     "w": "o",
+     "de": 188,
+     "ate": 191
     },
     {
-     "w": "inventário",
-     "de": 250,
-     "ate": 268
+     "w": "cofre",
+     "de": 191,
+     "ate": 202
     },
     {
-     "w": "e",
-     "de": 268,
-     "ate": 270
+     "w": "é",
+     "de": 202,
+     "ate": 203
     },
     {
-     "w": "de",
-     "de": 270,
-     "ate": 273
-    },
-    {
-     "w": "um",
-     "de": 273,
-     "ate": 276
-    },
-    {
-     "w": "prazo",
-     "de": 276,
-     "ate": 286
-    },
-    {
-     "w": "para",
-     "de": 286,
-     "ate": 291
-    },
-    {
-     "w": "contestação,",
-     "de": 291,
-     "ate": 313
-    },
-    {
-     "w": "cada",
-     "de": 320,
-     "ate": 327
-    },
-    {
-     "w": "herdeiro",
-     "de": 327,
-     "ate": 339
-    },
-    {
-     "w": "recebe",
-     "de": 340,
-     "ate": 351
-    },
-    {
-     "w": "apenas",
-     "de": 351,
-     "ate": 362
-    },
-    {
-     "w": "a",
-     "de": 362,
-     "ate": 366
-    },
-    {
-     "w": "sua",
-     "de": 366,
-     "ate": 374
-    },
-    {
-     "w": "parte.",
-     "de": 374,
-     "ate": 386
+     "w": "congelado.",
+     "de": 203,
+     "ate": 225
     }
    ]
   },
   {
    "id": "L17",
-   "cena": "s5",
-   "fraseId": "s05_01",
-   "de": 2,
-   "ate": 54,
+   "cena": "s4",
+   "fraseId": "s04_03",
+   "de": 233,
+   "ate": 415,
    "palavras": [
     {
-     "w": "Este",
-     "de": 13,
-     "ate": 23
+     "w": "Só",
+     "de": 237,
+     "ate": 243
     },
     {
-     "w": "é",
-     "de": 23,
-     "ate": 24
+     "w": "depois",
+     "de": 243,
+     "ate": 253
     },
     {
-     "w": "o",
-     "de": 25,
-     "ate": 26
+     "w": "do",
+     "de": 253,
+     "ate": 255
     },
     {
-     "w": "protótipo.",
-     "de": 26,
-     "ate": 44
+     "w": "inventário",
+     "de": 255,
+     "ate": 279
+    },
+    {
+     "w": "e",
+     "de": 279,
+     "ate": 281
+    },
+    {
+     "w": "de",
+     "de": 281,
+     "ate": 284
+    },
+    {
+     "w": "um",
+     "de": 284,
+     "ate": 287
+    },
+    {
+     "w": "prazo",
+     "de": 287,
+     "ate": 298
+    },
+    {
+     "w": "para",
+     "de": 298,
+     "ate": 303
+    },
+    {
+     "w": "contestação,",
+     "de": 303,
+     "ate": 330
+    },
+    {
+     "w": "cada",
+     "de": 334,
+     "ate": 341
+    },
+    {
+     "w": "herdeiro",
+     "de": 341,
+     "ate": 354
+    },
+    {
+     "w": "recebe",
+     "de": 354,
+     "ate": 367
+    },
+    {
+     "w": "apenas",
+     "de": 367,
+     "ate": 381
+    },
+    {
+     "w": "a",
+     "de": 381,
+     "ate": 384
+    },
+    {
+     "w": "sua",
+     "de": 384,
+     "ate": 390
+    },
+    {
+     "w": "parte.",
+     "de": 390,
+     "ate": 405
     }
    ]
   },
   {
    "id": "L18",
    "cena": "s5",
-   "fraseId": "s05_02",
-   "de": 54,
-   "ate": 230,
+   "fraseId": "s05_01",
+   "de": 6,
+   "ate": 55,
    "palavras": [
     {
-     "w": "O",
-     "de": 62,
-     "ate": 65
+     "w": "Este",
+     "de": 12,
+     "ate": 22
     },
     {
-     "w": "titular",
-     "de": 65,
-     "ate": 80
-    },
-    {
-     "w": "entra",
-     "de": 80,
-     "ate": 87
-    },
-    {
-     "w": "com",
-     "de": 87,
-     "ate": 92
-    },
-    {
-     "w": "a",
-     "de": 92,
-     "ate": 93
-    },
-    {
-     "w": "chave",
-     "de": 94,
-     "ate": 103
-    },
-    {
-     "w": "de",
-     "de": 103,
-     "ate": 105
-    },
-    {
-     "w": "acesso",
-     "de": 106,
-     "ate": 118
-    },
-    {
-     "w": "do",
-     "de": 118,
-     "ate": 121
-    },
-    {
-     "w": "celular",
-     "de": 121,
-     "ate": 136
-    },
-    {
-     "w": "e",
-     "de": 136,
-     "ate": 138
-    },
-    {
-     "w": "vê",
-     "de": 139,
-     "ate": 143
+     "w": "é",
+     "de": 22,
+     "ate": 23
     },
     {
      "w": "o",
-     "de": 143,
-     "ate": 145
+     "de": 23,
+     "ate": 25
     },
     {
-     "w": "que",
-     "de": 145,
-     "ate": 149
-    },
-    {
-     "w": "falta",
-     "de": 149,
-     "ate": 160
-    },
-    {
-     "w": "para",
-     "de": 160,
-     "ate": 164
-    },
-    {
-     "w": "o",
-     "de": 165,
-     "ate": 166
-    },
-    {
-     "w": "plano",
-     "de": 166,
-     "ate": 175
-    },
-    {
-     "w": "ficar",
-     "de": 175,
-     "ate": 184
-    },
-    {
-     "w": "completo.",
-     "de": 184,
-     "ate": 202
+     "w": "protótipo.",
+     "de": 25,
+     "ate": 48
     }
    ]
   },
   {
    "id": "L19",
    "cena": "s5",
-   "fraseId": "s05_03",
-   "de": 230,
-   "ate": 409,
+   "fraseId": "s05_02",
+   "de": 55,
+   "ate": 222,
    "palavras": [
     {
-     "w": "No",
-     "de": 220,
-     "ate": 223
+     "w": "O",
+     "de": 59,
+     "ate": 61
     },
     {
-     "w": "inventário,",
-     "de": 224,
-     "ate": 242
+     "w": "titular",
+     "de": 61,
+     "ate": 77
     },
     {
-     "w": "cada",
-     "de": 250,
-     "ate": 257
+     "w": "entra",
+     "de": 77,
+     "ate": 84
     },
     {
-     "w": "ativo",
-     "de": 257,
-     "ate": 270
+     "w": "com",
+     "de": 84,
+     "ate": 88
     },
     {
-     "w": "(redes",
-     "de": 275,
-     "ate": 285
+     "w": "a",
+     "de": 88,
+     "ate": 89
     },
     {
-     "w": "sociais,",
-     "de": 286,
-     "ate": 301
+     "w": "chave",
+     "de": 89,
+     "ate": 98
     },
     {
-     "w": "e-mails,",
-     "de": 308,
-     "ate": 322
+     "w": "de",
+     "de": 98,
+     "ate": 101
     },
     {
-     "w": "cripto,",
-     "de": 328,
-     "ate": 341
+     "w": "acesso",
+     "de": 101,
+     "ate": 113
     },
     {
-     "w": "assinaturas)",
-     "de": 347,
-     "ate": 370
+     "w": "do",
+     "de": 113,
+     "ate": 116
     },
     {
-     "w": "recebe",
-     "de": 376,
-     "ate": 389
+     "w": "celular",
+     "de": 116,
+     "ate": 133
     },
     {
-     "w": "um",
-     "de": 389,
-     "ate": 391
+     "w": "e",
+     "de": 133,
+     "ate": 139
     },
     {
-     "w": "destino:",
-     "de": 391,
-     "ate": 405
+     "w": "vê",
+     "de": 139,
+     "ate": 145
+    },
+    {
+     "w": "o",
+     "de": 145,
+     "ate": 147
+    },
+    {
+     "w": "que",
+     "de": 147,
+     "ate": 150
+    },
+    {
+     "w": "falta",
+     "de": 150,
+     "ate": 162
+    },
+    {
+     "w": "para",
+     "de": 162,
+     "ate": 167
+    },
+    {
+     "w": "o",
+     "de": 167,
+     "ate": 168
+    },
+    {
+     "w": "plano",
+     "de": 167,
+     "ate": 175
+    },
+    {
+     "w": "ficar",
+     "de": 175,
+     "ate": 183
+    },
+    {
+     "w": "completo.",
+     "de": 183,
+     "ate": 200
     }
    ]
   },
@@ -4288,82 +4165,97 @@
    "id": "L20",
    "cena": "s5",
    "fraseId": "s05_03",
-   "de": 409,
-   "ate": 487,
+   "de": 222,
+   "ate": 407,
    "palavras": [
     {
-     "w": "pessoal,",
-     "de": 413,
-     "ate": 429
+     "w": "No",
+     "de": 212,
+     "ate": 216
     },
     {
-     "w": "patrimonial",
-     "de": 437,
-     "ate": 458
+     "w": "inventário,",
+     "de": 216,
+     "ate": 238
     },
     {
-     "w": "ou",
-     "de": 459,
-     "ate": 463
+     "w": "cada",
+     "de": 243,
+     "ate": 250
     },
     {
-     "w": "encerrar.",
-     "de": 463,
-     "ate": 477
+     "w": "ativo",
+     "de": 250,
+     "ate": 264
+    },
+    {
+     "w": "(redes",
+     "de": 271,
+     "ate": 282
+    },
+    {
+     "w": "sociais,",
+     "de": 282,
+     "ate": 300
+    },
+    {
+     "w": "e-mails,",
+     "de": 306,
+     "ate": 324
+    },
+    {
+     "w": "cripto,",
+     "de": 329,
+     "ate": 342
+    },
+    {
+     "w": "assinaturas)",
+     "de": 347,
+     "ate": 371
+    },
+    {
+     "w": "recebe",
+     "de": 377,
+     "ate": 388
+    },
+    {
+     "w": "um",
+     "de": 388,
+     "ate": 389
+    },
+    {
+     "w": "destino:",
+     "de": 389,
+     "ate": 405
     }
    ]
   },
   {
    "id": "L21",
    "cena": "s5",
-   "fraseId": "s05_04",
-   "de": 487,
-   "ate": 580,
+   "fraseId": "s05_03",
+   "de": 407,
+   "ate": 492,
    "palavras": [
     {
-     "w": "Depois,",
-     "de": 495,
-     "ate": 511
+     "w": "pessoal,",
+     "de": 411,
+     "ate": 430
     },
     {
-     "w": "ele",
-     "de": 519,
-     "ate": 522
+     "w": "patrimonial",
+     "de": 435,
+     "ate": 462
     },
     {
-     "w": "escolhe",
-     "de": 523,
-     "ate": 534
+     "w": "ou",
+     "de": 462,
+     "ate": 468
     },
     {
-     "w": "os",
-     "de": 534,
-     "ate": 535
-    },
-    {
-     "w": "herdeiros",
-     "de": 536,
-     "ate": 549
-    },
-    {
-     "w": "e",
-     "de": 549,
-     "ate": 552
-    },
-    {
-     "w": "define",
-     "de": 552,
-     "ate": 563
-    },
-    {
-     "w": "a",
-     "de": 563,
-     "ate": 565
-    },
-    {
-     "w": "carência:",
-     "de": 565,
-     "ate": 579
+     "w": "encerrar.",
+     "de": 468,
+     "ate": 484
     }
    ]
   },
@@ -4371,117 +4263,92 @@
    "id": "L22",
    "cena": "s5",
    "fraseId": "s05_04",
-   "de": 580,
-   "ate": 671,
+   "de": 492,
+   "ate": 594,
    "palavras": [
     {
-     "w": "quinze,",
-     "de": 584,
-     "ate": 596
+     "w": "Depois,",
+     "de": 496,
+     "ate": 512
     },
     {
-     "w": "trinta,",
-     "de": 600,
-     "ate": 611
+     "w": "ele",
+     "de": 519,
+     "ate": 523
     },
     {
-     "w": "sessenta",
-     "de": 617,
-     "ate": 632
+     "w": "escolhe",
+     "de": 523,
+     "ate": 533
     },
     {
-     "w": "ou",
-     "de": 633,
-     "ate": 635
+     "w": "os",
+     "de": 533,
+     "ate": 534
     },
     {
-     "w": "noventa",
-     "de": 635,
-     "ate": 647
+     "w": "herdeiros",
+     "de": 534,
+     "ate": 551
     },
     {
-     "w": "dias.",
-     "de": 648,
-     "ate": 661
+     "w": "e",
+     "de": 551,
+     "ate": 554
+    },
+    {
+     "w": "define",
+     "de": 554,
+     "ate": 565
+    },
+    {
+     "w": "a",
+     "de": 565,
+     "ate": 566
+    },
+    {
+     "w": "carência:",
+     "de": 566,
+     "ate": 581
     }
    ]
   },
   {
    "id": "L23",
    "cena": "s5",
-   "fraseId": "s05_05",
-   "de": 671,
-   "ate": 810,
+   "fraseId": "s05_04",
+   "de": 594,
+   "ate": 687,
    "palavras": [
     {
-     "w": "Quando",
-     "de": 678,
-     "ate": 686
+     "w": "quinze,",
+     "de": 588,
+     "ate": 602
     },
     {
-     "w": "o",
-     "de": 687,
-     "ate": 688
+     "w": "trinta,",
+     "de": 607,
+     "ate": 619
     },
     {
-     "w": "titular",
-     "de": 688,
-     "ate": 699
+     "w": "sessenta",
+     "de": 626,
+     "ate": 646
     },
     {
-     "w": "falece,",
-     "de": 700,
-     "ate": 715
+     "w": "ou",
+     "de": 646,
+     "ate": 649
     },
     {
-     "w": "o",
-     "de": 722,
-     "ate": 725
+     "w": "noventa",
+     "de": 649,
+     "ate": 664
     },
     {
-     "w": "herdeiro",
-     "de": 725,
-     "ate": 736
-    },
-    {
-     "w": "abre",
-     "de": 737,
-     "ate": 742
-    },
-    {
-     "w": "o",
-     "de": 743,
-     "ate": 744
-    },
-    {
-     "w": "pedido",
-     "de": 744,
-     "ate": 754
-    },
-    {
-     "w": "com",
-     "de": 755,
-     "ate": 758
-    },
-    {
-     "w": "a",
-     "de": 758,
-     "ate": 759
-    },
-    {
-     "w": "certidão",
-     "de": 760,
-     "ate": 774
-    },
-    {
-     "w": "de",
-     "de": 774,
-     "ate": 778
-    },
-    {
-     "w": "óbito,",
-     "de": 778,
-     "ate": 790
+     "w": "dias.",
+     "de": 664,
+     "ate": 679
     }
    ]
   },
@@ -4489,388 +4356,383 @@
    "id": "L24",
    "cena": "s5",
    "fraseId": "s05_05",
-   "de": 810,
-   "ate": 932,
+   "de": 687,
+   "ate": 824,
    "palavras": [
     {
+     "w": "Quando",
+     "de": 691,
+     "ate": 696
+    },
+    {
      "w": "o",
-     "de": 800,
-     "ate": 802
+     "de": 696,
+     "ate": 697
     },
     {
-     "w": "documento",
-     "de": 803,
-     "ate": 819
+     "w": "titular",
+     "de": 697,
+     "ate": 708
     },
     {
-     "w": "do",
-     "de": 819,
-     "ate": 821
+     "w": "falece,",
+     "de": 708,
+     "ate": 726
     },
     {
-     "w": "inventário",
-     "de": 822,
-     "ate": 840
+     "w": "o",
+     "de": 731,
+     "ate": 734
     },
     {
-     "w": "e",
-     "de": 841,
-     "ate": 842
+     "w": "herdeiro",
+     "de": 734,
+     "ate": 748
     },
     {
-     "w": "uma",
-     "de": 842,
-     "ate": 847
+     "w": "abre",
+     "de": 748,
+     "ate": 756
     },
     {
-     "w": "selfie",
-     "de": 847,
-     "ate": 859
+     "w": "o",
+     "de": 756,
+     "ate": 757
     },
     {
-     "w": "para",
-     "de": 860,
-     "ate": 865
+     "w": "pedido",
+     "de": 757,
+     "ate": 769
     },
     {
-     "w": "confirmar",
-     "de": 866,
-     "ate": 882
+     "w": "com",
+     "de": 769,
+     "ate": 772
     },
     {
      "w": "a",
-     "de": 882,
-     "ate": 885
+     "de": 772,
+     "ate": 774
     },
     {
-     "w": "identidade.",
-     "de": 885,
-     "ate": 905
+     "w": "certidão",
+     "de": 774,
+     "ate": 792
+    },
+    {
+     "w": "de",
+     "de": 792,
+     "ate": 796
+    },
+    {
+     "w": "óbito,",
+     "de": 796,
+     "ate": 809
     }
    ]
   },
   {
    "id": "L25",
    "cena": "s5",
-   "fraseId": "s05_06",
-   "de": 932,
-   "ate": 1034,
+   "fraseId": "s05_05",
+   "de": 824,
+   "ate": 946,
    "palavras": [
     {
-     "w": "A",
-     "de": 923,
-     "ate": 927
+     "w": "o",
+     "de": 814,
+     "ate": 816
     },
     {
-     "w": "equipe",
-     "de": 927,
-     "ate": 937
+     "w": "documento",
+     "de": 816,
+     "ate": 832
     },
     {
-     "w": "valida,",
-     "de": 937,
-     "ate": 951
+     "w": "do",
+     "de": 832,
+     "ate": 834
     },
     {
-     "w": "todos",
-     "de": 956,
-     "ate": 966
-    },
-    {
-     "w": "são",
-     "de": 966,
-     "ate": 970
-    },
-    {
-     "w": "avisados",
-     "de": 971,
-     "ate": 986
+     "w": "inventário",
+     "de": 834,
+     "ate": 859
     },
     {
      "w": "e",
-     "de": 986,
-     "ate": 990
+     "de": 859,
+     "ate": 862
     },
     {
-     "w": "podem",
-     "de": 990,
-     "ate": 998
+     "w": "uma",
+     "de": 862,
+     "ate": 866
     },
     {
-     "w": "contestar.",
-     "de": 999,
-     "ate": 1014
+     "w": "selfie",
+     "de": 866,
+     "ate": 881
+    },
+    {
+     "w": "para",
+     "de": 881,
+     "ate": 887
+    },
+    {
+     "w": "confirmar",
+     "de": 887,
+     "ate": 903
+    },
+    {
+     "w": "a",
+     "de": 903,
+     "ate": 904
+    },
+    {
+     "w": "identidade.",
+     "de": 904,
+     "ate": 925
     }
    ]
   },
   {
    "id": "L26",
    "cena": "s5",
-   "fraseId": "s05_07",
-   "de": 1034,
-   "ate": 1226,
+   "fraseId": "s05_06",
+   "de": 946,
+   "ate": 1048,
    "palavras": [
     {
-     "w": "Terminado",
-     "de": 1032,
-     "ate": 1046
+     "w": "A",
+     "de": 937,
+     "ate": 941
     },
     {
-     "w": "o",
-     "de": 1047,
-     "ate": 1048
+     "w": "equipe",
+     "de": 941,
+     "ate": 953
     },
     {
-     "w": "prazo,",
-     "de": 1048,
-     "ate": 1059
+     "w": "valida,",
+     "de": 953,
+     "ate": 968
     },
     {
-     "w": "cada",
-     "de": 1067,
-     "ate": 1074
+     "w": "todos",
+     "de": 975,
+     "ate": 984
     },
     {
-     "w": "herdeiro",
-     "de": 1074,
-     "ate": 1086
+     "w": "são",
+     "de": 984,
+     "ate": 989
     },
     {
-     "w": "vê",
-     "de": 1086,
-     "ate": 1091
+     "w": "avisados",
+     "de": 989,
+     "ate": 1006
     },
     {
-     "w": "só",
-     "de": 1092,
-     "ate": 1097
+     "w": "e",
+     "de": 1006,
+     "ate": 1010
     },
     {
-     "w": "o",
-     "de": 1098,
-     "ate": 1099
+     "w": "podem",
+     "de": 1010,
+     "ate": 1020
     },
     {
-     "w": "que",
-     "de": 1099,
-     "ate": 1103
-    },
-    {
-     "w": "foi",
-     "de": 1103,
-     "ate": 1107
-    },
-    {
-     "w": "destinado",
-     "de": 1108,
-     "ate": 1123
-    },
-    {
-     "w": "a",
-     "de": 1123,
-     "ate": 1126
-    },
-    {
-     "w": "ele,",
-     "de": 1126,
-     "ate": 1134
-    },
-    {
-     "w": "com",
-     "de": 1141,
-     "ate": 1145
-    },
-    {
-     "w": "instruções",
-     "de": 1146,
-     "ate": 1162
-    },
-    {
-     "w": "para",
-     "de": 1163,
-     "ate": 1168
-    },
-    {
-     "w": "cada",
-     "de": 1169,
-     "ate": 1175
-    },
-    {
-     "w": "ativo.",
-     "de": 1176,
-     "ate": 1187
+     "w": "contestar.",
+     "de": 1020,
+     "ate": 1040
     }
    ]
   },
   {
    "id": "L27",
-   "cena": "s6",
-   "fraseId": "s06_01",
-   "de": 10,
-   "ate": 82,
+   "cena": "s5",
+   "fraseId": "s05_07",
+   "de": 1048,
+   "ate": 1240,
    "palavras": [
     {
-     "w": "Segurança",
-     "de": 11,
-     "ate": 31
-    },
-    {
-     "w": "é",
-     "de": 31,
-     "ate": 32
+     "w": "Terminado",
+     "de": 1052,
+     "ate": 1066
     },
     {
      "w": "o",
-     "de": 33,
-     "ate": 34
+     "de": 1066,
+     "ate": 1068
     },
     {
-     "w": "coração",
-     "de": 34,
-     "ate": 48
+     "w": "prazo,",
+     "de": 1068,
+     "ate": 1082
     },
     {
-     "w": "do",
-     "de": 49,
-     "ate": 52
+     "w": "cada",
+     "de": 1086,
+     "ate": 1093
     },
     {
-     "w": "produto.",
-     "de": 52,
-     "ate": 66
+     "w": "herdeiro",
+     "de": 1093,
+     "ate": 1106
+    },
+    {
+     "w": "vê",
+     "de": 1106,
+     "ate": 1115
+    },
+    {
+     "w": "só",
+     "de": 1115,
+     "ate": 1126
+    },
+    {
+     "w": "o",
+     "de": 1126,
+     "ate": 1127
+    },
+    {
+     "w": "que",
+     "de": 1127,
+     "ate": 1130
+    },
+    {
+     "w": "foi",
+     "de": 1130,
+     "ate": 1135
+    },
+    {
+     "w": "destinado",
+     "de": 1135,
+     "ate": 1152
+    },
+    {
+     "w": "a",
+     "de": 1152,
+     "ate": 1155
+    },
+    {
+     "w": "ele,",
+     "de": 1155,
+     "ate": 1165
+    },
+    {
+     "w": "com",
+     "de": 1169,
+     "ate": 1173
+    },
+    {
+     "w": "instruções",
+     "de": 1173,
+     "ate": 1190
+    },
+    {
+     "w": "para",
+     "de": 1190,
+     "ate": 1196
+    },
+    {
+     "w": "cada",
+     "de": 1196,
+     "ate": 1203
+    },
+    {
+     "w": "ativo.",
+     "de": 1203,
+     "ate": 1217
     }
    ]
   },
   {
    "id": "L28",
    "cena": "s6",
-   "fraseId": "s06_02",
-   "de": 82,
-   "ate": 174,
+   "fraseId": "s06_01",
+   "de": 6,
+   "ate": 81,
    "palavras": [
     {
-     "w": "O",
-     "de": 85,
-     "ate": 88
-    },
-    {
-     "w": "conteúdo",
-     "de": 88,
-     "ate": 106
+     "w": "Segurança",
+     "de": 10,
+     "ate": 32
     },
     {
      "w": "é",
-     "de": 106,
-     "ate": 107
+     "de": 32,
+     "ate": 34
     },
     {
-     "w": "cifrado",
-     "de": 107,
-     "ate": 123
+     "w": "o",
+     "de": 34,
+     "ate": 36
     },
     {
-     "w": "no",
-     "de": 123,
-     "ate": 125
-    },
-    {
-     "w": "aparelho",
-     "de": 126,
-     "ate": 139
+     "w": "coração",
+     "de": 36,
+     "ate": 54
     },
     {
      "w": "do",
-     "de": 139,
-     "ate": 143
+     "de": 54,
+     "ate": 57
     },
     {
-     "w": "titular.",
-     "de": 143,
-     "ate": 157
+     "w": "produto.",
+     "de": 57,
+     "ate": 74
     }
    ]
   },
   {
    "id": "L29",
    "cena": "s6",
-   "fraseId": "s06_03",
-   "de": 174,
-   "ate": 321,
+   "fraseId": "s06_02",
+   "de": 81,
+   "ate": 173,
    "palavras": [
     {
-     "w": "A",
-     "de": 176,
-     "ate": 179
+     "w": "O",
+     "de": 85,
+     "ate": 87
     },
     {
-     "w": "chave",
-     "de": 180,
-     "ate": 189
-    },
-    {
-     "w": "de",
-     "de": 189,
-     "ate": 192
-    },
-    {
-     "w": "sucessão",
-     "de": 193,
-     "ate": 208
+     "w": "conteúdo",
+     "de": 87,
+     "ate": 107
     },
     {
      "w": "é",
-     "de": 208,
-     "ate": 210
+     "de": 107,
+     "ate": 108
     },
     {
-     "w": "dividida",
-     "de": 210,
-     "ate": 222
+     "w": "cifrado",
+     "de": 108,
+     "ate": 124
     },
     {
-     "w": "em",
-     "de": 222,
-     "ate": 225
+     "w": "no",
+     "de": 124,
+     "ate": 126
     },
     {
-     "w": "três",
-     "de": 225,
-     "ate": 233
+     "w": "aparelho",
+     "de": 126,
+     "ate": 141
     },
     {
-     "w": "partes,",
-     "de": 233,
-     "ate": 248
+     "w": "do",
+     "de": 141,
+     "ate": 144
     },
     {
-     "w": "e",
-     "de": 257,
-     "ate": 260
-    },
-    {
-     "w": "duas",
-     "de": 260,
-     "ate": 269
-    },
-    {
-     "w": "são",
-     "de": 269,
-     "ate": 272
-    },
-    {
-     "w": "necessárias",
-     "de": 272,
-     "ate": 289
-    },
-    {
-     "w": "para",
-     "de": 289,
-     "ate": 293
-    },
-    {
-     "w": "abri-la:",
-     "de": 293,
-     "ate": 304
+     "w": "titular.",
+     "de": 144,
+     "ate": 159
     }
    ]
   },
@@ -4878,122 +4740,132 @@
    "id": "L30",
    "cena": "s6",
    "fraseId": "s06_03",
-   "de": 321,
-   "ate": 409,
+   "de": 173,
+   "ate": 327,
    "palavras": [
     {
-     "w": "nem",
-     "de": 311,
-     "ate": 317
+     "w": "A",
+     "de": 171,
+     "ate": 174
     },
     {
-     "w": "a",
-     "de": 317,
-     "ate": 318
+     "w": "chave",
+     "de": 174,
+     "ate": 185
     },
     {
-     "w": "empresa",
-     "de": 318,
-     "ate": 330
+     "w": "de",
+     "de": 185,
+     "ate": 188
     },
     {
-     "w": "consegue",
-     "de": 331,
-     "ate": 344
+     "w": "sucessão",
+     "de": 188,
+     "ate": 206
     },
     {
-     "w": "abrir",
-     "de": 344,
-     "ate": 352
+     "w": "é",
+     "de": 206,
+     "ate": 208
     },
     {
-     "w": "o",
-     "de": 352,
-     "ate": 353
+     "w": "dividida",
+     "de": 208,
+     "ate": 221
     },
     {
-     "w": "cofre",
-     "de": 354,
-     "ate": 363
+     "w": "em",
+     "de": 221,
+     "ate": 224
     },
     {
-     "w": "sozinha.",
-     "de": 363,
-     "ate": 379
+     "w": "três",
+     "de": 224,
+     "ate": 234
+    },
+    {
+     "w": "partes,",
+     "de": 234,
+     "ate": 249
+    },
+    {
+     "w": "e",
+     "de": 256,
+     "ate": 258
+    },
+    {
+     "w": "duas",
+     "de": 258,
+     "ate": 268
+    },
+    {
+     "w": "são",
+     "de": 268,
+     "ate": 272
+    },
+    {
+     "w": "necessárias",
+     "de": 272,
+     "ate": 292
+    },
+    {
+     "w": "para",
+     "de": 292,
+     "ate": 297
+    },
+    {
+     "w": "abri-la:",
+     "de": 297,
+     "ate": 307
     }
    ]
   },
   {
    "id": "L31",
    "cena": "s6",
-   "fraseId": "s06_04",
-   "de": 409,
-   "ate": 542,
+   "fraseId": "s06_03",
+   "de": 327,
+   "ate": 406,
    "palavras": [
     {
-     "w": "E",
-     "de": 399,
-     "ate": 402
+     "w": "nem",
+     "de": 317,
+     "ate": 322
     },
     {
-     "w": "mudanças",
-     "de": 402,
-     "ate": 418
+     "w": "a",
+     "de": 322,
+     "ate": 323
     },
     {
-     "w": "críticas,",
-     "de": 418,
-     "ate": 434
+     "w": "empresa",
+     "de": 323,
+     "ate": 337
     },
     {
-     "w": "como",
-     "de": 440,
-     "ate": 448
+     "w": "consegue",
+     "de": 337,
+     "ate": 349
     },
     {
-     "w": "remover",
-     "de": 448,
-     "ate": 461
-    },
-    {
-     "w": "um",
-     "de": 462,
-     "ate": 465
-    },
-    {
-     "w": "herdeiro,",
-     "de": 466,
-     "ate": 477
-    },
-    {
-     "w": "geram",
-     "de": 486,
-     "ate": 494
-    },
-    {
-     "w": "um",
-     "de": 494,
-     "ate": 497
-    },
-    {
-     "w": "alerta",
-     "de": 497,
-     "ate": 508
-    },
-    {
-     "w": "com",
-     "de": 508,
-     "ate": 512
+     "w": "abrir",
+     "de": 349,
+     "ate": 357
     },
     {
      "w": "o",
-     "de": 512,
-     "ate": 513
+     "de": 357,
+     "ate": 358
     },
     {
-     "w": "botão:",
-     "de": 513,
-     "ate": 526
+     "w": "cofre",
+     "de": 358,
+     "ate": 366
+    },
+    {
+     "w": "sozinha.",
+     "de": 366,
+     "ate": 384
     }
    ]
   },
@@ -5001,704 +4873,728 @@
    "id": "L32",
    "cena": "s6",
    "fraseId": "s06_04",
-   "de": 542,
-   "ate": 609,
+   "de": 406,
+   "ate": 517,
    "palavras": [
     {
-     "w": "Não",
-     "de": 532,
-     "ate": 538
+     "w": "Mudanças",
+     "de": 396,
+     "ate": 415
     },
     {
-     "w": "foi",
-     "de": 539,
-     "ate": 544
+     "w": "críticas,",
+     "de": 415,
+     "ate": 433
     },
     {
-     "w": "você?",
-     "de": 544,
-     "ate": 556
+     "w": "como",
+     "de": 437,
+     "ate": 443
     },
     {
-     "w": "Desfazer.",
-     "de": 580,
-     "ate": 599
+     "w": "remover",
+     "de": 443,
+     "ate": 459
+    },
+    {
+     "w": "um",
+     "de": 459,
+     "ate": 462
+    },
+    {
+     "w": "herdeiro,",
+     "de": 462,
+     "ate": 476
+    },
+    {
+     "w": "geram",
+     "de": 483,
+     "ate": 494
+    },
+    {
+     "w": "um",
+     "de": 494,
+     "ate": 496
+    },
+    {
+     "w": "alerta:",
+     "de": 496,
+     "ate": 511
     }
    ]
   },
   {
    "id": "L33",
-   "cena": "s7",
-   "fraseId": "s07_01",
-   "de": 0,
-   "ate": 122,
+   "cena": "s6",
+   "fraseId": "s06_04",
+   "de": 517,
+   "ate": 591,
    "palavras": [
     {
-     "w": "Gerenciadores",
-     "de": 11,
-     "ate": 34
+     "w": "Não",
+     "de": 521,
+     "ate": 527
     },
     {
-     "w": "de",
-     "de": 35,
-     "ate": 38
+     "w": "foi",
+     "de": 527,
+     "ate": 532
     },
     {
-     "w": "senha",
-     "de": 38,
-     "ate": 46
+     "w": "você?",
+     "de": 532,
+     "ate": 546
     },
     {
-     "w": "resolvem",
-     "de": 47,
-     "ate": 63
-    },
-    {
-     "w": "o",
-     "de": 63,
-     "ate": 64
-    },
-    {
-     "w": "dia",
-     "de": 65,
-     "ate": 70
-    },
-    {
-     "w": "a",
-     "de": 70,
-     "ate": 72
-    },
-    {
-     "w": "dia,",
-     "de": 72,
-     "ate": 81
-    },
-    {
-     "w": "não",
-     "de": 86,
-     "ate": 95
-    },
-    {
-     "w": "a",
-     "de": 95,
-     "ate": 96
-    },
-    {
-     "w": "sucessão.",
-     "de": 96,
-     "ate": 112
+     "w": "Desfazer.",
+     "de": 557,
+     "ate": 581
     }
    ]
   },
   {
    "id": "L34",
    "cena": "s7",
-   "fraseId": "s07_02",
-   "de": 122,
-   "ate": 274,
+   "fraseId": "s07_01",
+   "de": 6,
+   "ate": 132,
    "palavras": [
     {
-     "w": "Os",
-     "de": 130,
-     "ate": 134
-    },
-    {
-     "w": "contatos",
-     "de": 135,
-     "ate": 152
+     "w": "Gerenciadores",
+     "de": 10,
+     "ate": 34
     },
     {
      "w": "de",
-     "de": 152,
-     "ate": 155
+     "de": 34,
+     "ate": 37
     },
     {
-     "w": "legado",
-     "de": 155,
-     "ate": 166
+     "w": "senha",
+     "de": 37,
+     "ate": 48
     },
     {
-     "w": "de",
-     "de": 166,
-     "ate": 169
+     "w": "resolvem",
+     "de": 48,
+     "ate": 66
     },
     {
-     "w": "Google,",
-     "de": 169,
-     "ate": 181
+     "w": "o",
+     "de": 66,
+     "ate": 69
     },
     {
-     "w": "Apple",
-     "de": 189,
-     "ate": 198
-    },
-    {
-     "w": "e",
-     "de": 198,
-     "ate": 199
-    },
-    {
-     "w": "Meta",
-     "de": 199,
-     "ate": 208
-    },
-    {
-     "w": "cobrem",
-     "de": 208,
-     "ate": 219
-    },
-    {
-     "w": "só",
-     "de": 220,
-     "ate": 226
+     "w": "dia",
+     "de": 69,
+     "ate": 76
     },
     {
      "w": "a",
-     "de": 226,
-     "ate": 228
+     "de": 76,
+     "ate": 77
     },
     {
-     "w": "própria",
-     "de": 228,
-     "ate": 239
+     "w": "dia,",
+     "de": 77,
+     "ate": 87
     },
     {
-     "w": "plataforma.",
-     "de": 240,
-     "ate": 261
+     "w": "não",
+     "de": 94,
+     "ate": 104
+    },
+    {
+     "w": "a",
+     "de": 104,
+     "ate": 105
+    },
+    {
+     "w": "sucessão.",
+     "de": 104,
+     "ate": 125
     }
    ]
   },
   {
    "id": "L35",
    "cena": "s7",
-   "fraseId": "s07_03",
-   "de": 274,
-   "ate": 426,
+   "fraseId": "s07_02",
+   "de": 132,
+   "ate": 285,
    "palavras": [
     {
-     "w": "A",
-     "de": 280,
-     "ate": 283
+     "w": "Os",
+     "de": 136,
+     "ate": 139
     },
     {
-     "w": "Herança",
-     "de": 284,
-     "ate": 294
+     "w": "contatos",
+     "de": 139,
+     "ate": 156
     },
     {
-     "w": "Digital",
-     "de": 295,
-     "ate": 306
+     "w": "de",
+     "de": 156,
+     "ate": 158
     },
     {
-     "w": "reúne",
-     "de": 307,
-     "ate": 318
+     "w": "legado",
+     "de": 158,
+     "ate": 169
     },
     {
-     "w": "tudo",
-     "de": 319,
-     "ate": 326
+     "w": "de",
+     "de": 169,
+     "ate": 173
     },
     {
-     "w": "em",
-     "de": 327,
-     "ate": 329
+     "w": "Google,",
+     "de": 173,
+     "ate": 188
     },
     {
-     "w": "um",
-     "de": 329,
-     "ate": 332
+     "w": "Apple",
+     "de": 193,
+     "ate": 209
+    },
+    {
+     "w": "e",
+     "de": 209,
+     "ate": 212
+    },
+    {
+     "w": "Meta",
+     "de": 212,
+     "ate": 223
+    },
+    {
+     "w": "cobrem",
+     "de": 223,
+     "ate": 236
     },
     {
      "w": "só",
-     "de": 332,
-     "ate": 337
+     "de": 236,
+     "ate": 243
     },
     {
-     "w": "lugar,",
-     "de": 338,
-     "ate": 348
+     "w": "a",
+     "de": 243,
+     "ate": 245
     },
     {
-     "w": "seguindo",
-     "de": 358,
-     "ate": 369
+     "w": "própria",
+     "de": 245,
+     "ate": 257
     },
     {
-     "w": "o",
-     "de": 369,
-     "ate": 370
-    },
-    {
-     "w": "rito",
-     "de": 370,
-     "ate": 377
-    },
-    {
-     "w": "legal",
-     "de": 378,
-     "ate": 386
-    },
-    {
-     "w": "brasileiro.",
-     "de": 387,
-     "ate": 402
+     "w": "plataforma.",
+     "de": 257,
+     "ate": 277
     }
    ]
   },
   {
    "id": "L36",
-   "cena": "s8",
-   "fraseId": "s08_01",
-   "de": -4,
-   "ate": 148,
+   "cena": "s7",
+   "fraseId": "s07_03",
+   "de": 285,
+   "ate": 440,
    "palavras": [
     {
      "w": "A",
-     "de": 11,
-     "ate": 14
+     "de": 289,
+     "ate": 293
     },
     {
-     "w": "receita",
-     "de": 15,
-     "ate": 29
+     "w": "Herança",
+     "de": 293,
+     "ate": 304
     },
     {
-     "w": "vem",
-     "de": 29,
-     "ate": 34
+     "w": "Digital",
+     "de": 304,
+     "ate": 320
     },
     {
-     "w": "da",
-     "de": 35,
-     "ate": 37
+     "w": "reúne",
+     "de": 320,
+     "ate": 333
     },
     {
-     "w": "assinatura",
-     "de": 37,
-     "ate": 52
+     "w": "tudo",
+     "de": 333,
+     "ate": 341
     },
     {
-     "w": "anual",
-     "de": 52,
-     "ate": 60
+     "w": "em",
+     "de": 341,
+     "ate": 344
     },
     {
-     "w": "do",
-     "de": 61,
-     "ate": 63
+     "w": "um",
+     "de": 344,
+     "ate": 347
     },
     {
-     "w": "titular",
-     "de": 63,
-     "ate": 78
+     "w": "só",
+     "de": 347,
+     "ate": 355
     },
     {
-     "w": "e",
-     "de": 79,
-     "ate": 80
+     "w": "lugar,",
+     "de": 355,
+     "ate": 367
     },
     {
-     "w": "de",
-     "de": 81,
-     "ate": 83
+     "w": "seguindo",
+     "de": 375,
+     "ate": 390
     },
     {
-     "w": "uma",
-     "de": 83,
-     "ate": 88
+     "w": "o",
+     "de": 390,
+     "ate": 391
     },
     {
-     "w": "taxa",
-     "de": 89,
-     "ate": 99
+     "w": "rito",
+     "de": 391,
+     "ate": 401
     },
     {
-     "w": "na",
-     "de": 99,
-     "ate": 102
+     "w": "legal",
+     "de": 401,
+     "ate": 412
     },
     {
-     "w": "liberação.",
-     "de": 102,
-     "ate": 120
+     "w": "brasileiro.",
+     "de": 412,
+     "ate": 430
     }
    ]
   },
   {
    "id": "L37",
    "cena": "s8",
-   "fraseId": "s08_02",
-   "de": 148,
-   "ate": 328,
+   "fraseId": "s08_01",
+   "de": -5,
+   "ate": 147,
    "palavras": [
     {
-     "w": "Escritórios",
-     "de": 138,
-     "ate": 157
+     "w": "A",
+     "de": 10,
+     "ate": 13
     },
     {
-     "w": "de",
-     "de": 157,
-     "ate": 159
+     "w": "receita",
+     "de": 13,
+     "ate": 32
     },
     {
-     "w": "advocacia,",
-     "de": 159,
-     "ate": 181
+     "w": "vem",
+     "de": 32,
+     "ate": 38
     },
     {
-     "w": "cartórios,",
-     "de": 186,
-     "ate": 205
+     "w": "da",
+     "de": 38,
+     "ate": 41
     },
     {
-     "w": "bancos",
-     "de": 212,
-     "ate": 223
+     "w": "assinatura",
+     "de": 41,
+     "ate": 58
     },
     {
-     "w": "e",
-     "de": 224,
-     "ate": 226
+     "w": "anual",
+     "de": 58,
+     "ate": 68
     },
     {
-     "w": "seguradoras",
-     "de": 227,
-     "ate": 245
+     "w": "do",
+     "de": 68,
+     "ate": 71
     },
     {
-     "w": "entram",
-     "de": 245,
-     "ate": 254
-    },
-    {
-     "w": "como",
-     "de": 254,
-     "ate": 260
-    },
-    {
-     "w": "parceiros",
-     "de": 261,
-     "ate": 275
-    },
-    {
-     "w": "previstos",
-     "de": 275,
-     "ate": 289
+     "w": "titular",
+     "de": 71,
+     "ate": 88
     },
     {
      "w": "e",
-     "de": 290,
-     "ate": 293
-    },
-    {
-     "w": "canais",
-     "de": 293,
-     "ate": 304
+     "de": 88,
+     "ate": 92
     },
     {
      "w": "de",
-     "de": 304,
-     "ate": 307
+     "de": 92,
+     "ate": 95
     },
     {
-     "w": "venda.",
-     "de": 307,
-     "ate": 318
+     "w": "uma",
+     "de": 95,
+     "ate": 100
+    },
+    {
+     "w": "taxa",
+     "de": 100,
+     "ate": 112
+    },
+    {
+     "w": "na",
+     "de": 112,
+     "ate": 114
+    },
+    {
+     "w": "liberação.",
+     "de": 114,
+     "ate": 135
     }
    ]
   },
   {
    "id": "L38",
    "cena": "s8",
-   "fraseId": "s08_03",
-   "de": 332,
-   "ate": 439,
+   "fraseId": "s08_02",
+   "de": 147,
+   "ate": 340,
    "palavras": [
     {
-     "w": "Os",
-     "de": 336,
-     "ate": 340
+     "w": "Escritórios",
+     "de": 147,
+     "ate": 168
     },
     {
-     "w": "valores",
-     "de": 341,
-     "ate": 355
+     "w": "de",
+     "de": 168,
+     "ate": 171
     },
     {
-     "w": "serão",
-     "de": 355,
-     "ate": 361
+     "w": "advocacia,",
+     "de": 171,
+     "ate": 196
     },
     {
-     "w": "definidos",
-     "de": 361,
-     "ate": 377
+     "w": "cartórios,",
+     "de": 201,
+     "ate": 222
     },
     {
-     "w": "depois",
-     "de": 378,
-     "ate": 387
+     "w": "bancos",
+     "de": 227,
+     "ate": 240
     },
     {
-     "w": "da",
-     "de": 388,
-     "ate": 390
+     "w": "e",
+     "de": 240,
+     "ate": 244
     },
     {
-     "w": "pesquisa",
-     "de": 391,
-     "ate": 405
+     "w": "seguradoras",
+     "de": 244,
+     "ate": 265
     },
     {
-     "w": "com",
-     "de": 405,
-     "ate": 411
+     "w": "são",
+     "de": 265,
+     "ate": 269
     },
     {
-     "w": "usuários.",
-     "de": 411,
-     "ate": 429
+     "w": "parceiros",
+     "de": 269,
+     "ate": 283
+    },
+    {
+     "w": "previstos",
+     "de": 283,
+     "ate": 303
+    },
+    {
+     "w": "e",
+     "de": 303,
+     "ate": 306
+    },
+    {
+     "w": "canais",
+     "de": 306,
+     "ate": 317
+    },
+    {
+     "w": "de",
+     "de": 317,
+     "ate": 320
+    },
+    {
+     "w": "venda.",
+     "de": 320,
+     "ate": 332
     }
    ]
   },
   {
    "id": "L39",
-   "cena": "s9",
-   "fraseId": "s09_01",
-   "de": 7,
-   "ate": 232,
+   "cena": "s8",
+   "fraseId": "s08_03",
+   "de": 340,
+   "ate": 458,
    "palavras": [
     {
-     "w": "Somos",
-     "de": 11,
-     "ate": 22
+     "w": "Os",
+     "de": 344,
+     "ate": 348
     },
     {
-     "w": "um",
-     "de": 22,
-     "ate": 25
+     "w": "valores",
+     "de": 348,
+     "ate": 364
     },
     {
-     "w": "projeto",
-     "de": 26,
-     "ate": 40
+     "w": "serão",
+     "de": 364,
+     "ate": 371
     },
     {
-     "w": "de",
-     "de": 41,
-     "ate": 44
+     "w": "definidos",
+     "de": 371,
+     "ate": 388
     },
     {
-     "w": "faculdade,",
-     "de": 44,
-     "ate": 63
+     "w": "depois",
+     "de": 388,
+     "ate": 399
     },
     {
-     "w": "e",
-     "de": 72,
-     "ate": 74
+     "w": "da",
+     "de": 399,
+     "ate": 403
     },
     {
-     "w": "as",
-     "de": 74,
-     "ate": 78
-    },
-    {
-     "w": "parcerias",
-     "de": 79,
-     "ate": 94
+     "w": "pesquisa",
+     "de": 403,
+     "ate": 421
     },
     {
      "w": "com",
-     "de": 95,
-     "ate": 98
+     "de": 421,
+     "ate": 428
     },
     {
-     "w": "escritórios,",
-     "de": 99,
-     "ate": 118
-    },
-    {
-     "w": "cartórios",
-     "de": 123,
-     "ate": 137
-    },
-    {
-     "w": "e",
-     "de": 138,
-     "ate": 141
-    },
-    {
-     "w": "verificação",
-     "de": 141,
-     "ate": 161
-    },
-    {
-     "w": "de",
-     "de": 161,
-     "ate": 164
-    },
-    {
-     "w": "identidade",
-     "de": 164,
-     "ate": 182
-    },
-    {
-     "w": "são",
-     "de": 182,
-     "ate": 188
-    },
-    {
-     "w": "parceiros",
-     "de": 188,
-     "ate": 202
-    },
-    {
-     "w": "previstos.",
-     "de": 203,
-     "ate": 222
+     "w": "usuários.",
+     "de": 428,
+     "ate": 448
     }
    ]
   },
   {
    "id": "L40",
    "cena": "s9",
-   "fraseId": "s09_02",
-   "de": 236,
-   "ate": 434,
+   "fraseId": "s09_01",
+   "de": 6,
+   "ate": 215,
    "palavras": [
     {
-     "w": "Nossos",
-     "de": 240,
-     "ate": 253
-    },
-    {
-     "w": "próximos",
-     "de": 253,
-     "ate": 267
-    },
-    {
-     "w": "passos:",
-     "de": 267,
-     "ate": 282
-    },
-    {
-     "w": "validar",
-     "de": 289,
-     "ate": 304
-    },
-    {
-     "w": "com",
-     "de": 304,
-     "ate": 309
+     "w": "Somos",
+     "de": 10,
+     "ate": 21
     },
     {
      "w": "um",
-     "de": 309,
-     "ate": 311
+     "de": 21,
+     "ate": 25
     },
     {
-     "w": "advogado",
-     "de": 312,
-     "ate": 328
+     "w": "projeto",
+     "de": 25,
+     "ate": 38
     },
     {
      "w": "de",
-     "de": 328,
-     "ate": 331
+     "de": 38,
+     "ate": 40
     },
     {
-     "w": "sucessões,",
-     "de": 331,
-     "ate": 351
+     "w": "faculdade;",
+     "de": 40,
+     "ate": 62
     },
     {
-     "w": "ouvir",
-     "de": 358,
-     "ate": 369
+     "w": "escritórios,",
+     "de": 68,
+     "ate": 91
     },
     {
-     "w": "usuários",
-     "de": 369,
-     "ate": 382
+     "w": "cartórios",
+     "de": 96,
+     "ate": 115
     },
     {
      "w": "e",
-     "de": 383,
-     "ate": 386
+     "de": 115,
+     "ate": 121
     },
     {
-     "w": "construir",
-     "de": 386,
-     "ate": 401
+     "w": "verificação",
+     "de": 121,
+     "ate": 144
     },
     {
-     "w": "o",
-     "de": 401,
-     "ate": 404
+     "w": "de",
+     "de": 144,
+     "ate": 146
     },
     {
-     "w": "MVP.",
-     "de": 405,
-     "ate": 424
+     "w": "identidade",
+     "de": 146,
+     "ate": 166
+    },
+    {
+     "w": "são",
+     "de": 166,
+     "ate": 171
+    },
+    {
+     "w": "parceiros",
+     "de": 171,
+     "ate": 185
+    },
+    {
+     "w": "previstos.",
+     "de": 185,
+     "ate": 207
     }
    ]
   },
   {
    "id": "L41",
    "cena": "s9",
+   "fraseId": "s09_02",
+   "de": 215,
+   "ate": 408,
+   "palavras": [
+    {
+     "w": "Próximos",
+     "de": 219,
+     "ate": 233
+    },
+    {
+     "w": "passos:",
+     "de": 233,
+     "ate": 249
+    },
+    {
+     "w": "validar",
+     "de": 257,
+     "ate": 271
+    },
+    {
+     "w": "com",
+     "de": 271,
+     "ate": 275
+    },
+    {
+     "w": "um",
+     "de": 275,
+     "ate": 277
+    },
+    {
+     "w": "advogado",
+     "de": 277,
+     "ate": 295
+    },
+    {
+     "w": "de",
+     "de": 295,
+     "ate": 298
+    },
+    {
+     "w": "sucessões,",
+     "de": 298,
+     "ate": 321
+    },
+    {
+     "w": "ouvir",
+     "de": 326,
+     "ate": 338
+    },
+    {
+     "w": "usuários",
+     "de": 338,
+     "ate": 354
+    },
+    {
+     "w": "e",
+     "de": 354,
+     "ate": 358
+    },
+    {
+     "w": "construir",
+     "de": 358,
+     "ate": 375
+    },
+    {
+     "w": "o",
+     "de": 375,
+     "ate": 378
+    },
+    {
+     "w": "MVP.",
+     "de": 378,
+     "ate": 400
+    }
+   ]
+  },
+  {
+   "id": "L42",
+   "cena": "s9",
    "fraseId": "s09_03",
-   "de": 438,
-   "ate": 608,
+   "de": 408,
+   "ate": 576,
    "palavras": [
     {
      "w": "Herança",
-     "de": 442,
-     "ate": 455
+     "de": 412,
+     "ate": 425
     },
     {
      "w": "Digital:",
-     "de": 456,
-     "ate": 471
+     "de": 425,
+     "ate": 442
     },
     {
      "w": "seus",
-     "de": 480,
-     "ate": 487
+     "de": 449,
+     "ate": 458
     },
     {
      "w": "dados,",
-     "de": 488,
-     "ate": 500
+     "de": 458,
+     "ate": 475
     },
     {
      "w": "sua",
-     "de": 507,
-     "ate": 513
+     "de": 480,
+     "ate": 486
     },
     {
      "w": "história,",
-     "de": 513,
-     "ate": 527
+     "de": 486,
+     "ate": 501
     },
     {
      "w": "seu",
-     "de": 533,
-     "ate": 538
+     "de": 507,
+     "ate": 515
     },
     {
      "w": "futuro.",
-     "de": 539,
-     "ate": 552
+     "de": 515,
+     "ate": 532
     },
     {
      "w": "Obrigado!",
-     "de": 576,
-     "ate": 598
+     "de": 542,
+     "ate": 566
     }
    ]
   }
@@ -5721,238 +5617,238 @@
   {
    "id": "x003",
    "cena": "s1",
-   "frame": 23,
+   "frame": 20,
    "som": "thunk",
    "ganhoDb": -19
   },
   {
    "id": "x004",
    "cena": "s1",
-   "frame": 33,
+   "frame": 28,
    "som": "thunk",
    "ganhoDb": -19
   },
   {
    "id": "x005",
    "cena": "s1",
-   "frame": 59,
+   "frame": 54,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x006",
    "cena": "s1",
-   "frame": 86,
+   "frame": 80,
    "som": "pop",
    "ganhoDb": -13
   },
   {
    "id": "x007",
    "cena": "s1",
-   "frame": 87,
+   "frame": 81,
    "som": "impact_low",
    "ganhoDb": -17
   },
   {
    "id": "x008",
    "cena": "s1",
-   "frame": 115,
+   "frame": 108,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x009",
    "cena": "s1",
-   "frame": 126,
+   "frame": 119,
    "som": "pop",
    "ganhoDb": -13
   },
   {
    "id": "x010",
    "cena": "s1",
-   "frame": 127,
+   "frame": 120,
    "som": "impact_low",
    "ganhoDb": -17
   },
   {
    "id": "x011",
    "cena": "s1",
-   "frame": 154,
+   "frame": 147,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x012",
    "cena": "s1",
-   "frame": 170,
+   "frame": 162,
    "som": "pop",
    "ganhoDb": -13
   },
   {
    "id": "x013",
    "cena": "s1",
-   "frame": 171,
+   "frame": 163,
    "som": "impact_low",
    "ganhoDb": -17
   },
   {
    "id": "x014",
    "cena": "s1",
-   "frame": 183,
+   "frame": 175,
    "som": "pop",
    "ganhoDb": -20
   },
   {
    "id": "x015",
    "cena": "s1",
-   "frame": 184,
+   "frame": 176,
    "som": "whoosh_long",
    "ganhoDb": -16
   },
   {
    "id": "x016",
    "cena": "s1",
-   "frame": 186,
+   "frame": 178,
    "som": "pop",
    "ganhoDb": -20
   },
   {
    "id": "x017",
    "cena": "s1",
-   "frame": 186,
+   "frame": 178,
    "som": "thunk",
    "ganhoDb": -13
   },
   {
    "id": "x018",
    "cena": "s1",
-   "frame": 189,
+   "frame": 181,
    "som": "pop",
    "ganhoDb": -20
   },
   {
    "id": "x019",
    "cena": "s1",
-   "frame": 192,
+   "frame": 184,
    "som": "pop",
    "ganhoDb": -20
   },
   {
    "id": "x020",
    "cena": "s1",
-   "frame": 194,
+   "frame": 186,
    "som": "thunk",
    "ganhoDb": -13
   },
   {
    "id": "x021",
    "cena": "s1",
-   "frame": 202,
+   "frame": 194,
    "som": "thunk",
    "ganhoDb": -13
   },
   {
    "id": "x022",
    "cena": "s1",
-   "frame": 210,
+   "frame": 202,
    "som": "thunk",
    "ganhoDb": -13
   },
   {
    "id": "x023",
    "cena": "s1",
-   "frame": 218,
+   "frame": 210,
    "som": "thunk",
    "ganhoDb": -13
   },
   {
    "id": "x024",
    "cena": "s1",
-   "frame": 226,
+   "frame": 218,
    "som": "thunk",
    "ganhoDb": -13
   },
   {
    "id": "x025",
    "cena": "s1",
-   "frame": 234,
+   "frame": 226,
    "som": "thunk",
    "ganhoDb": -13
   },
   {
    "id": "x026",
    "cena": "s1",
-   "frame": 235,
+   "frame": 230,
    "som": "glitch_zap",
    "ganhoDb": -14
   },
   {
    "id": "x027",
    "cena": "s1",
-   "frame": 239,
+   "frame": 234,
    "som": "riser",
    "ganhoDb": -17
   },
   {
    "id": "x028",
    "cena": "s1",
-   "frame": 249,
+   "frame": 244,
    "som": "impact_low",
    "ganhoDb": -9
   },
   {
    "id": "x029",
    "cena": "s1",
-   "frame": 249,
+   "frame": 244,
    "som": "stinger_logo",
    "ganhoDb": -12
   },
   {
    "id": "x030",
    "cena": "s1",
-   "frame": 275,
+   "frame": 273,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x031",
    "cena": "s1",
-   "frame": 319,
+   "frame": 321,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x032",
    "cena": "s1",
-   "frame": 322,
+   "frame": 324,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x033",
    "cena": "s1",
-   "frame": 325,
+   "frame": 327,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x034",
    "cena": "s1",
-   "frame": 328,
+   "frame": 330,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x035",
    "cena": "s1",
-   "frame": 331,
+   "frame": 333,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x036",
    "cena": "s1",
-   "frame": 334,
+   "frame": 336,
    "som": "type",
    "ganhoDb": -22
   },
@@ -5966,35 +5862,35 @@
   {
    "id": "x038",
    "cena": "s2",
-   "frame": 49,
+   "frame": 42,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x039",
    "cena": "s2",
-   "frame": 65,
+   "frame": 60,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x040",
    "cena": "s2",
-   "frame": 97,
+   "frame": 92,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x041",
    "cena": "s2",
-   "frame": 130,
+   "frame": 125,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x042",
    "cena": "s2",
-   "frame": 164,
+   "frame": 157,
    "som": "pop",
    "ganhoDb": -17
   },
@@ -6015,168 +5911,168 @@
   {
    "id": "x045",
    "cena": "s2",
-   "frame": 235,
+   "frame": 229,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x046",
    "cena": "s2",
-   "frame": 302,
+   "frame": 296,
    "som": "impact_low",
    "ganhoDb": -14.9
   },
   {
    "id": "x047",
    "cena": "s2",
-   "frame": 308,
+   "frame": 302,
    "som": "glitch_zap",
    "ganhoDb": -17
   },
   {
    "id": "x048",
    "cena": "s2",
-   "frame": 323,
+   "frame": 316,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x049",
    "cena": "s2",
-   "frame": 327,
+   "frame": 320,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x050",
    "cena": "s2",
-   "frame": 330,
+   "frame": 323,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x051",
    "cena": "s2",
-   "frame": 333,
+   "frame": 326,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x052",
    "cena": "s2",
-   "frame": 336,
+   "frame": 329,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x053",
    "cena": "s2",
-   "frame": 338,
-   "som": "thunk",
-   "ganhoDb": -14
-  },
-  {
-   "id": "x054",
-   "cena": "s2",
-   "frame": 339,
+   "frame": 332,
    "som": "type",
    "ganhoDb": -22
   },
   {
+   "id": "x054",
+   "cena": "s2",
+   "frame": 334,
+   "som": "thunk",
+   "ganhoDb": -14
+  },
+  {
    "id": "x055",
    "cena": "s2",
-   "frame": 342,
+   "frame": 338,
    "som": "impact_low",
    "ganhoDb": -14
   },
   {
    "id": "x056",
    "cena": "s2",
-   "frame": 360,
+   "frame": 354,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x057",
    "cena": "s2",
-   "frame": 404,
+   "frame": 399,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x058",
    "cena": "s2",
-   "frame": 415,
+   "frame": 402,
    "som": "impact_low",
    "ganhoDb": -11
   },
   {
    "id": "x059",
    "cena": "s2",
-   "frame": 464,
+   "frame": 455,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x060",
    "cena": "s2",
-   "frame": 488,
+   "frame": 481,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x061",
    "cena": "s2",
-   "frame": 496,
+   "frame": 489,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x062",
    "cena": "s2",
-   "frame": 505,
+   "frame": 498,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x063",
    "cena": "s2",
-   "frame": 514,
+   "frame": 507,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x064",
    "cena": "s2",
-   "frame": 523,
+   "frame": 516,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x065",
    "cena": "s2",
-   "frame": 532,
+   "frame": 525,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x066",
    "cena": "s2",
-   "frame": 538,
+   "frame": 533,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x067",
    "cena": "s2",
-   "frame": 541,
+   "frame": 534,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x068",
    "cena": "s2",
-   "frame": 573,
+   "frame": 575,
    "som": "glitch_zap",
    "ganhoDb": -17
   },
@@ -6190,49 +6086,49 @@
   {
    "id": "x070",
    "cena": "s3",
-   "frame": 46,
+   "frame": 49,
    "som": "impact_low",
    "ganhoDb": -14
   },
   {
    "id": "x071",
    "cena": "s3",
-   "frame": 116,
+   "frame": 122,
    "som": "whoosh_long",
    "ganhoDb": -16
   },
   {
    "id": "x072",
    "cena": "s3",
-   "frame": 134,
+   "frame": 140,
    "som": "lock_click",
    "ganhoDb": -15
   },
   {
    "id": "x073",
    "cena": "s3",
-   "frame": 199,
+   "frame": 195,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x074",
    "cena": "s3",
-   "frame": 208,
+   "frame": 204,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x075",
    "cena": "s3",
-   "frame": 217,
+   "frame": 213,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x076",
    "cena": "s3",
-   "frame": 226,
+   "frame": 222,
    "som": "pop",
    "ganhoDb": -17
   },
@@ -6253,77 +6149,77 @@
   {
    "id": "x079",
    "cena": "s3",
-   "frame": 286,
+   "frame": 283,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x080",
    "cena": "s3",
-   "frame": 290,
+   "frame": 287,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x081",
    "cena": "s3",
-   "frame": 316,
+   "frame": 315,
    "som": "glitch_zap",
    "ganhoDb": -17
   },
   {
    "id": "x082",
    "cena": "s3",
-   "frame": 334,
+   "frame": 333,
    "som": "lock_click",
    "ganhoDb": -15
   },
   {
    "id": "x083",
    "cena": "s3",
-   "frame": 364,
+   "frame": 363,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x084",
    "cena": "s3",
-   "frame": 368,
+   "frame": 367,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x085",
    "cena": "s3",
-   "frame": 424,
+   "frame": 418,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x086",
    "cena": "s3",
-   "frame": 492,
+   "frame": 495,
    "som": "whoosh_long",
    "ganhoDb": -16
   },
   {
    "id": "x087",
    "cena": "s3",
-   "frame": 502,
+   "frame": 505,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x088",
    "cena": "s3",
-   "frame": 508,
+   "frame": 511,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x089",
    "cena": "s3",
-   "frame": 514,
+   "frame": 517,
    "som": "pop",
    "ganhoDb": -17
   },
@@ -6337,196 +6233,196 @@
   {
    "id": "x091",
    "cena": "s4",
-   "frame": 20,
+   "frame": 19,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x092",
    "cena": "s4",
-   "frame": 28,
+   "frame": 27,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x093",
    "cena": "s4",
-   "frame": 36,
+   "frame": 35,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x094",
    "cena": "s4",
-   "frame": 89,
+   "frame": 103,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x095",
    "cena": "s4",
-   "frame": 95,
+   "frame": 109,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x096",
    "cena": "s4",
-   "frame": 101,
+   "frame": 115,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x097",
    "cena": "s4",
-   "frame": 134,
+   "frame": 146,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x098",
    "cena": "s4",
-   "frame": 148,
+   "frame": 159,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x099",
    "cena": "s4",
-   "frame": 190,
+   "frame": 200,
    "som": "impact_low",
    "ganhoDb": -11
   },
   {
    "id": "x100",
    "cena": "s4",
-   "frame": 192,
+   "frame": 202,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x101",
    "cena": "s4",
-   "frame": 222,
+   "frame": 229,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x102",
    "cena": "s4",
-   "frame": 247,
+   "frame": 252,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x103",
    "cena": "s4",
-   "frame": 261,
+   "frame": 266,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x104",
    "cena": "s4",
-   "frame": 273,
+   "frame": 284,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x105",
    "cena": "s4",
-   "frame": 279,
+   "frame": 290,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x106",
    "cena": "s4",
-   "frame": 285,
+   "frame": 296,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x107",
    "cena": "s4",
-   "frame": 291,
+   "frame": 302,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x108",
    "cena": "s4",
-   "frame": 298,
+   "frame": 310,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x109",
    "cena": "s4",
-   "frame": 317,
+   "frame": 331,
    "som": "lock_click",
    "ganhoDb": -15
   },
   {
    "id": "x110",
    "cena": "s4",
-   "frame": 324,
+   "frame": 338,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x111",
    "cena": "s4",
-   "frame": 332,
+   "frame": 346,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x112",
    "cena": "s4",
-   "frame": 340,
+   "frame": 354,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x113",
    "cena": "s4",
-   "frame": 371,
+   "frame": 387,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x114",
    "cena": "s4",
-   "frame": 414,
+   "frame": 430,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x115",
    "cena": "s5",
-   "frame": 11,
+   "frame": 10,
    "som": "impact_low",
    "ganhoDb": -14
   },
   {
    "id": "x116",
    "cena": "s5",
-   "frame": 44,
+   "frame": 45,
    "som": "whoosh_long",
    "ganhoDb": -16
   },
   {
    "id": "x117",
    "cena": "s5",
-   "frame": 97,
+   "frame": 92,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x118",
    "cena": "s5",
-   "frame": 99,
+   "frame": 94,
    "som": "ping",
    "ganhoDb": -17
   },
@@ -6540,133 +6436,133 @@
   {
    "id": "x120",
    "cena": "s5",
-   "frame": 146,
+   "frame": 147,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x121",
    "cena": "s5",
-   "frame": 149,
+   "frame": 150,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x122",
    "cena": "s5",
-   "frame": 152,
+   "frame": 153,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x123",
    "cena": "s5",
-   "frame": 155,
+   "frame": 156,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x124",
    "cena": "s5",
-   "frame": 158,
+   "frame": 159,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x125",
    "cena": "s5",
-   "frame": 161,
+   "frame": 162,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x126",
    "cena": "s5",
-   "frame": 164,
+   "frame": 165,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x127",
    "cena": "s5",
-   "frame": 167,
+   "frame": 168,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x128",
    "cena": "s5",
-   "frame": 172,
+   "frame": 173,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x129",
    "cena": "s5",
-   "frame": 175,
+   "frame": 176,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x130",
    "cena": "s5",
-   "frame": 178,
+   "frame": 179,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x131",
    "cena": "s5",
-   "frame": 181,
+   "frame": 182,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x132",
    "cena": "s5",
-   "frame": 184,
+   "frame": 185,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x133",
    "cena": "s5",
-   "frame": 195,
+   "frame": 194,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x134",
    "cena": "s5",
-   "frame": 213,
+   "frame": 206,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x135",
    "cena": "s5",
-   "frame": 260,
+   "frame": 253,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x136",
    "cena": "s5",
-   "frame": 272,
+   "frame": 268,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x137",
    "cena": "s5",
-   "frame": 305,
+   "frame": 303,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x138",
    "cena": "s5",
-   "frame": 325,
+   "frame": 326,
    "som": "pop",
    "ganhoDb": -17
   },
@@ -6680,245 +6576,245 @@
   {
    "id": "x140",
    "cena": "s5",
-   "frame": 385,
+   "frame": 383,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x141",
    "cena": "s5",
-   "frame": 410,
+   "frame": 408,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x142",
    "cena": "s5",
-   "frame": 434,
+   "frame": 432,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x143",
    "cena": "s5",
-   "frame": 460,
+   "frame": 465,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x144",
    "cena": "s5",
-   "frame": 488,
+   "frame": 490,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x145",
    "cena": "s5",
-   "frame": 533,
+   "frame": 531,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x146",
    "cena": "s5",
-   "frame": 539,
+   "frame": 537,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x147",
    "cena": "s5",
-   "frame": 545,
+   "frame": 543,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x148",
    "cena": "s5",
-   "frame": 559,
+   "frame": 560,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x149",
    "cena": "s5",
-   "frame": 581,
+   "frame": 585,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x150",
    "cena": "s5",
-   "frame": 597,
+   "frame": 604,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x151",
    "cena": "s5",
-   "frame": 614,
+   "frame": 623,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x152",
    "cena": "s5",
-   "frame": 632,
+   "frame": 646,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x153",
    "cena": "s5",
-   "frame": 650,
+   "frame": 664,
    "som": "lock_click",
    "ganhoDb": -15
   },
   {
    "id": "x154",
    "cena": "s5",
-   "frame": 671,
+   "frame": 685,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x155",
    "cena": "s5",
-   "frame": 757,
+   "frame": 771,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x156",
    "cena": "s5",
-   "frame": 800,
+   "frame": 813,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x157",
    "cena": "s5",
-   "frame": 856,
+   "frame": 875,
    "som": "shutter",
    "ganhoDb": -15
   },
   {
    "id": "x158",
    "cena": "s5",
-   "frame": 882,
+   "frame": 901,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x159",
    "cena": "s5",
-   "frame": 916,
+   "frame": 931,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x160",
    "cena": "s5",
-   "frame": 934,
+   "frame": 950,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x161",
    "cena": "s5",
-   "frame": 968,
+   "frame": 986,
    "som": "ping",
    "ganhoDb": -17
   },
   {
    "id": "x162",
    "cena": "s5",
-   "frame": 976,
+   "frame": 994,
    "som": "ping",
    "ganhoDb": -17
   },
   {
    "id": "x163",
    "cena": "s5",
-   "frame": 984,
+   "frame": 1002,
    "som": "ping",
    "ganhoDb": -17
   },
   {
    "id": "x164",
    "cena": "s5",
-   "frame": 995,
+   "frame": 1016,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x165",
    "cena": "s5",
-   "frame": 1001,
+   "frame": 1022,
    "som": "impact_low",
    "ganhoDb": -11
   },
   {
    "id": "x166",
    "cena": "s5",
-   "frame": 1025,
+   "frame": 1046,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x167",
    "cena": "s5",
-   "frame": 1035,
+   "frame": 1056,
    "som": "whoosh_long",
    "ganhoDb": -16
   },
   {
    "id": "x168",
    "cena": "s5",
-   "frame": 1093,
+   "frame": 1116,
    "som": "lock_click",
    "ganhoDb": -15
   },
   {
    "id": "x169",
    "cena": "s5",
-   "frame": 1123,
+   "frame": 1150,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x170",
    "cena": "s5",
-   "frame": 1143,
+   "frame": 1170,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x171",
    "cena": "s5",
-   "frame": 1214,
+   "frame": 1238,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x172",
    "cena": "s6",
-   "frame": 31,
+   "frame": 33,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x173",
    "cena": "s6",
-   "frame": 45,
+   "frame": 47,
    "som": "thunk",
    "ganhoDb": -18.4
   },
   {
    "id": "x174",
    "cena": "s6",
-   "frame": 104,
+   "frame": 105,
    "som": "glitch_zap",
    "ganhoDb": -17
   },
@@ -6932,231 +6828,231 @@
   {
    "id": "x176",
    "cena": "s6",
-   "frame": 140,
+   "frame": 141,
    "som": "tick",
    "ganhoDb": -21
   },
   {
    "id": "x177",
    "cena": "s6",
-   "frame": 222,
+   "frame": 221,
    "som": "riser",
    "ganhoDb": -17
   },
   {
    "id": "x178",
    "cena": "s6",
-   "frame": 222,
+   "frame": 221,
    "som": "impact_low",
    "ganhoDb": -11
   },
   {
    "id": "x179",
    "cena": "s6",
-   "frame": 230,
+   "frame": 231,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x180",
    "cena": "s6",
-   "frame": 236,
+   "frame": 237,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x181",
    "cena": "s6",
-   "frame": 242,
+   "frame": 243,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x182",
    "cena": "s6",
-   "frame": 267,
+   "frame": 265,
    "som": "lock_click",
    "ganhoDb": -15
   },
   {
    "id": "x183",
    "cena": "s6",
-   "frame": 290,
+   "frame": 294,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x184",
    "cena": "s6",
-   "frame": 360,
+   "frame": 363,
    "som": "glitch_zap",
    "ganhoDb": -17
   },
   {
    "id": "x185",
    "cena": "s6",
-   "frame": 390,
+   "frame": 388,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x186",
    "cena": "s6",
-   "frame": 451,
+   "frame": 446,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x187",
    "cena": "s6",
-   "frame": 494,
+   "frame": 493,
    "som": "ping",
    "ganhoDb": -17
   },
   {
    "id": "x188",
    "cena": "s6",
-   "frame": 577,
+   "frame": 554,
    "som": "rewind",
    "ganhoDb": -15
   },
   {
    "id": "x189",
    "cena": "s6",
-   "frame": 601,
+   "frame": 578,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x190",
    "cena": "s6",
-   "frame": 630,
+   "frame": 606,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x191",
    "cena": "s7",
-   "frame": 8,
+   "frame": 7,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x192",
    "cena": "s7",
-   "frame": 62,
+   "frame": 66,
    "som": "lock_click",
    "ganhoDb": -18.4
   },
   {
    "id": "x193",
    "cena": "s7",
-   "frame": 68,
+   "frame": 72,
    "som": "lock_click",
    "ganhoDb": -18.4
   },
   {
    "id": "x194",
    "cena": "s7",
-   "frame": 74,
+   "frame": 78,
    "som": "lock_click",
    "ganhoDb": -18.4
   },
   {
    "id": "x195",
    "cena": "s7",
-   "frame": 80,
+   "frame": 84,
    "som": "lock_click",
    "ganhoDb": -18.4
   },
   {
    "id": "x196",
    "cena": "s7",
-   "frame": 132,
+   "frame": 136,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x197",
    "cena": "s7",
-   "frame": 152,
+   "frame": 155,
    "som": "lock_click",
    "ganhoDb": -18.4
   },
   {
    "id": "x198",
    "cena": "s7",
-   "frame": 158,
+   "frame": 161,
    "som": "lock_click",
    "ganhoDb": -18.4
   },
   {
    "id": "x199",
    "cena": "s7",
-   "frame": 164,
+   "frame": 167,
    "som": "lock_click",
    "ganhoDb": -18.4
   },
   {
    "id": "x200",
    "cena": "s7",
-   "frame": 170,
+   "frame": 173,
    "som": "lock_click",
    "ganhoDb": -18.4
   },
   {
    "id": "x201",
    "cena": "s7",
-   "frame": 281,
+   "frame": 290,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x202",
    "cena": "s7",
-   "frame": 304,
+   "frame": 317,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x203",
    "cena": "s7",
-   "frame": 311,
+   "frame": 324,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x204",
    "cena": "s7",
-   "frame": 316,
+   "frame": 330,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x205",
    "cena": "s7",
-   "frame": 318,
+   "frame": 331,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x206",
    "cena": "s7",
-   "frame": 325,
+   "frame": 338,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x207",
    "cena": "s7",
-   "frame": 335,
+   "frame": 352,
    "som": "whoosh_long",
    "ganhoDb": -16
   },
   {
    "id": "x208",
    "cena": "s7",
-   "frame": 430,
+   "frame": 454,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
@@ -7170,329 +7066,329 @@
   {
    "id": "x210",
    "cena": "s8",
-   "frame": 31,
+   "frame": 35,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x211",
    "cena": "s8",
-   "frame": 41,
+   "frame": 45,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x212",
    "cena": "s8",
-   "frame": 83,
+   "frame": 94,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x213",
    "cena": "s8",
-   "frame": 93,
+   "frame": 104,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x214",
    "cena": "s8",
-   "frame": 132,
+   "frame": 141,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x215",
    "cena": "s8",
-   "frame": 142,
+   "frame": 151,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x216",
    "cena": "s8",
-   "frame": 180,
+   "frame": 195,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x217",
    "cena": "s8",
-   "frame": 190,
+   "frame": 205,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x218",
    "cena": "s8",
-   "frame": 206,
+   "frame": 221,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x219",
    "cena": "s8",
-   "frame": 216,
+   "frame": 231,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x220",
    "cena": "s8",
-   "frame": 272,
+   "frame": 280,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x221",
    "cena": "s8",
-   "frame": 277,
+   "frame": 285,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x222",
    "cena": "s8",
-   "frame": 338,
+   "frame": 345,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x223",
    "cena": "s8",
-   "frame": 341,
+   "frame": 348,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x224",
    "cena": "s8",
-   "frame": 344,
+   "frame": 351,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x225",
    "cena": "s8",
-   "frame": 347,
+   "frame": 354,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x226",
    "cena": "s8",
-   "frame": 350,
+   "frame": 357,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x227",
    "cena": "s8",
-   "frame": 353,
+   "frame": 360,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x228",
    "cena": "s8",
-   "frame": 356,
+   "frame": 363,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x229",
    "cena": "s8",
-   "frame": 359,
+   "frame": 366,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x230",
    "cena": "s8",
-   "frame": 462,
+   "frame": 478,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x231",
    "cena": "s9",
-   "frame": 8,
+   "frame": 7,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x232",
    "cena": "s9",
-   "frame": 14,
+   "frame": 13,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x233",
    "cena": "s9",
-   "frame": 15,
+   "frame": 14,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x234",
    "cena": "s9",
-   "frame": 17,
+   "frame": 16,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x235",
    "cena": "s9",
-   "frame": 20,
+   "frame": 19,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x236",
    "cena": "s9",
-   "frame": 22,
+   "frame": 21,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x237",
    "cena": "s9",
-   "frame": 23,
+   "frame": 22,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x238",
    "cena": "s9",
-   "frame": 26,
+   "frame": 25,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x239",
    "cena": "s9",
-   "frame": 29,
+   "frame": 28,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x240",
    "cena": "s9",
-   "frame": 32,
+   "frame": 31,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x241",
    "cena": "s9",
-   "frame": 35,
+   "frame": 34,
    "som": "type",
    "ganhoDb": -22
   },
   {
    "id": "x242",
    "cena": "s9",
-   "frame": 41,
+   "frame": 37,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x243",
    "cena": "s9",
-   "frame": 96,
+   "frame": 65,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x244",
    "cena": "s9",
-   "frame": 120,
+   "frame": 93,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x245",
    "cena": "s9",
-   "frame": 138,
+   "frame": 118,
    "som": "pop",
    "ganhoDb": -17
   },
   {
    "id": "x246",
    "cena": "s9",
-   "frame": 200,
+   "frame": 182,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x247",
    "cena": "s9",
-   "frame": 204,
+   "frame": 186,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x248",
    "cena": "s9",
-   "frame": 208,
+   "frame": 190,
    "som": "thunk",
    "ganhoDb": -14
   },
   {
    "id": "x249",
    "cena": "s9",
-   "frame": 231,
+   "frame": 211,
    "som": "whoosh_short",
    "ganhoDb": -17
   },
   {
    "id": "x250",
    "cena": "s9",
-   "frame": 292,
+   "frame": 260,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x251",
    "cena": "s9",
-   "frame": 361,
+   "frame": 329,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x252",
    "cena": "s9",
-   "frame": 389,
+   "frame": 361,
    "som": "chime_ok",
    "ganhoDb": -16
   },
   {
    "id": "x253",
    "cena": "s9",
-   "frame": 425,
+   "frame": 396,
    "som": "whoosh_long",
    "ganhoDb": -16
   },
   {
    "id": "x254",
    "cena": "s9",
-   "frame": 437,
+   "frame": 408,
    "som": "riser",
    "ganhoDb": -17
   },
   {
    "id": "x255",
    "cena": "s9",
-   "frame": 437,
+   "frame": 408,
    "som": "stinger_logo",
    "ganhoDb": -12
   },
   {
    "id": "x256",
    "cena": "s9",
-   "frame": 573,
+   "frame": 539,
    "som": "impact_low",
    "ganhoDb": -14
   }

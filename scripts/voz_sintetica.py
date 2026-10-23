@@ -1,6 +1,6 @@
 """Voz sintética NEURAL (edge-tts), uma frase por arquivo, com tempo por palavra.
 
-Uso (chamado por scripts/sync.mjs):  python scripts/voz_sintetica.py <jobs.json> <voz> <rate>
+Uso (chamado por scripts/sync.mjs):  python scripts/voz_sintetica.py <jobs.json> <voz> <rate> [pasta de saída]
   jobs.json = [{"id": "s01_01", "fala": "texto já com o mapa de pronúncia aplicado"}, ...]
 Saída: public/audio/voz/<id>.mp3  +  public/audio/voz/<id>.words.json
   words.json = {"fonte": "sintetica", "voz": ..., "rate": ..., "palavras": [{"w","s","e"}]}  (segundos)
@@ -15,10 +15,9 @@ sys.stdout.reconfigure(encoding="utf-8")
 import edge_tts  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-VOZDIR = os.path.join(ROOT, "public", "audio", "voz")
-os.makedirs(VOZDIR, exist_ok=True)
-
 jobs_path, VOZ, RATE = sys.argv[1], sys.argv[2], sys.argv[3]
+VOZDIR = sys.argv[4] if len(sys.argv) > 4 else os.path.join(ROOT, "public", "audio", "voz")
+os.makedirs(VOZDIR, exist_ok=True)
 JOBS = json.load(open(jobs_path, encoding="utf-8"))
 
 

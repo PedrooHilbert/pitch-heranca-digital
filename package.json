@@ -51,7 +51,10 @@
     "audit": "python scripts/audit.py",
     "revisoes": "node scripts/revisoes.mjs",
     "editor": "node scripts/gerar-studio.mjs && vite --config editor/vite.config.ts",
-    "validar": "npx tsx scripts/validar-projeto.mts"
+    "validar": "npx tsx scripts/validar-projeto.mts",
+    "voz": "node --no-warnings scripts/sync.mjs --voz",
+    "voz:teste": "node --no-warnings scripts/voz-teste.mjs",
+    "voz:conferir": "node --no-warnings scripts/voz-conferir.mjs"
   },
   "allowScripts": {
     "esbuild": false

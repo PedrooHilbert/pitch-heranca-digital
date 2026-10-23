@@ -33,6 +33,12 @@ export const duracao = (file) =>
 const imp = async (rel) => import(pathToFileURL(P(rel)).href);
 export const carregarNarracao = async () => (await imp("src/data/narracao.ts")).NARRACAO;
 export const carregarPronuncia = async () => (await imp("src/data/pronuncia.ts")).PRONUNCIA;
+export const carregarVoz = async () => (await imp("src/data/voz.ts")).VOZ_ESCOLHIDA;
+
+// Pós-processamento leve da voz (revisão de voz), antes da normalização para −16 LUFS:
+// corta graves abaixo de 80 Hz, de-esser suave (sibilância ~6–8 kHz), compressão 2,2:1 e fade de 20 ms
+// no início (o do fim é feito no corte do silêncio final). Nada de time-stretch.
+export const FILTRO_VOZ = "highpass=f=80,deesser=i=0.25:m=0.5:f=0.5:s=o,acompressor=threshold=-21dB:ratio=2.2:attack=8:release=140:makeup=1.5,afade=t=in:d=0.02";
 // config.ts lê o projeto (imports sem extensão, que o Node puro não resolve): os scripts leem o project.json direto
 export const carregarConfig = async () => {
   const e = lerJSON(P("src", "data", "project.json")).equipe;

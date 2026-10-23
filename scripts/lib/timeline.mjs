@@ -31,6 +31,11 @@ const NIVEIS = [
  * @param frases [{id, cena, texto, sec, palavras:[{w,s,e}], fonte}]  (ordem do roteiro)
  * @param fpb quadros por batida
  */
+// Pausa entre frases: no máximo 6 q de timeline. Somada às bordas do áudio (~0,08 s depois da última palavra +
+// ~0,07 s antes da primeira) dá ≈ 0,35 s de silêncio real — a faixa pedida é 0,25–0,4 s. O tempo que sobra vai
+// para o fim das cenas (animação), não para buracos na fala.
+const PAUSA_MAX = 6;
+
 export function montarTimeline(frases, fpb, fps = 30, limite = 5400) {
   let ultimo = null;
   for (const nivel of NIVEIS) {
@@ -50,7 +55,7 @@ function tentar(frases, fpb, fps, nivel) {
     let cur = c.lead;
     fr.forEach((f, k) => {
       // pausa antes da frase: a da narração (fixa, a animação depende dela) ou o respiro da cena
-      if (k > 0) cur += f.pausa ?? Math.round(c.respiro * nivel.respiro);
+      if (k > 0) cur += f.pausa ?? Math.min(PAUSA_MAX, Math.round(c.respiro * nivel.respiro));
       const durF = Math.ceil(f.sec * fps);
       const abs = from + cur;
       out.push({

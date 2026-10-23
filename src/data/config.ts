@@ -2,6 +2,9 @@
 // Qualquer texto que contenha "[" aparece DESTACADO EM AMARELO no vídeo (<Placeholder>).
 import { getProjeto } from "./projeto";
 
+// Voz da narração (motor + voz + parâmetros): definida em ./voz.ts, que não importa nada (os scripts Node leem direto).
+export { VOZ_ESCOLHIDA } from "./voz";
+
 export type Membro = { nome: string; funcao: string };
 
 /** Nome do produto dividido para o wordmark: [início, última palavra em destaque]. */
