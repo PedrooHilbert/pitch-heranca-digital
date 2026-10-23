@@ -530,7 +530,7 @@ export const ComposicaoPitch: React.FC = () => (
             "passo3": "Construir o MVP",
             "passo3Sub": "login, inventário, cofre cifrado, herdeiros, liberação, auditoria",
             "slogan": "Seus dados, sua história, seu *futuro.*",
-            "obrigado": "Obrigado!"
+            "obrigado": "Remover obrigado"
           },
           "telas": {}
         }
@@ -3208,54 +3208,50 @@ export const ComposicaoPitch: React.FC = () => (
             {
               "w": "Somos",
               "de": 247,
-              "ate": 258
+              "ate": 260
             },
             {
               "w": "o",
-              "de": 258,
-              "ate": 263
-            },
-            {
-              "w": "grupo",
-              "de": 263,
-              "ate": 273
+              "de": 260,
+              "ate": 265
             },
             {
               "w": "EternaByte,",
-              "de": 273,
-              "ate": 298
+              "de": 265,
+              "ate": 291
             },
             {
               "w": "e",
-              "de": 304,
-              "ate": 306
+              "de": 291,
+              "ate": 295
             },
             {
               "w": "esta",
-              "de": 306,
-              "ate": 317
+              "de": 295,
+              "ate": 306
             },
             {
               "w": "é",
-              "de": 317,
-              "ate": 319
+              "de": 306,
+              "ate": 310
             },
             {
               "w": "a",
-              "de": 319,
-              "ate": 322
+              "de": 310,
+              "ate": 315
             },
             {
               "w": "Herança",
-              "de": 322,
-              "ate": 336
+              "de": 315,
+              "ate": 332
             },
             {
               "w": "Digital.",
-              "de": 336,
+              "de": 332,
               "ate": 352
             }
-          ]
+          ],
+          "manual": true
         },
         {
           "id": "L06",
@@ -3331,29 +3327,30 @@ export const ComposicaoPitch: React.FC = () => (
             {
               "w": "fotos",
               "de": 160,
-              "ate": 172
+              "ate": 173
             },
             {
               "w": "na",
-              "de": 172,
-              "ate": 177
+              "de": 173,
+              "ate": 179
             },
             {
               "w": "nuvem",
-              "de": 177,
-              "ate": 193
+              "de": 179,
+              "ate": 192
             },
             {
               "w": "e",
-              "de": 193,
+              "de": 192,
               "ate": 196
             },
             {
-              "w": "assinaturas.",
+              "w": "assinaturas",
               "de": 196,
               "ate": 221
             }
-          ]
+          ],
+          "manual": true
         },
         {
           "id": "L08",
