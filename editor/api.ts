@@ -102,41 +102,71 @@ async function regenerarStudio() {
   }
 }
 
-// ---------- still (bundle reaproveitado; refeito se o código das cenas mudar) ----------
-let bundleP: Promise<string> | null = null;
-let bundleCarimbo = 0;
-const ultimaMudanca = () => {
-  let ultimo = 0;
-  const varre = (d: string) => {
-    for (const f of fs.readdirSync(d, { withFileTypes: true })) {
-      const p = path.join(d, f.name);
-      if (f.isDirectory()) varre(p);
-      else if (/\.(tsx?|css)$/.test(f.name) && !f.name.endsWith(".gerada.tsx")) ultimo = Math.max(ultimo, fs.statSync(p).mtimeMs);
+// ---------- still: o Remotion (bundle + Chrome) roda num processo à parte (scripts/editor-still-worker.mjs) ----------
+// Se ele cair (falha nativa do webpack/Chrome), só ele morre: o editor responde erro àquele pedido e sobe outro
+// worker no próximo. Um still por vez; o bundle fica em cache no worker e é refeito quando src/ muda.
+type Pendente = { ok: () => void; falha: (e: Error) => void };
+let worker: ReturnType<typeof spawn> | null = null;
+const pendentes = new Map<number, Pendente>();
+let nPedido = 0;
+function abrirWorker() {
+  if (worker) return worker;
+  const w = spawn(process.execPath, ["--no-warnings", path.join(ROOT, "scripts", "editor-still-worker.mjs")], { cwd: ROOT, stdio: ["pipe", "pipe", "inherit"] });
+  let resto = "";
+  w.stdout!.on("data", (b: Buffer) => {
+    resto += b.toString();
+    const linhas = resto.split("\n");
+    resto = linhas.pop() ?? "";
+    for (const l of linhas) {
+      let r: { id?: number; ok?: boolean; erro?: string } | null = null;
+      try {
+        r = JSON.parse(l);
+      } catch {
+        /* log do Remotion, não é resposta */
+      }
+      const p = r?.id != null ? pendentes.get(r.id) : undefined;
+      if (!p) {
+        if (l.trim()) console.log("[estúdio·still]", l);
+        continue;
+      }
+      pendentes.delete(r!.id!);
+      if (r!.ok) p.ok();
+      else p.falha(new Error(r!.erro ?? "still falhou"));
     }
+  });
+  const morreu = (motivo: string) => {
+    if (worker !== w) return;
+    worker = null;
+    if (pendentes.size) console.error(`[estúdio] o processo de stills parou (${motivo}); o próximo pedido abre outro.`);
+    for (const p of pendentes.values()) p.falha(new Error(`processo de stills parou (${motivo})`));
+    pendentes.clear();
   };
-  varre(path.join(ROOT, "src"));
-  return ultimo;
-};
-async function serveUrl() {
-  const m = ultimaMudanca();
-  if (!bundleP || m > bundleCarimbo) {
-    bundleCarimbo = m;
-    const { bundle } = await import("@remotion/bundler");
-    bundleP = bundle({ entryPoint: path.join(ROOT, "src", "index.ts") });
-    bundleP.catch(() => {
-      bundleP = null;
-    });
-  }
-  return bundleP;
+  w.on("exit", (c) => morreu(`código ${c}`));
+  w.on("error", (e) => morreu(String(e)));
+  w.stdin!.on("error", () => undefined);
+  worker = w;
+  return w;
 }
-async function renderStillPNG(frame: number, projeto: unknown, saida: string, escala = 0.5) {
-  const { renderStill, selectComposition } = await import("@remotion/renderer");
-  const url = await serveUrl();
-  const props = projeto as Record<string, unknown>;
-  const composition = await selectComposition({ serveUrl: url, id: "PitchHerancaDigital", inputProps: props });
-  fs.mkdirSync(path.dirname(saida), { recursive: true });
-  await renderStill({ serveUrl: url, composition, frame, output: saida, overwrite: true, scale: escala, inputProps: props });
+function pedirWorker(pedido: Record<string, unknown>) {
+  return new Promise<void>((ok, falha) => {
+    const id = ++nPedido;
+    pendentes.set(id, { ok, falha });
+    abrirWorker().stdin!.write(JSON.stringify({ id, ...pedido }) + "\n");
+  });
 }
+const aquecerStills = () => pedirWorker({ tipo: "aquecer" });
+// Um still por vez: pedidos simultâneos (miniaturas recarregadas + pin) entram na fila.
+let filaStill: Promise<unknown> = Promise.resolve();
+function renderStillPNG(frame: number, projeto: unknown, saida: string, escala = 0.5) {
+  const pedido = { tipo: "still", frame, projeto, saida, escala };
+  // se o worker caiu no meio, tenta de novo uma vez (com um worker novo)
+  const vez = filaStill.then(() =>
+    pedirWorker(pedido).catch((e: Error) => (/processo de stills parou/.test(e.message) ? pedirWorker(pedido) : Promise.reject(e))),
+  );
+  filaStill = vez.catch(() => undefined);
+  return vez;
+}
+let nStill = 0;
 
 // ---------- render (rascunho 540p / final 1080p) ----------
 type Job = { tipo: string; status: "rodando" | "ok" | "erro"; progresso: number; etapa: string; log: string; saida: string; inicio: number };
@@ -193,9 +223,13 @@ export function apiPlugin(): Plugin {
   return {
     name: "estudio-api",
     configureServer(s) {
+      // rede de segurança: um erro solto num pedido não derruba o editor inteiro (fica registrado no terminal)
+      if (!process.listenerCount("uncaughtException")) {
+        process.on("uncaughtException", (e) => console.error("[estúdio] erro inesperado (o editor continua rodando):", e));
+      }
       server = s;
       // aquece o bundle do Remotion (primeiro still/pin fica rápido)
-      setTimeout(() => serveUrl().catch((e) => console.error("[estúdio] bundle:", e)), 1500);
+      setTimeout(() => aquecerStills().catch((e) => console.error("[estúdio] bundle:", e)), 1500);
       s.middlewares.use(async (req, res, next) => {
         const url = new URL(req.url ?? "/", "http://x");
         const rota = `${req.method} ${url.pathname}`;
@@ -258,13 +292,17 @@ export function apiPlugin(): Plugin {
 
           if (rota === "POST /api/still") {
             const { frame, projeto, escala } = await corpo(req);
-            const f = path.join(OUT, ".cache", `still-editor-${frame}.png`);
-            await renderStillPNG(frame, projeto, f, escala ?? 0.25);
-            res.setHeader("Content-Type", "image/png");
-            res.setHeader("Cache-Control", "no-store");
-            const st = fs.createReadStream(f);
-            st.on("close", () => fs.rmSync(f, { force: true }));
-            return st.pipe(res);
+            // arquivo único por pedido (dois pedidos do mesmo quadro não apagam o arquivo um do outro)
+            const f = path.join(OUT, ".cache", `still-editor-${frame}-${process.pid}-${++nStill}.png`);
+            try {
+              await renderStillPNG(frame, projeto, f, escala ?? 0.25);
+              const png = fs.readFileSync(f);
+              res.setHeader("Content-Type", "image/png");
+              res.setHeader("Cache-Control", "no-store");
+              return res.end(png);
+            } finally {
+              fs.rmSync(f, { force: true });
+            }
           }
 
           if (rota === "POST /api/render") {

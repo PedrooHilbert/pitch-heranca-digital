@@ -77,6 +77,9 @@ O que eu quero:     texto em duas linhas, sem cortar
   o erro em vermelho e **não salva** até corrigir.
 - **Desfazer/refazer** sem limite durante a sessão; cada salvamento guarda uma cópia em `revisoes/historico/`
   (as 50 últimas) — para voltar a uma versão antiga, copie o arquivo por cima de `src/data/project.json`.
+- Miniaturas, fotos dos pins e stills são feitos por um processo à parte (`scripts/editor-still-worker.mjs`),
+  um por vez e com cache de webpack próprio: dá para rodar `npm run render`/`npm run stills` com o editor aberto.
+  Se esse processo cair, o editor continua no ar, sobe outro e tenta o pedido de novo.
 - O selo amarelo **⚠ N campos [PREENCHER]** mostra quantos placeholders faltam (clique para abrir a equipe).
 
 ### Atalhos
