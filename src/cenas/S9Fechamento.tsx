@@ -108,7 +108,7 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
                   <div style={{ fontFamily, fontWeight: 800, fontSize: 28, color: colors.ink, textAlign: "center", minHeight: 36 }}>
                     {isPlaceholder(m.nome) ? <Placeholder>{m.nome}</Placeholder> : <TypeText texto={m.nome} inicio={t.somos + 6 + i * 7} cps={1.8} cursor={false} />}
                   </div>
-                  <div style={{ fontFamily, fontWeight: 600, fontSize: 20, color: colors.ink2 }}><Placeholder>{m.funcao}</Placeholder></div>
+                  {m.funcao.trim() ? <div style={{ fontFamily, fontWeight: 600, fontSize: 20, color: colors.ink2 }}><Placeholder>{m.funcao}</Placeholder></div> : null}
                 </div>
               );
             })}
@@ -199,7 +199,7 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
             </AbsoluteFill>
             <AbsoluteFill style={{ alignItems: "center", paddingTop: 780 }}>
               <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14, opacity: interpolate(frame, [t.obrigado + 10, t.obrigado + 18], [0, 1], clampOpt) }}>
-                <div style={{ fontFamily, fontWeight: 600, fontSize: 24, color: colors.mintSoft }}><Placeholder>{config.CONTATO}</Placeholder></div>
+                {config.CONTATO.trim() ? <div style={{ fontFamily, fontWeight: 600, fontSize: 24, color: colors.mintSoft }}><Placeholder>{config.CONTATO}</Placeholder></div> : null}
                 <div style={{ fontFamily, fontWeight: 600, fontSize: 17, letterSpacing: "0.14em", color: colors.mintSoft2 }}>{sloganCaixaAlta()}</div>
               </div>
             </AbsoluteFill>

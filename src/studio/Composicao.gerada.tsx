@@ -32,23 +32,23 @@ export const ComposicaoPitch: React.FC = () => (
         "marca": "Herança Digital",
         "nomeDoGrupo": "EternaByte",
         "disciplina": "Projeto UC HUB · Sprint 2",
-        "contato": "Remover isso pq não vai ter",
+        "contato": "",
         "membros": [
           {
-            "nome": "Christhopher ",
-            "funcao": "Manter sem nada aqui"
+            "nome": "Christhopher",
+            "funcao": ""
           },
           {
             "nome": "Pedro Hilbert",
-            "funcao": "Remover também "
+            "funcao": ""
           },
           {
-            "nome": "Matheus Victor ",
-            "funcao": "Remover "
+            "nome": "Matheus Victor",
+            "funcao": ""
           },
           {
-            "nome": "Daniel Almeida ",
-            "funcao": "Remover"
+            "nome": "Daniel Almeida",
+            "funcao": ""
           }
         ],
         "logoSimbolo": null,
@@ -3793,7 +3793,8 @@ export const ComposicaoPitch: React.FC = () => (
               "de": 319,
               "ate": 344
             }
-          ]
+          ],
+          "manual": true
         },
         {
           "id": "L13",

@@ -335,13 +335,13 @@ export const Inspector: React.FC<Props> = (props) => {
         {e.membros.map((m, i) => (
           <div key={i} className="linha" style={{ marginTop: 6 }}>
             <input placeholder="Nome" value={m.nome} onChange={(ev) => mudarEquipe((q) => { q.membros[i].nome = ev.target.value; })} />
-            <input placeholder="Função" value={m.funcao} onChange={(ev) => mudarEquipe((q) => { q.membros[i].funcao = ev.target.value; })} />
+            <input placeholder="Função (vazio = só o nome)" value={m.funcao} onChange={(ev) => mudarEquipe((q) => { q.membros[i].funcao = ev.target.value; })} />
             <button className="perigo" style={{ flex: "0 0 auto" }} disabled={e.membros.length <= 1} onClick={() => mudarEquipe((q) => { q.membros.splice(i, 1); })}><Trash2 size={13} /></button>
           </div>
         ))}
         <button style={{ marginTop: 6 }} disabled={e.membros.length >= 6} onClick={() => mudarEquipe((q) => { q.membros.push({ nome: "[NOME]", funcao: "[FUNÇÃO]" }); })}><Plus size={13} /> integrante</button>
-        <label>Contato (e-mail / @)</label>
-        <input value={e.contato} onChange={(ev) => mudarEquipe((q) => { q.contato = ev.target.value; })} />
+        <label>Contato (e-mail / @) — vazio = não aparece</label>
+        <input placeholder="vazio = sem contato no fechamento" value={e.contato} onChange={(ev) => mudarEquipe((q) => { q.contato = ev.target.value; })} />
         <label>Disciplina / rodapé</label>
         <input value={e.disciplina} onChange={(ev) => mudarEquipe((q) => { q.disciplina = ev.target.value; })} />
       </details>
