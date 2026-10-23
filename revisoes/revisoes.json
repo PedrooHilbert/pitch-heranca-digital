@@ -270,5 +270,22 @@
   "criadoEm": "2026-10-23T21:40:02.672Z",
   "resolvidoEm": "2026-10-23T22:13:04.360Z",
   "resolucao": "Pronúncia \"Dês-fazer\" (e fechado). Não dá para medir a vogal — conferir de ouvido."
+ },
+ {
+  "id": 16,
+  "frame": 379,
+  "tempo": "00:12.6",
+  "cena": "s2",
+  "cenaNome": "Cena 2 · Problema",
+  "x": null,
+  "y": null,
+  "texto": "ele continua falando esta , não está \n",
+  "queroQue": "",
+  "categoria": "Áudio/Voz",
+  "gravidade": "Média",
+  "still": "revisoes/pins/16.png",
+  "status": "aberto",
+  "criadoEm": "2026-10-23T22:54:35.296Z",
+  "atualizadoEm": "2026-10-23T22:56:53.098Z"
  }
 ]
