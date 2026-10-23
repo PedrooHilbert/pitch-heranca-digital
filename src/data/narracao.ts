@@ -67,7 +67,7 @@ export const NARRACAO: Frase[] = [
   // S9 — Equipe, próximos passos e fechamento
   { id: "s09_01", cena: "s9", texto: "Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos.", dica: "Honesto. Ênfase em \"previstos\"." },
   { id: "s09_02", cena: "s9", texto: "Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP.", dica: "Três passos, energia subindo." },
-  { id: "s09_03", cena: "s9", texto: "Herança Digital: seus dados, sua história, seu futuro. Obrigado!", dica: "Slogan devagar, uma pausa por vírgula. \"Obrigado!\" com sorriso." },
+  { id: "s09_03", cena: "s9", texto: "Herança Digital: seus dados, sua história, seu futuro.", dica: "Slogan devagar, uma pausa por vírgula, final firme (é a última fala do vídeo)." },
 ];
 
 export const frasesDaCena = (cena: CenaId) => NARRACAO.filter((f) => f.cena === cena);

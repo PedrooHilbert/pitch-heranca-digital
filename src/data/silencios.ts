@@ -16,3 +16,18 @@ export const silenciado = (d: Derivado, f: number) => {
   }
   return j.some(([a, b]) => f >= a && f < b);
 };
+
+const RAMPA_SAI = 8; // quadros: a trilha some antes do silêncio (revisão "corte estranho": era cortada de uma vez)
+const RAMPA_VOLTA = 6; // quadros: volta depois do silêncio (o impacto cobre o começo)
+
+/** Ganho da trilha (0..1) em volta das janelas de silêncio: rampa de saída, 0 dentro, rampa de volta. */
+export const ganhoSilencio = (d: Derivado, f: number) => {
+  silenciado(d, f); // garante o cache
+  let g = 1;
+  for (const [a, b] of cache.get(d)!) {
+    if (f >= a && f < b) return 0;
+    if (f >= a - RAMPA_SAI && f < a) g = Math.min(g, (a - f) / RAMPA_SAI);
+    if (f >= b && f < b + RAMPA_VOLTA) g = Math.min(g, (f - b + 1) / RAMPA_VOLTA);
+  }
+  return g;
+};

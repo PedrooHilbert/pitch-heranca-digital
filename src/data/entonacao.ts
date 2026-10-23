@@ -82,5 +82,5 @@ export const FRASES: Record<string, { marcado?: string; delta?: Delta }> = {
   // S9 — humilde → cresce → ponto alto
   s09_01: { delta: { rate: -3, pitch: -2 } },
   s09_02: { delta: { rate: 3, pitch: 6, volumeDb: 1 } },
-  s09_03: { marcado: "*Herança Digital*… seus dados, sua história, seu futuro. | Obrigado!", delta: { rate: -8, pitch: 2, volumeDb: 1.5 } },
+  s09_03: { marcado: "*Herança Digital*… seus dados, sua história, seu futuro.", delta: { rate: -8, pitch: 2, volumeDb: 1.5 } },
 };

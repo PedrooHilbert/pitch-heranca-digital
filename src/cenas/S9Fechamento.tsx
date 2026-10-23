@@ -28,7 +28,6 @@ export const PADRAO_S9 = {
     passo2: "Ouvir usuários", passo2Sub: "preço, carência e primeiro público",
     passo3: "Construir o MVP", passo3Sub: "login, inventário, cofre cifrado, herdeiros, liberação, auditoria",
     slogan: "Seus dados, sua história, seu *futuro.*",
-    obrigado: "Obrigado!",
   },
   fundos: { equipe: "claro", passos: "claro", fim: "escuro" },
   telas: {},
@@ -52,7 +51,8 @@ const T = () => {
     logo: r.ini(c) - 2,
     // "seu" (2ª palavra que começa com "seu" — a 1ª é "seus")
     slogan: [r.em(c, "seus"), r.em(c, "dados"), r.em(c, "sua"), r.em(c, "história"), r.em(c, "seu", 3, 2), r.em(c, "futuro")],
-    obrigado: r.em(c, "Obrigado"),
+    // revisão #7: sem "Obrigado!" — o fecho é o fim do slogan
+    fecho: r.apos(c, "futuro"),
     preto: r.dur - 26,
   };
 };
@@ -70,7 +70,7 @@ export const sfxS9 = (): Cue[] => {
     { f: t.implode, som: "whoosh_long" },
     { f: t.logo, som: "riser" },
     { f: t.logo, som: "stinger_logo" },
-    { f: t.obrigado, som: "impact_low", ganho: 0.2 },
+    { f: t.fecho, som: "impact_low", ganho: 0.2 },
   ];
 };
 
@@ -191,14 +191,11 @@ export const S9Fechamento: React.FC<{ dur: number }> = ({ dur }) => {
                 <LightSweep at={t.logo + 30} dur={26} largura={260} />
               </div>
             </AbsoluteFill>
-            <AbsoluteFill style={{ alignItems: "center", paddingTop: 480 }}>
-              <KineticText texto={tx("slogan")} inicio={t.slogan[0]} tempos={t.slogan} estilo="cor" tamanho={64} peso={700} />
+            <AbsoluteFill style={{ alignItems: "center", paddingTop: 520 }}>
+              <KineticText texto={tx("slogan")} inicio={t.slogan[0]} tempos={t.slogan} estilo="cor" tamanho={72} peso={700} />
             </AbsoluteFill>
-            <AbsoluteFill style={{ alignItems: "center", paddingTop: 610 }}>
-              <KineticText texto={tx("obrigado")} inicio={t.obrigado} stagger={4} tamanho={110} />
-            </AbsoluteFill>
-            <AbsoluteFill style={{ alignItems: "center", paddingTop: 780 }}>
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14, opacity: interpolate(frame, [t.obrigado + 10, t.obrigado + 18], [0, 1], clampOpt) }}>
+            <AbsoluteFill style={{ alignItems: "center", paddingTop: 680 }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 14, opacity: interpolate(frame, [t.fecho + 4, t.fecho + 12], [0, 1], clampOpt) }}>
                 {config.CONTATO.trim() ? <div style={{ fontFamily, fontWeight: 600, fontSize: 24, color: colors.mintSoft }}><Placeholder>{config.CONTATO}</Placeholder></div> : null}
                 <div style={{ fontFamily, fontWeight: 600, fontSize: 17, letterSpacing: "0.14em", color: colors.mintSoft2 }}>{sloganCaixaAlta()}</div>
               </div>

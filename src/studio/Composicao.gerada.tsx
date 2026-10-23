@@ -216,7 +216,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s4",
           "nome": "Como funciona",
-          "dur": 432,
+          "dur": 440,
           "fundos": {
             "trilho": "claro"
           },
@@ -422,7 +422,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s6",
           "nome": "Segurança",
-          "dur": 608,
+          "dur": 616,
           "fundos": {
             "seguranca": "escuro"
           },
@@ -458,7 +458,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s7",
           "nome": "Concorrência",
-          "dur": 456,
+          "dur": 464,
           "fundos": {
             "tabela": "claro"
           },
@@ -509,7 +509,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s9",
           "nome": "Equipe e fechamento",
-          "dur": 656,
+          "dur": 632,
           "fundos": {
             "equipe": "claro",
             "passos": "claro",
@@ -529,8 +529,7 @@ export const ComposicaoPitch: React.FC = () => (
             "passo2Sub": "preço, carência e primeiro público",
             "passo3": "Construir o MVP",
             "passo3Sub": "login, inventário, cofre cifrado, herdeiros, liberação, auditoria",
-            "slogan": "Seus dados, sua história, seu *futuro.*",
-            "obrigado": "Remover obrigado"
+            "slogan": "Seus dados, sua história, seu *futuro.*"
           },
           "telas": {}
         }
@@ -3022,30 +3021,30 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s09_03",
           "cena": "s9",
-          "texto": "Herança Digital: seus dados, sua história, seu futuro. Obrigado!",
+          "texto": "Herança Digital: seus dados, sua história, seu futuro.",
           "fonte": "sintetica",
           "src": "audio/voz/s09_03.mp3",
-          "dur": 160,
+          "dur": 125,
           "inicio": 409,
           "palavras": [
             {
               "w": "Herança",
               "de": 410,
-              "ate": 424
+              "ate": 425
             },
             {
               "w": "Digital:",
-              "de": 424,
-              "ate": 441
+              "de": 425,
+              "ate": 442
             },
             {
               "w": "seus",
-              "de": 448,
-              "ate": 457
+              "de": 449,
+              "ate": 458
             },
             {
               "w": "dados,",
-              "de": 457,
+              "de": 458,
               "ate": 474
             },
             {
@@ -3066,12 +3065,7 @@ export const ComposicaoPitch: React.FC = () => (
             {
               "w": "futuro.",
               "de": 513,
-              "ate": 531
-            },
-            {
-              "w": "Obrigado!",
-              "de": 541,
-              "ate": 564
+              "ate": 530
             }
           ]
         }
@@ -5504,26 +5498,26 @@ export const ComposicaoPitch: React.FC = () => (
           "cena": "s9",
           "fraseId": "s09_03",
           "de": 406,
-          "ate": 574,
+          "ate": 540,
           "palavras": [
             {
               "w": "Herança",
               "de": 410,
-              "ate": 424
+              "ate": 425
             },
             {
               "w": "Digital:",
-              "de": 424,
-              "ate": 441
+              "de": 425,
+              "ate": 442
             },
             {
               "w": "seus",
-              "de": 448,
-              "ate": 457
+              "de": 449,
+              "ate": 458
             },
             {
               "w": "dados,",
-              "de": 457,
+              "de": 458,
               "ate": 474
             },
             {
@@ -5544,12 +5538,7 @@ export const ComposicaoPitch: React.FC = () => (
             {
               "w": "futuro.",
               "de": 513,
-              "ate": 531
-            },
-            {
-              "w": "Obrigado!",
-              "de": 541,
-              "ate": 564
+              "ate": 530
             }
           ]
         }
@@ -6349,7 +6338,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x114",
           "cena": "s4",
-          "frame": 430,
+          "frame": 438,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
@@ -6881,7 +6870,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x190",
           "cena": "s6",
-          "frame": 606,
+          "frame": 614,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
@@ -7007,7 +6996,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x208",
           "cena": "s7",
-          "frame": 454,
+          "frame": 462,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
@@ -7343,7 +7332,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x256",
           "cena": "s9",
-          "frame": 538,
+          "frame": 530,
           "som": "impact_low",
           "ganhoDb": -14
         }

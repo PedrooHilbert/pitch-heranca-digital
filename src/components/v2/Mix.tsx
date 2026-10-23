@@ -5,7 +5,7 @@ import React from "react";
 import { Audio, Sequence, random, staticFile } from "remotion";
 import { derivado, getProjeto, type Derivado } from "../../data/projeto";
 import { ANTECIPA, DURACAO, type Som } from "../../data/sfx";
-import { silenciado } from "../../data/silencios";
+import { ganhoSilencio } from "../../data/silencios";
 
 const RAMPA = 9;
 const dbLin = (db: number) => Math.pow(10, db / 20);
@@ -60,7 +60,7 @@ export const Mix: React.FC<{ semVoz?: boolean }> = ({ semVoz = false }) => {
           volume={(f) => {
             const k = D[Math.min(D.length - 1, Math.max(0, f))];
             const fadeOut = Math.min(1, Math.max(0, (d.total - f) / 24));
-            return gTrilha * (1 - (1 - gDuck) * k) * fadeOut * (silenciado(d, f) ? 0 : 1);
+            return gTrilha * (1 - (1 - gDuck) * k) * fadeOut * ganhoSilencio(d, f);
           }}
         />
       ) : null}
@@ -74,7 +74,12 @@ export const Mix: React.FC<{ semVoz?: boolean }> = ({ semVoz = false }) => {
             const varVol = dbLin((random(`v${q.id}`) * 2 - 1) * 1); // ±1 dB
             return (
               <Sequence key={`${q.id}-${i}`} from={ini} durationInFrames={Math.ceil(DURACAO[som] * 30) + 4} name={`sfx ${som}`}>
-                <Audio src={staticFile(`audio/sfx/${som}.wav`)} volume={dbLin(q.ganhoDb) * gSfx * varVol} playbackRate={varPitch} />
+                <Audio
+                  src={staticFile(`audio/sfx/${som}.wav`)}
+                  // o riser termina com fade de 4 q (antes acabava seco no blackout da S1)
+                  volume={som === "riser" ? (f) => dbLin(q.ganhoDb) * gSfx * varVol * Math.min(1, Math.max(0, (DURACAO.riser * 30 - f) / 4)) : dbLin(q.ganhoDb) * gSfx * varVol}
+                  playbackRate={varPitch}
+                />
               </Sequence>
             );
           })

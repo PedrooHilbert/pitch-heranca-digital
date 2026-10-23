@@ -1,7 +1,7 @@
 # Roteiro de gravação da narração — Herança Digital (v2)
 
 > Gerado de `src/data/narracao.ts` (rode `npm run roteiro` se o texto mudar).
-> Total: 34 frases · 435 palavras · ritmo-alvo 160–170 palavras/min (≈ 2 min 40 s de fala).
+> Total: 34 frases · 434 palavras · ritmo-alvo 160–170 palavras/min (≈ 2 min 40 s de fala).
 
 ## Guia rápido de gravação
 1. **Lugar:** o mais silencioso possível. Grave num cômodo com tecido (guarda-roupa aberto, cobertor nas costas, sofá). Nada de ventilador/ar-condicionado.
@@ -20,9 +20,9 @@
 ## Frases
 | id | Cena | Texto | Dica de entonação | Duração atual (voz sintética) |
 |---|---|---|---|---|
-| `s01_01` | Abertura | Quando você morrer… | Grave e lento, quase sussurrado. Segure as reticências. | 1.2 s |
+| `s01_01` | Abertura | Quando você morrer… | Grave e lento, quase sussurrado. Segure as reticências. | 1.1 s |
 | `s01_02` | Abertura | quem fica com o seu Instagram? | Pergunta direta, olhando pra plateia. Ênfase em "quem fica". | 1.7 s |
-| `s01_03` | Abertura | Com o seu e-mail? | Curta, subindo a entonação. | 1.2 s |
+| `s01_03` | Abertura | Com o seu e-mail? | Curta, subindo a entonação. | 1.1 s |
 | `s01_04` | Abertura | Com as suas criptomoedas? | Mais forte que a anterior (é o fim da escalada). | 1.9 s |
 | `s01_05` | Abertura | Somos o grupo EternaByte, e esta é a Herança Digital. | Depois do silêncio, voz aberta, sorriso na voz. Ênfase em "Herança Digital". | 3.7 s |
 | `s02_01` | Problema | Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas. | Lista rápida, em ritmo de enumeração. | 7.2 s |
@@ -48,12 +48,12 @@
 | `s07_01` | Concorrência | Gerenciadores de senha resolvem o dia a dia, não a sucessão. | Contraste: "dia a dia" × "sucessão". | 4.0 s |
 | `s07_02` | Concorrência | Os contatos de legado de Google, Apple e Meta cobrem só a própria plataforma. | Neutro, sem desdenhar. | 4.9 s |
 | `s07_03` | Concorrência | A Herança Digital reúne tudo em um só lugar, seguindo o rito legal brasileiro. | Confiante. Ênfase em "tudo em um só lugar". | 4.9 s |
-| `s08_01` | Modelo de negócio | A receita vem da assinatura anual do titular e de uma taxa na liberação. | Objetivo. | 4.4 s |
+| `s08_01` | Modelo de negócio | A receita vem da assinatura anual do titular e de uma taxa na liberação. | Objetivo. | 4.3 s |
 | `s08_02` | Modelo de negócio | Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda. | Ênfase em "previstos". | 6.3 s |
 | `s08_03` | Modelo de negócio | Os valores serão definidos depois da pesquisa com usuários. | Honesto, tranquilo. | 3.7 s |
-| `s09_01` | Equipe e fechamento | Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos. | Honesto. Ênfase em "previstos". | 6.8 s |
+| `s09_01` | Equipe e fechamento | Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos. | Honesto. Ênfase em "previstos". | 6.7 s |
 | `s09_02` | Equipe e fechamento | Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP. | Três passos, energia subindo. | 6.2 s |
-| `s09_03` | Equipe e fechamento | Herança Digital: seus dados, sua história, seu futuro. Obrigado! | Slogan devagar, uma pausa por vírgula. "Obrigado!" com sorriso. | 5.3 s |
+| `s09_03` | Equipe e fechamento | Herança Digital: seus dados, sua história, seu futuro. | Slogan devagar, uma pausa por vírgula, final firme (é a última fala do vídeo). | 4.2 s |
 
 ## Pronúncia (só para voz sintética)
 "MVP" → "ême vê pê" · "UC HUB" → "U-Cê Rabi" · "OAB" → "ó á bê" · "gov.br" → "gov ponto bê érre" · "LGPD" → "éle gê pê dê" (`src/data/pronuncia.ts`).
