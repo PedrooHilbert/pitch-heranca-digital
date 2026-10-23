@@ -3374,7 +3374,8 @@ export const ComposicaoPitch: React.FC = () => (
               "de": 134,
               "ate": 161
             }
-          ]
+          ],
+          "manual": true
         },
         {
           "id": "L07",
@@ -3408,7 +3409,8 @@ export const ComposicaoPitch: React.FC = () => (
               "de": 196,
               "ate": 219
             }
-          ]
+          ],
+          "manual": true
         },
         {
           "id": "L08",
