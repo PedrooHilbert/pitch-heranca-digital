@@ -88,12 +88,12 @@ export const ComposicaoPitch: React.FC = () => (
         },
         "trilha": {
           "ativo": true,
-          "ganhoDb": 0,
-          "duckingDb": -6
+          "ganhoDb": 1.5,
+          "duckingDb": -8.5
         },
         "sfx": {
           "ativo": true,
-          "ganhoDb": 0
+          "ganhoDb": -1.5
         }
       },
       "cenas": [
