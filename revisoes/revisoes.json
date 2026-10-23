@@ -1,1 +1,18 @@
-[]
+[
+ {
+  "id": 1,
+  "frame": 31,
+  "tempo": "00:01.0",
+  "cena": "s1",
+  "cenaNome": "Cena 1 · Abertura",
+  "x": null,
+  "y": null,
+  "texto": "REVISÃO — Cena S1 (Abertura). Redesenhe a abertura para ter impacto desde o primeiro quadro. Mantenha o resto do vídeo, o teto de 180 s e as regras do PROMPT.md. Faça backup antes (git/cópia).\n\nPROBLEMAS (do grupo):\n1. \"Começou do nada\": a cena abre num fundo escuro quase vazio e os ícones só \"entram\". Não há gancho nem choque inicial.\n2. A primeira fala é \"E o seu Instagram, o seu e-mail…\". Começar com \"E\" parece meio de frase e não impacta.\n3. Os ícones são pequenos e a cena não tem peso.\n\nGANCHO = A\n(A) \"Quando você morrer… quem fica com o seu Instagram? Com o seu e-mail? Com as suas criptomoedas?\"\nDepois: \"Somos o grupo [NOME DO GRUPO], e esta é a Herança Digital.\"\nAtualize src/data/narracao.ts, as legendas e docs/ROTEIRO_GRAVACAO.md. Se a voz for sintética, gere de novo as frases da S1; se for a voz do grupo, liste só as frases novas para regravar. Rode `npm run sync`. Não comece nenhuma fala da S1 com conjunção. Primeira palavra audível ≥ 10 frames depois do primeiro impacto sonoro.\n\nNOVA COREOGRAFIA (120 BPM, 1 batida = 15 frames):\n- f0–f6: preto total + SILÊNCIO de 6 quadros, depois impact_low grave e flash menta de 2 quadros. Nada de elemento \"entrando devagar\".\n- f10: texto gigante (Montserrat 800, 180–220 px, ocupa a tela) \"QUANDO VOCÊ MORRER…\" entrando palavra por palavra com slam + shake leve, sincronizado com a voz (palavra-chave 2–3 quadros antes da fala).\n- Em seguida, uma pergunta por batida, cada uma ocupando a tela:\n  \"QUEM FICA COM O SEU INSTAGRAM?\" → ícone de câmera ENORME (≥ 260 px) estoura no centro com glow.\n  \"COM O SEU E-MAIL?\" → ícone de e-mail estoura.\n  \"COM AS SUAS CRIPTOMOEDAS?\" → ₿ estoura.\n  Cada estouro: pop + whoosh curto + zoom brusco (1.0→1.15→1.0), fundo muda de tom (preto → verde-petróleo → preto) para o \"interruptor de padrão\".\n  Use ícones genéricos desenhados por nós (não use logos reais de marcas).\n- Clímax (≈ s4–s6): os 3 ícones grandes + mais 4 (nuvem, play, domínio, banco) se juntam numa grade que gira em órbita; um CADEADO bate em cada um (thunk em sequência rápida, 1 a cada meia batida), tela treme, glitch de 3 quadros, riser subindo.\n- Blackout de 6 quadros com silêncio total, e então a REVELAÇÃO DO LOGO: use public/brand/logo-simbolo-menta-fundo-escuro.png, com impacto + stinger_logo, LightSweep, partículas, tremida de câmera 6–8 quadros; título \"Sua história também vive no digital.\" (palavra \"digital.\" em menta), chip \"Squad [NOME DO GRUPO]\" e o slogan.\n- Whip-pan com blur para a S2. Nada fica parado por ≥ 45 quadros; câmera sempre em zoom lento.\n- A cena pode durar até 12,5 s, desde que o total fique ≤ 180 s (se estourar, reduza respiros de outras cenas).\n\nSOM: música entra em f0 baixa com pulso grave; riser 1,5 s antes do logo; stinger no logo. Ducking sob a voz.\n\nENTREGA E CONFERÊNCIA:\n- Gere stills nos quadros 0, 6, 12, 30, 60, 90, 150, 210, 300 e o final da cena, abra todos e confirme: nada vazio, texto legível, sem cortar nas margens, legenda sem cobrir o conteúdo.\n- Rode auditoria de movimento (sem janela parada ≥ 45 quadros), áudio e duração total ≤ 180 s.\n- Atualize revisoes/revisoes.json (marque como feito o pin da S1) e me diga o que mudou e o que não consegue verificar (você não ouve a voz).",
+  "queroQue": "",
+  "categoria": "Conteúdo",
+  "gravidade": "Média",
+  "still": "revisoes/pins/1.png",
+  "status": "aberto",
+  "criadoEm": "2026-10-23T10:51:42.626Z"
+ }
+]

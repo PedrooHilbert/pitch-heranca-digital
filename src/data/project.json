@@ -8,21 +8,25 @@
  "vozSintetica": "pt-BR-AntonioNeural",
  "equipe": {
   "marca": "Herança Digital",
-  "nomeDoGrupo": "[NOME DO GRUPO]",
+  "nomeDoGrupo": "EternaByte",
   "disciplina": "Projeto UC HUB · Sprint 2",
-  "contato": "[E-MAIL / @ DO GRUPO]",
+  "contato": "Remover isso pq não vai ter",
   "membros": [
    {
-    "nome": "Walison Librelon",
-    "funcao": "[FUNÇÃO]"
+    "nome": "Christhopher ",
+    "funcao": "Manter sem nada aqui"
    },
    {
-    "nome": "Pedro Morais Hilbert",
-    "funcao": "[FUNÇÃO]"
+    "nome": "Pedro Hilbert",
+    "funcao": "Remover também "
    },
    {
-    "nome": "[DEMAIS INTEGRANTES]",
-    "funcao": "[FUNÇÃO]"
+    "nome": "Matheus Victor ",
+    "funcao": "Remover "
+   },
+   {
+    "nome": "Daniel Almeida ",
+    "funcao": "Remover"
    }
   ],
   "logoSimbolo": null,
@@ -161,8 +165,8 @@
       2,
       3,
       5,
-      6,
-      7
+      7,
+      6
      ]
     },
     "t2": {
@@ -3193,64 +3197,55 @@
     {
      "w": "Somos",
      "de": 214,
-     "ate": 225
+     "ate": 223
     },
     {
      "w": "o",
-     "de": 226,
-     "ate": 229
+     "de": 223,
+     "ate": 225
     },
     {
      "w": "grupo",
-     "de": 230,
-     "ate": 240
+     "de": 225,
+     "ate": 234
     },
     {
-     "w": "[NOME",
-     "de": 240,
-     "ate": 241
-    },
-    {
-     "w": "DO",
-     "de": 240,
-     "ate": 241
-    },
-    {
-     "w": "GRUPO],",
-     "de": 240,
-     "ate": 241
+     "w": "EternaByte,",
+     "de": 234,
+     "ate": 251
     },
     {
      "w": "e",
-     "de": 247,
-     "ate": 249
+     "de": 251,
+     "ate": 254
     },
     {
      "w": "esta",
-     "de": 250,
-     "ate": 258
-    },
-    {
-     "w": "é",
-     "de": 258,
+     "de": 254,
      "ate": 261
     },
     {
-     "w": "a",
+     "w": "é",
      "de": 261,
      "ate": 264
     },
     {
-     "w": "Herança",
+     "w": "a",
      "de": 264,
-     "ate": 275
+     "ate": 267
+    },
+    {
+     "w": "Herança",
+     "de": 267,
+     "ate": 278
     },
     {
      "w": "Digital.",
-     "de": 275,
+     "de": 278,
      "ate": 291
     }
-   ]
+   ],
+   "manual": true
   },
   {
    "id": "L04",
