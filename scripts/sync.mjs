@@ -103,15 +103,18 @@ async function vozExpressiva(rate) {
   }
 }
 
-// O edge-tts deixa ~0,8 s de silêncio no fim de cada frase: corta em (última palavra + 0,08 s): pausa real entre frases ≈ 0,3–0,4 s.
-// Não mexe no início, então os tempos das palavras continuam válidos.
+// Corta o silêncio das PONTAS (o edge-tts deixa ~0,05–0,1 s antes e ~0,8 s depois): de 0,04 s antes da 1ª palavra
+// até 0,08 s depois da última, com fade de 20 ms nas duas pontas. Os tempos das palavras andam junto com o corte.
 function cortarFim(mp3, wordsJson) {
-  const fim = lerJSON(wordsJson)?.palavras?.at(-1)?.e;
-  if (!fim) return;
-  const t = fim + 0.08;
+  const w = lerJSON(wordsJson);
+  const pal = w?.palavras;
+  if (!pal?.length) return;
+  const ini = Math.max(0, pal[0].s - 0.04);
+  const t = pal.at(-1).e + 0.08 - ini;
   const tmp = mp3 + ".tmp.mp3";
-  ffLog(["-hide_banner", "-y", "-i", mp3, "-t", t.toFixed(3), "-af", `afade=t=out:st=${(t - 0.02).toFixed(3)}:d=0.02`, "-ar", "44100", "-ac", "1", "-b:a", "192k", tmp]);
+  ffLog(["-hide_banner", "-y", "-ss", ini.toFixed(3), "-i", mp3, "-t", t.toFixed(3), "-af", `afade=t=in:d=0.02,afade=t=out:st=${(t - 0.02).toFixed(3)}:d=0.02`, "-ar", "44100", "-ac", "1", "-b:a", "192k", tmp]);
   fs.renameSync(tmp, mp3);
+  gravarJSON(wordsJson, { ...w, palavras: pal.map((p) => ({ ...p, s: +(p.s - ini).toFixed(3), e: +(p.e - ini).toFixed(3) })) });
 }
 
 // ---------- tempo de cada palavra pelo whisper (gravações do grupo e Kokoro) ----------

@@ -1,1 +1,22 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [], "palavras": [{"w": "Quando", "s": 0.09, "e": 0.359}, {"w": "você", "s": 0.359, "e": 0.695}, {"w": "morrer", "s": 0.695, "e": 1.206}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "Quando",
+   "s": 0.04,
+   "e": 0.302
+  },
+  {
+   "w": "você",
+   "s": 0.302,
+   "e": 0.565
+  },
+  {
+   "w": "morrer",
+   "s": 0.565,
+   "e": 1.04
+  }
+ ]
+}

@@ -1,1 +1,27 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [0.6375], "palavras": [{"w": "Com", "s": 0.09, "e": 0.278}, {"w": "as", "s": 0.278, "e": 0.39}, {"w": "suas", "s": 0.39, "e": 0.653}, {"w": "criptomoedas", "s": 0.638, "e": 1.901}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "Com",
+   "s": 0.04,
+   "e": 0.241
+  },
+  {
+   "w": "as",
+   "s": 0.241,
+   "e": 0.366
+  },
+  {
+   "w": "suas",
+   "s": 0.366,
+   "e": 0.628
+  },
+  {
+   "w": "criptomoedas",
+   "s": 0.628,
+   "e": 1.79
+  }
+ ]
+}

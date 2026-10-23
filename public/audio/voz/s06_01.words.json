@@ -1,1 +1,37 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [], "palavras": [{"w": "Segurança", "s": 0.09, "e": 0.871}, {"w": "é", "s": 0.871, "e": 0.923}, {"w": "o", "s": 0.923, "e": 0.988}, {"w": "coração", "s": 0.988, "e": 1.613}, {"w": "do", "s": 1.613, "e": 1.718}, {"w": "produto", "s": 1.718, "e": 2.291}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "Segurança",
+   "s": 0.04,
+   "e": 0.802
+  },
+  {
+   "w": "é",
+   "s": 0.802,
+   "e": 0.853
+  },
+  {
+   "w": "o",
+   "s": 0.853,
+   "e": 0.928
+  },
+  {
+   "w": "coração",
+   "s": 0.928,
+   "e": 1.528
+  },
+  {
+   "w": "do",
+   "s": 1.528,
+   "e": 1.628
+  },
+  {
+   "w": "produto",
+   "s": 1.627,
+   "e": 2.178
+  }
+ ]
+}

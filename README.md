@@ -121,12 +121,14 @@ npm run voz:importar   # corta silêncio, normaliza, alinha palavra a palavra (w
 npm run render
 ```
 **B) Voz sintética** (está no vídeo agora): **Thalita** (`pt-BR-ThalitaMultilingualNeural`, edge-tts), feminina,
-velocidade natural — **escolhida pelo grupo**. Expressividade **0,75 — ⚠ provisória, aguardando escolha do grupo**.
+velocidade natural, **sem edição nenhuma** — ⚠ **provisória, aguardando um motor melhor** (revisão "voz natural").
 
-- **Expressividade:** `src/data/entonacao.ts` marca ênfases (`*palavra*`), pausas dramáticas (`…`), finais de
-  pergunta e o mapa de energia de cada cena; `expressividade` em `src/data/voz.ts` (0 = plana … 1 = forte)
-  multiplica tudo. Ouça os 4 níveis lado a lado em `out/voz-teste/index.html` (`npm run voz:niveis` refaz) e
-  rode `npm run voz` depois de mudar. Medições antes/depois e o que o motor aceita: `docs/voz-medicoes.md`.
+- **Revertido:** a versão "expressiva" (emendas de palavras com tom/velocidade/volume por trecho) soou robótica e
+  saiu — guardada em `backup/voz-expressiva/` só para referência (`expressividade: 0` em `src/data/voz.ts`).
+- **Motores melhores precisam de chave** (nenhuma existe nesta máquina): ElevenLabs (`ELEVENLABS_API_KEY`),
+  OpenAI `gpt-4o-mini-tts` (`OPENAI_API_KEY`) ou Google Chirp 3 HD (conta de serviço em
+  `GOOGLE_APPLICATION_CREDENTIALS`). Com uma delas definida como variável de ambiente, dá para gerar o banco de
+  testes com esses motores e escolher de ouvido.
 - **Escolher outra voz:** `out/voz-teste/vozes.html` (as mesmas 3 frases em 8 vozes); mude
   `VOZ_ESCOLHIDA` em `src/data/voz.ts` (re-exportada em `config.ts`). Depois: `npm run voz` (regenera a narração
   inteira e roda o sync: timeline, legendas, efeitos e trilha). `npm run voz:teste` refaz o banco de testes.
@@ -135,7 +137,7 @@ velocidade natural — **escolhida pelo grupo**. Expressividade **0,75 — ⚠ p
   Google Chirp 3 HD — com uma chave dá para acrescentar. O edge-tts não aceita SSML próprio nem estilos de emoção.
 - **Sem aceleração:** a velocidade é a natural da voz (no máximo ±3 %). Se passar de 180 s, o `npm run voz` para
   e pede para enxugar o texto — ele não acelera mais a voz.
-- **Tratamento:** filtro de graves (80 Hz), de-esser leve, presença +1,8 dB em 3,5 kHz, compressão suave 1,8:1, fade de 20 ms nas pontas, −16 LUFS (± o volume do mapa de energia da cena);
+- **Tratamento mínimo:** só corte do silêncio nas duas pontas, fade de 20 ms e normalização (−16 LUFS). Sem compressão, EQ, de-esser nem reverb;
   pausa real entre frases ≈ 0,35–0,4 s. `npm run voz:conferir` confere duração, sample rate, LUFS, pico e
   silêncios dentro das frases.
 - **Texto enxugado para caber em 180 s na velocidade natural** (só conectivos, nenhum fato): s03_03, s06_04

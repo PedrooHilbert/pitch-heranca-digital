@@ -1,1 +1,77 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [], "palavras": [{"w": "Somos", "s": 0.09, "e": 0.473}, {"w": "um", "s": 0.473, "e": 0.6}, {"w": "projeto", "s": 0.6, "e": 1.047}, {"w": "de", "s": 1.047, "e": 1.11}, {"w": "faculdade", "s": 1.11, "e": 1.837}, {"w": "escritórios", "s": 2.067, "e": 2.807}, {"w": "cartórios", "s": 2.96, "e": 3.636}, {"w": "e", "s": 3.636, "e": 3.853}, {"w": "verificação", "s": 3.853, "e": 4.656}, {"w": "de", "s": 4.656, "e": 4.72}, {"w": "identidade", "s": 4.72, "e": 5.383}, {"w": "são", "s": 5.383, "e": 5.575}, {"w": "parceiros", "s": 5.575, "e": 6.047}, {"w": "previstos", "s": 6.047, "e": 6.799}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "Somos",
+   "s": 0.04,
+   "e": 0.415
+  },
+  {
+   "w": "um",
+   "s": 0.415,
+   "e": 0.552
+  },
+  {
+   "w": "projeto",
+   "s": 0.552,
+   "e": 0.99
+  },
+  {
+   "w": "de",
+   "s": 0.99,
+   "e": 1.052
+  },
+  {
+   "w": "faculdade",
+   "s": 1.052,
+   "e": 1.79
+  },
+  {
+   "w": "escritórios",
+   "s": 2.003,
+   "e": 2.765
+  },
+  {
+   "w": "cartórios",
+   "s": 2.915,
+   "e": 3.552
+  },
+  {
+   "w": "e",
+   "s": 3.552,
+   "e": 3.74
+  },
+  {
+   "w": "verificação",
+   "s": 3.74,
+   "e": 4.515
+  },
+  {
+   "w": "de",
+   "s": 4.515,
+   "e": 4.59
+  },
+  {
+   "w": "identidade",
+   "s": 4.59,
+   "e": 5.24
+  },
+  {
+   "w": "são",
+   "s": 5.24,
+   "e": 5.428
+  },
+  {
+   "w": "parceiros",
+   "s": 5.428,
+   "e": 5.89
+  },
+  {
+   "w": "previstos",
+   "s": 5.89,
+   "e": 6.628
+  }
+ ]
+}

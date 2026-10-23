@@ -1,1 +1,52 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [], "palavras": [{"w": "Os", "s": 0.09, "e": 0.246}, {"w": "valores", "s": 0.246, "e": 0.763}, {"w": "serão", "s": 0.763, "e": 0.967}, {"w": "definidos", "s": 0.967, "e": 1.52}, {"w": "depois", "s": 1.52, "e": 1.905}, {"w": "da", "s": 1.905, "e": 2.013}, {"w": "pesquisa", "s": 2.013, "e": 2.578}, {"w": "com", "s": 2.578, "e": 2.782}, {"w": "usuários", "s": 2.782, "e": 3.455}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "Os",
+   "s": 0.04,
+   "e": 0.19
+  },
+  {
+   "w": "valores",
+   "s": 0.19,
+   "e": 0.728
+  },
+  {
+   "w": "serão",
+   "s": 0.728,
+   "e": 0.953
+  },
+  {
+   "w": "definidos",
+   "s": 0.953,
+   "e": 1.528
+  },
+  {
+   "w": "depois",
+   "s": 1.528,
+   "e": 1.903
+  },
+  {
+   "w": "da",
+   "s": 1.903,
+   "e": 2.015
+  },
+  {
+   "w": "pesquisa",
+   "s": 2.015,
+   "e": 2.628
+  },
+  {
+   "w": "com",
+   "s": 2.628,
+   "e": 2.84
+  },
+  {
+   "w": "usuários",
+   "s": 2.84,
+   "e": 3.528
+  }
+ ]
+}

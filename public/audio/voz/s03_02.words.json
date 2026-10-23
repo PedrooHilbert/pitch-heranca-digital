@@ -1,1 +1,72 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [0.5847, 1.562], "palavras": [{"w": "Juntamos", "s": 0.09, "e": 0.6}, {"w": "três", "s": 0.585, "e": 0.92}, {"w": "coisas", "s": 0.92, "e": 1.422}, {"w": "um", "s": 1.708, "e": 1.793}, {"w": "inventário", "s": 1.793, "e": 2.363}, {"w": "dos", "s": 2.363, "e": 2.472}, {"w": "seus", "s": 2.472, "e": 2.594}, {"w": "ativos", "s": 2.594, "e": 3.212}, {"w": "um", "s": 3.431, "e": 3.54}, {"w": "cofre", "s": 3.54, "e": 3.929}, {"w": "de", "s": 3.929, "e": 4.001}, {"w": "acessos", "s": 4.001, "e": 4.523}, {"w": "criptografado", "s": 4.523, "e": 5.579}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "Juntamos",
+   "s": 0.04,
+   "e": 0.59
+  },
+  {
+   "w": "três",
+   "s": 0.59,
+   "e": 0.94
+  },
+  {
+   "w": "coisas",
+   "s": 0.94,
+   "e": 1.44
+  },
+  {
+   "w": "um",
+   "s": 1.74,
+   "e": 1.84
+  },
+  {
+   "w": "inventário",
+   "s": 1.84,
+   "e": 2.44
+  },
+  {
+   "w": "dos",
+   "s": 2.44,
+   "e": 2.565
+  },
+  {
+   "w": "seus",
+   "s": 2.565,
+   "e": 2.678
+  },
+  {
+   "w": "ativos",
+   "s": 2.678,
+   "e": 3.29
+  },
+  {
+   "w": "um",
+   "s": 3.503,
+   "e": 3.628
+  },
+  {
+   "w": "cofre",
+   "s": 3.628,
+   "e": 4.015
+  },
+  {
+   "w": "de",
+   "s": 4.015,
+   "e": 4.078
+  },
+  {
+   "w": "acessos",
+   "s": 4.078,
+   "e": 4.603
+  },
+  {
+   "w": "criptografado",
+   "s": 4.602,
+   "e": 5.69
+  }
+ ]
+}

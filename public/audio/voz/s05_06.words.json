@@ -1,1 +1,52 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [], "palavras": [{"w": "A", "s": 0.09, "e": 0.211}, {"w": "equipe", "s": 0.211, "e": 0.575}, {"w": "valida", "s": 0.575, "e": 1.049}, {"w": "todos", "s": 1.279, "e": 1.558}, {"w": "são", "s": 1.558, "e": 1.704}, {"w": "avisados", "s": 1.704, "e": 2.262}, {"w": "e", "s": 2.262, "e": 2.408}, {"w": "podem", "s": 2.408, "e": 2.736}, {"w": "contestar", "s": 2.736, "e": 3.342}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "A",
+   "s": 0.04,
+   "e": 0.178
+  },
+  {
+   "w": "equipe",
+   "s": 0.178,
+   "e": 0.603
+  },
+  {
+   "w": "valida",
+   "s": 0.603,
+   "e": 1.103
+  },
+  {
+   "w": "todos",
+   "s": 1.327,
+   "e": 1.627
+  },
+  {
+   "w": "são",
+   "s": 1.627,
+   "e": 1.79
+  },
+  {
+   "w": "avisados",
+   "s": 1.79,
+   "e": 2.34
+  },
+  {
+   "w": "e",
+   "s": 2.34,
+   "e": 2.49
+  },
+  {
+   "w": "podem",
+   "s": 2.49,
+   "e": 2.815
+  },
+  {
+   "w": "contestar",
+   "s": 2.815,
+   "e": 3.503
+  }
+ ]
+}

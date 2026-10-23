@@ -1,1 +1,77 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [], "palavras": [{"w": "Escritórios", "s": 0.09, "e": 0.811}, {"w": "de", "s": 0.811, "e": 0.871}, {"w": "advocacia", "s": 0.871, "e": 1.725}, {"w": "cartórios", "s": 1.857, "e": 2.506}, {"w": "bancos", "s": 2.65, "e": 3.071}, {"w": "e", "s": 3.071, "e": 3.179}, {"w": "seguradoras", "s": 3.179, "e": 3.84}, {"w": "são", "s": 3.84, "e": 3.972}, {"w": "parceiros", "s": 3.972, "e": 4.429}, {"w": "previstos", "s": 4.429, "e": 5.078}, {"w": "e", "s": 5.078, "e": 5.186}, {"w": "canais", "s": 5.186, "e": 5.523}, {"w": "de", "s": 5.523, "e": 5.631}, {"w": "venda", "s": 5.631, "e": 6.028}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "Escritórios",
+   "s": 0.04,
+   "e": 0.765
+  },
+  {
+   "w": "de",
+   "s": 0.765,
+   "e": 0.84
+  },
+  {
+   "w": "advocacia",
+   "s": 0.84,
+   "e": 1.702
+  },
+  {
+   "w": "cartórios",
+   "s": 1.853,
+   "e": 2.54
+  },
+  {
+   "w": "bancos",
+   "s": 2.715,
+   "e": 3.165
+  },
+  {
+   "w": "e",
+   "s": 3.165,
+   "e": 3.277
+  },
+  {
+   "w": "seguradoras",
+   "s": 3.278,
+   "e": 3.99
+  },
+  {
+   "w": "são",
+   "s": 3.99,
+   "e": 4.128
+  },
+  {
+   "w": "parceiros",
+   "s": 4.128,
+   "e": 4.602
+  },
+  {
+   "w": "previstos",
+   "s": 4.602,
+   "e": 5.253
+  },
+  {
+   "w": "e",
+   "s": 5.253,
+   "e": 5.365
+  },
+  {
+   "w": "canais",
+   "s": 5.365,
+   "e": 5.715
+  },
+  {
+   "w": "de",
+   "s": 5.715,
+   "e": 5.827
+  },
+  {
+   "w": "venda",
+   "s": 5.828,
+   "e": 6.228
+  }
+ ]
+}

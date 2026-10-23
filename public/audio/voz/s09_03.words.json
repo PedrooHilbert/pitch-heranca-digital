@@ -1,1 +1,52 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [1.6534, 4.8498], "palavras": [{"w": "Herança", "s": 0.09, "e": 0.601}, {"w": "Digital", "s": 0.601, "e": 1.241}, {"w": "seus", "s": 1.773, "e": 2.079}, {"w": "dados", "s": 2.079, "e": 2.664}, {"w": "sua", "s": 2.824, "e": 3.05}, {"w": "história", "s": 3.05, "e": 3.542}, {"w": "seu", "s": 3.754, "e": 4.06}, {"w": "futuro", "s": 4.06, "e": 4.685}, {"w": "Obrigado", "s": 5.03, "e": 5.907}]}
+{
+ "fonte": "sintetica",
+ "voz": "pt-BR-ThalitaMultilingualNeural",
+ "rate": "+0%",
+ "palavras": [
+  {
+   "w": "Herança",
+   "s": 0.04,
+   "e": 0.503
+  },
+  {
+   "w": "Digital",
+   "s": 0.502,
+   "e": 1.052
+  },
+  {
+   "w": "seus",
+   "s": 1.302,
+   "e": 1.59
+  },
+  {
+   "w": "dados",
+   "s": 1.59,
+   "e": 2.165
+  },
+  {
+   "w": "sua",
+   "s": 2.327,
+   "e": 2.528
+  },
+  {
+   "w": "história",
+   "s": 2.528,
+   "e": 3.028
+  },
+  {
+   "w": "seu",
+   "s": 3.227,
+   "e": 3.477
+  },
+  {
+   "w": "futuro",
+   "s": 3.477,
+   "e": 4.052
+  },
+  {
+   "w": "Obrigado",
+   "s": 4.39,
+   "e": 5.178
+  }
+ ]
+}

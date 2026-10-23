@@ -23,7 +23,7 @@ export const VOZ_ESCOLHIDA: VozConfig = {
   voz: "pt-BR-ThalitaMultilingualNeural",
   rate: "+0%",
   descricao: "Thalita (Microsoft, pt-BR, multilíngue) — feminina, velocidade natural",
-  provisoria: false, // escolhida pelo grupo depois de ouvir out/voz-teste
-  expressividade: 0.75,
-  expressividadeProvisoria: true, // nível "média" até o grupo escolher de ouvido
+  provisoria: true, // provisória até o grupo escolher um motor melhor (revisão "voz natural")
+  expressividade: 0, // revisão "voz natural": a versão expressiva (emendas) soou robótica — backup/voz-expressiva
+  expressividadeProvisoria: false,
 };

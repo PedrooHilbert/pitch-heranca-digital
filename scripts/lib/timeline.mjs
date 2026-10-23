@@ -6,7 +6,7 @@
 
 export const CENAS = [
   // min = duração nominal mínima (s); lead/respiro/cauda em quadros
-  { id: "s1", nome: "Abertura", min: 9, lead: 14, respiro: 11, cauda: 12, tema: "escuro" }, // lead 14 + ~3 q do TTS → 1ª palavra ≥ 10 q depois do impacto (f6)
+  { id: "s1", nome: "Abertura", min: 9, lead: 16, respiro: 11, cauda: 12, tema: "escuro" }, // lead 16 + ~1 q de margem → 1ª palavra ≥ 10 q depois do impacto (f6)
   { id: "s2", nome: "Problema", min: 18, lead: 8, respiro: 13, cauda: 20, tema: "claro" },
   { id: "s3", nome: "Proposta de valor", min: 15, lead: 10, respiro: 11, cauda: 30, tema: "escuro" },
   { id: "s4", nome: "Como funciona", min: 12, lead: 8, respiro: 14, cauda: 26, tema: "claro" },
