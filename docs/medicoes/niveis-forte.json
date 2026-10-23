@@ -1,0 +1,78 @@
+{
+ "resumo": {
+  "rotulo": "forte",
+  "frases": 7,
+  "pitch_faixa_st_media": 12.83,
+  "pitch_dp_st_media": 4.06,
+  "pitch_entre_frases_dp_st": 1.58,
+  "rms_dentro_dp_db_media": 6.97,
+  "rms_entre_frases_dp_db": 0.48,
+  "vel_media_pal_s": 2.82,
+  "vel_entre_frases_dp": 0.78
+ },
+ "frases": [
+  {
+   "id": "thalita_forte_s01_01",
+   "pitch_med_hz": 185.8,
+   "pitch_faixa_st": 9.7,
+   "pitch_dp_st": 3.62,
+   "rms_med_db": -17.98,
+   "rms_dp_db": 5.33,
+   "pal_por_s": 2.7
+  },
+  {
+   "id": "thalita_forte_s01_02",
+   "pitch_med_hz": 185.8,
+   "pitch_faixa_st": 18.93,
+   "pitch_dp_st": 5.3,
+   "rms_med_db": -18.61,
+   "rms_dp_db": 6.63,
+   "pal_por_s": 3.82
+  },
+  {
+   "id": "thalita_forte_s01_03",
+   "pitch_med_hz": 180.5,
+   "pitch_faixa_st": 5.4,
+   "pitch_dp_st": 1.84,
+   "rms_med_db": -17.5,
+   "rms_dp_db": 6.33,
+   "pal_por_s": 3.88
+  },
+  {
+   "id": "thalita_forte_s03_02",
+   "pitch_med_hz": 213.4,
+   "pitch_faixa_st": 12.79,
+   "pitch_dp_st": 3.98,
+   "rms_med_db": -16.93,
+   "rms_dp_db": 7.32,
+   "pal_por_s": 2.34
+  },
+  {
+   "id": "thalita_forte_s05_04",
+   "pitch_med_hz": 230.1,
+   "pitch_faixa_st": 12.34,
+   "pitch_dp_st": 4.07,
+   "rms_med_db": -17.9,
+   "rms_dp_db": 8.69,
+   "pal_por_s": 2.49
+  },
+  {
+   "id": "thalita_forte_s06_03",
+   "pitch_med_hz": 176.4,
+   "pitch_faixa_st": 15.62,
+   "pitch_dp_st": 4.48,
+   "rms_med_db": -17.79,
+   "rms_dp_db": 5.25,
+   "pal_por_s": 3.04
+  },
+  {
+   "id": "thalita_forte_s09_03",
+   "pitch_med_hz": 205.0,
+   "pitch_faixa_st": 15.05,
+   "pitch_dp_st": 5.14,
+   "rms_med_db": -17.45,
+   "rms_dp_db": 9.24,
+   "pal_por_s": 1.49
+  }
+ ]
+}

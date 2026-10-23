@@ -15,6 +15,7 @@ import {
 } from "./lib/projeto.mjs";
 import { montarFala, alinhar, distribuir } from "./lib/fala.mjs";
 import { montarTimeline } from "./lib/timeline.mjs";
+import { carregarEntonacao, planejar } from "./lib/expressiva.mjs";
 
 const args = new Set(process.argv.slice(2));
 // --so=s1 (ou --so=s01_02,s01_03): gera a voz sintética só dessas cenas/frases; as outras ficam como estão
@@ -36,14 +37,16 @@ const GRUPO = CFG.NOME_DO_GRUPO;
 const log = (...a) => console.log(...a);
 
 // ---------- normalização de loudness (2 passadas, linear) ----------
-function normalizar(entrada, saida, { cortarSilencio = false } = {}) {
+// `alvo`: loudness da frase (−16 LUFS ± o volume do mapa de energia da cena/frase — senão a normalização apaga o mapa)
+function normalizar(entrada, saida, { cortarSilencio = false, alvo = -16 } = {}) {
   const pre = cortarSilencio
     ? "highpass=f=70,adeclick,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,areverse,"
     : "";
   const pos = `${pre}${FILTRO_VOZ},`;
-  const medir = ffLog(["-hide_banner", "-i", entrada, "-af", `${pos}loudnorm=I=-16:TP=-1.5:LRA=11:print_format=json`, "-f", "null", "-"]);
+  const I = alvo.toFixed(1);
+  const medir = ffLog(["-hide_banner", "-i", entrada, "-af", `${pos}loudnorm=I=${I}:TP=-1.5:LRA=11:print_format=json`, "-f", "null", "-"]);
   const j = JSON.parse(medir.slice(medir.lastIndexOf("{"), medir.lastIndexOf("}") + 1));
-  const ln = `loudnorm=I=-16:TP=-1.5:LRA=11:measured_I=${j.input_i}:measured_TP=${j.input_tp}:measured_LRA=${j.input_lra}:measured_thresh=${j.input_thresh}:offset=${j.target_offset}:linear=true`;
+  const ln = `loudnorm=I=${I}:TP=-1.5:LRA=11:measured_I=${j.input_i}:measured_TP=${j.input_tp}:measured_LRA=${j.input_lra}:measured_thresh=${j.input_thresh}:offset=${j.target_offset}:linear=true`;
   const tmp = saida + ".tmp.mp3";
   ffLog(["-hide_banner", "-y", "-i", entrada, "-af", `${pos}${ln}`, "-ar", "44100", "-ac", "1", "-b:a", "192k", tmp]);
   fs.renameSync(tmp, saida);
@@ -51,6 +54,7 @@ function normalizar(entrada, saida, { cortarSilencio = false } = {}) {
 
 // ---------- A) voz sintética (motor da VOZ_ESCOLHIDA: edge-tts ou Kokoro local) ----------
 async function vozSintetica(rate) {
+  if (!process.env.TTS_VOZ && ESCOLHIDA.motor === "edge" && ESCOLHIDA.expressividade > 0) return vozExpressiva(rate);
   const jobs = NARR.filter(escolhida).map((f) => ({ id: f.id, fala: montarFala(f.texto, GRUPO, PRON).fala }));
   const jf = P("scripts", ".cache", "tts-jobs.json");
   gravarJSON(jf, jobs);
@@ -76,6 +80,26 @@ async function vozSintetica(rate) {
     const mp3 = path.join(VOZDIR, f.id + ".mp3");
     normalizar(mp3, mp3);
     cortarFim(mp3, path.join(VOZDIR, f.id + ".words.json"));
+  }
+}
+
+// ---------- A2) voz expressiva (src/data/entonacao.ts × EXPRESSIVIDADE): emenda de palavras de várias versões ----------
+async function vozExpressiva(rate) {
+  const ENT = await carregarEntonacao();
+  const expr = ESCOLHIDA.expressividade;
+  const frases = NARR.filter(escolhida).map((f) => planejar(f, ENT, expr, rate, GRUPO, PRON));
+  const pf = P("scripts", ".cache", "voz-expressiva.json");
+  gravarJSON(pf, { voz: VOZ, crossfadeMs: ENT.PARAMS.crossfade, frases });
+  log(`\n▶ voz expressiva: ${VOZ} · expressividade ${expr} (${frases.length} frases)`);
+  const r = spawnSync("python", [P("scripts", "voz_expressiva.py"), pf, VOZDIR], { stdio: "inherit" });
+  if (r.status !== 0) throw new Error("voz expressiva falhou");
+  log("▶ tratamento e loudness (−16 LUFS ± mapa de energia da cena)…");
+  for (const f of NARR.filter(escolhida)) {
+    const d = { ...(ENT.CENAS[f.cena] ?? {}) };
+    const volume = ((d.volumeDb ?? 0) + (ENT.FRASES[f.id]?.delta?.volumeDb ?? 0)) * expr;
+    const wav = path.join(VOZDIR, f.id + ".wav");
+    normalizar(wav, path.join(VOZDIR, f.id + ".mp3"), { alvo: -16 + volume });
+    fs.rmSync(wav, { force: true });
   }
 }
 

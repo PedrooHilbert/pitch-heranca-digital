@@ -120,10 +120,14 @@ cada cena dura o que as frases dela duram (+ respiros na grade da batida), e as 
 npm run voz:importar   # corta silêncio, normaliza, alinha palavra a palavra (whisper) e refaz o project.json
 npm run render
 ```
-**B) Voz sintética** (está no vídeo agora) — ⚠ **voz provisória — aguardando escolha do grupo**:
-**Thalita** (`pt-BR-ThalitaMultilingualNeural`, edge-tts), feminina, **velocidade natural** (rate +0 %).
+**B) Voz sintética** (está no vídeo agora): **Thalita** (`pt-BR-ThalitaMultilingualNeural`, edge-tts), feminina,
+velocidade natural — **escolhida pelo grupo**. Expressividade **0,75 — ⚠ provisória, aguardando escolha do grupo**.
 
-- **Escolher a voz:** abra `out/voz-teste/index.html` (as mesmas 3 frases em 8 vozes), escolha e mude
+- **Expressividade:** `src/data/entonacao.ts` marca ênfases (`*palavra*`), pausas dramáticas (`…`), finais de
+  pergunta e o mapa de energia de cada cena; `expressividade` em `src/data/voz.ts` (0 = plana … 1 = forte)
+  multiplica tudo. Ouça os 4 níveis lado a lado em `out/voz-teste/index.html` (`npm run voz:niveis` refaz) e
+  rode `npm run voz` depois de mudar. Medições antes/depois e o que o motor aceita: `docs/voz-medicoes.md`.
+- **Escolher outra voz:** `out/voz-teste/vozes.html` (as mesmas 3 frases em 8 vozes); mude
   `VOZ_ESCOLHIDA` em `src/data/voz.ts` (re-exportada em `config.ts`). Depois: `npm run voz` (regenera a narração
   inteira e roda o sync: timeline, legendas, efeitos e trilha). `npm run voz:teste` refaz o banco de testes.
 - **Motores que rodam aqui:** edge-tts (Thalita, Francisca, Ava e Emma multilíngues) e **Kokoro** local (Dora,
@@ -131,7 +135,7 @@ npm run render
   Google Chirp 3 HD — com uma chave dá para acrescentar. O edge-tts não aceita SSML próprio nem estilos de emoção.
 - **Sem aceleração:** a velocidade é a natural da voz (no máximo ±3 %). Se passar de 180 s, o `npm run voz` para
   e pede para enxugar o texto — ele não acelera mais a voz.
-- **Tratamento:** filtro de graves (80 Hz), de-esser leve, compressão 2,2:1, fade de 20 ms nas pontas, −16 LUFS;
+- **Tratamento:** filtro de graves (80 Hz), de-esser leve, presença +1,8 dB em 3,5 kHz, compressão suave 1,8:1, fade de 20 ms nas pontas, −16 LUFS (± o volume do mapa de energia da cena);
   pausa real entre frases ≈ 0,35–0,4 s. `npm run voz:conferir` confere duração, sample rate, LUFS, pico e
   silêncios dentro das frases.
 - **Texto enxugado para caber em 180 s na velocidade natural** (só conectivos, nenhum fato): s03_03, s06_04

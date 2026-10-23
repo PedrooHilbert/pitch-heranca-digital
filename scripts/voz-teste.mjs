@@ -116,5 +116,5 @@ const html = `<!doctype html>
 ${cartoes}
 </main></body></html>
 `;
-fs.writeFileSync(path.join(OUT, "index.html"), html);
+fs.writeFileSync(path.join(OUT, "vozes.html"), html); // index.html = níveis de expressividade (voz-niveis.mjs)
 console.log(`\n✓ ${resultado.length} vozes · ${OUT}\\index.html`);

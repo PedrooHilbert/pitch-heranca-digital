@@ -1,0 +1,321 @@
+{
+ "resumo": {
+  "rotulo": "antes",
+  "frases": 34,
+  "pitch_faixa_st_media": 11.73,
+  "pitch_dp_st_media": 3.68,
+  "pitch_entre_frases_dp_st": 1.1,
+  "rms_dentro_dp_db_media": 7.32,
+  "rms_entre_frases_dp_db": 1.29,
+  "vel_media_pal_s": 2.89,
+  "vel_entre_frases_dp": 0.62
+ },
+ "frases": [
+  {
+   "id": "s01_01",
+   "pitch_med_hz": 215.9,
+   "pitch_faixa_st": 11.25,
+   "pitch_dp_st": 4.32,
+   "rms_med_db": -17.78,
+   "rms_dp_db": 5.66,
+   "pal_por_s": 3.0
+  },
+  {
+   "id": "s01_02",
+   "pitch_med_hz": 173.4,
+   "pitch_faixa_st": 20.2,
+   "pitch_dp_st": 5.68,
+   "rms_med_db": -17.85,
+   "rms_dp_db": 5.99,
+   "pal_por_s": 3.93
+  },
+  {
+   "id": "s01_03",
+   "pitch_med_hz": 176.4,
+   "pitch_faixa_st": 7.39,
+   "pitch_dp_st": 2.6,
+   "rms_med_db": -18.96,
+   "rms_dp_db": 10.24,
+   "pal_por_s": 4.05
+  },
+  {
+   "id": "s01_04",
+   "pitch_med_hz": 185.3,
+   "pitch_faixa_st": 10.67,
+   "pitch_dp_st": 3.46,
+   "rms_med_db": -17.47,
+   "rms_dp_db": 6.19,
+   "pal_por_s": 2.29
+  },
+  {
+   "id": "s01_05",
+   "pitch_med_hz": 223.5,
+   "pitch_faixa_st": 11.94,
+   "pitch_dp_st": 3.66,
+   "rms_med_db": -18.08,
+   "rms_dp_db": 7.93,
+   "pal_por_s": 3.15
+  },
+  {
+   "id": "s02_01",
+   "pitch_med_hz": 176.4,
+   "pitch_faixa_st": 12.32,
+   "pitch_dp_st": 4.23,
+   "rms_med_db": -17.95,
+   "rms_dp_db": 7.86,
+   "pal_por_s": 2.27
+  },
+  {
+   "id": "s02_02",
+   "pitch_med_hz": 188.0,
+   "pitch_faixa_st": 14.73,
+   "pitch_dp_st": 4.32,
+   "rms_med_db": -17.69,
+   "rms_dp_db": 5.78,
+   "pal_por_s": 4.07
+  },
+  {
+   "id": "s02_03",
+   "pitch_med_hz": 186.9,
+   "pitch_faixa_st": 12.72,
+   "pitch_dp_st": 3.8,
+   "rms_med_db": -18.34,
+   "rms_dp_db": 6.59,
+   "pal_por_s": 2.42
+  },
+  {
+   "id": "s03_01",
+   "pitch_med_hz": 192.9,
+   "pitch_faixa_st": 11.79,
+   "pitch_dp_st": 3.0,
+   "rms_med_db": -18.11,
+   "rms_dp_db": 7.84,
+   "pal_por_s": 3.4
+  },
+  {
+   "id": "s03_02",
+   "pitch_med_hz": 200.3,
+   "pitch_faixa_st": 12.62,
+   "pitch_dp_st": 3.8,
+   "rms_med_db": -17.49,
+   "rms_dp_db": 6.73,
+   "pal_por_s": 2.3
+  },
+  {
+   "id": "s03_03",
+   "pitch_med_hz": 188.0,
+   "pitch_faixa_st": 8.07,
+   "pitch_dp_st": 2.66,
+   "rms_med_db": -16.36,
+   "rms_dp_db": 4.83,
+   "pal_por_s": 3.04
+  },
+  {
+   "id": "s04_01",
+   "pitch_med_hz": 195.7,
+   "pitch_faixa_st": 14.52,
+   "pitch_dp_st": 4.5,
+   "rms_med_db": -19.24,
+   "rms_dp_db": 9.6,
+   "pal_por_s": 3.16
+  },
+  {
+   "id": "s04_02",
+   "pitch_med_hz": 202.6,
+   "pitch_faixa_st": 10.2,
+   "pitch_dp_st": 3.05,
+   "rms_med_db": -18.68,
+   "rms_dp_db": 9.13,
+   "pal_por_s": 2.53
+  },
+  {
+   "id": "s04_03",
+   "pitch_med_hz": 192.4,
+   "pitch_faixa_st": 10.3,
+   "pitch_dp_st": 3.25,
+   "rms_med_db": -19.28,
+   "rms_dp_db": 8.78,
+   "pal_por_s": 3.02
+  },
+  {
+   "id": "s05_01",
+   "pitch_med_hz": 224.8,
+   "pitch_faixa_st": 12.82,
+   "pitch_dp_st": 5.02,
+   "rms_med_db": -24.4,
+   "rms_dp_db": 14.29,
+   "pal_por_s": 3.33
+  },
+  {
+   "id": "s05_02",
+   "pitch_med_hz": 186.9,
+   "pitch_faixa_st": 11.56,
+   "pitch_dp_st": 3.48,
+   "rms_med_db": -17.83,
+   "rms_dp_db": 6.03,
+   "pal_por_s": 4.23
+  },
+  {
+   "id": "s05_03",
+   "pitch_med_hz": 205.0,
+   "pitch_faixa_st": 11.8,
+   "pitch_dp_st": 3.82,
+   "rms_med_db": -18.7,
+   "rms_dp_db": 9.28,
+   "pal_por_s": 1.76
+  },
+  {
+   "id": "s05_04",
+   "pitch_med_hz": 200.3,
+   "pitch_faixa_st": 12.15,
+   "pitch_dp_st": 3.88,
+   "rms_med_db": -18.24,
+   "rms_dp_db": 8.1,
+   "pal_por_s": 2.46
+  },
+  {
+   "id": "s05_05",
+   "pitch_med_hz": 191.2,
+   "pitch_faixa_st": 10.59,
+   "pitch_dp_st": 3.25,
+   "rms_med_db": -17.22,
+   "rms_dp_db": 5.21,
+   "pal_por_s": 3.21
+  },
+  {
+   "id": "s05_06",
+   "pitch_med_hz": 198.0,
+   "pitch_faixa_st": 11.54,
+   "pitch_dp_st": 3.89,
+   "rms_med_db": -17.92,
+   "rms_dp_db": 6.66,
+   "pal_por_s": 2.6
+  },
+  {
+   "id": "s05_07",
+   "pitch_med_hz": 195.2,
+   "pitch_faixa_st": 11.29,
+   "pitch_dp_st": 3.61,
+   "rms_med_db": -17.95,
+   "rms_dp_db": 6.34,
+   "pal_por_s": 3.27
+  },
+  {
+   "id": "s06_01",
+   "pitch_med_hz": 192.4,
+   "pitch_faixa_st": 11.5,
+   "pitch_dp_st": 3.66,
+   "rms_med_db": -18.39,
+   "rms_dp_db": 6.2,
+   "pal_por_s": 2.81
+  },
+  {
+   "id": "s06_02",
+   "pitch_med_hz": 191.8,
+   "pitch_faixa_st": 11.55,
+   "pitch_dp_st": 3.25,
+   "rms_med_db": -18.17,
+   "rms_dp_db": 6.83,
+   "pal_por_s": 3.23
+  },
+  {
+   "id": "s06_03",
+   "pitch_med_hz": 183.7,
+   "pitch_faixa_st": 13.03,
+   "pitch_dp_st": 3.92,
+   "rms_med_db": -18.14,
+   "rms_dp_db": 6.87,
+   "pal_por_s": 3.23
+  },
+  {
+   "id": "s06_04",
+   "pitch_med_hz": 185.8,
+   "pitch_faixa_st": 14.27,
+   "pitch_dp_st": 4.33,
+   "rms_med_db": -17.08,
+   "rms_dp_db": 6.89,
+   "pal_por_s": 2.1
+  },
+  {
+   "id": "s07_01",
+   "pitch_med_hz": 179.5,
+   "pitch_faixa_st": 10.22,
+   "pitch_dp_st": 2.98,
+   "rms_med_db": -17.13,
+   "rms_dp_db": 4.01,
+   "pal_por_s": 2.87
+  },
+  {
+   "id": "s07_02",
+   "pitch_med_hz": 207.4,
+   "pitch_faixa_st": 10.36,
+   "pitch_dp_st": 3.2,
+   "rms_med_db": -19.61,
+   "rms_dp_db": 11.01,
+   "pal_por_s": 2.96
+  },
+  {
+   "id": "s07_03",
+   "pitch_med_hz": 191.2,
+   "pitch_faixa_st": 11.18,
+   "pitch_dp_st": 3.59,
+   "rms_med_db": -17.73,
+   "rms_dp_db": 6.26,
+   "pal_por_s": 2.96
+  },
+  {
+   "id": "s08_01",
+   "pitch_med_hz": 183.7,
+   "pitch_faixa_st": 8.69,
+   "pitch_dp_st": 2.53,
+   "rms_med_db": -18.72,
+   "rms_dp_db": 7.71,
+   "pal_por_s": 3.34
+  },
+  {
+   "id": "s08_02",
+   "pitch_med_hz": 171.4,
+   "pitch_faixa_st": 11.7,
+   "pitch_dp_st": 3.64,
+   "rms_med_db": -17.59,
+   "rms_dp_db": 5.87,
+   "pal_por_s": 2.26
+  },
+  {
+   "id": "s08_03",
+   "pitch_med_hz": 185.8,
+   "pitch_faixa_st": 8.67,
+   "pitch_dp_st": 2.89,
+   "rms_med_db": -17.09,
+   "rms_dp_db": 6.73,
+   "pal_por_s": 2.58
+  },
+  {
+   "id": "s09_01",
+   "pitch_med_hz": 182.6,
+   "pitch_faixa_st": 12.23,
+   "pitch_dp_st": 3.46,
+   "rms_med_db": -17.5,
+   "rms_dp_db": 5.8,
+   "pal_por_s": 2.13
+  },
+  {
+   "id": "s09_02",
+   "pitch_med_hz": 184.7,
+   "pitch_faixa_st": 11.0,
+   "pitch_dp_st": 3.69,
+   "rms_med_db": -17.55,
+   "rms_dp_db": 6.21,
+   "pal_por_s": 2.65
+  },
+  {
+   "id": "s09_03",
+   "pitch_med_hz": 183.7,
+   "pitch_faixa_st": 13.8,
+   "pitch_dp_st": 4.6,
+   "rms_med_db": -19.05,
+   "rms_dp_db": 9.42,
+   "pal_por_s": 1.75
+  }
+ ]
+}

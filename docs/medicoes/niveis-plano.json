@@ -1,0 +1,78 @@
+{
+ "resumo": {
+  "rotulo": "plano",
+  "frases": 7,
+  "pitch_faixa_st_media": 12.69,
+  "pitch_dp_st_media": 4.09,
+  "pitch_entre_frases_dp_st": 1.29,
+  "rms_dentro_dp_db_media": 7.4,
+  "rms_entre_frases_dp_db": 0.56,
+  "vel_media_pal_s": 2.96,
+  "vel_entre_frases_dp": 0.79
+ },
+ "frases": [
+  {
+   "id": "thalita_plano_s01_01",
+   "pitch_med_hz": 214.7,
+   "pitch_faixa_st": 11.51,
+   "pitch_dp_st": 4.36,
+   "rms_med_db": -19.2,
+   "rms_dp_db": 7.52,
+   "pal_por_s": 3.0
+  },
+  {
+   "id": "thalita_plano_s01_02",
+   "pitch_med_hz": 172.4,
+   "pitch_faixa_st": 19.22,
+   "pitch_dp_st": 5.54,
+   "rms_med_db": -18.64,
+   "rms_dp_db": 6.54,
+   "pal_por_s": 3.93
+  },
+  {
+   "id": "thalita_plano_s01_03",
+   "pitch_med_hz": 174.4,
+   "pitch_faixa_st": 6.9,
+   "pitch_dp_st": 2.54,
+   "rms_med_db": -18.17,
+   "rms_dp_db": 6.46,
+   "pal_por_s": 4.05
+  },
+  {
+   "id": "thalita_plano_s03_02",
+   "pitch_med_hz": 200.3,
+   "pitch_faixa_st": 12.46,
+   "pitch_dp_st": 3.84,
+   "rms_med_db": -18.09,
+   "rms_dp_db": 7.92,
+   "pal_por_s": 2.3
+  },
+  {
+   "id": "thalita_plano_s05_04",
+   "pitch_med_hz": 200.3,
+   "pitch_faixa_st": 12.25,
+   "pitch_dp_st": 3.88,
+   "rms_med_db": -18.52,
+   "rms_dp_db": 8.54,
+   "pal_por_s": 2.46
+  },
+  {
+   "id": "thalita_plano_s06_03",
+   "pitch_med_hz": 182.6,
+   "pitch_faixa_st": 12.63,
+   "pitch_dp_st": 3.84,
+   "rms_med_db": -17.83,
+   "rms_dp_db": 4.79,
+   "pal_por_s": 3.23
+  },
+  {
+   "id": "thalita_plano_s09_03",
+   "pitch_med_hz": 186.9,
+   "pitch_faixa_st": 13.88,
+   "pitch_dp_st": 4.6,
+   "rms_med_db": -19.48,
+   "rms_dp_db": 10.01,
+   "pal_por_s": 1.75
+  }
+ ]
+}

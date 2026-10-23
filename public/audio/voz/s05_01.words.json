@@ -1,1 +1,1 @@
-{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "rate": "+0%", "palavras": [{"w": "Este", "s": 0.05, "e": 0.388}, {"w": "é", "s": 0.388, "e": 0.438}, {"w": "o", "s": 0.438, "e": 0.512}, {"w": "protótipo", "s": 0.512, "e": 1.25}]}
+{"fonte": "sintetica", "voz": "pt-BR-ThalitaMultilingualNeural", "expressiva": true, "emendas": [0.5362], "palavras": [{"w": "Este", "s": 0.09, "e": 0.43}, {"w": "é", "s": 0.43, "e": 0.478}, {"w": "o", "s": 0.478, "e": 0.551}, {"w": "protótipo", "s": 0.536, "e": 1.296}]}

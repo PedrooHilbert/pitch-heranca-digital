@@ -54,7 +54,8 @@
     "validar": "npx tsx scripts/validar-projeto.mts",
     "voz": "node --no-warnings scripts/sync.mjs --voz",
     "voz:teste": "node --no-warnings scripts/voz-teste.mjs",
-    "voz:conferir": "node --no-warnings scripts/voz-conferir.mjs"
+    "voz:conferir": "node --no-warnings scripts/voz-conferir.mjs",
+    "voz:niveis": "node --no-warnings scripts/voz-niveis.mjs"
   },
   "allowScripts": {
     "esbuild": false

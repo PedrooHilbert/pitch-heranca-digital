@@ -4,6 +4,9 @@ import { getProjeto } from "./projeto";
 
 // Voz da narração (motor + voz + parâmetros): definida em ./voz.ts, que não importa nada (os scripts Node leem direto).
 export { VOZ_ESCOLHIDA } from "./voz";
+import { VOZ_ESCOLHIDA as VOZ } from "./voz";
+/** 0 = plana … 1 = forte (multiplica os deltas de ./entonacao.ts). Mude em ./voz.ts e rode `npm run voz`. */
+export const EXPRESSIVIDADE = VOZ.expressividade;
 
 export type Membro = { nome: string; funcao: string };
 

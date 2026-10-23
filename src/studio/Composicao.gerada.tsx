@@ -14,7 +14,7 @@ export const ComposicaoPitch: React.FC = () => (
     fps={30}
     width={1920}
     height={1080}
-    durationInFrames={5400}
+    durationInFrames={5392}
     calculateMetadata={({ props }) => {
       const total = (props as Projeto).cenas.reduce((a, c) => a + c.dur, 0);
       if (total > LIMITE_QUADROS) throw new Error(`Duração total ${total} q passa de ${LIMITE_QUADROS} (180 s).`);
@@ -100,7 +100,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s1",
           "nome": "Abertura",
-          "dur": 368,
+          "dur": 392,
           "fundos": {
             "gancho": "preto",
             "estouro": "escuro",
@@ -119,7 +119,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s2",
           "nome": "Problema",
-          "dur": 616,
+          "dur": 632,
           "fundos": {
             "lista": "claro",
             "semLista": "claro",
@@ -160,7 +160,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s3",
           "nome": "Proposta de valor",
-          "dur": 544,
+          "dur": 528,
           "fundos": {
             "abertura": "escuro",
             "t1": "claro",
@@ -256,7 +256,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s5",
           "nome": "Demo do protótipo",
-          "dur": 1240,
+          "dur": 1216,
           "fundos": {
             "demo": "claro"
           },
@@ -422,7 +422,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s6",
           "nome": "Segurança",
-          "dur": 608,
+          "dur": 632,
           "fundos": {
             "seguranca": "escuro"
           },
@@ -485,7 +485,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s8",
           "nome": "Modelo de negócio",
-          "dur": 480,
+          "dur": 456,
           "fundos": {
             "negocio": "escuro"
           },
@@ -509,7 +509,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s9",
           "nome": "Equipe e fechamento",
-          "dur": 656,
+          "dur": 648,
           "fundos": {
             "equipe": "claro",
             "passos": "claro",
@@ -542,23 +542,23 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Quando você morrer…",
           "fonte": "sintetica",
           "src": "audio/voz/s01_01.mp3",
-          "dur": 36,
+          "dur": 49,
           "inicio": 14,
           "palavras": [
             {
               "w": "Quando",
-              "de": 16,
-              "ate": 23
+              "de": 17,
+              "ate": 25
             },
             {
               "w": "você",
-              "de": 23,
-              "ate": 31
+              "de": 25,
+              "ate": 35
             },
             {
               "w": "morrer…",
-              "de": 31,
-              "ate": 46
+              "de": 35,
+              "ate": 50
             }
           ]
         },
@@ -568,38 +568,38 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "quem fica com o seu Instagram?",
           "fonte": "sintetica",
           "src": "audio/voz/s01_02.mp3",
-          "dur": 51,
-          "inicio": 53,
+          "dur": 54,
+          "inicio": 66,
           "palavras": [
             {
               "w": "quem",
-              "de": 55,
-              "ate": 60
+              "de": 69,
+              "ate": 74
             },
             {
               "w": "fica",
-              "de": 60,
-              "ate": 72
+              "de": 74,
+              "ate": 86
             },
             {
               "w": "com",
-              "de": 72,
-              "ate": 76
+              "de": 86,
+              "ate": 90
             },
             {
               "w": "o",
-              "de": 76,
-              "ate": 77
+              "de": 90,
+              "ate": 91
             },
             {
               "w": "seu",
-              "de": 77,
-              "ate": 84
+              "de": 91,
+              "ate": 99
             },
             {
               "w": "Instagram?",
-              "de": 84,
-              "ate": 101
+              "de": 98,
+              "ate": 116
             }
           ]
         },
@@ -609,28 +609,28 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Com o seu e-mail?",
           "fonte": "sintetica",
           "src": "audio/voz/s01_03.mp3",
-          "dur": 36,
-          "inicio": 107,
+          "dur": 37,
+          "inicio": 123,
           "palavras": [
             {
               "w": "Com",
-              "de": 109,
-              "ate": 115
+              "de": 126,
+              "ate": 131
             },
             {
               "w": "o",
-              "de": 115,
-              "ate": 116
+              "de": 131,
+              "ate": 133
             },
             {
               "w": "seu",
-              "de": 116,
-              "ate": 123
+              "de": 133,
+              "ate": 140
             },
             {
               "w": "e-mail?",
-              "de": 123,
-              "ate": 139
+              "de": 140,
+              "ate": 157
             }
           ]
         },
@@ -640,28 +640,28 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Com as suas criptomoedas?",
           "fonte": "sintetica",
           "src": "audio/voz/s01_04.mp3",
-          "dur": 58,
-          "inicio": 146,
+          "dur": 61,
+          "inicio": 163,
           "palavras": [
             {
               "w": "Com",
-              "de": 148,
-              "ate": 154
+              "de": 166,
+              "ate": 171
             },
             {
               "w": "as",
-              "de": 154,
-              "ate": 158
+              "de": 171,
+              "ate": 175
             },
             {
               "w": "suas",
-              "de": 158,
-              "ate": 166
+              "de": 175,
+              "ate": 183
             },
             {
               "w": "criptomoedas?",
-              "de": 166,
-              "ate": 200
+              "de": 182,
+              "ate": 220
             }
           ]
         },
@@ -671,58 +671,58 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Somos o grupo EternaByte, e esta é a Herança Digital.",
           "fonte": "sintetica",
           "src": "audio/voz/s01_05.mp3",
-          "dur": 110,
-          "inicio": 246,
+          "dur": 112,
+          "inicio": 266,
           "palavras": [
             {
               "w": "Somos",
-              "de": 248,
-              "ate": 259
+              "de": 269,
+              "ate": 280
             },
             {
               "w": "o",
-              "de": 259,
-              "ate": 263
+              "de": 280,
+              "ate": 284
             },
             {
               "w": "grupo",
-              "de": 263,
-              "ate": 273
+              "de": 284,
+              "ate": 293
             },
             {
               "w": "EternaByte,",
-              "de": 273,
-              "ate": 299
+              "de": 293,
+              "ate": 319
             },
             {
               "w": "e",
-              "de": 304,
-              "ate": 307
+              "de": 325,
+              "ate": 327
             },
             {
               "w": "esta",
-              "de": 307,
-              "ate": 317
+              "de": 327,
+              "ate": 338
             },
             {
               "w": "é",
-              "de": 317,
-              "ate": 320
+              "de": 338,
+              "ate": 340
             },
             {
               "w": "a",
-              "de": 320,
-              "ate": 323
+              "de": 340,
+              "ate": 344
             },
             {
               "w": "Herança",
-              "de": 323,
-              "ate": 336
+              "de": 343,
+              "ate": 357
             },
             {
               "w": "Digital.",
-              "de": 336,
-              "ate": 352
+              "de": 357,
+              "ate": 374
             }
           ]
         },
@@ -732,88 +732,88 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas.",
           "fonte": "sintetica",
           "src": "audio/voz/s02_01.mp3",
-          "dur": 217,
+          "dur": 229,
           "inicio": 8,
           "palavras": [
             {
               "w": "Hoje",
-              "de": 10,
-              "ate": 17
+              "de": 11,
+              "ate": 19
             },
             {
               "w": "quase",
-              "de": 17,
-              "ate": 27
+              "de": 19,
+              "ate": 28
             },
             {
               "w": "todo",
-              "de": 27,
-              "ate": 32
+              "de": 28,
+              "ate": 33
             },
             {
               "w": "mundo",
-              "de": 32,
-              "ate": 41
+              "de": 33,
+              "ate": 44
             },
             {
               "w": "tem",
-              "de": 41,
-              "ate": 46
+              "de": 44,
+              "ate": 47
             },
             {
               "w": "e-mail,",
-              "de": 46,
-              "ate": 59
+              "de": 47,
+              "ate": 61
             },
             {
               "w": "redes",
-              "de": 64,
-              "ate": 71
+              "de": 66,
+              "ate": 74
             },
             {
               "w": "sociais,",
-              "de": 71,
-              "ate": 91
+              "de": 74,
+              "ate": 94
             },
             {
               "w": "banco",
-              "de": 96,
-              "ate": 106
+              "de": 99,
+              "ate": 110
             },
             {
               "w": "digital,",
-              "de": 106,
-              "ate": 125
+              "de": 110,
+              "ate": 130
             },
             {
               "w": "criptomoedas,",
-              "de": 129,
-              "ate": 155
+              "de": 135,
+              "ate": 162
             },
             {
               "w": "fotos",
-              "de": 161,
-              "ate": 172
+              "de": 169,
+              "ate": 181
             },
             {
               "w": "na",
-              "de": 172,
-              "ate": 178
+              "de": 181,
+              "ate": 186
             },
             {
               "w": "nuvem",
-              "de": 178,
-              "ate": 193
+              "de": 186,
+              "ate": 204
             },
             {
               "w": "e",
-              "de": 193,
-              "ate": 196
+              "de": 204,
+              "ate": 207
             },
             {
               "w": "assinaturas.",
-              "de": 196,
-              "ate": 221
+              "de": 207,
+              "ate": 233
             }
           ]
         },
@@ -823,118 +823,118 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Quando a pessoa morre, a família não sabe o que existe, não tem as senhas, e não sabe o que ela queria.",
           "fonte": "sintetica",
           "src": "audio/voz/s02_02.mp3",
-          "dur": 167,
-          "inicio": 231,
+          "dur": 170,
+          "inicio": 243,
           "palavras": [
             {
               "w": "Quando",
-              "de": 233,
-              "ate": 238
+              "de": 246,
+              "ate": 251
             },
             {
               "w": "a",
-              "de": 238,
-              "ate": 239
+              "de": 251,
+              "ate": 252
             },
             {
               "w": "pessoa",
-              "de": 239,
-              "ate": 249
+              "de": 252,
+              "ate": 263
             },
             {
               "w": "morre,",
-              "de": 249,
-              "ate": 261
+              "de": 263,
+              "ate": 275
             },
             {
               "w": "a",
-              "de": 267,
-              "ate": 269
+              "de": 281,
+              "ate": 283
             },
             {
               "w": "família",
-              "de": 269,
-              "ate": 280
+              "de": 283,
+              "ate": 294
             },
             {
               "w": "não",
-              "de": 280,
-              "ate": 285
-            },
-            {
-              "w": "sabe",
-              "de": 285,
-              "ate": 295
-            },
-            {
-              "w": "o",
-              "de": 295,
-              "ate": 296
-            },
-            {
-              "w": "que",
-              "de": 297,
+              "de": 294,
               "ate": 299
             },
             {
-              "w": "existe,",
-              "de": 299,
-              "ate": 314
-            },
-            {
-              "w": "não",
-              "de": 320,
-              "ate": 326
-            },
-            {
-              "w": "tem",
-              "de": 326,
-              "ate": 334
-            },
-            {
-              "w": "as",
-              "de": 334,
-              "ate": 337
-            },
-            {
-              "w": "senhas,",
-              "de": 337,
-              "ate": 350
-            },
-            {
-              "w": "e",
-              "de": 356,
-              "ate": 358
-            },
-            {
-              "w": "não",
-              "de": 358,
-              "ate": 365
-            },
-            {
               "w": "sabe",
-              "de": 365,
-              "ate": 375
+              "de": 299,
+              "ate": 310
             },
             {
               "w": "o",
-              "de": 375,
-              "ate": 376
+              "de": 309,
+              "ate": 310
             },
             {
               "w": "que",
-              "de": 376,
+              "de": 310,
+              "ate": 313
+            },
+            {
+              "w": "existe,",
+              "de": 313,
+              "ate": 327
+            },
+            {
+              "w": "não",
+              "de": 333,
+              "ate": 339
+            },
+            {
+              "w": "tem",
+              "de": 339,
+              "ate": 347
+            },
+            {
+              "w": "as",
+              "de": 347,
+              "ate": 350
+            },
+            {
+              "w": "senhas,",
+              "de": 350,
+              "ate": 363
+            },
+            {
+              "w": "e",
+              "de": 369,
+              "ate": 371
+            },
+            {
+              "w": "não",
+              "de": 371,
               "ate": 378
             },
             {
-              "w": "ela",
+              "w": "sabe",
               "de": 378,
-              "ate": 382
+              "ate": 389
+            },
+            {
+              "w": "o",
+              "de": 389,
+              "ate": 390
+            },
+            {
+              "w": "que",
+              "de": 390,
+              "ate": 392
+            },
+            {
+              "w": "ela",
+              "de": 392,
+              "ate": 396
             },
             {
               "w": "queria.",
-              "de": 382,
-              "ate": 395
+              "de": 396,
+              "ate": 409
             }
           ]
         },
@@ -944,83 +944,83 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Resultado: bens com valor perdidos, assinaturas cobrando para sempre e perfis virando alvo de golpe.",
           "fonte": "sintetica",
           "src": "audio/voz/s02_03.mp3",
-          "dur": 191,
-          "inicio": 404,
+          "dur": 195,
+          "inicio": 419,
           "palavras": [
             {
               "w": "Resultado:",
-              "de": 406,
-              "ate": 427
+              "de": 422,
+              "ate": 442
             },
             {
               "w": "bens",
-              "de": 435,
-              "ate": 445
+              "de": 451,
+              "ate": 461
             },
             {
               "w": "com",
-              "de": 445,
-              "ate": 449
+              "de": 461,
+              "ate": 465
             },
             {
               "w": "valor",
-              "de": 449,
-              "ate": 458
+              "de": 465,
+              "ate": 474
             },
             {
               "w": "perdidos,",
-              "de": 458,
-              "ate": 479
+              "de": 474,
+              "ate": 494
             },
             {
               "w": "assinaturas",
-              "de": 484,
-              "ate": 503
+              "de": 500,
+              "ate": 518
             },
             {
               "w": "cobrando",
-              "de": 503,
-              "ate": 516
+              "de": 518,
+              "ate": 532
             },
             {
               "w": "para",
-              "de": 516,
-              "ate": 522
+              "de": 531,
+              "ate": 538
             },
             {
               "w": "sempre",
-              "de": 522,
-              "ate": 536
+              "de": 538,
+              "ate": 554
             },
             {
               "w": "e",
-              "de": 536,
-              "ate": 537
+              "de": 553,
+              "ate": 554
             },
             {
               "w": "perfis",
-              "de": 536,
-              "ate": 553
+              "de": 554,
+              "ate": 571
             },
             {
               "w": "virando",
-              "de": 553,
-              "ate": 566
+              "de": 571,
+              "ate": 584
             },
             {
               "w": "alvo",
-              "de": 566,
-              "ate": 575
+              "de": 584,
+              "ate": 593
             },
             {
               "w": "de",
-              "de": 575,
-              "ate": 578
+              "de": 593,
+              "ate": 597
             },
             {
               "w": "golpe.",
-              "de": 578,
-              "ate": 591
+              "de": 596,
+              "ate": 610
             }
           ]
         },
@@ -1030,42 +1030,42 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "A Herança Digital é um cofre onde você organiza, em vida, tudo o que tem no mundo digital.",
           "fonte": "sintetica",
           "src": "audio/voz/s03_01.mp3",
-          "dur": 164,
+          "dur": 160,
           "inicio": 10,
           "palavras": [
             {
               "w": "A",
-              "de": 12,
-              "ate": 16
+              "de": 13,
+              "ate": 17
             },
             {
               "w": "Herança",
-              "de": 16,
-              "ate": 27
+              "de": 17,
+              "ate": 28
             },
             {
               "w": "Digital",
-              "de": 27,
-              "ate": 46
+              "de": 28,
+              "ate": 47
             },
             {
               "w": "é",
-              "de": 46,
-              "ate": 48
+              "de": 47,
+              "ate": 49
             },
             {
               "w": "um",
-              "de": 48,
+              "de": 49,
               "ate": 52
             },
             {
               "w": "cofre",
               "de": 52,
-              "ate": 61
+              "ate": 62
             },
             {
               "w": "onde",
-              "de": 61,
+              "de": 62,
               "ate": 68
             },
             {
@@ -1076,52 +1076,52 @@ export const ComposicaoPitch: React.FC = () => (
             {
               "w": "organiza,",
               "de": 75,
-              "ate": 97
+              "ate": 96
             },
             {
               "w": "em",
-              "de": 102,
-              "ate": 107
+              "de": 100,
+              "ate": 106
             },
             {
               "w": "vida,",
-              "de": 107,
-              "ate": 120
+              "de": 106,
+              "ate": 118
             },
             {
               "w": "tudo",
-              "de": 125,
-              "ate": 132
+              "de": 123,
+              "ate": 130
             },
             {
               "w": "o",
-              "de": 132,
-              "ate": 133
+              "de": 130,
+              "ate": 131
             },
             {
               "w": "que",
-              "de": 132,
-              "ate": 136
+              "de": 130,
+              "ate": 134
             },
             {
               "w": "tem",
-              "de": 136,
-              "ate": 141
+              "de": 134,
+              "ate": 138
             },
             {
               "w": "no",
-              "de": 141,
-              "ate": 143
+              "de": 138,
+              "ate": 141
             },
             {
               "w": "mundo",
-              "de": 143,
-              "ate": 154
+              "de": 141,
+              "ate": 151
             },
             {
               "w": "digital.",
-              "de": 154,
-              "ate": 171
+              "de": 151,
+              "ate": 166
             }
           ]
         },
@@ -1131,73 +1131,73 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Juntamos três coisas: um inventário dos seus ativos, um cofre de acessos criptografado,",
           "fonte": "sintetica",
           "src": "audio/voz/s03_02.mp3",
-          "dur": 175,
-          "inicio": 180,
+          "dur": 171,
+          "inicio": 175,
           "palavras": [
             {
               "w": "Juntamos",
-              "de": 182,
-              "ate": 198
+              "de": 178,
+              "ate": 193
             },
             {
               "w": "três",
-              "de": 198,
-              "ate": 209
+              "de": 193,
+              "ate": 203
             },
             {
               "w": "coisas:",
-              "de": 209,
-              "ate": 224
+              "de": 203,
+              "ate": 218
             },
             {
               "w": "um",
-              "de": 233,
-              "ate": 236
+              "de": 226,
+              "ate": 229
             },
             {
               "w": "inventário",
-              "de": 236,
-              "ate": 254
+              "de": 229,
+              "ate": 246
             },
             {
               "w": "dos",
-              "de": 254,
-              "ate": 257
+              "de": 246,
+              "ate": 249
             },
             {
               "w": "seus",
-              "de": 257,
-              "ate": 261
+              "de": 249,
+              "ate": 253
             },
             {
               "w": "ativos,",
-              "de": 261,
-              "ate": 279
+              "de": 253,
+              "ate": 271
             },
             {
               "w": "um",
-              "de": 285,
-              "ate": 289
+              "de": 278,
+              "ate": 281
             },
             {
               "w": "cofre",
-              "de": 289,
-              "ate": 301
+              "de": 281,
+              "ate": 293
             },
             {
               "w": "de",
-              "de": 301,
-              "ate": 303
+              "de": 293,
+              "ate": 295
             },
             {
               "w": "acessos",
-              "de": 303,
-              "ate": 318
+              "de": 295,
+              "ate": 311
             },
             {
               "w": "criptografado,",
-              "de": 318,
-              "ate": 351
+              "de": 311,
+              "ate": 342
             }
           ]
         },
@@ -1207,83 +1207,83 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "e uma liberação que só vale pelo caminho legal: inventário em cartório ou na justiça.",
           "fonte": "sintetica",
           "src": "audio/voz/s03_03.mp3",
-          "dur": 153,
-          "inicio": 361,
+          "dur": 155,
+          "inicio": 351,
           "palavras": [
             {
               "w": "e",
-              "de": 363,
-              "ate": 366
+              "de": 354,
+              "ate": 357
             },
             {
               "w": "uma",
-              "de": 366,
-              "ate": 369
+              "de": 357,
+              "ate": 361
             },
             {
               "w": "liberação",
-              "de": 369,
-              "ate": 389
+              "de": 361,
+              "ate": 380
             },
             {
               "w": "que",
-              "de": 389,
-              "ate": 391
+              "de": 380,
+              "ate": 383
             },
             {
               "w": "só",
-              "de": 391,
-              "ate": 397
+              "de": 383,
+              "ate": 390
             },
             {
               "w": "vale",
-              "de": 397,
-              "ate": 407
+              "de": 390,
+              "ate": 399
             },
             {
               "w": "pelo",
-              "de": 407,
-              "ate": 412
+              "de": 399,
+              "ate": 405
             },
             {
               "w": "caminho",
-              "de": 412,
-              "ate": 421
+              "de": 405,
+              "ate": 414
             },
             {
               "w": "legal:",
-              "de": 421,
-              "ate": 434
+              "de": 413,
+              "ate": 426
             },
             {
               "w": "inventário",
-              "de": 441,
-              "ate": 460
+              "de": 433,
+              "ate": 452
             },
             {
               "w": "em",
-              "de": 460,
-              "ate": 462
+              "de": 452,
+              "ate": 454
             },
             {
               "w": "cartório",
-              "de": 462,
-              "ate": 483
+              "de": 454,
+              "ate": 475
             },
             {
               "w": "ou",
-              "de": 483,
-              "ate": 488
+              "de": 475,
+              "ate": 480
             },
             {
               "w": "na",
-              "de": 488,
-              "ate": 492
+              "de": 480,
+              "ate": 483
             },
             {
               "w": "justiça.",
-              "de": 492,
-              "ate": 511
+              "de": 483,
+              "ate": 502
             }
           ]
         },
@@ -1293,78 +1293,78 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Em vida, o titular cadastra os ativos e escolhe o destino de cada um.",
           "fonte": "sintetica",
           "src": "audio/voz/s04_01.mp3",
-          "dur": 138,
+          "dur": 140,
           "inicio": 8,
           "palavras": [
             {
               "w": "Em",
-              "de": 10,
-              "ate": 16
+              "de": 11,
+              "ate": 17
             },
             {
               "w": "vida,",
-              "de": 16,
-              "ate": 28
+              "de": 17,
+              "ate": 29
             },
             {
               "w": "o",
-              "de": 34,
-              "ate": 36
+              "de": 35,
+              "ate": 37
             },
             {
               "w": "titular",
-              "de": 36,
-              "ate": 52
+              "de": 37,
+              "ate": 53
             },
             {
               "w": "cadastra",
-              "de": 52,
-              "ate": 67
-            },
-            {
-              "w": "os",
-              "de": 67,
+              "de": 53,
               "ate": 68
             },
             {
+              "w": "os",
+              "de": 68,
+              "ate": 69
+            },
+            {
               "w": "ativos",
-              "de": 67,
-              "ate": 85
+              "de": 68,
+              "ate": 86
             },
             {
               "w": "e",
-              "de": 85,
-              "ate": 91
+              "de": 86,
+              "ate": 92
             },
             {
               "w": "escolhe",
-              "de": 91,
-              "ate": 104
-            },
-            {
-              "w": "o",
-              "de": 104,
+              "de": 92,
               "ate": 106
             },
             {
-              "w": "destino",
+              "w": "o",
               "de": 106,
-              "ate": 121
+              "ate": 107
+            },
+            {
+              "w": "destino",
+              "de": 107,
+              "ate": 122
             },
             {
               "w": "de",
-              "de": 121,
-              "ate": 125
+              "de": 122,
+              "ate": 126
             },
             {
               "w": "cada",
-              "de": 125,
-              "ate": 136
+              "de": 126,
+              "ate": 137
             },
             {
               "w": "um.",
-              "de": 136,
-              "ate": 143
+              "de": 137,
+              "ate": 144
             }
           ]
         },
@@ -1374,38 +1374,38 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "No falecimento, o cofre é congelado.",
           "fonte": "sintetica",
           "src": "audio/voz/s04_02.mp3",
-          "dur": 77,
-          "inicio": 152,
+          "dur": 82,
+          "inicio": 154,
           "palavras": [
             {
               "w": "No",
-              "de": 154,
-              "ate": 158
+              "de": 157,
+              "ate": 161
             },
             {
               "w": "falecimento,",
-              "de": 158,
-              "ate": 183
+              "de": 161,
+              "ate": 186
             },
             {
               "w": "o",
-              "de": 188,
-              "ate": 191
+              "de": 192,
+              "ate": 195
             },
             {
               "w": "cofre",
-              "de": 191,
-              "ate": 202
+              "de": 195,
+              "ate": 207
             },
             {
               "w": "é",
-              "de": 202,
-              "ate": 203
+              "de": 207,
+              "ate": 209
             },
             {
               "w": "congelado.",
-              "de": 203,
-              "ate": 225
+              "de": 208,
+              "ate": 232
             }
           ]
         },
@@ -1415,93 +1415,93 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Só depois do inventário e de um prazo para contestação, cada herdeiro recebe apenas a sua parte.",
           "fonte": "sintetica",
           "src": "audio/voz/s04_03.mp3",
-          "dur": 174,
-          "inicio": 235,
+          "dur": 176,
+          "inicio": 242,
           "palavras": [
             {
               "w": "Só",
-              "de": 237,
-              "ate": 243
+              "de": 245,
+              "ate": 251
             },
             {
               "w": "depois",
-              "de": 243,
-              "ate": 253
+              "de": 251,
+              "ate": 262
             },
             {
               "w": "do",
-              "de": 253,
-              "ate": 255
+              "de": 262,
+              "ate": 263
             },
             {
               "w": "inventário",
-              "de": 255,
-              "ate": 279
-            },
-            {
-              "w": "e",
-              "de": 279,
-              "ate": 281
-            },
-            {
-              "w": "de",
-              "de": 281,
-              "ate": 284
-            },
-            {
-              "w": "um",
-              "de": 284,
+              "de": 263,
               "ate": 287
             },
             {
-              "w": "prazo",
+              "w": "e",
               "de": 287,
-              "ate": 298
+              "ate": 289
+            },
+            {
+              "w": "de",
+              "de": 289,
+              "ate": 292
+            },
+            {
+              "w": "um",
+              "de": 292,
+              "ate": 295
+            },
+            {
+              "w": "prazo",
+              "de": 295,
+              "ate": 306
             },
             {
               "w": "para",
-              "de": 298,
-              "ate": 303
+              "de": 306,
+              "ate": 311
             },
             {
               "w": "contestação,",
-              "de": 303,
-              "ate": 330
+              "de": 311,
+              "ate": 338
             },
             {
               "w": "cada",
-              "de": 334,
-              "ate": 341
+              "de": 343,
+              "ate": 349
             },
             {
               "w": "herdeiro",
-              "de": 341,
-              "ate": 354
+              "de": 349,
+              "ate": 362
             },
             {
               "w": "recebe",
-              "de": 354,
-              "ate": 367
+              "de": 362,
+              "ate": 375
             },
             {
               "w": "apenas",
-              "de": 367,
-              "ate": 381
+              "de": 374,
+              "ate": 389
             },
             {
               "w": "a",
-              "de": 381,
-              "ate": 384
+              "de": 389,
+              "ate": 393
             },
             {
               "w": "sua",
-              "de": 384,
-              "ate": 390
+              "de": 393,
+              "ate": 399
             },
             {
               "w": "parte.",
-              "de": 390,
-              "ate": 405
+              "de": 399,
+              "ate": 414
             }
           ]
         },
@@ -1511,28 +1511,28 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Este é o protótipo.",
           "fonte": "sintetica",
           "src": "audio/voz/s05_01.mp3",
-          "dur": 41,
+          "dur": 43,
           "inicio": 10,
           "palavras": [
             {
               "w": "Este",
-              "de": 12,
-              "ate": 22
-            },
-            {
-              "w": "é",
-              "de": 22,
+              "de": 13,
               "ate": 23
             },
             {
-              "w": "o",
+              "w": "é",
               "de": 23,
-              "ate": 25
+              "ate": 24
+            },
+            {
+              "w": "o",
+              "de": 24,
+              "ate": 27
             },
             {
               "w": "protótipo.",
-              "de": 25,
-              "ate": 48
+              "de": 26,
+              "ate": 49
             }
           ]
         },
@@ -1542,107 +1542,107 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "O titular entra com a chave de acesso do celular e vê o que falta para o plano ficar completo.",
           "fonte": "sintetica",
           "src": "audio/voz/s05_02.mp3",
-          "dur": 147,
-          "inicio": 57,
+          "dur": 146,
+          "inicio": 58,
           "palavras": [
             {
               "w": "O",
-              "de": 59,
-              "ate": 61
+              "de": 61,
+              "ate": 63
             },
             {
               "w": "titular",
-              "de": 61,
-              "ate": 77
+              "de": 63,
+              "ate": 78
             },
             {
               "w": "entra",
-              "de": 77,
-              "ate": 84
+              "de": 78,
+              "ate": 86
             },
             {
               "w": "com",
-              "de": 84,
-              "ate": 88
-            },
-            {
-              "w": "a",
-              "de": 88,
+              "de": 86,
               "ate": 89
             },
             {
-              "w": "chave",
+              "w": "a",
               "de": 89,
-              "ate": 98
+              "ate": 90
+            },
+            {
+              "w": "chave",
+              "de": 90,
+              "ate": 100
             },
             {
               "w": "de",
-              "de": 98,
-              "ate": 101
+              "de": 100,
+              "ate": 102
             },
             {
               "w": "acesso",
-              "de": 101,
-              "ate": 113
+              "de": 102,
+              "ate": 115
             },
             {
               "w": "do",
-              "de": 113,
-              "ate": 116
+              "de": 115,
+              "ate": 117
             },
             {
               "w": "celular",
-              "de": 116,
-              "ate": 133
+              "de": 117,
+              "ate": 134
             },
             {
               "w": "e",
-              "de": 133,
-              "ate": 139
+              "de": 134,
+              "ate": 140
             },
             {
               "w": "vê",
-              "de": 139,
-              "ate": 145
+              "de": 140,
+              "ate": 146
             },
             {
               "w": "o",
-              "de": 145,
-              "ate": 147
+              "de": 146,
+              "ate": 148
             },
             {
               "w": "que",
-              "de": 147,
-              "ate": 150
+              "de": 148,
+              "ate": 152
             },
             {
               "w": "falta",
-              "de": 150,
-              "ate": 162
+              "de": 152,
+              "ate": 164
             },
             {
               "w": "para",
-              "de": 162,
-              "ate": 167
-            },
-            {
-              "w": "o",
-              "de": 167,
+              "de": 164,
               "ate": 168
             },
             {
+              "w": "o",
+              "de": 168,
+              "ate": 169
+            },
+            {
               "w": "plano",
-              "de": 167,
-              "ate": 175
+              "de": 169,
+              "ate": 176
             },
             {
               "w": "ficar",
-              "de": 175,
-              "ate": 183
+              "de": 176,
+              "ate": 184
             },
             {
               "w": "completo.",
-              "de": 183,
+              "de": 184,
               "ate": 200
             }
           ]
@@ -1653,8 +1653,8 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "No inventário, cada ativo (redes sociais, e-mails, cripto, assinaturas) recebe um destino: pessoal, patrimonial ou encerrar.",
           "fonte": "sintetica",
           "src": "audio/voz/s05_03.mp3",
-          "dur": 278,
-          "inicio": 210,
+          "dur": 274,
+          "inicio": 209,
           "palavras": [
             {
               "w": "No",
@@ -1674,67 +1674,67 @@ export const ComposicaoPitch: React.FC = () => (
             {
               "w": "ativo",
               "de": 250,
-              "ate": 264
+              "ate": 263
             },
             {
               "w": "(redes",
-              "de": 271,
-              "ate": 282
+              "de": 270,
+              "ate": 280
             },
             {
               "w": "sociais,",
-              "de": 282,
-              "ate": 300
+              "de": 280,
+              "ate": 298
             },
             {
               "w": "e-mails,",
-              "de": 306,
-              "ate": 324
+              "de": 303,
+              "ate": 321
             },
             {
               "w": "cripto,",
-              "de": 329,
-              "ate": 342
+              "de": 325,
+              "ate": 338
             },
             {
               "w": "assinaturas)",
-              "de": 347,
-              "ate": 371
+              "de": 343,
+              "ate": 366
             },
             {
               "w": "recebe",
-              "de": 377,
-              "ate": 388
+              "de": 372,
+              "ate": 383
             },
             {
               "w": "um",
-              "de": 388,
-              "ate": 389
+              "de": 383,
+              "ate": 384
             },
             {
               "w": "destino:",
-              "de": 389,
-              "ate": 405
+              "de": 384,
+              "ate": 400
             },
             {
               "w": "pessoal,",
-              "de": 411,
-              "ate": 430
+              "de": 405,
+              "ate": 424
             },
             {
               "w": "patrimonial",
-              "de": 435,
-              "ate": 462
+              "de": 429,
+              "ate": 457
             },
             {
               "w": "ou",
-              "de": 462,
-              "ate": 468
+              "de": 457,
+              "ate": 462
             },
             {
               "w": "encerrar.",
-              "de": 468,
-              "ate": 484
+              "de": 462,
+              "ate": 479
             }
           ]
         },
@@ -1744,83 +1744,83 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Depois, ele escolhe os herdeiros e define a carência: quinze, trinta, sessenta ou noventa dias.",
           "fonte": "sintetica",
           "src": "audio/voz/s05_04.mp3",
-          "dur": 189,
-          "inicio": 494,
+          "dur": 190,
+          "inicio": 488,
           "palavras": [
             {
               "w": "Depois,",
-              "de": 496,
-              "ate": 512
+              "de": 491,
+              "ate": 507
             },
             {
               "w": "ele",
-              "de": 519,
-              "ate": 523
+              "de": 513,
+              "ate": 516
             },
             {
               "w": "escolhe",
-              "de": 523,
-              "ate": 533
+              "de": 516,
+              "ate": 527
             },
             {
               "w": "os",
-              "de": 533,
-              "ate": 534
+              "de": 527,
+              "ate": 528
             },
             {
               "w": "herdeiros",
-              "de": 534,
-              "ate": 551
+              "de": 527,
+              "ate": 544
             },
             {
               "w": "e",
-              "de": 551,
-              "ate": 554
+              "de": 544,
+              "ate": 547
             },
             {
               "w": "define",
-              "de": 554,
-              "ate": 565
+              "de": 547,
+              "ate": 558
             },
             {
               "w": "a",
-              "de": 565,
-              "ate": 566
+              "de": 558,
+              "ate": 559
             },
             {
               "w": "carência:",
-              "de": 566,
-              "ate": 581
+              "de": 559,
+              "ate": 574
             },
             {
               "w": "quinze,",
-              "de": 588,
-              "ate": 602
+              "de": 581,
+              "ate": 595
             },
             {
               "w": "trinta,",
-              "de": 607,
-              "ate": 619
+              "de": 600,
+              "ate": 612
             },
             {
               "w": "sessenta",
-              "de": 626,
-              "ate": 646
+              "de": 620,
+              "ate": 640
             },
             {
               "w": "ou",
-              "de": 646,
-              "ate": 649
+              "de": 640,
+              "ate": 643
             },
             {
               "w": "noventa",
-              "de": 649,
-              "ate": 664
+              "de": 643,
+              "ate": 658
             },
             {
               "w": "dias.",
-              "de": 664,
-              "ate": 679
+              "de": 658,
+              "ate": 674
             }
           ]
         },
@@ -1830,133 +1830,133 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Quando o titular falece, o herdeiro abre o pedido com a certidão de óbito, o documento do inventário e uma selfie para confirmar a identidade.",
           "fonte": "sintetica",
           "src": "audio/voz/s05_05.mp3",
-          "dur": 240,
-          "inicio": 689,
+          "dur": 235,
+          "inicio": 683,
           "palavras": [
             {
               "w": "Quando",
-              "de": 691,
-              "ate": 696
+              "de": 686,
+              "ate": 691
             },
             {
               "w": "o",
-              "de": 696,
-              "ate": 697
+              "de": 691,
+              "ate": 692
             },
             {
               "w": "titular",
-              "de": 697,
-              "ate": 708
+              "de": 692,
+              "ate": 703
             },
             {
               "w": "falece,",
-              "de": 708,
-              "ate": 726
+              "de": 703,
+              "ate": 720
             },
             {
               "w": "o",
-              "de": 731,
-              "ate": 734
+              "de": 725,
+              "ate": 727
             },
             {
               "w": "herdeiro",
-              "de": 734,
-              "ate": 748
+              "de": 727,
+              "ate": 742
             },
             {
               "w": "abre",
-              "de": 748,
-              "ate": 756
+              "de": 742,
+              "ate": 749
             },
             {
               "w": "o",
-              "de": 756,
-              "ate": 757
+              "de": 749,
+              "ate": 750
             },
             {
               "w": "pedido",
-              "de": 757,
-              "ate": 769
+              "de": 750,
+              "ate": 763
             },
             {
               "w": "com",
-              "de": 769,
-              "ate": 772
+              "de": 763,
+              "ate": 765
             },
             {
               "w": "a",
-              "de": 772,
-              "ate": 774
+              "de": 765,
+              "ate": 767
             },
             {
               "w": "certidão",
-              "de": 774,
-              "ate": 792
+              "de": 767,
+              "ate": 784
             },
             {
               "w": "de",
-              "de": 792,
-              "ate": 796
+              "de": 784,
+              "ate": 788
             },
             {
               "w": "óbito,",
-              "de": 796,
-              "ate": 809
+              "de": 788,
+              "ate": 801
             },
             {
               "w": "o",
-              "de": 814,
-              "ate": 816
+              "de": 805,
+              "ate": 807
             },
             {
               "w": "documento",
-              "de": 816,
-              "ate": 832
+              "de": 807,
+              "ate": 823
             },
             {
               "w": "do",
-              "de": 832,
-              "ate": 834
+              "de": 823,
+              "ate": 824
             },
             {
               "w": "inventário",
-              "de": 834,
-              "ate": 859
+              "de": 824,
+              "ate": 849
             },
             {
               "w": "e",
-              "de": 859,
-              "ate": 862
+              "de": 849,
+              "ate": 852
             },
             {
               "w": "uma",
-              "de": 862,
-              "ate": 866
+              "de": 852,
+              "ate": 856
             },
             {
               "w": "selfie",
-              "de": 866,
-              "ate": 881
+              "de": 856,
+              "ate": 871
             },
             {
               "w": "para",
-              "de": 881,
-              "ate": 887
+              "de": 871,
+              "ate": 877
             },
             {
               "w": "confirmar",
-              "de": 887,
-              "ate": 903
+              "de": 877,
+              "ate": 892
             },
             {
               "w": "a",
-              "de": 903,
-              "ate": 904
+              "de": 892,
+              "ate": 893
             },
             {
               "w": "identidade.",
-              "de": 904,
-              "ate": 925
+              "de": 893,
+              "ate": 914
             }
           ]
         },
@@ -1966,53 +1966,53 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "A equipe valida, todos são avisados e podem contestar.",
           "fonte": "sintetica",
           "src": "audio/voz/s05_06.mp3",
-          "dur": 109,
-          "inicio": 935,
+          "dur": 105,
+          "inicio": 923,
           "palavras": [
             {
               "w": "A",
-              "de": 937,
-              "ate": 941
+              "de": 926,
+              "ate": 929
             },
             {
               "w": "equipe",
-              "de": 941,
-              "ate": 953
+              "de": 929,
+              "ate": 940
             },
             {
               "w": "valida,",
-              "de": 953,
-              "ate": 968
+              "de": 940,
+              "ate": 954
             },
             {
               "w": "todos",
-              "de": 975,
-              "ate": 984
+              "de": 961,
+              "ate": 970
             },
             {
               "w": "são",
-              "de": 984,
-              "ate": 989
+              "de": 970,
+              "ate": 974
             },
             {
               "w": "avisados",
-              "de": 989,
-              "ate": 1006
+              "de": 974,
+              "ate": 991
             },
             {
               "w": "e",
-              "de": 1006,
-              "ate": 1010
+              "de": 991,
+              "ate": 995
             },
             {
               "w": "podem",
-              "de": 1010,
-              "ate": 1020
+              "de": 995,
+              "ate": 1005
             },
             {
               "w": "contestar.",
-              "de": 1020,
-              "ate": 1040
+              "de": 1005,
+              "ate": 1023
             }
           ]
         },
@@ -2023,97 +2023,97 @@ export const ComposicaoPitch: React.FC = () => (
           "fonte": "sintetica",
           "src": "audio/voz/s05_07.mp3",
           "dur": 171,
-          "inicio": 1050,
+          "inicio": 1033,
           "palavras": [
             {
               "w": "Terminado",
-              "de": 1052,
-              "ate": 1066
+              "de": 1036,
+              "ate": 1050
             },
             {
               "w": "o",
-              "de": 1066,
-              "ate": 1068
+              "de": 1050,
+              "ate": 1051
             },
             {
               "w": "prazo,",
-              "de": 1068,
-              "ate": 1082
+              "de": 1051,
+              "ate": 1064
             },
             {
               "w": "cada",
-              "de": 1086,
-              "ate": 1093
+              "de": 1068,
+              "ate": 1076
             },
             {
               "w": "herdeiro",
-              "de": 1093,
-              "ate": 1106
+              "de": 1076,
+              "ate": 1090
             },
             {
               "w": "vê",
-              "de": 1106,
-              "ate": 1115
+              "de": 1090,
+              "ate": 1099
             },
             {
               "w": "só",
-              "de": 1115,
-              "ate": 1126
+              "de": 1099,
+              "ate": 1109
             },
             {
               "w": "o",
-              "de": 1126,
-              "ate": 1127
+              "de": 1109,
+              "ate": 1111
             },
             {
               "w": "que",
-              "de": 1127,
-              "ate": 1130
+              "de": 1111,
+              "ate": 1114
             },
             {
               "w": "foi",
-              "de": 1130,
-              "ate": 1135
+              "de": 1114,
+              "ate": 1119
             },
             {
               "w": "destinado",
-              "de": 1135,
-              "ate": 1152
+              "de": 1119,
+              "ate": 1136
             },
             {
               "w": "a",
-              "de": 1152,
-              "ate": 1155
+              "de": 1136,
+              "ate": 1140
             },
             {
               "w": "ele,",
-              "de": 1155,
-              "ate": 1165
+              "de": 1140,
+              "ate": 1150
             },
             {
               "w": "com",
-              "de": 1169,
-              "ate": 1173
+              "de": 1154,
+              "ate": 1158
             },
             {
               "w": "instruções",
-              "de": 1173,
-              "ate": 1190
+              "de": 1158,
+              "ate": 1175
             },
             {
               "w": "para",
-              "de": 1190,
-              "ate": 1196
+              "de": 1175,
+              "ate": 1181
             },
             {
               "w": "cada",
-              "de": 1196,
-              "ate": 1203
+              "de": 1181,
+              "ate": 1187
             },
             {
               "w": "ativo.",
-              "de": 1203,
-              "ate": 1217
+              "de": 1187,
+              "ate": 1201
             }
           ]
         },
@@ -2123,38 +2123,38 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Segurança é o coração do produto.",
           "fonte": "sintetica",
           "src": "audio/voz/s06_01.mp3",
-          "dur": 69,
+          "dur": 73,
           "inicio": 8,
           "palavras": [
             {
               "w": "Segurança",
-              "de": 10,
-              "ate": 32
-            },
-            {
-              "w": "é",
-              "de": 32,
+              "de": 11,
               "ate": 34
             },
             {
-              "w": "o",
+              "w": "é",
               "de": 34,
               "ate": 36
             },
             {
-              "w": "coração",
+              "w": "o",
               "de": 36,
-              "ate": 54
+              "ate": 38
+            },
+            {
+              "w": "coração",
+              "de": 38,
+              "ate": 56
             },
             {
               "w": "do",
-              "de": 54,
-              "ate": 57
+              "de": 56,
+              "ate": 60
             },
             {
               "w": "produto.",
-              "de": 57,
-              "ate": 74
+              "de": 60,
+              "ate": 77
             }
           ]
         },
@@ -2164,48 +2164,48 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "O conteúdo é cifrado no aparelho do titular.",
           "fonte": "sintetica",
           "src": "audio/voz/s06_02.mp3",
-          "dur": 80,
-          "inicio": 83,
+          "dur": 85,
+          "inicio": 87,
           "palavras": [
             {
               "w": "O",
-              "de": 85,
-              "ate": 87
+              "de": 90,
+              "ate": 92
             },
             {
               "w": "conteúdo",
-              "de": 87,
-              "ate": 107
+              "de": 92,
+              "ate": 113
             },
             {
               "w": "é",
-              "de": 107,
-              "ate": 108
+              "de": 113,
+              "ate": 114
             },
             {
               "w": "cifrado",
-              "de": 108,
-              "ate": 124
+              "de": 114,
+              "ate": 133
             },
             {
               "w": "no",
-              "de": 124,
-              "ate": 126
+              "de": 133,
+              "ate": 135
             },
             {
               "w": "aparelho",
-              "de": 126,
-              "ate": 141
+              "de": 135,
+              "ate": 150
             },
             {
               "w": "do",
-              "de": 141,
-              "ate": 144
+              "de": 150,
+              "ate": 153
             },
             {
               "w": "titular.",
-              "de": 144,
-              "ate": 159
+              "de": 153,
+              "ate": 168
             }
           ]
         },
@@ -2215,123 +2215,123 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "A chave de sucessão é dividida em três partes, e duas são necessárias para abri-la: nem a empresa consegue abrir o cofre sozinha.",
           "fonte": "sintetica",
           "src": "audio/voz/s06_03.mp3",
-          "dur": 219,
-          "inicio": 169,
+          "dur": 229,
+          "inicio": 178,
           "palavras": [
             {
               "w": "A",
-              "de": 171,
-              "ate": 174
+              "de": 181,
+              "ate": 184
             },
             {
               "w": "chave",
-              "de": 174,
-              "ate": 185
+              "de": 184,
+              "ate": 196
             },
             {
               "w": "de",
-              "de": 185,
-              "ate": 188
+              "de": 196,
+              "ate": 199
             },
             {
               "w": "sucessão",
-              "de": 188,
-              "ate": 206
+              "de": 199,
+              "ate": 217
             },
             {
               "w": "é",
-              "de": 206,
-              "ate": 208
+              "de": 217,
+              "ate": 218
             },
             {
               "w": "dividida",
-              "de": 208,
-              "ate": 221
+              "de": 218,
+              "ate": 231
             },
             {
               "w": "em",
-              "de": 221,
-              "ate": 224
+              "de": 231,
+              "ate": 235
             },
             {
               "w": "três",
-              "de": 224,
-              "ate": 234
+              "de": 234,
+              "ate": 245
             },
             {
               "w": "partes,",
-              "de": 234,
-              "ate": 249
+              "de": 245,
+              "ate": 262
             },
             {
               "w": "e",
-              "de": 256,
-              "ate": 258
-            },
-            {
-              "w": "duas",
-              "de": 258,
-              "ate": 268
-            },
-            {
-              "w": "são",
-              "de": 268,
+              "de": 269,
               "ate": 272
             },
             {
-              "w": "necessárias",
+              "w": "duas",
               "de": 272,
-              "ate": 292
+              "ate": 282
+            },
+            {
+              "w": "são",
+              "de": 282,
+              "ate": 286
+            },
+            {
+              "w": "necessárias",
+              "de": 286,
+              "ate": 305
             },
             {
               "w": "para",
-              "de": 292,
-              "ate": 297
+              "de": 305,
+              "ate": 310
             },
             {
               "w": "abri-la:",
-              "de": 297,
-              "ate": 307
-            },
-            {
-              "w": "nem",
-              "de": 317,
+              "de": 310,
               "ate": 322
             },
             {
-              "w": "a",
-              "de": 322,
-              "ate": 323
-            },
-            {
-              "w": "empresa",
-              "de": 323,
+              "w": "nem",
+              "de": 331,
               "ate": 337
             },
             {
-              "w": "consegue",
+              "w": "a",
               "de": 337,
-              "ate": 349
+              "ate": 338
             },
             {
-              "w": "abrir",
-              "de": 349,
-              "ate": 357
+              "w": "empresa",
+              "de": 337,
+              "ate": 354
             },
             {
-              "w": "o",
-              "de": 357,
-              "ate": 358
-            },
-            {
-              "w": "cofre",
-              "de": 358,
+              "w": "consegue",
+              "de": 354,
               "ate": 366
             },
             {
-              "w": "sozinha.",
+              "w": "abrir",
               "de": 366,
+              "ate": 374
+            },
+            {
+              "w": "o",
+              "de": 374,
+              "ate": 376
+            },
+            {
+              "w": "cofre",
+              "de": 376,
               "ate": 384
+            },
+            {
+              "w": "sozinha.",
+              "de": 384,
+              "ate": 403
             }
           ]
         },
@@ -2341,73 +2341,73 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Mudanças críticas, como remover um herdeiro, geram um alerta: Não foi você? Desfazer.",
           "fonte": "sintetica",
           "src": "audio/voz/s06_04.mp3",
-          "dur": 191,
-          "inicio": 394,
+          "dur": 199,
+          "inicio": 413,
           "palavras": [
             {
               "w": "Mudanças",
-              "de": 396,
-              "ate": 415
+              "de": 416,
+              "ate": 434
             },
             {
               "w": "críticas,",
-              "de": 415,
-              "ate": 433
+              "de": 434,
+              "ate": 453
             },
             {
               "w": "como",
-              "de": 437,
-              "ate": 443
+              "de": 457,
+              "ate": 464
             },
             {
               "w": "remover",
-              "de": 443,
-              "ate": 459
+              "de": 464,
+              "ate": 479
             },
             {
               "w": "um",
-              "de": 459,
-              "ate": 462
+              "de": 479,
+              "ate": 483
             },
             {
               "w": "herdeiro,",
-              "de": 462,
-              "ate": 476
+              "de": 483,
+              "ate": 498
             },
             {
               "w": "geram",
-              "de": 483,
-              "ate": 494
+              "de": 506,
+              "ate": 518
             },
             {
               "w": "um",
-              "de": 494,
-              "ate": 496
+              "de": 518,
+              "ate": 520
             },
             {
               "w": "alerta:",
-              "de": 496,
-              "ate": 511
+              "de": 520,
+              "ate": 536
             },
             {
               "w": "Não",
-              "de": 521,
-              "ate": 527
+              "de": 545,
+              "ate": 552
             },
             {
               "w": "foi",
-              "de": 527,
-              "ate": 532
+              "de": 552,
+              "ate": 558
             },
             {
               "w": "você?",
-              "de": 532,
-              "ate": 546
+              "de": 557,
+              "ate": 570
             },
             {
               "w": "Desfazer.",
-              "de": 557,
-              "ate": 581
+              "de": 582,
+              "ate": 608
             }
           ]
         },
@@ -2417,63 +2417,63 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Gerenciadores de senha resolvem o dia a dia, não a sucessão.",
           "fonte": "sintetica",
           "src": "audio/voz/s07_01.mp3",
-          "dur": 120,
+          "dur": 125,
           "inicio": 8,
           "palavras": [
             {
               "w": "Gerenciadores",
-              "de": 10,
-              "ate": 34
-            },
-            {
-              "w": "de",
-              "de": 34,
+              "de": 11,
               "ate": 37
             },
             {
-              "w": "senha",
+              "w": "de",
               "de": 37,
-              "ate": 48
+              "ate": 40
+            },
+            {
+              "w": "senha",
+              "de": 40,
+              "ate": 52
             },
             {
               "w": "resolvem",
-              "de": 48,
-              "ate": 66
-            },
-            {
-              "w": "o",
-              "de": 66,
+              "de": 52,
               "ate": 69
             },
             {
-              "w": "dia",
+              "w": "o",
               "de": 69,
-              "ate": 76
+              "ate": 71
+            },
+            {
+              "w": "dia",
+              "de": 71,
+              "ate": 78
             },
             {
               "w": "a",
-              "de": 76,
-              "ate": 77
+              "de": 78,
+              "ate": 80
             },
             {
               "w": "dia,",
-              "de": 77,
-              "ate": 87
+              "de": 80,
+              "ate": 91
             },
             {
               "w": "não",
-              "de": 94,
-              "ate": 104
+              "de": 98,
+              "ate": 107
             },
             {
               "w": "a",
-              "de": 104,
-              "ate": 105
+              "de": 107,
+              "ate": 108
             },
             {
               "w": "sucessão.",
-              "de": 104,
-              "ate": 125
+              "de": 108,
+              "ate": 129
             }
           ]
         },
@@ -2483,78 +2483,78 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Os contatos de legado de Google, Apple e Meta cobrem só a própria plataforma.",
           "fonte": "sintetica",
           "src": "audio/voz/s07_02.mp3",
-          "dur": 147,
-          "inicio": 134,
+          "dur": 149,
+          "inicio": 138,
           "palavras": [
             {
               "w": "Os",
-              "de": 136,
-              "ate": 139
+              "de": 141,
+              "ate": 143
             },
             {
               "w": "contatos",
-              "de": 139,
-              "ate": 156
+              "de": 143,
+              "ate": 160
             },
             {
               "w": "de",
-              "de": 156,
-              "ate": 158
+              "de": 160,
+              "ate": 163
             },
             {
               "w": "legado",
-              "de": 158,
-              "ate": 169
+              "de": 163,
+              "ate": 175
             },
             {
               "w": "de",
-              "de": 169,
-              "ate": 173
+              "de": 175,
+              "ate": 178
             },
             {
               "w": "Google,",
-              "de": 173,
-              "ate": 188
+              "de": 178,
+              "ate": 192
             },
             {
               "w": "Apple",
-              "de": 193,
-              "ate": 209
-            },
-            {
-              "w": "e",
-              "de": 209,
+              "de": 197,
               "ate": 212
             },
             {
-              "w": "Meta",
+              "w": "e",
               "de": 212,
-              "ate": 223
+              "ate": 215
+            },
+            {
+              "w": "Meta",
+              "de": 215,
+              "ate": 225
             },
             {
               "w": "cobrem",
-              "de": 223,
-              "ate": 236
+              "de": 225,
+              "ate": 239
             },
             {
               "w": "só",
-              "de": 236,
-              "ate": 243
+              "de": 238,
+              "ate": 246
             },
             {
               "w": "a",
-              "de": 243,
-              "ate": 245
+              "de": 246,
+              "ate": 248
             },
             {
               "w": "própria",
-              "de": 245,
-              "ate": 257
+              "de": 248,
+              "ate": 261
             },
             {
               "w": "plataforma.",
-              "de": 257,
-              "ate": 277
+              "de": 261,
+              "ate": 282
             }
           ]
         },
@@ -2565,77 +2565,77 @@ export const ComposicaoPitch: React.FC = () => (
           "fonte": "sintetica",
           "src": "audio/voz/s07_03.mp3",
           "dur": 147,
-          "inicio": 287,
+          "inicio": 292,
           "palavras": [
             {
               "w": "A",
-              "de": 289,
-              "ate": 293
+              "de": 295,
+              "ate": 298
             },
             {
               "w": "Herança",
-              "de": 293,
-              "ate": 304
+              "de": 298,
+              "ate": 309
             },
             {
               "w": "Digital",
-              "de": 304,
-              "ate": 320
+              "de": 309,
+              "ate": 324
             },
             {
               "w": "reúne",
-              "de": 320,
-              "ate": 333
+              "de": 324,
+              "ate": 337
             },
             {
               "w": "tudo",
-              "de": 333,
-              "ate": 341
+              "de": 337,
+              "ate": 346
             },
             {
               "w": "em",
-              "de": 341,
-              "ate": 344
+              "de": 346,
+              "ate": 349
             },
             {
               "w": "um",
-              "de": 344,
-              "ate": 347
+              "de": 349,
+              "ate": 352
             },
             {
               "w": "só",
-              "de": 347,
-              "ate": 355
+              "de": 352,
+              "ate": 361
             },
             {
               "w": "lugar,",
-              "de": 355,
-              "ate": 367
+              "de": 361,
+              "ate": 373
             },
             {
               "w": "seguindo",
-              "de": 375,
-              "ate": 390
+              "de": 381,
+              "ate": 395
             },
             {
               "w": "o",
-              "de": 390,
-              "ate": 391
+              "de": 395,
+              "ate": 396
             },
             {
               "w": "rito",
-              "de": 391,
-              "ate": 401
+              "de": 396,
+              "ate": 406
             },
             {
               "w": "legal",
-              "de": 401,
-              "ate": 412
+              "de": 406,
+              "ate": 417
             },
             {
               "w": "brasileiro.",
-              "de": 412,
-              "ate": 430
+              "de": 417,
+              "ate": 435
             }
           ]
         },
@@ -2645,78 +2645,78 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "A receita vem da assinatura anual do titular e de uma taxa na liberação.",
           "fonte": "sintetica",
           "src": "audio/voz/s08_01.mp3",
-          "dur": 131,
+          "dur": 126,
           "inicio": 8,
           "palavras": [
             {
               "w": "A",
-              "de": 10,
-              "ate": 13
+              "de": 11,
+              "ate": 14
             },
             {
               "w": "receita",
-              "de": 13,
-              "ate": 32
+              "de": 14,
+              "ate": 33
             },
             {
               "w": "vem",
-              "de": 32,
+              "de": 33,
               "ate": 38
             },
             {
               "w": "da",
               "de": 38,
-              "ate": 41
+              "ate": 40
             },
             {
               "w": "assinatura",
-              "de": 41,
-              "ate": 58
+              "de": 40,
+              "ate": 57
             },
             {
               "w": "anual",
-              "de": 58,
-              "ate": 68
+              "de": 57,
+              "ate": 66
             },
             {
               "w": "do",
-              "de": 68,
-              "ate": 71
+              "de": 66,
+              "ate": 69
             },
             {
               "w": "titular",
-              "de": 71,
-              "ate": 88
+              "de": 69,
+              "ate": 85
             },
             {
               "w": "e",
-              "de": 88,
-              "ate": 92
+              "de": 85,
+              "ate": 89
             },
             {
               "w": "de",
-              "de": 92,
-              "ate": 95
+              "de": 89,
+              "ate": 91
             },
             {
               "w": "uma",
-              "de": 95,
-              "ate": 100
+              "de": 91,
+              "ate": 97
             },
             {
               "w": "taxa",
-              "de": 100,
-              "ate": 112
+              "de": 97,
+              "ate": 108
             },
             {
               "w": "na",
-              "de": 112,
-              "ate": 114
+              "de": 108,
+              "ate": 110
             },
             {
               "w": "liberação.",
-              "de": 114,
-              "ate": 135
+              "de": 110,
+              "ate": 130
             }
           ]
         },
@@ -2726,78 +2726,78 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda.",
           "fonte": "sintetica",
           "src": "audio/voz/s08_02.mp3",
-          "dur": 191,
-          "inicio": 145,
+          "dur": 185,
+          "inicio": 139,
           "palavras": [
             {
               "w": "Escritórios",
-              "de": 147,
-              "ate": 168
+              "de": 142,
+              "ate": 163
             },
             {
               "w": "de",
-              "de": 168,
-              "ate": 171
+              "de": 163,
+              "ate": 165
             },
             {
               "w": "advocacia,",
-              "de": 171,
-              "ate": 196
+              "de": 165,
+              "ate": 191
             },
             {
               "w": "cartórios,",
-              "de": 201,
-              "ate": 222
+              "de": 195,
+              "ate": 214
             },
             {
               "w": "bancos",
-              "de": 227,
-              "ate": 240
+              "de": 219,
+              "ate": 231
             },
             {
               "w": "e",
-              "de": 240,
-              "ate": 244
+              "de": 231,
+              "ate": 234
             },
             {
               "w": "seguradoras",
-              "de": 244,
-              "ate": 265
+              "de": 234,
+              "ate": 254
             },
             {
               "w": "são",
-              "de": 265,
-              "ate": 269
+              "de": 254,
+              "ate": 258
             },
             {
               "w": "parceiros",
-              "de": 269,
-              "ate": 283
+              "de": 258,
+              "ate": 272
             },
             {
               "w": "previstos",
-              "de": 283,
-              "ate": 303
+              "de": 272,
+              "ate": 291
             },
             {
               "w": "e",
-              "de": 303,
-              "ate": 306
+              "de": 291,
+              "ate": 295
             },
             {
               "w": "canais",
-              "de": 306,
-              "ate": 317
+              "de": 295,
+              "ate": 305
             },
             {
               "w": "de",
-              "de": 317,
-              "ate": 320
+              "de": 305,
+              "ate": 308
             },
             {
               "w": "venda.",
-              "de": 320,
-              "ate": 332
+              "de": 308,
+              "ate": 320
             }
           ]
         },
@@ -2807,53 +2807,53 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Os valores serão definidos depois da pesquisa com usuários.",
           "fonte": "sintetica",
           "src": "audio/voz/s08_03.mp3",
-          "dur": 110,
-          "inicio": 342,
+          "dur": 108,
+          "inicio": 329,
           "palavras": [
             {
               "w": "Os",
-              "de": 344,
-              "ate": 348
+              "de": 332,
+              "ate": 336
             },
             {
               "w": "valores",
-              "de": 348,
-              "ate": 364
+              "de": 336,
+              "ate": 352
             },
             {
               "w": "serão",
-              "de": 364,
-              "ate": 371
+              "de": 352,
+              "ate": 358
             },
             {
               "w": "definidos",
-              "de": 371,
-              "ate": 388
+              "de": 358,
+              "ate": 375
             },
             {
               "w": "depois",
-              "de": 388,
-              "ate": 399
+              "de": 375,
+              "ate": 386
             },
             {
               "w": "da",
-              "de": 399,
-              "ate": 403
+              "de": 386,
+              "ate": 389
             },
             {
               "w": "pesquisa",
-              "de": 403,
-              "ate": 421
+              "de": 389,
+              "ate": 406
             },
             {
               "w": "com",
-              "de": 421,
-              "ate": 428
+              "de": 406,
+              "ate": 412
             },
             {
               "w": "usuários.",
-              "de": 428,
-              "ate": 448
+              "de": 412,
+              "ate": 433
             }
           ]
         },
@@ -2863,78 +2863,78 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos.",
           "fonte": "sintetica",
           "src": "audio/voz/s09_01.mp3",
-          "dur": 203,
+          "dur": 208,
           "inicio": 8,
           "palavras": [
             {
               "w": "Somos",
-              "de": 10,
-              "ate": 21
+              "de": 11,
+              "ate": 22
             },
             {
               "w": "um",
-              "de": 21,
-              "ate": 25
+              "de": 22,
+              "ate": 26
             },
             {
               "w": "projeto",
-              "de": 25,
-              "ate": 38
+              "de": 26,
+              "ate": 39
             },
             {
               "w": "de",
-              "de": 38,
-              "ate": 40
+              "de": 39,
+              "ate": 41
             },
             {
               "w": "faculdade;",
-              "de": 40,
-              "ate": 62
+              "de": 41,
+              "ate": 63
             },
             {
               "w": "escritórios,",
-              "de": 68,
-              "ate": 91
+              "de": 70,
+              "ate": 92
             },
             {
               "w": "cartórios",
-              "de": 96,
-              "ate": 115
+              "de": 97,
+              "ate": 117
             },
             {
               "w": "e",
-              "de": 115,
-              "ate": 121
+              "de": 117,
+              "ate": 124
             },
             {
               "w": "verificação",
-              "de": 121,
-              "ate": 144
+              "de": 124,
+              "ate": 148
             },
             {
               "w": "de",
-              "de": 144,
-              "ate": 146
+              "de": 148,
+              "ate": 150
             },
             {
               "w": "identidade",
-              "de": 146,
-              "ate": 166
+              "de": 150,
+              "ate": 169
             },
             {
               "w": "são",
-              "de": 166,
-              "ate": 171
+              "de": 169,
+              "ate": 175
             },
             {
               "w": "parceiros",
-              "de": 171,
-              "ate": 185
+              "de": 175,
+              "ate": 189
             },
             {
               "w": "previstos.",
-              "de": 185,
-              "ate": 207
+              "de": 189,
+              "ate": 212
             }
           ]
         },
@@ -2944,78 +2944,78 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP.",
           "fonte": "sintetica",
           "src": "audio/voz/s09_02.mp3",
-          "dur": 187,
-          "inicio": 217,
+          "dur": 184,
+          "inicio": 221,
           "palavras": [
             {
               "w": "Próximos",
-              "de": 219,
-              "ate": 233
+              "de": 224,
+              "ate": 238
             },
             {
               "w": "passos:",
-              "de": 233,
-              "ate": 249
+              "de": 238,
+              "ate": 254
             },
             {
               "w": "validar",
-              "de": 257,
-              "ate": 271
-            },
-            {
-              "w": "com",
-              "de": 271,
+              "de": 261,
               "ate": 275
             },
             {
-              "w": "um",
+              "w": "com",
               "de": 275,
-              "ate": 277
+              "ate": 279
+            },
+            {
+              "w": "um",
+              "de": 279,
+              "ate": 280
             },
             {
               "w": "advogado",
-              "de": 277,
-              "ate": 295
-            },
-            {
-              "w": "de",
-              "de": 295,
+              "de": 280,
               "ate": 298
             },
             {
-              "w": "sucessões,",
+              "w": "de",
               "de": 298,
-              "ate": 321
+              "ate": 301
+            },
+            {
+              "w": "sucessões,",
+              "de": 301,
+              "ate": 322
             },
             {
               "w": "ouvir",
-              "de": 326,
-              "ate": 338
+              "de": 328,
+              "ate": 339
             },
             {
               "w": "usuários",
-              "de": 338,
+              "de": 339,
               "ate": 354
             },
             {
               "w": "e",
               "de": 354,
-              "ate": 358
+              "ate": 359
             },
             {
               "w": "construir",
-              "de": 358,
-              "ate": 375
+              "de": 359,
+              "ate": 376
             },
             {
               "w": "o",
-              "de": 375,
-              "ate": 378
+              "de": 376,
+              "ate": 379
             },
             {
               "w": "MVP.",
-              "de": 378,
-              "ate": 400
+              "de": 379,
+              "ate": 401
             }
           ]
         },
@@ -3025,53 +3025,53 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Herança Digital: seus dados, sua história, seu futuro. Obrigado!",
           "fonte": "sintetica",
           "src": "audio/voz/s09_03.mp3",
-          "dur": 160,
+          "dur": 182,
           "inicio": 410,
           "palavras": [
             {
               "w": "Herança",
-              "de": 412,
-              "ate": 425
+              "de": 413,
+              "ate": 428
             },
             {
               "w": "Digital:",
-              "de": 425,
-              "ate": 442
+              "de": 428,
+              "ate": 447
             },
             {
               "w": "seus",
-              "de": 449,
-              "ate": 458
+              "de": 463,
+              "ate": 472
             },
             {
               "w": "dados,",
-              "de": 458,
-              "ate": 475
+              "de": 472,
+              "ate": 490
             },
             {
               "w": "sua",
-              "de": 480,
-              "ate": 486
+              "de": 495,
+              "ate": 502
             },
             {
               "w": "história,",
-              "de": 486,
-              "ate": 501
+              "de": 502,
+              "ate": 516
             },
             {
               "w": "seu",
-              "de": 507,
-              "ate": 515
-            },
-            {
-              "w": "futuro.",
-              "de": 515,
+              "de": 523,
               "ate": 532
             },
             {
+              "w": "futuro.",
+              "de": 532,
+              "ate": 551
+            },
+            {
               "w": "Obrigado!",
-              "de": 542,
-              "ate": 566
+              "de": 561,
+              "ate": 587
             }
           ]
         }
@@ -3081,23 +3081,23 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L01",
           "cena": "s1",
           "fraseId": "s01_01",
-          "de": 12,
-          "ate": 51,
+          "de": 13,
+          "ate": 60,
           "palavras": [
             {
               "w": "Quando",
-              "de": 16,
-              "ate": 23
+              "de": 17,
+              "ate": 25
             },
             {
               "w": "você",
-              "de": 23,
-              "ate": 31
+              "de": 25,
+              "ate": 35
             },
             {
               "w": "morrer…",
-              "de": 31,
-              "ate": 46
+              "de": 35,
+              "ate": 50
             }
           ]
         },
@@ -3105,38 +3105,38 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L02",
           "cena": "s1",
           "fraseId": "s01_02",
-          "de": 51,
-          "ate": 119,
+          "de": 60,
+          "ate": 132,
           "palavras": [
             {
               "w": "quem",
-              "de": 55,
-              "ate": 60
+              "de": 69,
+              "ate": 74
             },
             {
               "w": "fica",
-              "de": 60,
-              "ate": 72
+              "de": 74,
+              "ate": 86
             },
             {
               "w": "com",
-              "de": 72,
-              "ate": 76
+              "de": 86,
+              "ate": 90
             },
             {
               "w": "o",
-              "de": 76,
-              "ate": 77
+              "de": 90,
+              "ate": 91
             },
             {
               "w": "seu",
-              "de": 77,
-              "ate": 84
+              "de": 91,
+              "ate": 99
             },
             {
               "w": "Instagram?",
-              "de": 84,
-              "ate": 101
+              "de": 98,
+              "ate": 116
             }
           ]
         },
@@ -3144,28 +3144,28 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L03",
           "cena": "s1",
           "fraseId": "s01_03",
-          "de": 119,
-          "ate": 158,
+          "de": 132,
+          "ate": 176,
           "palavras": [
             {
               "w": "Com",
-              "de": 109,
-              "ate": 115
+              "de": 126,
+              "ate": 131
             },
             {
               "w": "o",
-              "de": 115,
-              "ate": 116
+              "de": 131,
+              "ate": 133
             },
             {
               "w": "seu",
-              "de": 116,
-              "ate": 123
+              "de": 133,
+              "ate": 140
             },
             {
               "w": "e-mail?",
-              "de": 123,
-              "ate": 139
+              "de": 140,
+              "ate": 157
             }
           ]
         },
@@ -3173,28 +3173,28 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L04",
           "cena": "s1",
           "fraseId": "s01_04",
-          "de": 158,
-          "ate": 210,
+          "de": 176,
+          "ate": 230,
           "palavras": [
             {
               "w": "Com",
-              "de": 148,
-              "ate": 154
+              "de": 166,
+              "ate": 171
             },
             {
               "w": "as",
-              "de": 154,
-              "ate": 158
+              "de": 171,
+              "ate": 175
             },
             {
               "w": "suas",
-              "de": 158,
-              "ate": 166
+              "de": 175,
+              "ate": 183
             },
             {
               "w": "criptomoedas?",
-              "de": 166,
-              "ate": 200
+              "de": 182,
+              "ate": 220
             }
           ]
         },
@@ -3202,58 +3202,58 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L05",
           "cena": "s1",
           "fraseId": "s01_05",
-          "de": 244,
-          "ate": 362,
+          "de": 265,
+          "ate": 384,
           "palavras": [
             {
               "w": "Somos",
-              "de": 248,
-              "ate": 259
+              "de": 269,
+              "ate": 280
             },
             {
               "w": "o",
-              "de": 259,
-              "ate": 263
+              "de": 280,
+              "ate": 284
             },
             {
               "w": "grupo",
-              "de": 263,
-              "ate": 273
+              "de": 284,
+              "ate": 293
             },
             {
               "w": "EternaByte,",
-              "de": 273,
-              "ate": 299
+              "de": 293,
+              "ate": 319
             },
             {
               "w": "e",
-              "de": 304,
-              "ate": 307
+              "de": 325,
+              "ate": 327
             },
             {
               "w": "esta",
-              "de": 307,
-              "ate": 317
+              "de": 327,
+              "ate": 338
             },
             {
               "w": "é",
-              "de": 317,
-              "ate": 320
+              "de": 338,
+              "ate": 340
             },
             {
               "w": "a",
-              "de": 320,
-              "ate": 323
+              "de": 340,
+              "ate": 344
             },
             {
               "w": "Herança",
-              "de": 323,
-              "ate": 336
+              "de": 343,
+              "ate": 357
             },
             {
               "w": "Digital.",
-              "de": 336,
-              "ate": 352
+              "de": 357,
+              "ate": 374
             }
           ]
         },
@@ -3261,63 +3261,63 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L06",
           "cena": "s2",
           "fraseId": "s02_01",
-          "de": 6,
-          "ate": 157,
+          "de": 7,
+          "ate": 165,
           "palavras": [
             {
               "w": "Hoje",
-              "de": 10,
-              "ate": 17
+              "de": 11,
+              "ate": 19
             },
             {
               "w": "quase",
-              "de": 17,
-              "ate": 27
+              "de": 19,
+              "ate": 28
             },
             {
               "w": "todo",
-              "de": 27,
-              "ate": 32
+              "de": 28,
+              "ate": 33
             },
             {
               "w": "mundo",
-              "de": 32,
-              "ate": 41
+              "de": 33,
+              "ate": 44
             },
             {
               "w": "tem",
-              "de": 41,
-              "ate": 46
+              "de": 44,
+              "ate": 47
             },
             {
               "w": "e-mail,",
-              "de": 46,
-              "ate": 59
+              "de": 47,
+              "ate": 61
             },
             {
               "w": "redes",
-              "de": 64,
-              "ate": 71
+              "de": 66,
+              "ate": 74
             },
             {
               "w": "sociais,",
-              "de": 71,
-              "ate": 91
+              "de": 74,
+              "ate": 94
             },
             {
               "w": "banco",
-              "de": 96,
-              "ate": 106
+              "de": 99,
+              "ate": 110
             },
             {
               "w": "digital,",
-              "de": 106,
-              "ate": 125
+              "de": 110,
+              "ate": 130
             },
             {
               "w": "criptomoedas,",
-              "de": 129,
-              "ate": 155
+              "de": 135,
+              "ate": 162
             }
           ]
         },
@@ -3325,33 +3325,33 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L07",
           "cena": "s2",
           "fraseId": "s02_01",
-          "de": 157,
-          "ate": 229,
+          "de": 165,
+          "ate": 242,
           "palavras": [
             {
               "w": "fotos",
-              "de": 161,
-              "ate": 172
+              "de": 169,
+              "ate": 181
             },
             {
               "w": "na",
-              "de": 172,
-              "ate": 178
+              "de": 181,
+              "ate": 186
             },
             {
               "w": "nuvem",
-              "de": 178,
-              "ate": 193
+              "de": 186,
+              "ate": 204
             },
             {
               "w": "e",
-              "de": 193,
-              "ate": 196
+              "de": 204,
+              "ate": 207
             },
             {
               "w": "assinaturas.",
-              "de": 196,
-              "ate": 221
+              "de": 207,
+              "ate": 233
             }
           ]
         },
@@ -3359,83 +3359,83 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L08",
           "cena": "s2",
           "fraseId": "s02_02",
-          "de": 229,
-          "ate": 366,
+          "de": 242,
+          "ate": 379,
           "palavras": [
             {
               "w": "Quando",
-              "de": 233,
-              "ate": 238
+              "de": 246,
+              "ate": 251
             },
             {
               "w": "a",
-              "de": 238,
-              "ate": 239
+              "de": 251,
+              "ate": 252
             },
             {
               "w": "pessoa",
-              "de": 239,
-              "ate": 249
+              "de": 252,
+              "ate": 263
             },
             {
               "w": "morre,",
-              "de": 249,
-              "ate": 261
+              "de": 263,
+              "ate": 275
             },
             {
               "w": "a",
-              "de": 267,
-              "ate": 269
+              "de": 281,
+              "ate": 283
             },
             {
               "w": "família",
-              "de": 269,
-              "ate": 280
+              "de": 283,
+              "ate": 294
             },
             {
               "w": "não",
-              "de": 280,
-              "ate": 285
-            },
-            {
-              "w": "sabe",
-              "de": 285,
-              "ate": 295
-            },
-            {
-              "w": "o",
-              "de": 295,
-              "ate": 296
-            },
-            {
-              "w": "que",
-              "de": 297,
+              "de": 294,
               "ate": 299
             },
             {
-              "w": "existe,",
+              "w": "sabe",
               "de": 299,
-              "ate": 314
+              "ate": 310
+            },
+            {
+              "w": "o",
+              "de": 309,
+              "ate": 310
+            },
+            {
+              "w": "que",
+              "de": 310,
+              "ate": 313
+            },
+            {
+              "w": "existe,",
+              "de": 313,
+              "ate": 327
             },
             {
               "w": "não",
-              "de": 320,
-              "ate": 326
+              "de": 333,
+              "ate": 339
             },
             {
               "w": "tem",
-              "de": 326,
-              "ate": 334
+              "de": 339,
+              "ate": 347
             },
             {
               "w": "as",
-              "de": 334,
-              "ate": 337
+              "de": 347,
+              "ate": 350
             },
             {
               "w": "senhas,",
-              "de": 337,
-              "ate": 350
+              "de": 350,
+              "ate": 363
             }
           ]
         },
@@ -3443,43 +3443,43 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L09",
           "cena": "s2",
           "fraseId": "s02_02",
-          "de": 366,
-          "ate": 416,
+          "de": 379,
+          "ate": 432,
           "palavras": [
             {
               "w": "e",
-              "de": 356,
-              "ate": 358
+              "de": 369,
+              "ate": 371
             },
             {
               "w": "não",
-              "de": 358,
-              "ate": 365
-            },
-            {
-              "w": "sabe",
-              "de": 365,
-              "ate": 375
-            },
-            {
-              "w": "o",
-              "de": 375,
-              "ate": 376
-            },
-            {
-              "w": "que",
-              "de": 376,
+              "de": 371,
               "ate": 378
             },
             {
-              "w": "ela",
+              "w": "sabe",
               "de": 378,
-              "ate": 382
+              "ate": 389
+            },
+            {
+              "w": "o",
+              "de": 389,
+              "ate": 390
+            },
+            {
+              "w": "que",
+              "de": 390,
+              "ate": 392
+            },
+            {
+              "w": "ela",
+              "de": 392,
+              "ate": 396
             },
             {
               "w": "queria.",
-              "de": 382,
-              "ate": 395
+              "de": 396,
+              "ate": 409
             }
           ]
         },
@@ -3487,83 +3487,83 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L10",
           "cena": "s2",
           "fraseId": "s02_03",
-          "de": 416,
-          "ate": 601,
+          "de": 432,
+          "ate": 620,
           "palavras": [
             {
               "w": "Resultado:",
-              "de": 406,
-              "ate": 427
+              "de": 422,
+              "ate": 442
             },
             {
               "w": "bens",
-              "de": 435,
-              "ate": 445
+              "de": 451,
+              "ate": 461
             },
             {
               "w": "com",
-              "de": 445,
-              "ate": 449
+              "de": 461,
+              "ate": 465
             },
             {
               "w": "valor",
-              "de": 449,
-              "ate": 458
+              "de": 465,
+              "ate": 474
             },
             {
               "w": "perdidos,",
-              "de": 458,
-              "ate": 479
+              "de": 474,
+              "ate": 494
             },
             {
               "w": "assinaturas",
-              "de": 484,
-              "ate": 503
+              "de": 500,
+              "ate": 518
             },
             {
               "w": "cobrando",
-              "de": 503,
-              "ate": 516
+              "de": 518,
+              "ate": 532
             },
             {
               "w": "para",
-              "de": 516,
-              "ate": 522
+              "de": 531,
+              "ate": 538
             },
             {
               "w": "sempre",
-              "de": 522,
-              "ate": 536
+              "de": 538,
+              "ate": 554
             },
             {
               "w": "e",
-              "de": 536,
-              "ate": 537
+              "de": 553,
+              "ate": 554
             },
             {
               "w": "perfis",
-              "de": 536,
-              "ate": 553
+              "de": 554,
+              "ate": 571
             },
             {
               "w": "virando",
-              "de": 553,
-              "ate": 566
+              "de": 571,
+              "ate": 584
             },
             {
               "w": "alvo",
-              "de": 566,
-              "ate": 575
+              "de": 584,
+              "ate": 593
             },
             {
               "w": "de",
-              "de": 575,
-              "ate": 578
+              "de": 593,
+              "ate": 597
             },
             {
               "w": "golpe.",
-              "de": 578,
-              "ate": 591
+              "de": 596,
+              "ate": 610
             }
           ]
         },
@@ -3571,42 +3571,42 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L11",
           "cena": "s3",
           "fraseId": "s03_01",
-          "de": -3,
-          "ate": 189,
+          "de": -2,
+          "ate": 188,
           "palavras": [
             {
               "w": "A",
-              "de": 12,
-              "ate": 16
+              "de": 13,
+              "ate": 17
             },
             {
               "w": "Herança",
-              "de": 16,
-              "ate": 27
+              "de": 17,
+              "ate": 28
             },
             {
               "w": "Digital",
-              "de": 27,
-              "ate": 46
+              "de": 28,
+              "ate": 47
             },
             {
               "w": "é",
-              "de": 46,
-              "ate": 48
+              "de": 47,
+              "ate": 49
             },
             {
               "w": "um",
-              "de": 48,
+              "de": 49,
               "ate": 52
             },
             {
               "w": "cofre",
               "de": 52,
-              "ate": 61
+              "ate": 62
             },
             {
               "w": "onde",
-              "de": 61,
+              "de": 62,
               "ate": 68
             },
             {
@@ -3617,52 +3617,52 @@ export const ComposicaoPitch: React.FC = () => (
             {
               "w": "organiza,",
               "de": 75,
-              "ate": 97
+              "ate": 96
             },
             {
               "w": "em",
-              "de": 102,
-              "ate": 107
+              "de": 100,
+              "ate": 106
             },
             {
               "w": "vida,",
-              "de": 107,
-              "ate": 120
+              "de": 106,
+              "ate": 118
             },
             {
               "w": "tudo",
-              "de": 125,
-              "ate": 132
+              "de": 123,
+              "ate": 130
             },
             {
               "w": "o",
-              "de": 132,
-              "ate": 133
+              "de": 130,
+              "ate": 131
             },
             {
               "w": "que",
-              "de": 132,
-              "ate": 136
+              "de": 130,
+              "ate": 134
             },
             {
               "w": "tem",
-              "de": 136,
-              "ate": 141
+              "de": 134,
+              "ate": 138
             },
             {
               "w": "no",
-              "de": 141,
-              "ate": 143
+              "de": 138,
+              "ate": 141
             },
             {
               "w": "mundo",
-              "de": 143,
-              "ate": 154
+              "de": 141,
+              "ate": 151
             },
             {
               "w": "digital.",
-              "de": 154,
-              "ate": 171
+              "de": 151,
+              "ate": 166
             }
           ]
         },
@@ -3670,73 +3670,73 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L12",
           "cena": "s3",
           "fraseId": "s03_02",
-          "de": 189,
-          "ate": 359,
+          "de": 188,
+          "ate": 350,
           "palavras": [
             {
               "w": "Juntamos",
-              "de": 182,
-              "ate": 198
+              "de": 178,
+              "ate": 193
             },
             {
               "w": "três",
-              "de": 198,
-              "ate": 209
+              "de": 193,
+              "ate": 203
             },
             {
               "w": "coisas:",
-              "de": 209,
-              "ate": 224
+              "de": 203,
+              "ate": 218
             },
             {
               "w": "um",
-              "de": 233,
-              "ate": 236
+              "de": 226,
+              "ate": 229
             },
             {
               "w": "inventário",
-              "de": 236,
-              "ate": 254
+              "de": 229,
+              "ate": 246
             },
             {
               "w": "dos",
-              "de": 254,
-              "ate": 257
+              "de": 246,
+              "ate": 249
             },
             {
               "w": "seus",
-              "de": 257,
-              "ate": 261
+              "de": 249,
+              "ate": 253
             },
             {
               "w": "ativos,",
-              "de": 261,
-              "ate": 279
+              "de": 253,
+              "ate": 271
             },
             {
               "w": "um",
-              "de": 285,
-              "ate": 289
+              "de": 278,
+              "ate": 281
             },
             {
               "w": "cofre",
-              "de": 289,
-              "ate": 301
+              "de": 281,
+              "ate": 293
             },
             {
               "w": "de",
-              "de": 301,
-              "ate": 303
+              "de": 293,
+              "ate": 295
             },
             {
               "w": "acessos",
-              "de": 303,
-              "ate": 318
+              "de": 295,
+              "ate": 311
             },
             {
               "w": "criptografado,",
-              "de": 318,
-              "ate": 351
+              "de": 311,
+              "ate": 342
             }
           ]
         },
@@ -3744,53 +3744,53 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L13",
           "cena": "s3",
           "fraseId": "s03_03",
-          "de": 359,
-          "ate": 451,
+          "de": 350,
+          "ate": 443,
           "palavras": [
             {
               "w": "e",
-              "de": 363,
-              "ate": 366
+              "de": 354,
+              "ate": 357
             },
             {
               "w": "uma",
-              "de": 366,
-              "ate": 369
+              "de": 357,
+              "ate": 361
             },
             {
               "w": "liberação",
-              "de": 369,
-              "ate": 389
+              "de": 361,
+              "ate": 380
             },
             {
               "w": "que",
-              "de": 389,
-              "ate": 391
+              "de": 380,
+              "ate": 383
             },
             {
               "w": "só",
-              "de": 391,
-              "ate": 397
+              "de": 383,
+              "ate": 390
             },
             {
               "w": "vale",
-              "de": 397,
-              "ate": 407
+              "de": 390,
+              "ate": 399
             },
             {
               "w": "pelo",
-              "de": 407,
-              "ate": 412
+              "de": 399,
+              "ate": 405
             },
             {
               "w": "caminho",
-              "de": 412,
-              "ate": 421
+              "de": 405,
+              "ate": 414
             },
             {
               "w": "legal:",
-              "de": 421,
-              "ate": 434
+              "de": 413,
+              "ate": 426
             }
           ]
         },
@@ -3798,38 +3798,38 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L14",
           "cena": "s3",
           "fraseId": "s03_03",
-          "de": 451,
-          "ate": 523,
+          "de": 443,
+          "ate": 515,
           "palavras": [
             {
               "w": "inventário",
-              "de": 441,
-              "ate": 460
+              "de": 433,
+              "ate": 452
             },
             {
               "w": "em",
-              "de": 460,
-              "ate": 462
+              "de": 452,
+              "ate": 454
             },
             {
               "w": "cartório",
-              "de": 462,
-              "ate": 483
+              "de": 454,
+              "ate": 475
             },
             {
               "w": "ou",
-              "de": 483,
-              "ate": 488
+              "de": 475,
+              "ate": 480
             },
             {
               "w": "na",
-              "de": 488,
-              "ate": 492
+              "de": 480,
+              "ate": 483
             },
             {
               "w": "justiça.",
-              "de": 492,
-              "ate": 511
+              "de": 483,
+              "ate": 502
             }
           ]
         },
@@ -3837,78 +3837,78 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L15",
           "cena": "s4",
           "fraseId": "s04_01",
-          "de": 1,
-          "ate": 150,
+          "de": 2,
+          "ate": 153,
           "palavras": [
             {
               "w": "Em",
-              "de": 10,
-              "ate": 16
+              "de": 11,
+              "ate": 17
             },
             {
               "w": "vida,",
-              "de": 16,
-              "ate": 28
+              "de": 17,
+              "ate": 29
             },
             {
               "w": "o",
-              "de": 34,
-              "ate": 36
+              "de": 35,
+              "ate": 37
             },
             {
               "w": "titular",
-              "de": 36,
-              "ate": 52
+              "de": 37,
+              "ate": 53
             },
             {
               "w": "cadastra",
-              "de": 52,
-              "ate": 67
-            },
-            {
-              "w": "os",
-              "de": 67,
+              "de": 53,
               "ate": 68
             },
             {
+              "w": "os",
+              "de": 68,
+              "ate": 69
+            },
+            {
               "w": "ativos",
-              "de": 67,
-              "ate": 85
+              "de": 68,
+              "ate": 86
             },
             {
               "w": "e",
-              "de": 85,
-              "ate": 91
+              "de": 86,
+              "ate": 92
             },
             {
               "w": "escolhe",
-              "de": 91,
-              "ate": 104
-            },
-            {
-              "w": "o",
-              "de": 104,
+              "de": 92,
               "ate": 106
             },
             {
-              "w": "destino",
+              "w": "o",
               "de": 106,
-              "ate": 121
+              "ate": 107
+            },
+            {
+              "w": "destino",
+              "de": 107,
+              "ate": 122
             },
             {
               "w": "de",
-              "de": 121,
-              "ate": 125
+              "de": 122,
+              "ate": 126
             },
             {
               "w": "cada",
-              "de": 125,
-              "ate": 136
+              "de": 126,
+              "ate": 137
             },
             {
               "w": "um.",
-              "de": 136,
-              "ate": 143
+              "de": 137,
+              "ate": 144
             }
           ]
         },
@@ -3916,38 +3916,38 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L16",
           "cena": "s4",
           "fraseId": "s04_02",
-          "de": 150,
-          "ate": 233,
+          "de": 153,
+          "ate": 241,
           "palavras": [
             {
               "w": "No",
-              "de": 154,
-              "ate": 158
+              "de": 157,
+              "ate": 161
             },
             {
               "w": "falecimento,",
-              "de": 158,
-              "ate": 183
+              "de": 161,
+              "ate": 186
             },
             {
               "w": "o",
-              "de": 188,
-              "ate": 191
+              "de": 192,
+              "ate": 195
             },
             {
               "w": "cofre",
-              "de": 191,
-              "ate": 202
+              "de": 195,
+              "ate": 207
             },
             {
               "w": "é",
-              "de": 202,
-              "ate": 203
+              "de": 207,
+              "ate": 209
             },
             {
               "w": "congelado.",
-              "de": 203,
-              "ate": 225
+              "de": 208,
+              "ate": 232
             }
           ]
         },
@@ -3955,93 +3955,93 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L17",
           "cena": "s4",
           "fraseId": "s04_03",
-          "de": 233,
-          "ate": 415,
+          "de": 241,
+          "ate": 424,
           "palavras": [
             {
               "w": "Só",
-              "de": 237,
-              "ate": 243
+              "de": 245,
+              "ate": 251
             },
             {
               "w": "depois",
-              "de": 243,
-              "ate": 253
+              "de": 251,
+              "ate": 262
             },
             {
               "w": "do",
-              "de": 253,
-              "ate": 255
+              "de": 262,
+              "ate": 263
             },
             {
               "w": "inventário",
-              "de": 255,
-              "ate": 279
-            },
-            {
-              "w": "e",
-              "de": 279,
-              "ate": 281
-            },
-            {
-              "w": "de",
-              "de": 281,
-              "ate": 284
-            },
-            {
-              "w": "um",
-              "de": 284,
+              "de": 263,
               "ate": 287
             },
             {
-              "w": "prazo",
+              "w": "e",
               "de": 287,
-              "ate": 298
+              "ate": 289
+            },
+            {
+              "w": "de",
+              "de": 289,
+              "ate": 292
+            },
+            {
+              "w": "um",
+              "de": 292,
+              "ate": 295
+            },
+            {
+              "w": "prazo",
+              "de": 295,
+              "ate": 306
             },
             {
               "w": "para",
-              "de": 298,
-              "ate": 303
+              "de": 306,
+              "ate": 311
             },
             {
               "w": "contestação,",
-              "de": 303,
-              "ate": 330
+              "de": 311,
+              "ate": 338
             },
             {
               "w": "cada",
-              "de": 334,
-              "ate": 341
+              "de": 343,
+              "ate": 349
             },
             {
               "w": "herdeiro",
-              "de": 341,
-              "ate": 354
+              "de": 349,
+              "ate": 362
             },
             {
               "w": "recebe",
-              "de": 354,
-              "ate": 367
+              "de": 362,
+              "ate": 375
             },
             {
               "w": "apenas",
-              "de": 367,
-              "ate": 381
+              "de": 374,
+              "ate": 389
             },
             {
               "w": "a",
-              "de": 381,
-              "ate": 384
+              "de": 389,
+              "ate": 393
             },
             {
               "w": "sua",
-              "de": 384,
-              "ate": 390
+              "de": 393,
+              "ate": 399
             },
             {
               "w": "parte.",
-              "de": 390,
-              "ate": 405
+              "de": 399,
+              "ate": 414
             }
           ]
         },
@@ -4049,28 +4049,28 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L18",
           "cena": "s5",
           "fraseId": "s05_01",
-          "de": 6,
-          "ate": 55,
+          "de": 7,
+          "ate": 57,
           "palavras": [
             {
               "w": "Este",
-              "de": 12,
-              "ate": 22
-            },
-            {
-              "w": "é",
-              "de": 22,
+              "de": 13,
               "ate": 23
             },
             {
-              "w": "o",
+              "w": "é",
               "de": 23,
-              "ate": 25
+              "ate": 24
+            },
+            {
+              "w": "o",
+              "de": 24,
+              "ate": 27
             },
             {
               "w": "protótipo.",
-              "de": 25,
-              "ate": 48
+              "de": 26,
+              "ate": 49
             }
           ]
         },
@@ -4078,107 +4078,107 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L19",
           "cena": "s5",
           "fraseId": "s05_02",
-          "de": 55,
+          "de": 57,
           "ate": 222,
           "palavras": [
             {
               "w": "O",
-              "de": 59,
-              "ate": 61
+              "de": 61,
+              "ate": 63
             },
             {
               "w": "titular",
-              "de": 61,
-              "ate": 77
+              "de": 63,
+              "ate": 78
             },
             {
               "w": "entra",
-              "de": 77,
-              "ate": 84
+              "de": 78,
+              "ate": 86
             },
             {
               "w": "com",
-              "de": 84,
-              "ate": 88
-            },
-            {
-              "w": "a",
-              "de": 88,
+              "de": 86,
               "ate": 89
             },
             {
-              "w": "chave",
+              "w": "a",
               "de": 89,
-              "ate": 98
+              "ate": 90
+            },
+            {
+              "w": "chave",
+              "de": 90,
+              "ate": 100
             },
             {
               "w": "de",
-              "de": 98,
-              "ate": 101
+              "de": 100,
+              "ate": 102
             },
             {
               "w": "acesso",
-              "de": 101,
-              "ate": 113
+              "de": 102,
+              "ate": 115
             },
             {
               "w": "do",
-              "de": 113,
-              "ate": 116
+              "de": 115,
+              "ate": 117
             },
             {
               "w": "celular",
-              "de": 116,
-              "ate": 133
+              "de": 117,
+              "ate": 134
             },
             {
               "w": "e",
-              "de": 133,
-              "ate": 139
+              "de": 134,
+              "ate": 140
             },
             {
               "w": "vê",
-              "de": 139,
-              "ate": 145
+              "de": 140,
+              "ate": 146
             },
             {
               "w": "o",
-              "de": 145,
-              "ate": 147
+              "de": 146,
+              "ate": 148
             },
             {
               "w": "que",
-              "de": 147,
-              "ate": 150
+              "de": 148,
+              "ate": 152
             },
             {
               "w": "falta",
-              "de": 150,
-              "ate": 162
+              "de": 152,
+              "ate": 164
             },
             {
               "w": "para",
-              "de": 162,
-              "ate": 167
-            },
-            {
-              "w": "o",
-              "de": 167,
+              "de": 164,
               "ate": 168
             },
             {
+              "w": "o",
+              "de": 168,
+              "ate": 169
+            },
+            {
               "w": "plano",
-              "de": 167,
-              "ate": 175
+              "de": 169,
+              "ate": 176
             },
             {
               "w": "ficar",
-              "de": 175,
-              "ate": 183
+              "de": 176,
+              "ate": 184
             },
             {
               "w": "completo.",
-              "de": 183,
+              "de": 184,
               "ate": 200
             }
           ]
@@ -4188,7 +4188,7 @@ export const ComposicaoPitch: React.FC = () => (
           "cena": "s5",
           "fraseId": "s05_03",
           "de": 222,
-          "ate": 407,
+          "ate": 401,
           "palavras": [
             {
               "w": "No",
@@ -4208,47 +4208,47 @@ export const ComposicaoPitch: React.FC = () => (
             {
               "w": "ativo",
               "de": 250,
-              "ate": 264
+              "ate": 263
             },
             {
               "w": "(redes",
-              "de": 271,
-              "ate": 282
+              "de": 270,
+              "ate": 280
             },
             {
               "w": "sociais,",
-              "de": 282,
-              "ate": 300
+              "de": 280,
+              "ate": 298
             },
             {
               "w": "e-mails,",
-              "de": 306,
-              "ate": 324
+              "de": 303,
+              "ate": 321
             },
             {
               "w": "cripto,",
-              "de": 329,
-              "ate": 342
+              "de": 325,
+              "ate": 338
             },
             {
               "w": "assinaturas)",
-              "de": 347,
-              "ate": 371
+              "de": 343,
+              "ate": 366
             },
             {
               "w": "recebe",
-              "de": 377,
-              "ate": 388
+              "de": 372,
+              "ate": 383
             },
             {
               "w": "um",
-              "de": 388,
-              "ate": 389
+              "de": 383,
+              "ate": 384
             },
             {
               "w": "destino:",
-              "de": 389,
-              "ate": 405
+              "de": 384,
+              "ate": 400
             }
           ]
         },
@@ -4256,28 +4256,28 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L21",
           "cena": "s5",
           "fraseId": "s05_03",
-          "de": 407,
-          "ate": 492,
+          "de": 401,
+          "ate": 487,
           "palavras": [
             {
               "w": "pessoal,",
-              "de": 411,
-              "ate": 430
+              "de": 405,
+              "ate": 424
             },
             {
               "w": "patrimonial",
-              "de": 435,
-              "ate": 462
+              "de": 429,
+              "ate": 457
             },
             {
               "w": "ou",
-              "de": 462,
-              "ate": 468
+              "de": 457,
+              "ate": 462
             },
             {
               "w": "encerrar.",
-              "de": 468,
-              "ate": 484
+              "de": 462,
+              "ate": 479
             }
           ]
         },
@@ -4285,53 +4285,53 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L22",
           "cena": "s5",
           "fraseId": "s05_04",
-          "de": 492,
-          "ate": 594,
+          "de": 487,
+          "ate": 589,
           "palavras": [
             {
               "w": "Depois,",
-              "de": 496,
-              "ate": 512
+              "de": 491,
+              "ate": 507
             },
             {
               "w": "ele",
-              "de": 519,
-              "ate": 523
+              "de": 513,
+              "ate": 516
             },
             {
               "w": "escolhe",
-              "de": 523,
-              "ate": 533
+              "de": 516,
+              "ate": 527
             },
             {
               "w": "os",
-              "de": 533,
-              "ate": 534
+              "de": 527,
+              "ate": 528
             },
             {
               "w": "herdeiros",
-              "de": 534,
-              "ate": 551
+              "de": 527,
+              "ate": 544
             },
             {
               "w": "e",
-              "de": 551,
-              "ate": 554
+              "de": 544,
+              "ate": 547
             },
             {
               "w": "define",
-              "de": 554,
-              "ate": 565
+              "de": 547,
+              "ate": 558
             },
             {
               "w": "a",
-              "de": 565,
-              "ate": 566
+              "de": 558,
+              "ate": 559
             },
             {
               "w": "carência:",
-              "de": 566,
-              "ate": 581
+              "de": 559,
+              "ate": 574
             }
           ]
         },
@@ -4339,38 +4339,38 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L23",
           "cena": "s5",
           "fraseId": "s05_04",
-          "de": 594,
-          "ate": 687,
+          "de": 589,
+          "ate": 682,
           "palavras": [
             {
               "w": "quinze,",
-              "de": 588,
-              "ate": 602
+              "de": 581,
+              "ate": 595
             },
             {
               "w": "trinta,",
-              "de": 607,
-              "ate": 619
+              "de": 600,
+              "ate": 612
             },
             {
               "w": "sessenta",
-              "de": 626,
-              "ate": 646
+              "de": 620,
+              "ate": 640
             },
             {
               "w": "ou",
-              "de": 646,
-              "ate": 649
+              "de": 640,
+              "ate": 643
             },
             {
               "w": "noventa",
-              "de": 649,
-              "ate": 664
+              "de": 643,
+              "ate": 658
             },
             {
               "w": "dias.",
-              "de": 664,
-              "ate": 679
+              "de": 658,
+              "ate": 674
             }
           ]
         },
@@ -4378,78 +4378,78 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L24",
           "cena": "s5",
           "fraseId": "s05_05",
-          "de": 687,
-          "ate": 824,
+          "de": 682,
+          "ate": 815,
           "palavras": [
             {
               "w": "Quando",
-              "de": 691,
-              "ate": 696
+              "de": 686,
+              "ate": 691
             },
             {
               "w": "o",
-              "de": 696,
-              "ate": 697
+              "de": 691,
+              "ate": 692
             },
             {
               "w": "titular",
-              "de": 697,
-              "ate": 708
+              "de": 692,
+              "ate": 703
             },
             {
               "w": "falece,",
-              "de": 708,
-              "ate": 726
+              "de": 703,
+              "ate": 720
             },
             {
               "w": "o",
-              "de": 731,
-              "ate": 734
+              "de": 725,
+              "ate": 727
             },
             {
               "w": "herdeiro",
-              "de": 734,
-              "ate": 748
+              "de": 727,
+              "ate": 742
             },
             {
               "w": "abre",
-              "de": 748,
-              "ate": 756
+              "de": 742,
+              "ate": 749
             },
             {
               "w": "o",
-              "de": 756,
-              "ate": 757
+              "de": 749,
+              "ate": 750
             },
             {
               "w": "pedido",
-              "de": 757,
-              "ate": 769
+              "de": 750,
+              "ate": 763
             },
             {
               "w": "com",
-              "de": 769,
-              "ate": 772
+              "de": 763,
+              "ate": 765
             },
             {
               "w": "a",
-              "de": 772,
-              "ate": 774
+              "de": 765,
+              "ate": 767
             },
             {
               "w": "certidão",
-              "de": 774,
-              "ate": 792
+              "de": 767,
+              "ate": 784
             },
             {
               "w": "de",
-              "de": 792,
-              "ate": 796
+              "de": 784,
+              "ate": 788
             },
             {
               "w": "óbito,",
-              "de": 796,
-              "ate": 809
+              "de": 788,
+              "ate": 801
             }
           ]
         },
@@ -4457,63 +4457,63 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L25",
           "cena": "s5",
           "fraseId": "s05_05",
-          "de": 824,
-          "ate": 946,
+          "de": 815,
+          "ate": 936,
           "palavras": [
             {
               "w": "o",
-              "de": 814,
-              "ate": 816
+              "de": 805,
+              "ate": 807
             },
             {
               "w": "documento",
-              "de": 816,
-              "ate": 832
+              "de": 807,
+              "ate": 823
             },
             {
               "w": "do",
-              "de": 832,
-              "ate": 834
+              "de": 823,
+              "ate": 824
             },
             {
               "w": "inventário",
-              "de": 834,
-              "ate": 859
+              "de": 824,
+              "ate": 849
             },
             {
               "w": "e",
-              "de": 859,
-              "ate": 862
+              "de": 849,
+              "ate": 852
             },
             {
               "w": "uma",
-              "de": 862,
-              "ate": 866
+              "de": 852,
+              "ate": 856
             },
             {
               "w": "selfie",
-              "de": 866,
-              "ate": 881
+              "de": 856,
+              "ate": 871
             },
             {
               "w": "para",
-              "de": 881,
-              "ate": 887
+              "de": 871,
+              "ate": 877
             },
             {
               "w": "confirmar",
-              "de": 887,
-              "ate": 903
+              "de": 877,
+              "ate": 892
             },
             {
               "w": "a",
-              "de": 903,
-              "ate": 904
+              "de": 892,
+              "ate": 893
             },
             {
               "w": "identidade.",
-              "de": 904,
-              "ate": 925
+              "de": 893,
+              "ate": 914
             }
           ]
         },
@@ -4521,53 +4521,53 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L26",
           "cena": "s5",
           "fraseId": "s05_06",
-          "de": 946,
-          "ate": 1048,
+          "de": 936,
+          "ate": 1038,
           "palavras": [
             {
               "w": "A",
-              "de": 937,
-              "ate": 941
+              "de": 926,
+              "ate": 929
             },
             {
               "w": "equipe",
-              "de": 941,
-              "ate": 953
+              "de": 929,
+              "ate": 940
             },
             {
               "w": "valida,",
-              "de": 953,
-              "ate": 968
+              "de": 940,
+              "ate": 954
             },
             {
               "w": "todos",
-              "de": 975,
-              "ate": 984
+              "de": 961,
+              "ate": 970
             },
             {
               "w": "são",
-              "de": 984,
-              "ate": 989
+              "de": 970,
+              "ate": 974
             },
             {
               "w": "avisados",
-              "de": 989,
-              "ate": 1006
+              "de": 974,
+              "ate": 991
             },
             {
               "w": "e",
-              "de": 1006,
-              "ate": 1010
+              "de": 991,
+              "ate": 995
             },
             {
               "w": "podem",
-              "de": 1010,
-              "ate": 1020
+              "de": 995,
+              "ate": 1005
             },
             {
               "w": "contestar.",
-              "de": 1020,
-              "ate": 1040
+              "de": 1005,
+              "ate": 1023
             }
           ]
         },
@@ -4575,98 +4575,98 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L27",
           "cena": "s5",
           "fraseId": "s05_07",
-          "de": 1048,
-          "ate": 1240,
+          "de": 1038,
+          "ate": 1230,
           "palavras": [
             {
               "w": "Terminado",
-              "de": 1052,
-              "ate": 1066
+              "de": 1036,
+              "ate": 1050
             },
             {
               "w": "o",
-              "de": 1066,
-              "ate": 1068
+              "de": 1050,
+              "ate": 1051
             },
             {
               "w": "prazo,",
-              "de": 1068,
-              "ate": 1082
+              "de": 1051,
+              "ate": 1064
             },
             {
               "w": "cada",
-              "de": 1086,
-              "ate": 1093
+              "de": 1068,
+              "ate": 1076
             },
             {
               "w": "herdeiro",
-              "de": 1093,
-              "ate": 1106
+              "de": 1076,
+              "ate": 1090
             },
             {
               "w": "vê",
-              "de": 1106,
-              "ate": 1115
+              "de": 1090,
+              "ate": 1099
             },
             {
               "w": "só",
-              "de": 1115,
-              "ate": 1126
+              "de": 1099,
+              "ate": 1109
             },
             {
               "w": "o",
-              "de": 1126,
-              "ate": 1127
+              "de": 1109,
+              "ate": 1111
             },
             {
               "w": "que",
-              "de": 1127,
-              "ate": 1130
+              "de": 1111,
+              "ate": 1114
             },
             {
               "w": "foi",
-              "de": 1130,
-              "ate": 1135
+              "de": 1114,
+              "ate": 1119
             },
             {
               "w": "destinado",
-              "de": 1135,
-              "ate": 1152
+              "de": 1119,
+              "ate": 1136
             },
             {
               "w": "a",
-              "de": 1152,
-              "ate": 1155
+              "de": 1136,
+              "ate": 1140
             },
             {
               "w": "ele,",
-              "de": 1155,
-              "ate": 1165
+              "de": 1140,
+              "ate": 1150
             },
             {
               "w": "com",
-              "de": 1169,
-              "ate": 1173
+              "de": 1154,
+              "ate": 1158
             },
             {
               "w": "instruções",
-              "de": 1173,
-              "ate": 1190
+              "de": 1158,
+              "ate": 1175
             },
             {
               "w": "para",
-              "de": 1190,
-              "ate": 1196
+              "de": 1175,
+              "ate": 1181
             },
             {
               "w": "cada",
-              "de": 1196,
-              "ate": 1203
+              "de": 1181,
+              "ate": 1187
             },
             {
               "w": "ativo.",
-              "de": 1203,
-              "ate": 1217
+              "de": 1187,
+              "ate": 1201
             }
           ]
         },
@@ -4674,38 +4674,38 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L28",
           "cena": "s6",
           "fraseId": "s06_01",
-          "de": 6,
-          "ate": 81,
+          "de": 14,
+          "ate": 86,
           "palavras": [
             {
               "w": "Segurança",
-              "de": 10,
-              "ate": 32
-            },
-            {
-              "w": "é",
-              "de": 32,
+              "de": 11,
               "ate": 34
             },
             {
-              "w": "o",
+              "w": "é",
               "de": 34,
               "ate": 36
             },
             {
-              "w": "coração",
+              "w": "o",
               "de": 36,
-              "ate": 54
+              "ate": 38
+            },
+            {
+              "w": "coração",
+              "de": 38,
+              "ate": 56
             },
             {
               "w": "do",
-              "de": 54,
-              "ate": 57
+              "de": 56,
+              "ate": 60
             },
             {
               "w": "produto.",
-              "de": 57,
-              "ate": 74
+              "de": 60,
+              "ate": 77
             }
           ]
         },
@@ -4713,48 +4713,48 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L29",
           "cena": "s6",
           "fraseId": "s06_02",
-          "de": 81,
-          "ate": 173,
+          "de": 86,
+          "ate": 177,
           "palavras": [
             {
               "w": "O",
-              "de": 85,
-              "ate": 87
+              "de": 90,
+              "ate": 92
             },
             {
               "w": "conteúdo",
-              "de": 87,
-              "ate": 107
+              "de": 92,
+              "ate": 113
             },
             {
               "w": "é",
-              "de": 107,
-              "ate": 108
+              "de": 113,
+              "ate": 114
             },
             {
               "w": "cifrado",
-              "de": 108,
-              "ate": 124
+              "de": 114,
+              "ate": 133
             },
             {
               "w": "no",
-              "de": 124,
-              "ate": 126
+              "de": 133,
+              "ate": 135
             },
             {
               "w": "aparelho",
-              "de": 126,
-              "ate": 141
+              "de": 135,
+              "ate": 150
             },
             {
               "w": "do",
-              "de": 141,
-              "ate": 144
+              "de": 150,
+              "ate": 153
             },
             {
               "w": "titular.",
-              "de": 144,
-              "ate": 159
+              "de": 153,
+              "ate": 168
             }
           ]
         },
@@ -4762,83 +4762,83 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L30",
           "cena": "s6",
           "fraseId": "s06_03",
-          "de": 173,
-          "ate": 327,
+          "de": 177,
+          "ate": 339,
           "palavras": [
             {
               "w": "A",
-              "de": 171,
-              "ate": 174
+              "de": 181,
+              "ate": 184
             },
             {
               "w": "chave",
-              "de": 174,
-              "ate": 185
+              "de": 184,
+              "ate": 196
             },
             {
               "w": "de",
-              "de": 185,
-              "ate": 188
+              "de": 196,
+              "ate": 199
             },
             {
               "w": "sucessão",
-              "de": 188,
-              "ate": 206
+              "de": 199,
+              "ate": 217
             },
             {
               "w": "é",
-              "de": 206,
-              "ate": 208
+              "de": 217,
+              "ate": 218
             },
             {
               "w": "dividida",
-              "de": 208,
-              "ate": 221
+              "de": 218,
+              "ate": 231
             },
             {
               "w": "em",
-              "de": 221,
-              "ate": 224
+              "de": 231,
+              "ate": 235
             },
             {
               "w": "três",
-              "de": 224,
-              "ate": 234
+              "de": 234,
+              "ate": 245
             },
             {
               "w": "partes,",
-              "de": 234,
-              "ate": 249
+              "de": 245,
+              "ate": 262
             },
             {
               "w": "e",
-              "de": 256,
-              "ate": 258
-            },
-            {
-              "w": "duas",
-              "de": 258,
-              "ate": 268
-            },
-            {
-              "w": "são",
-              "de": 268,
+              "de": 269,
               "ate": 272
             },
             {
-              "w": "necessárias",
+              "w": "duas",
               "de": 272,
-              "ate": 292
+              "ate": 282
+            },
+            {
+              "w": "são",
+              "de": 282,
+              "ate": 286
+            },
+            {
+              "w": "necessárias",
+              "de": 286,
+              "ate": 305
             },
             {
               "w": "para",
-              "de": 292,
-              "ate": 297
+              "de": 305,
+              "ate": 310
             },
             {
               "w": "abri-la:",
-              "de": 297,
-              "ate": 307
+              "de": 310,
+              "ate": 322
             }
           ]
         },
@@ -4846,48 +4846,48 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L31",
           "cena": "s6",
           "fraseId": "s06_03",
-          "de": 327,
-          "ate": 406,
+          "de": 339,
+          "ate": 426,
           "palavras": [
             {
               "w": "nem",
-              "de": 317,
-              "ate": 322
-            },
-            {
-              "w": "a",
-              "de": 322,
-              "ate": 323
-            },
-            {
-              "w": "empresa",
-              "de": 323,
+              "de": 331,
               "ate": 337
             },
             {
-              "w": "consegue",
+              "w": "a",
               "de": 337,
-              "ate": 349
+              "ate": 338
             },
             {
-              "w": "abrir",
-              "de": 349,
-              "ate": 357
+              "w": "empresa",
+              "de": 337,
+              "ate": 354
             },
             {
-              "w": "o",
-              "de": 357,
-              "ate": 358
-            },
-            {
-              "w": "cofre",
-              "de": 358,
+              "w": "consegue",
+              "de": 354,
               "ate": 366
             },
             {
-              "w": "sozinha.",
+              "w": "abrir",
               "de": 366,
+              "ate": 374
+            },
+            {
+              "w": "o",
+              "de": 374,
+              "ate": 376
+            },
+            {
+              "w": "cofre",
+              "de": 376,
               "ate": 384
+            },
+            {
+              "w": "sozinha.",
+              "de": 384,
+              "ate": 403
             }
           ]
         },
@@ -4895,53 +4895,53 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L32",
           "cena": "s6",
           "fraseId": "s06_04",
-          "de": 406,
-          "ate": 517,
+          "de": 426,
+          "ate": 541,
           "palavras": [
             {
               "w": "Mudanças",
-              "de": 396,
-              "ate": 415
+              "de": 416,
+              "ate": 434
             },
             {
               "w": "críticas,",
-              "de": 415,
-              "ate": 433
+              "de": 434,
+              "ate": 453
             },
             {
               "w": "como",
-              "de": 437,
-              "ate": 443
+              "de": 457,
+              "ate": 464
             },
             {
               "w": "remover",
-              "de": 443,
-              "ate": 459
+              "de": 464,
+              "ate": 479
             },
             {
               "w": "um",
-              "de": 459,
-              "ate": 462
+              "de": 479,
+              "ate": 483
             },
             {
               "w": "herdeiro,",
-              "de": 462,
-              "ate": 476
+              "de": 483,
+              "ate": 498
             },
             {
               "w": "geram",
-              "de": 483,
-              "ate": 494
+              "de": 506,
+              "ate": 518
             },
             {
               "w": "um",
-              "de": 494,
-              "ate": 496
+              "de": 518,
+              "ate": 520
             },
             {
               "w": "alerta:",
-              "de": 496,
-              "ate": 511
+              "de": 520,
+              "ate": 536
             }
           ]
         },
@@ -4949,28 +4949,28 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L33",
           "cena": "s6",
           "fraseId": "s06_04",
-          "de": 517,
-          "ate": 591,
+          "de": 541,
+          "ate": 618,
           "palavras": [
             {
               "w": "Não",
-              "de": 521,
-              "ate": 527
+              "de": 545,
+              "ate": 552
             },
             {
               "w": "foi",
-              "de": 527,
-              "ate": 532
+              "de": 552,
+              "ate": 558
             },
             {
               "w": "você?",
-              "de": 532,
-              "ate": 546
+              "de": 557,
+              "ate": 570
             },
             {
               "w": "Desfazer.",
-              "de": 557,
-              "ate": 581
+              "de": 582,
+              "ate": 608
             }
           ]
         },
@@ -4978,63 +4978,63 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L34",
           "cena": "s7",
           "fraseId": "s07_01",
-          "de": 6,
-          "ate": 132,
+          "de": 7,
+          "ate": 137,
           "palavras": [
             {
               "w": "Gerenciadores",
-              "de": 10,
-              "ate": 34
-            },
-            {
-              "w": "de",
-              "de": 34,
+              "de": 11,
               "ate": 37
             },
             {
-              "w": "senha",
+              "w": "de",
               "de": 37,
-              "ate": 48
+              "ate": 40
+            },
+            {
+              "w": "senha",
+              "de": 40,
+              "ate": 52
             },
             {
               "w": "resolvem",
-              "de": 48,
-              "ate": 66
-            },
-            {
-              "w": "o",
-              "de": 66,
+              "de": 52,
               "ate": 69
             },
             {
-              "w": "dia",
+              "w": "o",
               "de": 69,
-              "ate": 76
+              "ate": 71
+            },
+            {
+              "w": "dia",
+              "de": 71,
+              "ate": 78
             },
             {
               "w": "a",
-              "de": 76,
-              "ate": 77
+              "de": 78,
+              "ate": 80
             },
             {
               "w": "dia,",
-              "de": 77,
-              "ate": 87
+              "de": 80,
+              "ate": 91
             },
             {
               "w": "não",
-              "de": 94,
-              "ate": 104
+              "de": 98,
+              "ate": 107
             },
             {
               "w": "a",
-              "de": 104,
-              "ate": 105
+              "de": 107,
+              "ate": 108
             },
             {
               "w": "sucessão.",
-              "de": 104,
-              "ate": 125
+              "de": 108,
+              "ate": 129
             }
           ]
         },
@@ -5042,78 +5042,78 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L35",
           "cena": "s7",
           "fraseId": "s07_02",
-          "de": 132,
-          "ate": 285,
+          "de": 137,
+          "ate": 291,
           "palavras": [
             {
               "w": "Os",
-              "de": 136,
-              "ate": 139
+              "de": 141,
+              "ate": 143
             },
             {
               "w": "contatos",
-              "de": 139,
-              "ate": 156
+              "de": 143,
+              "ate": 160
             },
             {
               "w": "de",
-              "de": 156,
-              "ate": 158
+              "de": 160,
+              "ate": 163
             },
             {
               "w": "legado",
-              "de": 158,
-              "ate": 169
+              "de": 163,
+              "ate": 175
             },
             {
               "w": "de",
-              "de": 169,
-              "ate": 173
+              "de": 175,
+              "ate": 178
             },
             {
               "w": "Google,",
-              "de": 173,
-              "ate": 188
+              "de": 178,
+              "ate": 192
             },
             {
               "w": "Apple",
-              "de": 193,
-              "ate": 209
-            },
-            {
-              "w": "e",
-              "de": 209,
+              "de": 197,
               "ate": 212
             },
             {
-              "w": "Meta",
+              "w": "e",
               "de": 212,
-              "ate": 223
+              "ate": 215
+            },
+            {
+              "w": "Meta",
+              "de": 215,
+              "ate": 225
             },
             {
               "w": "cobrem",
-              "de": 223,
-              "ate": 236
+              "de": 225,
+              "ate": 239
             },
             {
               "w": "só",
-              "de": 236,
-              "ate": 243
+              "de": 238,
+              "ate": 246
             },
             {
               "w": "a",
-              "de": 243,
-              "ate": 245
+              "de": 246,
+              "ate": 248
             },
             {
               "w": "própria",
-              "de": 245,
-              "ate": 257
+              "de": 248,
+              "ate": 261
             },
             {
               "w": "plataforma.",
-              "de": 257,
-              "ate": 277
+              "de": 261,
+              "ate": 282
             }
           ]
         },
@@ -5121,78 +5121,78 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L36",
           "cena": "s7",
           "fraseId": "s07_03",
-          "de": 285,
-          "ate": 440,
+          "de": 291,
+          "ate": 445,
           "palavras": [
             {
               "w": "A",
-              "de": 289,
-              "ate": 293
+              "de": 295,
+              "ate": 298
             },
             {
               "w": "Herança",
-              "de": 293,
-              "ate": 304
+              "de": 298,
+              "ate": 309
             },
             {
               "w": "Digital",
-              "de": 304,
-              "ate": 320
+              "de": 309,
+              "ate": 324
             },
             {
               "w": "reúne",
-              "de": 320,
-              "ate": 333
+              "de": 324,
+              "ate": 337
             },
             {
               "w": "tudo",
-              "de": 333,
-              "ate": 341
+              "de": 337,
+              "ate": 346
             },
             {
               "w": "em",
-              "de": 341,
-              "ate": 344
+              "de": 346,
+              "ate": 349
             },
             {
               "w": "um",
-              "de": 344,
-              "ate": 347
+              "de": 349,
+              "ate": 352
             },
             {
               "w": "só",
-              "de": 347,
-              "ate": 355
+              "de": 352,
+              "ate": 361
             },
             {
               "w": "lugar,",
-              "de": 355,
-              "ate": 367
+              "de": 361,
+              "ate": 373
             },
             {
               "w": "seguindo",
-              "de": 375,
-              "ate": 390
+              "de": 381,
+              "ate": 395
             },
             {
               "w": "o",
-              "de": 390,
-              "ate": 391
+              "de": 395,
+              "ate": 396
             },
             {
               "w": "rito",
-              "de": 391,
-              "ate": 401
+              "de": 396,
+              "ate": 406
             },
             {
               "w": "legal",
-              "de": 401,
-              "ate": 412
+              "de": 406,
+              "ate": 417
             },
             {
               "w": "brasileiro.",
-              "de": 412,
-              "ate": 430
+              "de": 417,
+              "ate": 435
             }
           ]
         },
@@ -5200,78 +5200,78 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L37",
           "cena": "s8",
           "fraseId": "s08_01",
-          "de": -5,
-          "ate": 147,
+          "de": -4,
+          "ate": 148,
           "palavras": [
             {
               "w": "A",
-              "de": 10,
-              "ate": 13
+              "de": 11,
+              "ate": 14
             },
             {
               "w": "receita",
-              "de": 13,
-              "ate": 32
+              "de": 14,
+              "ate": 33
             },
             {
               "w": "vem",
-              "de": 32,
+              "de": 33,
               "ate": 38
             },
             {
               "w": "da",
               "de": 38,
-              "ate": 41
+              "ate": 40
             },
             {
               "w": "assinatura",
-              "de": 41,
-              "ate": 58
+              "de": 40,
+              "ate": 57
             },
             {
               "w": "anual",
-              "de": 58,
-              "ate": 68
+              "de": 57,
+              "ate": 66
             },
             {
               "w": "do",
-              "de": 68,
-              "ate": 71
+              "de": 66,
+              "ate": 69
             },
             {
               "w": "titular",
-              "de": 71,
-              "ate": 88
+              "de": 69,
+              "ate": 85
             },
             {
               "w": "e",
-              "de": 88,
-              "ate": 92
+              "de": 85,
+              "ate": 89
             },
             {
               "w": "de",
-              "de": 92,
-              "ate": 95
+              "de": 89,
+              "ate": 91
             },
             {
               "w": "uma",
-              "de": 95,
-              "ate": 100
+              "de": 91,
+              "ate": 97
             },
             {
               "w": "taxa",
-              "de": 100,
-              "ate": 112
+              "de": 97,
+              "ate": 108
             },
             {
               "w": "na",
-              "de": 112,
-              "ate": 114
+              "de": 108,
+              "ate": 110
             },
             {
               "w": "liberação.",
-              "de": 114,
-              "ate": 135
+              "de": 110,
+              "ate": 130
             }
           ]
         },
@@ -5279,78 +5279,78 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L38",
           "cena": "s8",
           "fraseId": "s08_02",
-          "de": 147,
-          "ate": 340,
+          "de": 148,
+          "ate": 328,
           "palavras": [
             {
               "w": "Escritórios",
-              "de": 147,
-              "ate": 168
+              "de": 142,
+              "ate": 163
             },
             {
               "w": "de",
-              "de": 168,
-              "ate": 171
+              "de": 163,
+              "ate": 165
             },
             {
               "w": "advocacia,",
-              "de": 171,
-              "ate": 196
+              "de": 165,
+              "ate": 191
             },
             {
               "w": "cartórios,",
-              "de": 201,
-              "ate": 222
+              "de": 195,
+              "ate": 214
             },
             {
               "w": "bancos",
-              "de": 227,
-              "ate": 240
+              "de": 219,
+              "ate": 231
             },
             {
               "w": "e",
-              "de": 240,
-              "ate": 244
+              "de": 231,
+              "ate": 234
             },
             {
               "w": "seguradoras",
-              "de": 244,
-              "ate": 265
+              "de": 234,
+              "ate": 254
             },
             {
               "w": "são",
-              "de": 265,
-              "ate": 269
+              "de": 254,
+              "ate": 258
             },
             {
               "w": "parceiros",
-              "de": 269,
-              "ate": 283
+              "de": 258,
+              "ate": 272
             },
             {
               "w": "previstos",
-              "de": 283,
-              "ate": 303
+              "de": 272,
+              "ate": 291
             },
             {
               "w": "e",
-              "de": 303,
-              "ate": 306
+              "de": 291,
+              "ate": 295
             },
             {
               "w": "canais",
-              "de": 306,
-              "ate": 317
+              "de": 295,
+              "ate": 305
             },
             {
               "w": "de",
-              "de": 317,
-              "ate": 320
+              "de": 305,
+              "ate": 308
             },
             {
               "w": "venda.",
-              "de": 320,
-              "ate": 332
+              "de": 308,
+              "ate": 320
             }
           ]
         },
@@ -5358,53 +5358,53 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L39",
           "cena": "s8",
           "fraseId": "s08_03",
-          "de": 340,
-          "ate": 458,
+          "de": 328,
+          "ate": 443,
           "palavras": [
             {
               "w": "Os",
-              "de": 344,
-              "ate": 348
+              "de": 332,
+              "ate": 336
             },
             {
               "w": "valores",
-              "de": 348,
-              "ate": 364
+              "de": 336,
+              "ate": 352
             },
             {
               "w": "serão",
-              "de": 364,
-              "ate": 371
+              "de": 352,
+              "ate": 358
             },
             {
               "w": "definidos",
-              "de": 371,
-              "ate": 388
+              "de": 358,
+              "ate": 375
             },
             {
               "w": "depois",
-              "de": 388,
-              "ate": 399
+              "de": 375,
+              "ate": 386
             },
             {
               "w": "da",
-              "de": 399,
-              "ate": 403
+              "de": 386,
+              "ate": 389
             },
             {
               "w": "pesquisa",
-              "de": 403,
-              "ate": 421
+              "de": 389,
+              "ate": 406
             },
             {
               "w": "com",
-              "de": 421,
-              "ate": 428
+              "de": 406,
+              "ate": 412
             },
             {
               "w": "usuários.",
-              "de": 428,
-              "ate": 448
+              "de": 412,
+              "ate": 433
             }
           ]
         },
@@ -5412,78 +5412,78 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L40",
           "cena": "s9",
           "fraseId": "s09_01",
-          "de": 6,
-          "ate": 215,
+          "de": 7,
+          "ate": 220,
           "palavras": [
             {
               "w": "Somos",
-              "de": 10,
-              "ate": 21
+              "de": 11,
+              "ate": 22
             },
             {
               "w": "um",
-              "de": 21,
-              "ate": 25
+              "de": 22,
+              "ate": 26
             },
             {
               "w": "projeto",
-              "de": 25,
-              "ate": 38
+              "de": 26,
+              "ate": 39
             },
             {
               "w": "de",
-              "de": 38,
-              "ate": 40
+              "de": 39,
+              "ate": 41
             },
             {
               "w": "faculdade;",
-              "de": 40,
-              "ate": 62
+              "de": 41,
+              "ate": 63
             },
             {
               "w": "escritórios,",
-              "de": 68,
-              "ate": 91
+              "de": 70,
+              "ate": 92
             },
             {
               "w": "cartórios",
-              "de": 96,
-              "ate": 115
+              "de": 97,
+              "ate": 117
             },
             {
               "w": "e",
-              "de": 115,
-              "ate": 121
+              "de": 117,
+              "ate": 124
             },
             {
               "w": "verificação",
-              "de": 121,
-              "ate": 144
+              "de": 124,
+              "ate": 148
             },
             {
               "w": "de",
-              "de": 144,
-              "ate": 146
+              "de": 148,
+              "ate": 150
             },
             {
               "w": "identidade",
-              "de": 146,
-              "ate": 166
+              "de": 150,
+              "ate": 169
             },
             {
               "w": "são",
-              "de": 166,
-              "ate": 171
+              "de": 169,
+              "ate": 175
             },
             {
               "w": "parceiros",
-              "de": 171,
-              "ate": 185
+              "de": 175,
+              "ate": 189
             },
             {
               "w": "previstos.",
-              "de": 185,
-              "ate": 207
+              "de": 189,
+              "ate": 212
             }
           ]
         },
@@ -5491,78 +5491,78 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L41",
           "cena": "s9",
           "fraseId": "s09_02",
-          "de": 215,
-          "ate": 408,
+          "de": 220,
+          "ate": 409,
           "palavras": [
             {
               "w": "Próximos",
-              "de": 219,
-              "ate": 233
+              "de": 224,
+              "ate": 238
             },
             {
               "w": "passos:",
-              "de": 233,
-              "ate": 249
+              "de": 238,
+              "ate": 254
             },
             {
               "w": "validar",
-              "de": 257,
-              "ate": 271
-            },
-            {
-              "w": "com",
-              "de": 271,
+              "de": 261,
               "ate": 275
             },
             {
-              "w": "um",
+              "w": "com",
               "de": 275,
-              "ate": 277
+              "ate": 279
+            },
+            {
+              "w": "um",
+              "de": 279,
+              "ate": 280
             },
             {
               "w": "advogado",
-              "de": 277,
-              "ate": 295
-            },
-            {
-              "w": "de",
-              "de": 295,
+              "de": 280,
               "ate": 298
             },
             {
-              "w": "sucessões,",
+              "w": "de",
               "de": 298,
-              "ate": 321
+              "ate": 301
+            },
+            {
+              "w": "sucessões,",
+              "de": 301,
+              "ate": 322
             },
             {
               "w": "ouvir",
-              "de": 326,
-              "ate": 338
+              "de": 328,
+              "ate": 339
             },
             {
               "w": "usuários",
-              "de": 338,
+              "de": 339,
               "ate": 354
             },
             {
               "w": "e",
               "de": 354,
-              "ate": 358
+              "ate": 359
             },
             {
               "w": "construir",
-              "de": 358,
-              "ate": 375
+              "de": 359,
+              "ate": 376
             },
             {
               "w": "o",
-              "de": 375,
-              "ate": 378
+              "de": 376,
+              "ate": 379
             },
             {
               "w": "MVP.",
-              "de": 378,
-              "ate": 400
+              "de": 379,
+              "ate": 401
             }
           ]
         },
@@ -5570,53 +5570,53 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L42",
           "cena": "s9",
           "fraseId": "s09_03",
-          "de": 408,
-          "ate": 576,
+          "de": 409,
+          "ate": 597,
           "palavras": [
             {
               "w": "Herança",
-              "de": 412,
-              "ate": 425
+              "de": 413,
+              "ate": 428
             },
             {
               "w": "Digital:",
-              "de": 425,
-              "ate": 442
+              "de": 428,
+              "ate": 447
             },
             {
               "w": "seus",
-              "de": 449,
-              "ate": 458
+              "de": 463,
+              "ate": 472
             },
             {
               "w": "dados,",
-              "de": 458,
-              "ate": 475
+              "de": 472,
+              "ate": 490
             },
             {
               "w": "sua",
-              "de": 480,
-              "ate": 486
+              "de": 495,
+              "ate": 502
             },
             {
               "w": "história,",
-              "de": 486,
-              "ate": 501
+              "de": 502,
+              "ate": 516
             },
             {
               "w": "seu",
-              "de": 507,
-              "ate": 515
-            },
-            {
-              "w": "futuro.",
-              "de": 515,
+              "de": 523,
               "ate": 532
             },
             {
+              "w": "futuro.",
+              "de": 532,
+              "ate": 551
+            },
+            {
               "w": "Obrigado!",
-              "de": 542,
-              "ate": 566
+              "de": 561,
+              "ate": 587
             }
           ]
         }
@@ -5639,238 +5639,238 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x003",
           "cena": "s1",
-          "frame": 20,
+          "frame": 22,
           "som": "thunk",
           "ganhoDb": -19
         },
         {
           "id": "x004",
           "cena": "s1",
-          "frame": 28,
+          "frame": 32,
           "som": "thunk",
           "ganhoDb": -19
         },
         {
           "id": "x005",
           "cena": "s1",
-          "frame": 54,
+          "frame": 68,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x006",
           "cena": "s1",
-          "frame": 80,
+          "frame": 94,
           "som": "pop",
           "ganhoDb": -13
         },
         {
           "id": "x007",
           "cena": "s1",
-          "frame": 81,
+          "frame": 95,
           "som": "impact_low",
           "ganhoDb": -17
         },
         {
           "id": "x008",
           "cena": "s1",
-          "frame": 108,
+          "frame": 125,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x009",
           "cena": "s1",
-          "frame": 119,
+          "frame": 136,
           "som": "pop",
           "ganhoDb": -13
         },
         {
           "id": "x010",
           "cena": "s1",
-          "frame": 120,
+          "frame": 137,
           "som": "impact_low",
           "ganhoDb": -17
         },
         {
           "id": "x011",
           "cena": "s1",
-          "frame": 147,
+          "frame": 165,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x012",
           "cena": "s1",
-          "frame": 162,
+          "frame": 178,
           "som": "pop",
           "ganhoDb": -13
         },
         {
           "id": "x013",
           "cena": "s1",
-          "frame": 163,
+          "frame": 179,
           "som": "impact_low",
           "ganhoDb": -17
         },
         {
           "id": "x014",
           "cena": "s1",
-          "frame": 175,
+          "frame": 191,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x015",
           "cena": "s1",
-          "frame": 176,
+          "frame": 192,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
           "id": "x016",
           "cena": "s1",
-          "frame": 178,
+          "frame": 194,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x017",
           "cena": "s1",
-          "frame": 178,
+          "frame": 194,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x018",
           "cena": "s1",
-          "frame": 181,
+          "frame": 197,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x019",
           "cena": "s1",
-          "frame": 184,
+          "frame": 200,
           "som": "pop",
           "ganhoDb": -20
         },
         {
           "id": "x020",
           "cena": "s1",
-          "frame": 186,
+          "frame": 202,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x021",
           "cena": "s1",
-          "frame": 194,
+          "frame": 210,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x022",
           "cena": "s1",
-          "frame": 202,
+          "frame": 218,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x023",
           "cena": "s1",
-          "frame": 210,
+          "frame": 226,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x024",
           "cena": "s1",
-          "frame": 218,
+          "frame": 234,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x025",
           "cena": "s1",
-          "frame": 226,
+          "frame": 242,
           "som": "thunk",
           "ganhoDb": -13
         },
         {
           "id": "x026",
           "cena": "s1",
-          "frame": 230,
+          "frame": 251,
           "som": "glitch_zap",
           "ganhoDb": -14
         },
         {
           "id": "x027",
           "cena": "s1",
-          "frame": 234,
+          "frame": 255,
           "som": "riser",
           "ganhoDb": -17
         },
         {
           "id": "x028",
           "cena": "s1",
-          "frame": 244,
+          "frame": 265,
           "som": "impact_low",
           "ganhoDb": -9
         },
         {
           "id": "x029",
           "cena": "s1",
-          "frame": 244,
+          "frame": 265,
           "som": "stinger_logo",
           "ganhoDb": -12
         },
         {
           "id": "x030",
           "cena": "s1",
-          "frame": 273,
+          "frame": 293,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x031",
           "cena": "s1",
-          "frame": 321,
+          "frame": 341,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x032",
           "cena": "s1",
-          "frame": 324,
+          "frame": 344,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x033",
           "cena": "s1",
-          "frame": 327,
+          "frame": 347,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x034",
           "cena": "s1",
-          "frame": 330,
+          "frame": 350,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x035",
           "cena": "s1",
-          "frame": 333,
+          "frame": 353,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x036",
           "cena": "s1",
-          "frame": 336,
+          "frame": 356,
           "som": "type",
           "ganhoDb": -22
         },
@@ -5884,224 +5884,224 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x038",
           "cena": "s2",
-          "frame": 42,
+          "frame": 43,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x039",
           "cena": "s2",
-          "frame": 60,
+          "frame": 62,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x040",
           "cena": "s2",
-          "frame": 92,
+          "frame": 95,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x041",
           "cena": "s2",
-          "frame": 125,
+          "frame": 131,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x042",
           "cena": "s2",
-          "frame": 157,
+          "frame": 165,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x043",
           "cena": "s2",
-          "frame": 192,
+          "frame": 203,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x044",
           "cena": "s2",
-          "frame": 204,
+          "frame": 215,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x045",
           "cena": "s2",
-          "frame": 229,
+          "frame": 242,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x046",
           "cena": "s2",
-          "frame": 296,
+          "frame": 310,
           "som": "impact_low",
           "ganhoDb": -14.9
         },
         {
           "id": "x047",
           "cena": "s2",
-          "frame": 302,
+          "frame": 316,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
           "id": "x048",
           "cena": "s2",
-          "frame": 316,
+          "frame": 329,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x049",
           "cena": "s2",
-          "frame": 320,
+          "frame": 333,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x050",
           "cena": "s2",
-          "frame": 323,
+          "frame": 336,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x051",
           "cena": "s2",
-          "frame": 326,
+          "frame": 339,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x052",
           "cena": "s2",
-          "frame": 329,
+          "frame": 342,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x053",
           "cena": "s2",
-          "frame": 332,
+          "frame": 345,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x054",
           "cena": "s2",
-          "frame": 334,
+          "frame": 347,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x055",
           "cena": "s2",
-          "frame": 338,
+          "frame": 351,
           "som": "impact_low",
           "ganhoDb": -14
         },
         {
           "id": "x056",
           "cena": "s2",
-          "frame": 354,
+          "frame": 367,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x057",
           "cena": "s2",
-          "frame": 399,
+          "frame": 413,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x058",
           "cena": "s2",
-          "frame": 402,
+          "frame": 417,
           "som": "impact_low",
           "ganhoDb": -11
         },
         {
           "id": "x059",
           "cena": "s2",
-          "frame": 455,
+          "frame": 471,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x060",
           "cena": "s2",
-          "frame": 481,
+          "frame": 497,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x061",
           "cena": "s2",
-          "frame": 489,
+          "frame": 505,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x062",
           "cena": "s2",
-          "frame": 498,
+          "frame": 514,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x063",
           "cena": "s2",
-          "frame": 507,
+          "frame": 523,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x064",
           "cena": "s2",
-          "frame": 516,
+          "frame": 532,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x065",
           "cena": "s2",
-          "frame": 525,
+          "frame": 541,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x066",
           "cena": "s2",
-          "frame": 533,
-          "som": "pop",
-          "ganhoDb": -17
-        },
-        {
-          "id": "x067",
-          "cena": "s2",
-          "frame": 534,
+          "frame": 550,
           "som": "tick",
           "ganhoDb": -21
         },
         {
+          "id": "x067",
+          "cena": "s2",
+          "frame": 551,
+          "som": "pop",
+          "ganhoDb": -17
+        },
+        {
           "id": "x068",
           "cena": "s2",
-          "frame": 575,
+          "frame": 593,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
           "id": "x069",
           "cena": "s2",
-          "frame": 614,
+          "frame": 630,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
@@ -6115,301 +6115,301 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x071",
           "cena": "s3",
-          "frame": 122,
+          "frame": 120,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
           "id": "x072",
           "cena": "s3",
-          "frame": 140,
+          "frame": 138,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
           "id": "x073",
           "cena": "s3",
-          "frame": 195,
+          "frame": 190,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x074",
           "cena": "s3",
-          "frame": 204,
+          "frame": 199,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x075",
           "cena": "s3",
-          "frame": 213,
+          "frame": 208,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x076",
           "cena": "s3",
-          "frame": 222,
+          "frame": 217,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x077",
           "cena": "s3",
-          "frame": 230,
+          "frame": 223,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x078",
           "cena": "s3",
-          "frame": 234,
+          "frame": 227,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x079",
           "cena": "s3",
-          "frame": 283,
+          "frame": 275,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x080",
           "cena": "s3",
-          "frame": 287,
+          "frame": 279,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x081",
           "cena": "s3",
-          "frame": 315,
+          "frame": 308,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
           "id": "x082",
           "cena": "s3",
-          "frame": 333,
+          "frame": 326,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
           "id": "x083",
           "cena": "s3",
-          "frame": 363,
+          "frame": 355,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x084",
           "cena": "s3",
-          "frame": 367,
+          "frame": 359,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x085",
           "cena": "s3",
-          "frame": 418,
+          "frame": 410,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x086",
           "cena": "s3",
-          "frame": 495,
+          "frame": 486,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
           "id": "x087",
           "cena": "s3",
-          "frame": 505,
+          "frame": 496,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x088",
           "cena": "s3",
-          "frame": 511,
+          "frame": 502,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x089",
           "cena": "s3",
-          "frame": 517,
+          "frame": 508,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x090",
           "cena": "s3",
-          "frame": 542,
+          "frame": 526,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x091",
           "cena": "s4",
-          "frame": 19,
+          "frame": 20,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x092",
           "cena": "s4",
-          "frame": 27,
+          "frame": 28,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x093",
           "cena": "s4",
-          "frame": 35,
+          "frame": 36,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x094",
           "cena": "s4",
-          "frame": 103,
+          "frame": 104,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x095",
           "cena": "s4",
-          "frame": 109,
+          "frame": 110,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x096",
           "cena": "s4",
-          "frame": 115,
+          "frame": 116,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x097",
           "cena": "s4",
-          "frame": 146,
+          "frame": 148,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x098",
           "cena": "s4",
-          "frame": 159,
+          "frame": 162,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x099",
           "cena": "s4",
-          "frame": 200,
+          "frame": 205,
           "som": "impact_low",
           "ganhoDb": -11
         },
         {
           "id": "x100",
           "cena": "s4",
-          "frame": 202,
+          "frame": 207,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x101",
           "cena": "s4",
-          "frame": 229,
+          "frame": 236,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x102",
           "cena": "s4",
-          "frame": 252,
+          "frame": 260,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x103",
           "cena": "s4",
-          "frame": 266,
+          "frame": 274,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x104",
           "cena": "s4",
-          "frame": 284,
+          "frame": 292,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x105",
           "cena": "s4",
-          "frame": 290,
+          "frame": 298,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x106",
           "cena": "s4",
-          "frame": 296,
+          "frame": 304,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x107",
           "cena": "s4",
-          "frame": 302,
+          "frame": 310,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x108",
           "cena": "s4",
-          "frame": 310,
+          "frame": 318,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x109",
           "cena": "s4",
-          "frame": 331,
+          "frame": 340,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
           "id": "x110",
           "cena": "s4",
-          "frame": 338,
+          "frame": 346,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x111",
           "cena": "s4",
-          "frame": 346,
+          "frame": 354,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x112",
           "cena": "s4",
-          "frame": 354,
+          "frame": 362,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x113",
           "cena": "s4",
-          "frame": 387,
+          "frame": 396,
           "som": "chime_ok",
           "ganhoDb": -16
         },
@@ -6423,140 +6423,140 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x115",
           "cena": "s5",
-          "frame": 10,
+          "frame": 11,
           "som": "impact_low",
           "ganhoDb": -14
         },
         {
           "id": "x116",
           "cena": "s5",
-          "frame": 45,
+          "frame": 47,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
           "id": "x117",
           "cena": "s5",
-          "frame": 92,
+          "frame": 93,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x118",
           "cena": "s5",
-          "frame": 94,
+          "frame": 95,
           "som": "ping",
           "ganhoDb": -17
         },
         {
           "id": "x119",
           "cena": "s5",
-          "frame": 135,
+          "frame": 136,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x120",
           "cena": "s5",
-          "frame": 147,
+          "frame": 149,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x121",
           "cena": "s5",
-          "frame": 150,
+          "frame": 152,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x122",
           "cena": "s5",
-          "frame": 153,
+          "frame": 155,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x123",
           "cena": "s5",
-          "frame": 156,
+          "frame": 158,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x124",
           "cena": "s5",
-          "frame": 159,
+          "frame": 161,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x125",
           "cena": "s5",
-          "frame": 162,
+          "frame": 164,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x126",
           "cena": "s5",
-          "frame": 165,
+          "frame": 167,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x127",
           "cena": "s5",
-          "frame": 168,
+          "frame": 170,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x128",
           "cena": "s5",
-          "frame": 173,
+          "frame": 175,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x129",
           "cena": "s5",
-          "frame": 176,
+          "frame": 178,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x130",
           "cena": "s5",
-          "frame": 179,
+          "frame": 181,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x131",
           "cena": "s5",
-          "frame": 182,
+          "frame": 184,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x132",
           "cena": "s5",
-          "frame": 185,
+          "frame": 187,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x133",
           "cena": "s5",
-          "frame": 194,
+          "frame": 195,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x134",
           "cena": "s5",
-          "frame": 206,
+          "frame": 205,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
@@ -6570,504 +6570,504 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x136",
           "cena": "s5",
-          "frame": 268,
+          "frame": 267,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x137",
           "cena": "s5",
-          "frame": 303,
+          "frame": 300,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x138",
           "cena": "s5",
-          "frame": 326,
+          "frame": 322,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x139",
           "cena": "s5",
-          "frame": 344,
+          "frame": 340,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x140",
           "cena": "s5",
-          "frame": 383,
+          "frame": 378,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x141",
           "cena": "s5",
-          "frame": 408,
+          "frame": 402,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x142",
           "cena": "s5",
-          "frame": 432,
+          "frame": 426,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x143",
           "cena": "s5",
-          "frame": 465,
+          "frame": 459,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x144",
           "cena": "s5",
-          "frame": 490,
+          "frame": 484,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x145",
           "cena": "s5",
-          "frame": 531,
+          "frame": 524,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x146",
           "cena": "s5",
-          "frame": 537,
+          "frame": 530,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x147",
           "cena": "s5",
-          "frame": 543,
+          "frame": 536,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x148",
           "cena": "s5",
-          "frame": 560,
+          "frame": 553,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x149",
           "cena": "s5",
-          "frame": 585,
+          "frame": 578,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x150",
           "cena": "s5",
-          "frame": 604,
+          "frame": 597,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x151",
           "cena": "s5",
-          "frame": 623,
+          "frame": 617,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x152",
           "cena": "s5",
-          "frame": 646,
+          "frame": 640,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x153",
           "cena": "s5",
-          "frame": 664,
+          "frame": 658,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
           "id": "x154",
           "cena": "s5",
-          "frame": 685,
+          "frame": 679,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x155",
           "cena": "s5",
-          "frame": 771,
+          "frame": 764,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x156",
           "cena": "s5",
-          "frame": 813,
+          "frame": 804,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x157",
           "cena": "s5",
-          "frame": 875,
+          "frame": 865,
           "som": "shutter",
           "ganhoDb": -15
         },
         {
           "id": "x158",
           "cena": "s5",
-          "frame": 901,
+          "frame": 890,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x159",
           "cena": "s5",
-          "frame": 931,
+          "frame": 919,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x160",
           "cena": "s5",
-          "frame": 950,
+          "frame": 937,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x161",
           "cena": "s5",
-          "frame": 986,
+          "frame": 971,
           "som": "ping",
           "ganhoDb": -17
         },
         {
           "id": "x162",
           "cena": "s5",
-          "frame": 994,
+          "frame": 979,
           "som": "ping",
           "ganhoDb": -17
         },
         {
           "id": "x163",
           "cena": "s5",
-          "frame": 1002,
+          "frame": 987,
           "som": "ping",
           "ganhoDb": -17
         },
         {
           "id": "x164",
           "cena": "s5",
-          "frame": 1016,
+          "frame": 1001,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x165",
           "cena": "s5",
-          "frame": 1022,
+          "frame": 1007,
           "som": "impact_low",
           "ganhoDb": -11
         },
         {
           "id": "x166",
           "cena": "s5",
-          "frame": 1046,
+          "frame": 1029,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x167",
           "cena": "s5",
-          "frame": 1056,
+          "frame": 1039,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
           "id": "x168",
           "cena": "s5",
-          "frame": 1116,
+          "frame": 1100,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
           "id": "x169",
           "cena": "s5",
-          "frame": 1150,
+          "frame": 1135,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x170",
           "cena": "s5",
-          "frame": 1170,
+          "frame": 1155,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x171",
           "cena": "s5",
-          "frame": 1238,
+          "frame": 1214,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x172",
           "cena": "s6",
-          "frame": 33,
+          "frame": 35,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x173",
           "cena": "s6",
-          "frame": 47,
+          "frame": 49,
           "som": "thunk",
           "ganhoDb": -18.4
         },
         {
           "id": "x174",
           "cena": "s6",
-          "frame": 105,
+          "frame": 111,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
           "id": "x175",
           "cena": "s6",
-          "frame": 123,
+          "frame": 132,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x176",
           "cena": "s6",
-          "frame": 141,
+          "frame": 150,
           "som": "tick",
           "ganhoDb": -21
         },
         {
           "id": "x177",
           "cena": "s6",
-          "frame": 221,
+          "frame": 231,
           "som": "riser",
           "ganhoDb": -17
         },
         {
           "id": "x178",
           "cena": "s6",
-          "frame": 221,
+          "frame": 231,
           "som": "impact_low",
           "ganhoDb": -11
         },
         {
           "id": "x179",
           "cena": "s6",
-          "frame": 231,
+          "frame": 242,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x180",
           "cena": "s6",
-          "frame": 237,
+          "frame": 248,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x181",
           "cena": "s6",
-          "frame": 243,
+          "frame": 254,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x182",
           "cena": "s6",
-          "frame": 265,
+          "frame": 279,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
           "id": "x183",
           "cena": "s6",
-          "frame": 294,
+          "frame": 307,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x184",
           "cena": "s6",
-          "frame": 363,
+          "frame": 381,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
           "id": "x185",
           "cena": "s6",
-          "frame": 388,
+          "frame": 407,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x186",
           "cena": "s6",
-          "frame": 446,
+          "frame": 467,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x187",
           "cena": "s6",
-          "frame": 493,
+          "frame": 517,
           "som": "ping",
           "ganhoDb": -17
         },
         {
           "id": "x188",
           "cena": "s6",
-          "frame": 554,
+          "frame": 579,
           "som": "rewind",
           "ganhoDb": -15
         },
         {
           "id": "x189",
           "cena": "s6",
-          "frame": 578,
+          "frame": 603,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x190",
           "cena": "s6",
-          "frame": 606,
+          "frame": 630,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x191",
           "cena": "s7",
-          "frame": 7,
+          "frame": 8,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x192",
           "cena": "s7",
-          "frame": 66,
+          "frame": 68,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
           "id": "x193",
           "cena": "s7",
-          "frame": 72,
+          "frame": 74,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
           "id": "x194",
           "cena": "s7",
-          "frame": 78,
+          "frame": 80,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
           "id": "x195",
           "cena": "s7",
-          "frame": 84,
+          "frame": 86,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
           "id": "x196",
           "cena": "s7",
-          "frame": 136,
+          "frame": 140,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x197",
           "cena": "s7",
-          "frame": 155,
+          "frame": 160,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
           "id": "x198",
           "cena": "s7",
-          "frame": 161,
+          "frame": 166,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
           "id": "x199",
           "cena": "s7",
-          "frame": 167,
+          "frame": 172,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
           "id": "x200",
           "cena": "s7",
-          "frame": 173,
+          "frame": 178,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
           "id": "x201",
           "cena": "s7",
-          "frame": 290,
+          "frame": 295,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x202",
           "cena": "s7",
-          "frame": 317,
+          "frame": 321,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x203",
           "cena": "s7",
-          "frame": 324,
+          "frame": 328,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x204",
           "cena": "s7",
-          "frame": 330,
+          "frame": 334,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x205",
           "cena": "s7",
-          "frame": 331,
+          "frame": 335,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x206",
           "cena": "s7",
-          "frame": 338,
+          "frame": 342,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x207",
           "cena": "s7",
-          "frame": 352,
+          "frame": 358,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
@@ -7088,301 +7088,301 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x210",
           "cena": "s8",
-          "frame": 35,
+          "frame": 34,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x211",
           "cena": "s8",
-          "frame": 45,
+          "frame": 44,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x212",
           "cena": "s8",
-          "frame": 94,
+          "frame": 91,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x213",
           "cena": "s8",
-          "frame": 104,
+          "frame": 101,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x214",
           "cena": "s8",
-          "frame": 141,
+          "frame": 136,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x215",
           "cena": "s8",
-          "frame": 151,
+          "frame": 146,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x216",
           "cena": "s8",
-          "frame": 195,
+          "frame": 189,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x217",
           "cena": "s8",
-          "frame": 205,
+          "frame": 199,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x218",
           "cena": "s8",
-          "frame": 221,
+          "frame": 213,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x219",
           "cena": "s8",
-          "frame": 231,
+          "frame": 223,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x220",
           "cena": "s8",
-          "frame": 280,
+          "frame": 269,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x221",
           "cena": "s8",
-          "frame": 285,
+          "frame": 274,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x222",
           "cena": "s8",
-          "frame": 345,
+          "frame": 333,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x223",
           "cena": "s8",
-          "frame": 348,
+          "frame": 336,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x224",
           "cena": "s8",
-          "frame": 351,
+          "frame": 339,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x225",
           "cena": "s8",
-          "frame": 354,
+          "frame": 342,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x226",
           "cena": "s8",
-          "frame": 357,
+          "frame": 345,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x227",
           "cena": "s8",
-          "frame": 360,
+          "frame": 348,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x228",
           "cena": "s8",
-          "frame": 363,
+          "frame": 351,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x229",
           "cena": "s8",
-          "frame": 366,
+          "frame": 354,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x230",
           "cena": "s8",
-          "frame": 478,
+          "frame": 454,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x231",
           "cena": "s9",
-          "frame": 7,
+          "frame": 8,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x232",
           "cena": "s9",
-          "frame": 13,
+          "frame": 14,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x233",
           "cena": "s9",
-          "frame": 14,
+          "frame": 15,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x234",
           "cena": "s9",
-          "frame": 16,
+          "frame": 17,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x235",
           "cena": "s9",
-          "frame": 19,
+          "frame": 20,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x236",
           "cena": "s9",
-          "frame": 21,
+          "frame": 22,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x237",
           "cena": "s9",
-          "frame": 22,
+          "frame": 23,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x238",
           "cena": "s9",
-          "frame": 25,
+          "frame": 26,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x239",
           "cena": "s9",
-          "frame": 28,
+          "frame": 29,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x240",
           "cena": "s9",
-          "frame": 31,
+          "frame": 32,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x241",
           "cena": "s9",
-          "frame": 34,
+          "frame": 35,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x242",
           "cena": "s9",
-          "frame": 37,
+          "frame": 38,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x243",
           "cena": "s9",
-          "frame": 65,
+          "frame": 67,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x244",
           "cena": "s9",
-          "frame": 93,
+          "frame": 94,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x245",
           "cena": "s9",
-          "frame": 118,
+          "frame": 121,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x246",
           "cena": "s9",
-          "frame": 182,
+          "frame": 186,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x247",
           "cena": "s9",
-          "frame": 186,
+          "frame": 190,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x248",
           "cena": "s9",
-          "frame": 190,
+          "frame": 194,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
           "id": "x249",
           "cena": "s9",
-          "frame": 211,
+          "frame": 215,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x250",
           "cena": "s9",
-          "frame": 260,
+          "frame": 264,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x251",
           "cena": "s9",
-          "frame": 329,
+          "frame": 331,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
           "id": "x252",
           "cena": "s9",
-          "frame": 361,
+          "frame": 362,
           "som": "chime_ok",
           "ganhoDb": -16
         },
@@ -7410,7 +7410,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x256",
           "cena": "s9",
-          "frame": 539,
+          "frame": 558,
           "som": "impact_low",
           "ganhoDb": -14
         }
