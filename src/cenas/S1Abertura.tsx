@@ -3,8 +3,10 @@
 //   gancho  "QUANDO VOCÊ MORRER…" gigante, palavra por palavra com slam, junto com a voz
 //   3 perguntas, uma por fala: texto grande + ícone ENORME que estoura (pop, whoosh, soco de zoom,
 //           fundo pisca preto → verde-petróleo → preto)
-//   clímax  7 ícones em órbita, um cadeado bate em cada um (1 a cada meia batida), riser, glitch, tremida
-//   blackout de 6 q em silêncio → logo real + stinger, varredura de luz, partículas → título, chip, slogan → whip-pan
+//   clímax  13 ícones em órbita, cadeados batendo em sequência, riser, glitch, tremida
+//   implosão: a órbita é sugada para o centro e vira um cadeado grande → flash → logo real (que tem cadeado) + stinger,
+//           varredura de luz, partículas → título, chip, slogan → whip-pan
+//   (o blackout de 6 q em silêncio da revisão #1 saiu: no vídeo parecia que a imagem e o som tinham caído)
 // Textos e fundos: project.json → cenas[s1] (editáveis no Estúdio de Revisão). *palavra* = destaque.
 import React from "react";
 import { AbsoluteFill, Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "remotion";
@@ -40,6 +42,7 @@ export const PADRAO_S1 = {
 const LOGO_ESCURO = "brand/logo-simbolo-menta-fundo-escuro.png";
 const MEIA_BATIDA = 8; // 16 q por batida (112,5 BPM, a trilha) — ver README "Decisões"
 const TRANSICAO = 6; // quadros da passagem pergunta → órbita
+const IMPLOSAO = 12; // quadros da órbita sendo sugada até virar o cadeado do logo
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 const PERGUNTAS = [
@@ -73,12 +76,12 @@ const T = () => {
     // a pergunta entra quando a 1ª palavra dela bate (a anterior fica até lá: nenhum quadro vazio)
     return { ...p, ini: tempos[0], tempos, estouro: tempos[tempos.length - 1] - 1 };
   });
-  // o clímax espera "criptomoedas" quase acabar (revisão #4: o ₿ sumia 12 q depois de estourar, no meio da palavra —
-  // corte seco); a pausa de 42 q antes de "Somos" (narracao.ts) cobre os cadeados + glitch (3 q) + blackout (6 q)
-  const climax = Math.max(perguntas[2].estouro + 12, r.apos("s01_04", "criptomoedas") - 10);
+  // o clímax entra no fim de "criptomoedas" (revisão #4: antes o ₿ sumia 12 q depois de estourar); a pausa de 42 q
+  // antes de "Somos" (narracao.ts) cobre cadeados + glitch + implosão (12 q) até o logo
+  const climax = Math.max(perguntas[2].estouro + 12, r.apos("s01_04", "criptomoedas") - 14);
   const logo = r.em("s01_05", "Somos", 6);
-  const blackout = logo - 6;
-  const glitch = logo - 9;
+  const implosao = logo - IMPLOSAO;
+  const glitch = implosao - 4;
   const entradas = ORBITA.map((_, i) => climax + (i < 3 ? 0 : i - 2));
   // 7 cadeados: na meia batida se couber; senão mais juntos (mínimo 4 q), sempre antes do glitch
   const passo = Math.max(4, Math.min(MEIA_BATIDA, Math.floor((glitch - 2 - (climax + 4)) / (THUNKS - 1))));
@@ -87,13 +90,13 @@ const T = () => {
   const chip = r.apos("s01_05", "grupo");
   const titulo = logo + 10;
   const slogan = Math.max(chip + 24, r.em("s01_05", "Herança", 2));
-  return { r, impacto, gancho, perguntas, climax, logo, blackout, glitch, entradas, travas, batidas, chip, titulo, slogan, whip: r.dur - 9 };
+  return { r, impacto, gancho, perguntas, climax, logo, implosao, glitch, entradas, travas, batidas, chip, titulo, slogan, whip: r.dur - 9 };
 };
 
 /** Janelas de silêncio total (locais) — o Mix zera a trilha nelas. */
 export const silenciosS1 = (): [number, number][] => {
   const t = T();
-  return [[0, t.impacto], [t.blackout, t.logo]];
+  return [[0, t.impacto]];
 };
 
 export const sfxS1 = (): Cue[] => {
@@ -111,8 +114,9 @@ export const sfxS1 = (): Cue[] => {
     { f: t.climax + 2, som: "whoosh_long" as const },
     ...t.entradas.slice(3).filter((_, i) => i % 3 === 0).map((f) => ({ f, som: "pop" as const, ganho: dB(-20) })),
     ...t.batidas.map((f) => ({ f, som: "thunk" as const, ganho: dB(-13) })),
-    { f: t.blackout - 2, som: "riser" }, // o riser termina quando começa o blackout
-    { f: t.glitch - 3, som: "glitch_zap", ganho: dB(-14) }, // 8 q de som: termina antes do blackout
+    { f: t.logo - 2, som: "riser" }, // o riser sobe até o logo
+    { f: t.glitch - 3, som: "glitch_zap", ganho: dB(-14) },
+    { f: t.implosao + 2, som: "rewind", ganho: dB(-15) }, // a órbita sendo sugada
     { f: t.logo + 2, som: "impact_low", ganho: dB(-9) },
     { f: t.logo + 2, som: "stinger_logo" },
     { f: t.chip, som: "pop" },
@@ -251,7 +255,7 @@ export const S1Abertura: React.FC<{ dur: number }> = ({ dur }) => {
   const pisca = Math.max(0, ...t.perguntas.map((p) => interpolate(frame, [p.estouro, p.estouro + 2, p.estouro + 12, p.estouro + 24], [0, 1, 0.85, 0], clampOpt)));
   const pergunta = [...t.perguntas].reverse().find((p) => frame >= p.ini);
   const fase =
-    frame < t.impacto ? "preto" : frame < t.perguntas[0].ini ? "gancho" : frame < t.climax ? "perguntas" : frame < t.blackout ? "climax" : frame < t.logo ? "blackout" : "logo";
+    frame < t.impacto ? "preto" : frame < t.perguntas[0].ini ? "gancho" : frame < t.climax ? "perguntas" : frame < t.logo ? "climax" : "logo";
   const tremidas = [
     ...t.gancho.map((at) => ({ at, amp: 5, dur: 5 })),
     ...t.batidas.map((at) => ({ at, amp: 7, dur: 5 })),
@@ -262,7 +266,7 @@ export const S1Abertura: React.FC<{ dur: number }> = ({ dur }) => {
 
   return (
     <AbsoluteFill style={{ background: "#000", transform: `translateX(${-whip * 110}px) scale(${1 + whip * 0.12})`, filter: whip > 0 ? `blur(${whip * 22}px)` : undefined }}>
-      {fase === "preto" || fase === "blackout" ? null : (
+      {fase === "preto" ? null : (
         <CameraRig dur={dur} zoom={[1.0, 1.08]} tremidas={tremidas} socos={socos}>
           {fase !== "logo" ? (
             <Glitch at={t.glitch} dur={3}>
@@ -298,24 +302,47 @@ export const S1Abertura: React.FC<{ dur: number }> = ({ dur }) => {
               ) : null}
 
               {fase === "climax" ? (
-                <AbsoluteFill style={{ opacity: interpolate(frame, [t.climax, t.climax + TRANSICAO], [0, 1], clampOpt) }}>
-                  <Orbit
-                    itens={ORBITA.map((m, i) => <TileTrava key={i} marca={m} tranca={t.travas[i]} tamanho={150} />)}
-                    cx={960} cy={470} raio={700} achata={0.46} periodo={170} entradas={t.entradas} tamanho={150} corAnel={colors.mint}
-                  />
-                  <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingBottom: 120 }}>
-                    <div
-                      style={{
-                        fontFamily, fontWeight: 800, fontSize: 64, letterSpacing: "0.12em", color: colors.amber,
-                        opacity: interpolate(frame, [t.travas[0], t.travas[0] + 4], [0, 1], clampOpt),
-                        transform: `scale(${interpolate(frame, [t.travas[0], t.glitch], [1, 1.12], clampOpt)})`,
-                        textShadow: "0 0 30px rgba(245,200,107,0.35)",
-                      }}
-                    >
-                      TUDO TRANCADO
-                    </div>
-                  </AbsoluteFill>
-                </AbsoluteFill>
+                (() => {
+                  // implosão: a órbita encolhe para o centro (aceleração no fim), os ícones somem dentro de um
+                  // cadeado grande que cresce no meio — e o flash do logo nasce dele
+                  const imp = interpolate(frame, [t.implosao, t.logo], [0, 1], { ...clampOpt, easing: Easing.in(Easing.cubic) });
+                  const cad = spring({ frame: frame - t.implosao - 2, fps: 30, config: { damping: 12, stiffness: 220, mass: 0.6 } });
+                  return (
+                    <AbsoluteFill style={{ opacity: interpolate(frame, [t.climax, t.climax + TRANSICAO], [0, 1], clampOpt) }}>
+                      <AbsoluteFill style={{ background: "#000", opacity: imp * 0.45 }} />
+                      <AbsoluteFill style={{ opacity: 1 - imp * imp, transform: `scale(${1 - 0.55 * imp})`, transformOrigin: "960px 470px" }}>
+                        <Orbit
+                          itens={ORBITA.map((m, i) => <TileTrava key={i} marca={m} tranca={t.travas[i]} tamanho={150} />)}
+                          cx={960} cy={470} raio={700 * (1 - imp)} achata={0.46} periodo={170} entradas={t.entradas} tamanho={150}
+                          corAnel={colors.mint} mostrarAnel={imp < 0.3}
+                        />
+                      </AbsoluteFill>
+                      <AbsoluteFill style={{ alignItems: "center", justifyContent: "center", paddingBottom: 120 }}>
+                        <div
+                          style={{
+                            fontFamily, fontWeight: 800, fontSize: 64, letterSpacing: "0.12em", color: colors.amber,
+                            opacity: interpolate(frame, [t.travas[0], t.travas[0] + 4], [0, 1], clampOpt) * (1 - Math.min(1, cad * 1.8)), // sai quando o cadeado entra
+                            transform: `scale(${interpolate(frame, [t.travas[0], t.implosao], [1, 1.12], clampOpt) * (1 - 0.4 * imp)})`,
+                            textShadow: "0 0 30px rgba(245,200,107,0.35)",
+                          }}
+                        >
+                          TUDO TRANCADO
+                        </div>
+                      </AbsoluteFill>
+                      {frame >= t.implosao ? (
+                        <div
+                          style={{
+                            position: "absolute", left: 960 - 150, top: 470 - 150, width: 300, height: 300, display: "flex", alignItems: "center", justifyContent: "center",
+                            color: colors.amber, transform: `scale(${0.25 + 0.95 * cad})`, opacity: Math.min(1, cad * 1.6),
+                            filter: `drop-shadow(0 0 ${30 + 50 * imp}px rgba(245,200,107,${0.5 + 0.4 * imp}))`,
+                          }}
+                        >
+                          <Lock size={230} strokeWidth={2.2} />
+                        </div>
+                      ) : null}
+                    </AbsoluteFill>
+                  );
+                })()
               ) : null}
             </Glitch>
           ) : (
