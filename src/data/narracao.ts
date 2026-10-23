@@ -22,7 +22,7 @@ export const NARRACAO: Frase[] = [
   { id: "s01_03", cena: "s1", texto: "Com o seu e-mail?", dica: "Curta, subindo a entonação.", pausa: 3 },
   { id: "s01_04", cena: "s1", texto: "Com as suas criptomoedas?", dica: "Mais forte que a anterior (é o fim da escalada).", pausa: 3 },
   // a pausa longa é o fim do clímax (cadeados) + glitch + blackout + revelação do logo — ver T() em S1Abertura.tsx
-  { id: "s01_05", cena: "s1", texto: "Somos o [NOME DO GRUPO], e esta é a Herança Digital.", dica: "Depois do silêncio, voz aberta, sorriso na voz. Ênfase em \"Herança Digital\".", pausa: 54 },
+  { id: "s01_05", cena: "s1", texto: "Somos o [NOME DO GRUPO], e esta é a Herança Digital.", dica: "Depois do silêncio, voz aberta, sorriso na voz. Ênfase em \"Herança Digital\".", pausa: 42 },
 
   // S2 — Problema
   { id: "s02_01", cena: "s2", texto: "Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas.", dica: "Lista rápida, em ritmo de enumeração." },

@@ -15,4 +15,5 @@ export const PRONUNCIA: Pronuncia[] = [
   { de: "sabe o", para: "sabe, o" },
   { de: "nem a", para: "nem a," }, // "nem, a" ainda deixava o "a" com 37 ms; assim ele dura ~200 ms
   { de: "Desfazer", para: "Dês-fazer" }, // a voz dizia "Disfaizer"
+  { de: "esta é", para: "ésta é" }, // revisão #16: a voz lia "está" (verbo) em "e esta é a Herança Digital"
 ];

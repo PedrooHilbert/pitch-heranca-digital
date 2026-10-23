@@ -43,7 +43,7 @@ const LOGO_ESCURO = "brand/logo-simbolo-menta-fundo-escuro.png";
 const MEIA_BATIDA = 8; // 16 q por batida (112,5 BPM, a trilha) — ver README "Decisões"
 const TRANSICAO = 6; // quadros da passagem pergunta → órbita
 const IMPLOSAO = 12;
-const LOGO_ANTES = 18; // quadros entre o impacto do logo (drop da trilha) e o "Somos" // quadros da órbita sendo sugada até virar o cadeado do logo
+const LOGO_ANTES = 6; // quadros entre o impacto do logo e o "Somos" (18 deixava a narração ~2 s calada: parecia corte) // quadros da órbita sendo sugada até virar o cadeado do logo
 const clampOpt = { extrapolateLeft: "clamp", extrapolateRight: "clamp" } as const;
 
 const PERGUNTAS = [
@@ -100,11 +100,8 @@ export const silenciosS1 = (): [number, number][] => {
   return [[0, t.impacto]];
 };
 
-/** Realce da trilha (locais): o drop da revelação do logo sobe +4 dB até a voz entrar (revisão #12). */
-export const realcesS1 = (): [number, number, number][] => {
-  const t = T();
-  return [[t.logo, t.logo + LOGO_ANTES, Math.pow(10, 4 / 20)]];
-};
+/** Realce da trilha (locais). Vazio: o salto de +4 dB no logo (revisão #12) soava como corte — ficou só o drop da trilha. */
+export const realcesS1 = (): [number, number, number][] => [];
 
 export const sfxS1 = (): Cue[] => {
   const t = T();

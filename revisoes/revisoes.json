@@ -284,8 +284,10 @@
   "categoria": "Áudio/Voz",
   "gravidade": "Média",
   "still": "revisoes/pins/16.png",
-  "status": "aberto",
+  "status": "feito",
   "criadoEm": "2026-10-23T22:54:35.296Z",
-  "atualizadoEm": "2026-10-23T22:56:53.098Z"
+  "atualizadoEm": "2026-10-23T22:56:53.098Z",
+  "resolvidoEm": "2026-10-23T23:21:55.055Z",
+  "resolucao": "Pronúncia \"ésta é\" (a voz lia \"está\", o verbo) na fala \"e esta é a Herança Digital\"; só a voz da s01_05 foi regenerada, legenda igual. Junto: a S1 voltou ao ritmo aprovado (voz 6 q depois do logo, sem o salto de +4 dB)."
  }
 ]

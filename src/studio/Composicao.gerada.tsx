@@ -14,7 +14,7 @@ export const ComposicaoPitch: React.FC = () => (
     fps={30}
     width={1920}
     height={1080}
-    durationInFrames={5368}
+    durationInFrames={5360}
     calculateMetadata={({ props }) => {
       const total = (props as Projeto).cenas.reduce((a, c) => a + c.dur, 0);
       if (total > LIMITE_QUADROS) throw new Error(`Duração total ${total} q passa de ${LIMITE_QUADROS} (180 s).`);
@@ -100,7 +100,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s1",
           "nome": "Abertura",
-          "dur": 376,
+          "dur": 368,
           "fundos": {
             "gancho": "preto",
             "estouro": "escuro",
@@ -681,53 +681,53 @@ export const ComposicaoPitch: React.FC = () => (
           "texto": "Somos o EternaByte, e esta é a Herança Digital.",
           "fonte": "sintetica",
           "src": "audio/voz/s01_05.mp3",
-          "dur": 103,
-          "inicio": 258,
+          "dur": 106,
+          "inicio": 246,
           "palavras": [
             {
               "w": "Somos",
-              "de": 259,
-              "ate": 272
+              "de": 247,
+              "ate": 258
             },
             {
               "w": "o",
-              "de": 272,
-              "ate": 276
+              "de": 258,
+              "ate": 262
             },
             {
               "w": "EternaByte,",
-              "de": 276,
-              "ate": 303
+              "de": 262,
+              "ate": 289
             },
             {
               "w": "e",
-              "de": 309,
-              "ate": 311
+              "de": 294,
+              "ate": 298
             },
             {
               "w": "esta",
-              "de": 311,
-              "ate": 322
+              "de": 298,
+              "ate": 317
             },
             {
               "w": "é",
-              "de": 322,
-              "ate": 324
+              "de": 317,
+              "ate": 318
             },
             {
               "w": "a",
-              "de": 324,
-              "ate": 327
+              "de": 317,
+              "ate": 319
             },
             {
               "w": "Herança",
-              "de": 327,
-              "ate": 341
+              "de": 319,
+              "ate": 332
             },
             {
               "w": "Digital.",
-              "de": 341,
-              "ate": 357
+              "de": 332,
+              "ate": 348
             }
           ]
         },
@@ -3162,53 +3162,53 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L05",
           "cena": "s1",
           "fraseId": "s01_05",
-          "de": 255,
-          "ate": 367,
+          "de": 243,
+          "ate": 358,
           "palavras": [
             {
               "w": "Somos",
-              "de": 259,
-              "ate": 272
+              "de": 247,
+              "ate": 258
             },
             {
               "w": "o",
-              "de": 272,
-              "ate": 276
+              "de": 258,
+              "ate": 262
             },
             {
               "w": "EternaByte,",
-              "de": 276,
-              "ate": 303
+              "de": 262,
+              "ate": 289
             },
             {
               "w": "e",
-              "de": 309,
-              "ate": 311
+              "de": 294,
+              "ate": 298
             },
             {
               "w": "esta",
-              "de": 311,
-              "ate": 322
+              "de": 298,
+              "ate": 317
             },
             {
               "w": "é",
-              "de": 322,
-              "ate": 324
+              "de": 317,
+              "ate": 318
             },
             {
               "w": "a",
-              "de": 324,
-              "ate": 327
+              "de": 317,
+              "ate": 319
             },
             {
               "w": "Herança",
-              "de": 327,
-              "ate": 341
+              "de": 319,
+              "ate": 332
             },
             {
               "w": "Digital.",
-              "de": 341,
-              "ate": 357
+              "de": 332,
+              "ate": 348
             }
           ]
         },
@@ -5689,49 +5689,49 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x032",
           "cena": "s1",
-          "frame": 274,
+          "frame": 260,
           "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x033",
           "cena": "s1",
-          "frame": 325,
+          "frame": 317,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x034",
           "cena": "s1",
-          "frame": 328,
+          "frame": 320,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x035",
           "cena": "s1",
-          "frame": 331,
+          "frame": 323,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x036",
           "cena": "s1",
-          "frame": 334,
+          "frame": 326,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x037",
           "cena": "s1",
-          "frame": 337,
+          "frame": 329,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x038",
           "cena": "s1",
-          "frame": 340,
+          "frame": 332,
           "som": "type",
           "ganhoDb": -22
         },

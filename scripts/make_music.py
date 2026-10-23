@@ -58,8 +58,8 @@ inicio_cena = {c["id"]: c["from"] / FPS for c in TL["cenas"]}
 fim_logo = next(f["from"] for f in TL["frases"] if f["id"] == "s09_03") / FPS - 0.1  # acorde final
 fronteiras = [(round(inicio_cena[c] / BEAT) * BEAT, SECAO[c]) for c in inicio_cena] + [(fim_logo, "final")]
 # revisão #12: "drop" na revelação do logo da S1 (logo = 6 q antes de "Somos"): a tensão vira energia plena até a S2
-# (o "Somos" vem 18 q depois do logo; a fala começa ~1 q antes da 1ª palavra)
-_logo_s1 = (next(f["from"] for f in TL["frases"] if f["id"] == "s01_05") + 1 - 18) / FPS
+# (o "Somos" vem 6 q depois do logo; a fala começa ~1 q antes da 1ª palavra)
+_logo_s1 = (next(f["from"] for f in TL["frases"] if f["id"] == "s01_05") + 1 - 6) / FPS
 fronteiras = sorted(fronteiras + [(_logo_s1, "drop")])
 
 
