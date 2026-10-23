@@ -140,7 +140,7 @@ try:
 except Exception as e:  # noqa: BLE001
     res["legendas"] = {"erro": str(e), "stderr": leg.stderr[-400:]}
 ph = subprocess.run(["node", "scripts/check-placeholders.mjs"], capture_output=True, text=True, encoding="utf-8", cwd=ROOT)
-res["placeholders_pendentes"] = re.findall(r"(\[[^\]]+\])", ph.stderr)
+res["placeholders_pendentes"] = re.findall(r"^\s*(\[[^\]]+\])", ph.stderr, re.M)  # 1º colchete da linha (o resto é o caminho, ex. membros[2])
 
 out = os.path.join(ROOT, "out", "auditoria.json")
 json.dump(res, open(out, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
