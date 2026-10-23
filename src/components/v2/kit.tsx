@@ -52,8 +52,8 @@ export const Tile: React.FC<{
 };
 
 /** Logo com revelação (escala + varredura de luz) e "respiração". */
-export const LogoRevela: React.FC<{ at: number; tamanho?: number; variante?: "dark" | "light"; wordmark?: boolean }> = ({
-  at, tamanho = 150, variante = "dark", wordmark = true,
+export const LogoRevela: React.FC<{ at: number; tamanho?: number; variante?: "dark" | "light"; wordmark?: boolean; arquivo?: string }> = ({
+  at, tamanho = 150, variante = "dark", wordmark = true, arquivo,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -66,7 +66,7 @@ export const LogoRevela: React.FC<{ at: number; tamanho?: number; variante?: "da
   return (
     <div style={{ position: "relative", display: "flex", alignItems: "center", gap: tamanho * 0.22, transform: `scale(${(0.55 + 0.45 * s) * resp})`, opacity: Math.min(1, s * 1.5) }}>
       <div style={{ filter: `drop-shadow(0 0 ${24 * s}px ${colors.mint})` }}>
-        <LogoSymbol size={tamanho} variant={variante} />
+        <LogoSymbol size={tamanho} variant={variante} arquivo={arquivo} />
       </div>
       {wordmark ? (
         <div style={{ fontFamily, fontWeight: 800, fontSize: tamanho * 0.5, color: dark ? "#fff" : colors.ink, letterSpacing: "-0.02em", whiteSpace: "nowrap", clipPath: `inset(0 ${(1 - wm) * 100}% 0 0)` }}>

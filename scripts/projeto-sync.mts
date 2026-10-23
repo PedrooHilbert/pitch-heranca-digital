@@ -107,7 +107,15 @@ const base = {
 setProjeto(base);
 const d = derivado(base);
 const inicio = d.inicioDe;
-const manuaisLeg = (antigo.legendas ?? []).filter((l) => l.manual);
+// legenda manual só sobrevive se a fala dela não mudou de texto (fala reescrita → legenda gerada de novo)
+const textoAntigo = new Map((antigo.frases ?? []).map((f) => [f.id, f.texto]));
+const manuaisLeg = (antigo.legendas ?? []).filter((l) => {
+  if (!l.manual) return false;
+  const nova = d.frases.find((f) => f.id === l.fraseId);
+  const ok = !!nova && nova.texto === textoAntigo.get(l.fraseId);
+  if (!ok) console.log(`  legenda manual ${l.id} (${l.fraseId}) descartada: a fala mudou de texto`);
+  return ok;
+});
 const fraseManual = new Set(manuaisLeg.map((l) => l.fraseId));
 const geradas = gerarLegendas(d.frases.filter((f) => !fraseManual.has(f.id)), d.total).map((l) => {
   const cena = d.frases.find((f) => f.id === l.fraseId)!.cena;

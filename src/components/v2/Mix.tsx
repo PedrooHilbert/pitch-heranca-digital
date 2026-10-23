@@ -5,6 +5,7 @@ import React from "react";
 import { Audio, Sequence, random, staticFile } from "remotion";
 import { derivado, getProjeto, type Derivado } from "../../data/projeto";
 import { ANTECIPA, DURACAO, type Som } from "../../data/sfx";
+import { silenciado } from "../../data/silencios";
 
 const RAMPA = 9;
 const dbLin = (db: number) => Math.pow(10, db / 20);
@@ -59,7 +60,7 @@ export const Mix: React.FC<{ semVoz?: boolean }> = ({ semVoz = false }) => {
           volume={(f) => {
             const k = D[Math.min(D.length - 1, Math.max(0, f))];
             const fadeOut = Math.min(1, Math.max(0, (d.total - f) / 24));
-            return gTrilha * (1 - (1 - gDuck) * k) * fadeOut;
+            return gTrilha * (1 - (1 - gDuck) * k) * fadeOut * (silenciado(d, f) ? 0 : 1);
           }}
         />
       ) : null}

@@ -26,7 +26,13 @@ export function montarFala(texto, grupo, pronuncia, { gravada = false } = {}) {
         }
         tokens(mostrado).forEach((t) => itens.push({ d: t, s: [] }));
       } else {
-        tokens(mostrado).forEach((t) => itens.push({ d: t, s: [t] }));
+        // o nome também pode ter pronúncia (ex.: EternaByte → "Eterna Báite")
+        const pr = !gravada && pronuncia.find((p) => p.de === grupo);
+        if (pr) {
+          const falada = tokens(pr.para);
+          falada[falada.length - 1] += pont;
+          tokens(mostrado).forEach((t, k) => itens.push({ d: t, s: k === 0 ? falada : [] }));
+        } else tokens(mostrado).forEach((t) => itens.push({ d: t, s: [t] }));
       }
       continue;
     }

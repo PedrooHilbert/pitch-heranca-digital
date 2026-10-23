@@ -9,11 +9,14 @@ import { config, marcaPartes } from "../data/config";
 export const LogoSymbol: React.FC<{
   size?: number;
   variant?: "dark" | "light";
-}> = ({ size = 56, variant = "dark" }) => {
-  if (config.LOGO_SIMBOLO) {
+  /** arquivo em public/ que substitui o logo do projeto (ex.: versão para fundo escuro) */
+  arquivo?: string;
+}> = ({ size = 56, variant = "dark", arquivo }) => {
+  const src = arquivo ?? config.LOGO_SIMBOLO;
+  if (src) {
     return (
       <Img
-        src={staticFile(config.LOGO_SIMBOLO)}
+        src={staticFile(src)}
         style={{ width: size, height: size, objectFit: "contain" }}
       />
     );

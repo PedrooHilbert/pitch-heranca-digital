@@ -161,5 +161,12 @@ docs/                     RECEITA_DE_MOVIMENTO · ROTEIRO_GRAVACAO · PROGRESSO_
   o histórico em `revisoes/historico/` cobre o "voltar atrás".
 - O **rascunho 540p** do editor renderiza o que está no editor (mesmo sem salvar); o **final** salva antes.
 - Texto só com espaços conta como vazio (inválido).
+- **Abertura (revisão #1)**: a revisão pedia "120 BPM, 1 batida = 15 q", mas a trilha e todos os cortes estão em
+  112,5 BPM (16 q). Mantive 16 q para os cadeados (1 a cada meia batida = 8 q) não saírem do tempo da música.
+- A S1 tem 12,3 s (368 q, limite pedido 12,5 s): o clímax começa no fim de "criptomoedas" e a pausa antes de
+  "Somos…" é fixa em `narracao.ts` (`pausa: 42`). Mudar a voz da S1 pode pedir outro valor (os cadeados se
+  comprimem para caber, mas ficam mais juntos).
+- `npm run voz:sintetica -- --so=s1` gera a voz sintética só das frases da S1 (ou de ids: `--so=s01_02,s01_03`).
+- Legenda editada à mão volta a ser gerada se o texto da fala dela mudar (o sync avisa no terminal).
 - Ícones da abertura são genéricos, concorrência é **conceitual**, parcerias são sempre **"previstas"** e os nomes
   nas telas são fictícios (PROMPT.md §2).

@@ -10,4 +10,5 @@ export const PRONUNCIA: Pronuncia[] = [
   { de: "OAB", para: "ó á bê" },
   { de: "gov.br", para: "gov ponto bê érre" },
   { de: "LGPD", para: "éle gê pê dê" },
+  { de: "EternaByte", para: "Eterna Báite" }, // nome do grupo
 ];

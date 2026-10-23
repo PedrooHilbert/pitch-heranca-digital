@@ -6,7 +6,7 @@
 
 export const CENAS = [
   // min = duração nominal mínima (s); lead/respiro/cauda em quadros
-  { id: "s1", nome: "Abertura", min: 9, lead: 20, respiro: 11, cauda: 54, tema: "escuro" },
+  { id: "s1", nome: "Abertura", min: 9, lead: 14, respiro: 11, cauda: 12, tema: "escuro" }, // lead 14 + ~3 q do TTS → 1ª palavra ≥ 10 q depois do impacto (f6)
   { id: "s2", nome: "Problema", min: 18, lead: 8, respiro: 13, cauda: 20, tema: "claro" },
   { id: "s3", nome: "Proposta de valor", min: 15, lead: 10, respiro: 11, cauda: 30, tema: "escuro" },
   { id: "s4", nome: "Como funciona", min: 12, lead: 8, respiro: 14, cauda: 26, tema: "claro" },
@@ -49,6 +49,8 @@ function tentar(frases, fpb, fps, nivel) {
     const fr = frases.filter((f) => f.cena === c.id);
     let cur = c.lead;
     fr.forEach((f, k) => {
+      // pausa antes da frase: a da narração (fixa, a animação depende dela) ou o respiro da cena
+      if (k > 0) cur += f.pausa ?? Math.round(c.respiro * nivel.respiro);
       const durF = Math.ceil(f.sec * fps);
       const abs = from + cur;
       out.push({
@@ -66,7 +68,6 @@ function tentar(frases, fpb, fps, nivel) {
         })),
       });
       cur += durF;
-      if (k < fr.length - 1) cur += Math.round(c.respiro * nivel.respiro);
     });
     const conteudo = cur + Math.round(c.cauda * nivel.cauda);
     let dur = Math.max(Math.round(c.min * fps * nivel.min), conteudo);

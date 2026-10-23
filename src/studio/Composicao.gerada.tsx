@@ -14,7 +14,7 @@ export const ComposicaoPitch: React.FC = () => (
     fps={30}
     width={1920}
     height={1080}
-    durationInFrames={5352}
+    durationInFrames={5376}
     calculateMetadata={({ props }) => {
       const total = (props as Projeto).cenas.reduce((a, c) => a + c.dur, 0);
       if (total > LIMITE_QUADROS) throw new Error(`Duração total ${total} q passa de ${LIMITE_QUADROS} (180 s).`);
@@ -100,16 +100,19 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s1",
           "nome": "Abertura",
-          "dur": 344,
+          "dur": 368,
           "fundos": {
             "gancho": "preto",
+            "estouro": "escuro",
             "logo": "escuro"
           },
           "textos": {
-            "gancho1": "Quando você morrer…",
-            "gancho2": "quem fica com o seu *digital?*",
+            "gancho": "QUANDO VOCÊ MORRER…",
+            "pergunta1": "QUEM FICA COM O SEU *INSTAGRAM?*",
+            "pergunta2": "COM O SEU *E-MAIL?*",
+            "pergunta3": "COM AS SUAS *CRIPTOMOEDAS?*",
             "titulo": "Sua história também vive no *digital.*",
-            "chip": "Projeto UC HUB · Squad"
+            "chip": "Squad"
           },
           "telas": {}
         },
@@ -536,167 +539,190 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s01_01",
           "cena": "s1",
-          "texto": "E o seu Instagram, o seu e-mail, as suas criptomoedas… quando você morrer, quem fica com eles?",
+          "texto": "Quando você morrer…",
           "fonte": "sintetica",
           "src": "audio/voz/s01_01.mp3",
-          "dur": 182,
-          "inicio": 20,
+          "dur": 40,
+          "inicio": 14,
           "palavras": [
             {
-              "w": "E",
-              "de": 23,
+              "w": "Quando",
+              "de": 17,
               "ate": 26
             },
             {
-              "w": "o",
-              "de": 27,
-              "ate": 28
-            },
-            {
-              "w": "seu",
-              "de": 28,
-              "ate": 34
-            },
-            {
-              "w": "Instagram,",
-              "de": 34,
-              "ate": 48
-            },
-            {
-              "w": "o",
-              "de": 59,
-              "ate": 60
-            },
-            {
-              "w": "seu",
-              "de": 60,
-              "ate": 67
-            },
-            {
-              "w": "e-mail,",
-              "de": 67,
-              "ate": 78
-            },
-            {
-              "w": "as",
-              "de": 84,
-              "ate": 89
-            },
-            {
-              "w": "suas",
-              "de": 89,
-              "ate": 97
-            },
-            {
-              "w": "criptomoedas…",
-              "de": 97,
-              "ate": 124
-            },
-            {
-              "w": "quando",
-              "de": 130,
-              "ate": 137
-            },
-            {
               "w": "você",
-              "de": 137,
-              "ate": 145
+              "de": 26,
+              "ate": 35
             },
             {
-              "w": "morrer,",
-              "de": 145,
-              "ate": 157
-            },
-            {
-              "w": "quem",
-              "de": 164,
-              "ate": 169
-            },
-            {
-              "w": "fica",
-              "de": 169,
-              "ate": 178
-            },
-            {
-              "w": "com",
-              "de": 178,
-              "ate": 184
-            },
-            {
-              "w": "eles?",
-              "de": 184,
-              "ate": 195
+              "w": "morrer…",
+              "de": 36,
+              "ate": 47
             }
           ]
         },
         {
           "id": "s01_02",
           "cena": "s1",
-          "texto": "Somos o grupo [NOME DO GRUPO], e esta é a Herança Digital.",
+          "texto": "quem fica com o seu Instagram?",
           "fonte": "sintetica",
           "src": "audio/voz/s01_02.mp3",
-          "dur": 86,
-          "inicio": 211,
+          "dur": 53,
+          "inicio": 57,
           "palavras": [
             {
-              "w": "Somos",
-              "de": 214,
-              "ate": 225
+              "w": "quem",
+              "de": 60,
+              "ate": 67
+            },
+            {
+              "w": "fica",
+              "de": 67,
+              "ate": 77
+            },
+            {
+              "w": "com",
+              "de": 77,
+              "ate": 82
             },
             {
               "w": "o",
-              "de": 226,
-              "ate": 229
+              "de": 82,
+              "ate": 83
             },
             {
-              "w": "grupo",
-              "de": 230,
-              "ate": 240
+              "w": "seu",
+              "de": 84,
+              "ate": 89
             },
             {
-              "w": "[NOME",
-              "de": 240,
-              "ate": 241
+              "w": "Instagram?",
+              "de": 90,
+              "ate": 104
+            }
+          ]
+        },
+        {
+          "id": "s01_03",
+          "cena": "s1",
+          "texto": "Com o seu e-mail?",
+          "fonte": "sintetica",
+          "src": "audio/voz/s01_03.mp3",
+          "dur": 36,
+          "inicio": 113,
+          "palavras": [
+            {
+              "w": "Com",
+              "de": 116,
+              "ate": 122
             },
             {
-              "w": "DO",
-              "de": 240,
-              "ate": 241
+              "w": "o",
+              "de": 122,
+              "ate": 124
             },
             {
-              "w": "GRUPO],",
-              "de": 240,
-              "ate": 241
+              "w": "seu",
+              "de": 124,
+              "ate": 130
             },
             {
-              "w": "e",
-              "de": 247,
-              "ate": 249
+              "w": "e-mail?",
+              "de": 130,
+              "ate": 143
+            }
+          ]
+        },
+        {
+          "id": "s01_04",
+          "cena": "s1",
+          "texto": "Com as suas criptomoedas?",
+          "fonte": "sintetica",
+          "src": "audio/voz/s01_04.mp3",
+          "dur": 56,
+          "inicio": 152,
+          "palavras": [
+            {
+              "w": "Com",
+              "de": 155,
+              "ate": 163
             },
             {
-              "w": "esta",
-              "de": 250,
-              "ate": 258
+              "w": "as",
+              "de": 163,
+              "ate": 167
             },
             {
-              "w": "é",
-              "de": 258,
-              "ate": 261
+              "w": "suas",
+              "de": 167,
+              "ate": 174
             },
             {
-              "w": "a",
-              "de": 261,
+              "w": "criptomoedas?",
+              "de": 174,
+              "ate": 202
+            }
+          ]
+        },
+        {
+          "id": "s01_05",
+          "cena": "s1",
+          "texto": "Somos o grupo EternaByte, e esta é a Herança Digital.",
+          "fonte": "sintetica",
+          "src": "audio/voz/s01_05.mp3",
+          "dur": 105,
+          "inicio": 250,
+          "palavras": [
+            {
+              "w": "Somos",
+              "de": 253,
               "ate": 264
             },
             {
-              "w": "Herança",
-              "de": 264,
+              "w": "o",
+              "de": 265,
+              "ate": 268
+            },
+            {
+              "w": "grupo",
+              "de": 269,
               "ate": 275
             },
             {
+              "w": "EternaByte,",
+              "de": 276,
+              "ate": 299
+            },
+            {
+              "w": "e",
+              "de": 306,
+              "ate": 307
+            },
+            {
+              "w": "esta",
+              "de": 307,
+              "ate": 315
+            },
+            {
+              "w": "é",
+              "de": 316,
+              "ate": 319
+            },
+            {
+              "w": "a",
+              "de": 319,
+              "ate": 321
+            },
+            {
+              "w": "Herança",
+              "de": 321,
+              "ate": 333
+            },
+            {
               "w": "Digital.",
-              "de": 275,
-              "ate": 291
+              "de": 333,
+              "ate": 348
             }
           ]
         },
@@ -3110,167 +3136,184 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L01",
           "cena": "s1",
           "fraseId": "s01_01",
-          "de": 19,
-          "ate": 126,
+          "de": 13,
+          "ate": 56,
           "palavras": [
             {
-              "w": "E",
-              "de": 23,
+              "w": "Quando",
+              "de": 17,
               "ate": 26
             },
             {
-              "w": "o",
-              "de": 27,
-              "ate": 28
+              "w": "você",
+              "de": 26,
+              "ate": 35
             },
             {
-              "w": "seu",
-              "de": 28,
-              "ate": 34
-            },
-            {
-              "w": "Instagram,",
-              "de": 34,
-              "ate": 48
-            },
-            {
-              "w": "o",
-              "de": 59,
-              "ate": 60
-            },
-            {
-              "w": "seu",
-              "de": 60,
-              "ate": 67
-            },
-            {
-              "w": "e-mail,",
-              "de": 67,
-              "ate": 78
-            },
-            {
-              "w": "as",
-              "de": 84,
-              "ate": 89
-            },
-            {
-              "w": "suas",
-              "de": 89,
-              "ate": 97
-            },
-            {
-              "w": "criptomoedas…",
-              "de": 97,
-              "ate": 124
+              "w": "morrer…",
+              "de": 36,
+              "ate": 47
             }
           ]
         },
         {
           "id": "L02",
           "cena": "s1",
-          "fraseId": "s01_01",
-          "de": 126,
-          "ate": 208,
+          "fraseId": "s01_02",
+          "de": 56,
+          "ate": 126,
           "palavras": [
             {
-              "w": "quando",
-              "de": 130,
-              "ate": 137
-            },
-            {
-              "w": "você",
-              "de": 137,
-              "ate": 145
-            },
-            {
-              "w": "morrer,",
-              "de": 145,
-              "ate": 157
-            },
-            {
               "w": "quem",
-              "de": 164,
-              "ate": 169
+              "de": 60,
+              "ate": 67
             },
             {
               "w": "fica",
-              "de": 169,
-              "ate": 178
+              "de": 67,
+              "ate": 77
             },
             {
               "w": "com",
-              "de": 178,
-              "ate": 184
+              "de": 77,
+              "ate": 82
             },
             {
-              "w": "eles?",
-              "de": 184,
-              "ate": 195
+              "w": "o",
+              "de": 82,
+              "ate": 83
+            },
+            {
+              "w": "seu",
+              "de": 84,
+              "ate": 89
+            },
+            {
+              "w": "Instagram?",
+              "de": 90,
+              "ate": 104
             }
           ]
         },
         {
           "id": "L03",
           "cena": "s1",
-          "fraseId": "s01_02",
-          "de": 208,
-          "ate": 340,
+          "fraseId": "s01_03",
+          "de": 126,
+          "ate": 165,
           "palavras": [
             {
-              "w": "Somos",
-              "de": 214,
-              "ate": 223
+              "w": "Com",
+              "de": 116,
+              "ate": 122
             },
             {
               "w": "o",
-              "de": 223,
-              "ate": 225
+              "de": 122,
+              "ate": 124
             },
             {
-              "w": "grupo",
-              "de": 225,
-              "ate": 234
+              "w": "seu",
+              "de": 124,
+              "ate": 130
             },
             {
-              "w": "EternaByte,",
-              "de": 234,
-              "ate": 251
-            },
-            {
-              "w": "e",
-              "de": 251,
-              "ate": 254
-            },
-            {
-              "w": "esta",
-              "de": 254,
-              "ate": 261
-            },
-            {
-              "w": "é",
-              "de": 261,
-              "ate": 264
-            },
-            {
-              "w": "a",
-              "de": 264,
-              "ate": 267
-            },
-            {
-              "w": "Herança",
-              "de": 267,
-              "ate": 278
-            },
-            {
-              "w": "Digital.",
-              "de": 278,
-              "ate": 291
+              "w": "e-mail?",
+              "de": 130,
+              "ate": 143
             }
-          ],
-          "manual": true
+          ]
         },
         {
           "id": "L04",
+          "cena": "s1",
+          "fraseId": "s01_04",
+          "de": 165,
+          "ate": 217,
+          "palavras": [
+            {
+              "w": "Com",
+              "de": 155,
+              "ate": 163
+            },
+            {
+              "w": "as",
+              "de": 163,
+              "ate": 167
+            },
+            {
+              "w": "suas",
+              "de": 167,
+              "ate": 174
+            },
+            {
+              "w": "criptomoedas?",
+              "de": 174,
+              "ate": 202
+            }
+          ]
+        },
+        {
+          "id": "L05",
+          "cena": "s1",
+          "fraseId": "s01_05",
+          "de": 246,
+          "ate": 358,
+          "palavras": [
+            {
+              "w": "Somos",
+              "de": 253,
+              "ate": 264
+            },
+            {
+              "w": "o",
+              "de": 265,
+              "ate": 268
+            },
+            {
+              "w": "grupo",
+              "de": 269,
+              "ate": 275
+            },
+            {
+              "w": "EternaByte,",
+              "de": 276,
+              "ate": 299
+            },
+            {
+              "w": "e",
+              "de": 306,
+              "ate": 307
+            },
+            {
+              "w": "esta",
+              "de": 307,
+              "ate": 315
+            },
+            {
+              "w": "é",
+              "de": 316,
+              "ate": 319
+            },
+            {
+              "w": "a",
+              "de": 319,
+              "ate": 321
+            },
+            {
+              "w": "Herança",
+              "de": 321,
+              "ate": 333
+            },
+            {
+              "w": "Digital.",
+              "de": 333,
+              "ate": 348
+            }
+          ]
+        },
+        {
+          "id": "L06",
           "cena": "s2",
           "fraseId": "s02_01",
           "de": 7,
@@ -3334,7 +3377,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L05",
+          "id": "L07",
           "cena": "s2",
           "fraseId": "s02_01",
           "de": 164,
@@ -3368,7 +3411,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L06",
+          "id": "L08",
           "cena": "s2",
           "fraseId": "s02_02",
           "de": 229,
@@ -3452,7 +3495,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L07",
+          "id": "L09",
           "cena": "s2",
           "fraseId": "s02_02",
           "de": 372,
@@ -3496,7 +3539,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L08",
+          "id": "L10",
           "cena": "s2",
           "fraseId": "s02_03",
           "de": 430,
@@ -3580,7 +3623,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L09",
+          "id": "L11",
           "cena": "s3",
           "fraseId": "s03_01",
           "de": -2,
@@ -3679,7 +3722,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L10",
+          "id": "L12",
           "cena": "s3",
           "fraseId": "s03_02",
           "de": 190,
@@ -3753,7 +3796,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L11",
+          "id": "L13",
           "cena": "s3",
           "fraseId": "s03_03",
           "de": 354,
@@ -3842,7 +3885,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L12",
+          "id": "L14",
           "cena": "s4",
           "fraseId": "s04_01",
           "de": -4,
@@ -3921,7 +3964,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L13",
+          "id": "L15",
           "cena": "s4",
           "fraseId": "s04_02",
           "de": 148,
@@ -3960,7 +4003,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L14",
+          "id": "L16",
           "cena": "s4",
           "fraseId": "s04_03",
           "de": 221,
@@ -4054,7 +4097,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L15",
+          "id": "L17",
           "cena": "s5",
           "fraseId": "s05_01",
           "de": 2,
@@ -4083,7 +4126,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L16",
+          "id": "L18",
           "cena": "s5",
           "fraseId": "s05_02",
           "de": 54,
@@ -4192,7 +4235,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L17",
+          "id": "L19",
           "cena": "s5",
           "fraseId": "s05_03",
           "de": 230,
@@ -4261,7 +4304,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L18",
+          "id": "L20",
           "cena": "s5",
           "fraseId": "s05_03",
           "de": 409,
@@ -4290,7 +4333,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L19",
+          "id": "L21",
           "cena": "s5",
           "fraseId": "s05_04",
           "de": 487,
@@ -4344,7 +4387,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L20",
+          "id": "L22",
           "cena": "s5",
           "fraseId": "s05_04",
           "de": 580,
@@ -4383,7 +4426,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L21",
+          "id": "L23",
           "cena": "s5",
           "fraseId": "s05_05",
           "de": 671,
@@ -4462,7 +4505,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L22",
+          "id": "L24",
           "cena": "s5",
           "fraseId": "s05_05",
           "de": 810,
@@ -4526,7 +4569,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L23",
+          "id": "L25",
           "cena": "s5",
           "fraseId": "s05_06",
           "de": 932,
@@ -4580,7 +4623,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L24",
+          "id": "L26",
           "cena": "s5",
           "fraseId": "s05_07",
           "de": 1034,
@@ -4679,7 +4722,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L25",
+          "id": "L27",
           "cena": "s6",
           "fraseId": "s06_01",
           "de": 10,
@@ -4718,7 +4761,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L26",
+          "id": "L28",
           "cena": "s6",
           "fraseId": "s06_02",
           "de": 82,
@@ -4767,7 +4810,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L27",
+          "id": "L29",
           "cena": "s6",
           "fraseId": "s06_03",
           "de": 174,
@@ -4851,7 +4894,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L28",
+          "id": "L30",
           "cena": "s6",
           "fraseId": "s06_03",
           "de": 321,
@@ -4900,7 +4943,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L29",
+          "id": "L31",
           "cena": "s6",
           "fraseId": "s06_04",
           "de": 409,
@@ -4974,7 +5017,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L30",
+          "id": "L32",
           "cena": "s6",
           "fraseId": "s06_04",
           "de": 542,
@@ -5003,7 +5046,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L31",
+          "id": "L33",
           "cena": "s7",
           "fraseId": "s07_01",
           "de": 0,
@@ -5067,7 +5110,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L32",
+          "id": "L34",
           "cena": "s7",
           "fraseId": "s07_02",
           "de": 122,
@@ -5146,7 +5189,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L33",
+          "id": "L35",
           "cena": "s7",
           "fraseId": "s07_03",
           "de": 274,
@@ -5225,7 +5268,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L34",
+          "id": "L36",
           "cena": "s8",
           "fraseId": "s08_01",
           "de": -4,
@@ -5304,7 +5347,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L35",
+          "id": "L37",
           "cena": "s8",
           "fraseId": "s08_02",
           "de": 148,
@@ -5388,7 +5431,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L36",
+          "id": "L38",
           "cena": "s8",
           "fraseId": "s08_03",
           "de": 332,
@@ -5442,7 +5485,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L37",
+          "id": "L39",
           "cena": "s9",
           "fraseId": "s09_01",
           "de": 7,
@@ -5541,7 +5584,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L38",
+          "id": "L40",
           "cena": "s9",
           "fraseId": "s09_02",
           "de": 236,
@@ -5625,7 +5668,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L39",
+          "id": "L41",
           "cena": "s9",
           "fraseId": "s09_03",
           "de": 438,
@@ -5683,1706 +5726,1790 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x001",
           "cena": "s1",
-          "frame": 1,
+          "frame": 8,
           "som": "impact_low",
-          "ganhoDb": -13.2
+          "ganhoDb": -8
         },
         {
           "id": "x002",
           "cena": "s1",
-          "frame": 3,
-          "som": "pop",
-          "ganhoDb": -17
+          "frame": 10,
+          "som": "thunk",
+          "ganhoDb": -19
         },
         {
           "id": "x003",
           "cena": "s1",
-          "frame": 11,
-          "som": "pop",
-          "ganhoDb": -17
+          "frame": 23,
+          "som": "thunk",
+          "ganhoDb": -19
         },
         {
           "id": "x004",
           "cena": "s1",
-          "frame": 19,
-          "som": "pop",
-          "ganhoDb": -17
+          "frame": 33,
+          "som": "thunk",
+          "ganhoDb": -19
         },
         {
           "id": "x005",
           "cena": "s1",
-          "frame": 27,
-          "som": "pop",
+          "frame": 59,
+          "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x006",
           "cena": "s1",
-          "frame": 35,
+          "frame": 86,
           "som": "pop",
-          "ganhoDb": -17
+          "ganhoDb": -13
         },
         {
           "id": "x007",
           "cena": "s1",
-          "frame": 43,
-          "som": "pop",
+          "frame": 87,
+          "som": "impact_low",
           "ganhoDb": -17
         },
         {
           "id": "x008",
           "cena": "s1",
-          "frame": 127,
-          "som": "thunk",
-          "ganhoDb": -14
+          "frame": 115,
+          "som": "whoosh_short",
+          "ganhoDb": -17
         },
         {
           "id": "x009",
           "cena": "s1",
-          "frame": 135,
-          "som": "lock_click",
-          "ganhoDb": -15
+          "frame": 126,
+          "som": "pop",
+          "ganhoDb": -13
         },
         {
           "id": "x010",
           "cena": "s1",
-          "frame": 143,
-          "som": "lock_click",
-          "ganhoDb": -15
+          "frame": 127,
+          "som": "impact_low",
+          "ganhoDb": -17
         },
         {
           "id": "x011",
           "cena": "s1",
-          "frame": 151,
-          "som": "lock_click",
-          "ganhoDb": -15
+          "frame": 154,
+          "som": "whoosh_short",
+          "ganhoDb": -17
         },
         {
           "id": "x012",
           "cena": "s1",
-          "frame": 159,
-          "som": "lock_click",
-          "ganhoDb": -15
+          "frame": 170,
+          "som": "pop",
+          "ganhoDb": -13
         },
         {
           "id": "x013",
           "cena": "s1",
-          "frame": 167,
-          "som": "thunk",
-          "ganhoDb": -14
+          "frame": 171,
+          "som": "impact_low",
+          "ganhoDb": -17
         },
         {
           "id": "x014",
           "cena": "s1",
-          "frame": 187,
-          "som": "tick",
-          "ganhoDb": -21
+          "frame": 184,
+          "som": "whoosh_long",
+          "ganhoDb": -16
         },
         {
           "id": "x015",
           "cena": "s1",
-          "frame": 209,
-          "som": "glitch_zap",
-          "ganhoDb": -17
+          "frame": 184,
+          "som": "pop",
+          "ganhoDb": -20
         },
         {
           "id": "x016",
           "cena": "s1",
-          "frame": 212,
-          "som": "riser",
-          "ganhoDb": -17
+          "frame": 186,
+          "som": "pop",
+          "ganhoDb": -20
         },
         {
           "id": "x017",
           "cena": "s1",
-          "frame": 212,
-          "som": "impact_low",
-          "ganhoDb": -11
+          "frame": 186,
+          "som": "thunk",
+          "ganhoDb": -13
         },
         {
           "id": "x018",
           "cena": "s1",
-          "frame": 227,
+          "frame": 188,
           "som": "pop",
-          "ganhoDb": -17
+          "ganhoDb": -20
         },
         {
           "id": "x019",
           "cena": "s1",
-          "frame": 299,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 190,
+          "som": "pop",
+          "ganhoDb": -20
         },
         {
           "id": "x020",
           "cena": "s1",
-          "frame": 302,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 194,
+          "som": "thunk",
+          "ganhoDb": -13
         },
         {
           "id": "x021",
           "cena": "s1",
-          "frame": 305,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 202,
+          "som": "thunk",
+          "ganhoDb": -13
         },
         {
           "id": "x022",
           "cena": "s1",
-          "frame": 308,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 210,
+          "som": "thunk",
+          "ganhoDb": -13
         },
         {
           "id": "x023",
           "cena": "s1",
-          "frame": 311,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 218,
+          "som": "thunk",
+          "ganhoDb": -13
         },
         {
           "id": "x024",
           "cena": "s1",
-          "frame": 314,
+          "frame": 226,
+          "som": "thunk",
+          "ganhoDb": -13
+        },
+        {
+          "id": "x025",
+          "cena": "s1",
+          "frame": 234,
+          "som": "thunk",
+          "ganhoDb": -13
+        },
+        {
+          "id": "x026",
+          "cena": "s1",
+          "frame": 235,
+          "som": "glitch_zap",
+          "ganhoDb": -14
+        },
+        {
+          "id": "x027",
+          "cena": "s1",
+          "frame": 239,
+          "som": "riser",
+          "ganhoDb": -17
+        },
+        {
+          "id": "x028",
+          "cena": "s1",
+          "frame": 249,
+          "som": "impact_low",
+          "ganhoDb": -9
+        },
+        {
+          "id": "x029",
+          "cena": "s1",
+          "frame": 249,
+          "som": "stinger_logo",
+          "ganhoDb": -12
+        },
+        {
+          "id": "x030",
+          "cena": "s1",
+          "frame": 275,
+          "som": "pop",
+          "ganhoDb": -17
+        },
+        {
+          "id": "x031",
+          "cena": "s1",
+          "frame": 319,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x025",
+          "id": "x032",
+          "cena": "s1",
+          "frame": 322,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x033",
+          "cena": "s1",
+          "frame": 325,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x034",
+          "cena": "s1",
+          "frame": 328,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x035",
+          "cena": "s1",
+          "frame": 331,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x036",
+          "cena": "s1",
+          "frame": 334,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x037",
           "cena": "s2",
           "frame": 0,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
-          "id": "x026",
+          "id": "x038",
           "cena": "s2",
           "frame": 49,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x027",
+          "id": "x039",
           "cena": "s2",
           "frame": 65,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x028",
+          "id": "x040",
           "cena": "s2",
           "frame": 97,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x029",
+          "id": "x041",
           "cena": "s2",
           "frame": 130,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x030",
+          "id": "x042",
           "cena": "s2",
           "frame": 164,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x031",
+          "id": "x043",
           "cena": "s2",
           "frame": 192,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x032",
+          "id": "x044",
           "cena": "s2",
           "frame": 204,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x033",
+          "id": "x045",
           "cena": "s2",
           "frame": 235,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x034",
+          "id": "x046",
           "cena": "s2",
           "frame": 302,
           "som": "impact_low",
           "ganhoDb": -14.9
         },
         {
-          "id": "x035",
+          "id": "x047",
           "cena": "s2",
           "frame": 308,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
-          "id": "x036",
+          "id": "x048",
           "cena": "s2",
           "frame": 323,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x037",
+          "id": "x049",
           "cena": "s2",
           "frame": 327,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x038",
+          "id": "x050",
           "cena": "s2",
           "frame": 330,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x039",
+          "id": "x051",
           "cena": "s2",
           "frame": 333,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x040",
+          "id": "x052",
           "cena": "s2",
           "frame": 336,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x041",
+          "id": "x053",
           "cena": "s2",
           "frame": 338,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x042",
+          "id": "x054",
           "cena": "s2",
           "frame": 339,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x043",
+          "id": "x055",
           "cena": "s2",
           "frame": 342,
           "som": "impact_low",
           "ganhoDb": -14
         },
         {
-          "id": "x044",
+          "id": "x056",
           "cena": "s2",
           "frame": 360,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x045",
+          "id": "x057",
           "cena": "s2",
           "frame": 404,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x046",
+          "id": "x058",
           "cena": "s2",
           "frame": 415,
           "som": "impact_low",
           "ganhoDb": -11
         },
         {
-          "id": "x047",
+          "id": "x059",
           "cena": "s2",
           "frame": 464,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x048",
+          "id": "x060",
           "cena": "s2",
           "frame": 488,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x049",
+          "id": "x061",
           "cena": "s2",
           "frame": 496,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x050",
+          "id": "x062",
           "cena": "s2",
           "frame": 505,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x051",
+          "id": "x063",
           "cena": "s2",
           "frame": 514,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x052",
+          "id": "x064",
           "cena": "s2",
           "frame": 523,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x053",
+          "id": "x065",
           "cena": "s2",
           "frame": 532,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x054",
+          "id": "x066",
           "cena": "s2",
           "frame": 538,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x055",
+          "id": "x067",
           "cena": "s2",
           "frame": 541,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x056",
+          "id": "x068",
           "cena": "s2",
           "frame": 573,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
-          "id": "x057",
+          "id": "x069",
           "cena": "s2",
           "frame": 614,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x058",
+          "id": "x070",
           "cena": "s3",
           "frame": 46,
           "som": "impact_low",
           "ganhoDb": -14
         },
         {
-          "id": "x059",
+          "id": "x071",
           "cena": "s3",
           "frame": 116,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
-          "id": "x060",
+          "id": "x072",
           "cena": "s3",
           "frame": 134,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
-          "id": "x061",
+          "id": "x073",
           "cena": "s3",
           "frame": 199,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x062",
+          "id": "x074",
           "cena": "s3",
           "frame": 208,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x063",
+          "id": "x075",
           "cena": "s3",
           "frame": 217,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x064",
+          "id": "x076",
           "cena": "s3",
           "frame": 226,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x065",
+          "id": "x077",
           "cena": "s3",
           "frame": 230,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x066",
+          "id": "x078",
           "cena": "s3",
           "frame": 234,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x067",
+          "id": "x079",
           "cena": "s3",
           "frame": 286,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x068",
+          "id": "x080",
           "cena": "s3",
           "frame": 290,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x069",
+          "id": "x081",
           "cena": "s3",
           "frame": 316,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
-          "id": "x070",
+          "id": "x082",
           "cena": "s3",
           "frame": 334,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
-          "id": "x071",
+          "id": "x083",
           "cena": "s3",
           "frame": 364,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x072",
+          "id": "x084",
           "cena": "s3",
           "frame": 368,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x073",
+          "id": "x085",
           "cena": "s3",
           "frame": 424,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x074",
+          "id": "x086",
           "cena": "s3",
           "frame": 492,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
-          "id": "x075",
+          "id": "x087",
           "cena": "s3",
           "frame": 502,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x076",
+          "id": "x088",
           "cena": "s3",
           "frame": 508,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x077",
+          "id": "x089",
           "cena": "s3",
           "frame": 514,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x078",
+          "id": "x090",
           "cena": "s3",
           "frame": 542,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x079",
+          "id": "x091",
           "cena": "s4",
           "frame": 20,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x080",
+          "id": "x092",
           "cena": "s4",
           "frame": 28,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x081",
+          "id": "x093",
           "cena": "s4",
           "frame": 36,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x082",
+          "id": "x094",
           "cena": "s4",
           "frame": 89,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x083",
+          "id": "x095",
           "cena": "s4",
           "frame": 95,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x084",
+          "id": "x096",
           "cena": "s4",
           "frame": 101,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x085",
+          "id": "x097",
           "cena": "s4",
           "frame": 134,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x086",
+          "id": "x098",
           "cena": "s4",
           "frame": 148,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x087",
+          "id": "x099",
           "cena": "s4",
           "frame": 190,
           "som": "impact_low",
           "ganhoDb": -11
         },
         {
-          "id": "x088",
+          "id": "x100",
           "cena": "s4",
           "frame": 192,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x089",
+          "id": "x101",
           "cena": "s4",
           "frame": 222,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x090",
+          "id": "x102",
           "cena": "s4",
           "frame": 247,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x091",
+          "id": "x103",
           "cena": "s4",
           "frame": 261,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x092",
+          "id": "x104",
           "cena": "s4",
           "frame": 273,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x093",
+          "id": "x105",
           "cena": "s4",
           "frame": 279,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x094",
+          "id": "x106",
           "cena": "s4",
           "frame": 285,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x095",
+          "id": "x107",
           "cena": "s4",
           "frame": 291,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x096",
+          "id": "x108",
           "cena": "s4",
           "frame": 298,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x097",
+          "id": "x109",
           "cena": "s4",
           "frame": 317,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
-          "id": "x098",
+          "id": "x110",
           "cena": "s4",
           "frame": 324,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x099",
+          "id": "x111",
           "cena": "s4",
           "frame": 332,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x100",
+          "id": "x112",
           "cena": "s4",
           "frame": 340,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x101",
+          "id": "x113",
           "cena": "s4",
           "frame": 371,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x102",
+          "id": "x114",
           "cena": "s4",
           "frame": 414,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x103",
+          "id": "x115",
           "cena": "s5",
           "frame": 11,
           "som": "impact_low",
           "ganhoDb": -14
         },
         {
-          "id": "x104",
+          "id": "x116",
           "cena": "s5",
           "frame": 44,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
-          "id": "x105",
+          "id": "x117",
           "cena": "s5",
           "frame": 97,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x106",
+          "id": "x118",
           "cena": "s5",
           "frame": 99,
           "som": "ping",
           "ganhoDb": -17
         },
         {
-          "id": "x107",
+          "id": "x119",
           "cena": "s5",
           "frame": 135,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x108",
+          "id": "x120",
           "cena": "s5",
           "frame": 146,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x109",
+          "id": "x121",
           "cena": "s5",
           "frame": 149,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x110",
+          "id": "x122",
           "cena": "s5",
           "frame": 152,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x111",
+          "id": "x123",
           "cena": "s5",
           "frame": 155,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x112",
+          "id": "x124",
           "cena": "s5",
           "frame": 158,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x113",
+          "id": "x125",
           "cena": "s5",
           "frame": 161,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x114",
+          "id": "x126",
           "cena": "s5",
           "frame": 164,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x115",
+          "id": "x127",
           "cena": "s5",
           "frame": 167,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x116",
+          "id": "x128",
           "cena": "s5",
           "frame": 172,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x117",
+          "id": "x129",
           "cena": "s5",
           "frame": 175,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x118",
+          "id": "x130",
           "cena": "s5",
           "frame": 178,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x119",
+          "id": "x131",
           "cena": "s5",
           "frame": 181,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x120",
+          "id": "x132",
           "cena": "s5",
           "frame": 184,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x121",
+          "id": "x133",
           "cena": "s5",
           "frame": 195,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x122",
+          "id": "x134",
           "cena": "s5",
           "frame": 213,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x123",
+          "id": "x135",
           "cena": "s5",
           "frame": 260,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x124",
+          "id": "x136",
           "cena": "s5",
           "frame": 272,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x125",
+          "id": "x137",
           "cena": "s5",
           "frame": 305,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x126",
+          "id": "x138",
           "cena": "s5",
           "frame": 325,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x127",
+          "id": "x139",
           "cena": "s5",
           "frame": 344,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x128",
+          "id": "x140",
           "cena": "s5",
           "frame": 385,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x129",
+          "id": "x141",
           "cena": "s5",
           "frame": 410,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x130",
+          "id": "x142",
           "cena": "s5",
           "frame": 434,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x131",
+          "id": "x143",
           "cena": "s5",
           "frame": 460,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x132",
+          "id": "x144",
           "cena": "s5",
           "frame": 488,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x133",
+          "id": "x145",
           "cena": "s5",
           "frame": 533,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x134",
+          "id": "x146",
           "cena": "s5",
           "frame": 539,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x135",
+          "id": "x147",
           "cena": "s5",
           "frame": 545,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x136",
+          "id": "x148",
           "cena": "s5",
           "frame": 559,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x137",
+          "id": "x149",
           "cena": "s5",
           "frame": 581,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x138",
+          "id": "x150",
           "cena": "s5",
           "frame": 597,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x139",
+          "id": "x151",
           "cena": "s5",
           "frame": 614,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x140",
+          "id": "x152",
           "cena": "s5",
           "frame": 632,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x141",
+          "id": "x153",
           "cena": "s5",
           "frame": 650,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
-          "id": "x142",
+          "id": "x154",
           "cena": "s5",
           "frame": 671,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x143",
+          "id": "x155",
           "cena": "s5",
           "frame": 757,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x144",
+          "id": "x156",
           "cena": "s5",
           "frame": 800,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x145",
+          "id": "x157",
           "cena": "s5",
           "frame": 856,
           "som": "shutter",
           "ganhoDb": -15
         },
         {
-          "id": "x146",
+          "id": "x158",
           "cena": "s5",
           "frame": 882,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x147",
+          "id": "x159",
           "cena": "s5",
           "frame": 916,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x148",
+          "id": "x160",
           "cena": "s5",
           "frame": 934,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x149",
+          "id": "x161",
           "cena": "s5",
           "frame": 968,
           "som": "ping",
           "ganhoDb": -17
         },
         {
-          "id": "x150",
+          "id": "x162",
           "cena": "s5",
           "frame": 976,
           "som": "ping",
           "ganhoDb": -17
         },
         {
-          "id": "x151",
+          "id": "x163",
           "cena": "s5",
           "frame": 984,
           "som": "ping",
           "ganhoDb": -17
         },
         {
-          "id": "x152",
+          "id": "x164",
           "cena": "s5",
           "frame": 995,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x153",
+          "id": "x165",
           "cena": "s5",
           "frame": 1001,
           "som": "impact_low",
           "ganhoDb": -11
         },
         {
-          "id": "x154",
+          "id": "x166",
           "cena": "s5",
           "frame": 1025,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x155",
+          "id": "x167",
           "cena": "s5",
           "frame": 1035,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
-          "id": "x156",
+          "id": "x168",
           "cena": "s5",
           "frame": 1093,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
-          "id": "x157",
+          "id": "x169",
           "cena": "s5",
           "frame": 1123,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x158",
+          "id": "x170",
           "cena": "s5",
           "frame": 1143,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x159",
+          "id": "x171",
           "cena": "s5",
           "frame": 1214,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x160",
+          "id": "x172",
           "cena": "s6",
           "frame": 31,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x161",
+          "id": "x173",
           "cena": "s6",
           "frame": 45,
           "som": "thunk",
           "ganhoDb": -18.4
         },
         {
-          "id": "x162",
+          "id": "x174",
           "cena": "s6",
           "frame": 104,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
-          "id": "x163",
+          "id": "x175",
           "cena": "s6",
           "frame": 123,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x164",
+          "id": "x176",
           "cena": "s6",
           "frame": 140,
           "som": "tick",
           "ganhoDb": -21
         },
         {
-          "id": "x165",
+          "id": "x177",
           "cena": "s6",
           "frame": 222,
           "som": "riser",
           "ganhoDb": -17
         },
         {
-          "id": "x166",
+          "id": "x178",
           "cena": "s6",
           "frame": 222,
           "som": "impact_low",
           "ganhoDb": -11
         },
         {
-          "id": "x167",
+          "id": "x179",
           "cena": "s6",
           "frame": 230,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x168",
+          "id": "x180",
           "cena": "s6",
           "frame": 236,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x169",
+          "id": "x181",
           "cena": "s6",
           "frame": 242,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x170",
+          "id": "x182",
           "cena": "s6",
           "frame": 267,
           "som": "lock_click",
           "ganhoDb": -15
         },
         {
-          "id": "x171",
+          "id": "x183",
           "cena": "s6",
           "frame": 290,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x172",
+          "id": "x184",
           "cena": "s6",
           "frame": 360,
           "som": "glitch_zap",
           "ganhoDb": -17
         },
         {
-          "id": "x173",
+          "id": "x185",
           "cena": "s6",
           "frame": 390,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x174",
+          "id": "x186",
           "cena": "s6",
           "frame": 451,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x175",
+          "id": "x187",
           "cena": "s6",
           "frame": 494,
           "som": "ping",
           "ganhoDb": -17
         },
         {
-          "id": "x176",
+          "id": "x188",
           "cena": "s6",
           "frame": 577,
           "som": "rewind",
           "ganhoDb": -15
         },
         {
-          "id": "x177",
+          "id": "x189",
           "cena": "s6",
           "frame": 601,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x178",
+          "id": "x190",
           "cena": "s6",
           "frame": 630,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x179",
+          "id": "x191",
           "cena": "s7",
           "frame": 8,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x180",
+          "id": "x192",
           "cena": "s7",
           "frame": 62,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
-          "id": "x181",
+          "id": "x193",
           "cena": "s7",
           "frame": 68,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
-          "id": "x182",
+          "id": "x194",
           "cena": "s7",
           "frame": 74,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
-          "id": "x183",
+          "id": "x195",
           "cena": "s7",
           "frame": 80,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
-          "id": "x184",
+          "id": "x196",
           "cena": "s7",
           "frame": 132,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x185",
+          "id": "x197",
           "cena": "s7",
           "frame": 152,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
-          "id": "x186",
+          "id": "x198",
           "cena": "s7",
           "frame": 158,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
-          "id": "x187",
+          "id": "x199",
           "cena": "s7",
           "frame": 164,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
-          "id": "x188",
+          "id": "x200",
           "cena": "s7",
           "frame": 170,
           "som": "lock_click",
           "ganhoDb": -18.4
         },
         {
-          "id": "x189",
+          "id": "x201",
           "cena": "s7",
           "frame": 281,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x190",
+          "id": "x202",
           "cena": "s7",
           "frame": 304,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x191",
+          "id": "x203",
           "cena": "s7",
           "frame": 311,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x192",
+          "id": "x204",
           "cena": "s7",
           "frame": 316,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x193",
+          "id": "x205",
           "cena": "s7",
           "frame": 318,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x194",
+          "id": "x206",
           "cena": "s7",
           "frame": 325,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x195",
+          "id": "x207",
           "cena": "s7",
           "frame": 335,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
-          "id": "x196",
+          "id": "x208",
           "cena": "s7",
           "frame": 430,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x197",
+          "id": "x209",
           "cena": "s8",
           "frame": 4,
           "som": "impact_low",
           "ganhoDb": -14.9
         },
         {
-          "id": "x198",
+          "id": "x210",
           "cena": "s8",
           "frame": 31,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x199",
+          "id": "x211",
           "cena": "s8",
           "frame": 41,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x200",
+          "id": "x212",
           "cena": "s8",
           "frame": 83,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x201",
+          "id": "x213",
           "cena": "s8",
           "frame": 93,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x202",
+          "id": "x214",
           "cena": "s8",
           "frame": 132,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x203",
+          "id": "x215",
           "cena": "s8",
           "frame": 142,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x204",
+          "id": "x216",
           "cena": "s8",
           "frame": 180,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x205",
+          "id": "x217",
           "cena": "s8",
           "frame": 190,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x206",
+          "id": "x218",
           "cena": "s8",
           "frame": 206,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x207",
+          "id": "x219",
           "cena": "s8",
           "frame": 216,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x208",
+          "id": "x220",
           "cena": "s8",
           "frame": 272,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x209",
+          "id": "x221",
           "cena": "s8",
           "frame": 277,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x210",
+          "id": "x222",
           "cena": "s8",
           "frame": 338,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x211",
+          "id": "x223",
           "cena": "s8",
           "frame": 341,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x212",
+          "id": "x224",
           "cena": "s8",
           "frame": 344,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x213",
+          "id": "x225",
           "cena": "s8",
           "frame": 347,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x214",
+          "id": "x226",
           "cena": "s8",
           "frame": 350,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x215",
+          "id": "x227",
           "cena": "s8",
           "frame": 353,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x216",
+          "id": "x228",
           "cena": "s8",
           "frame": 356,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x217",
+          "id": "x229",
           "cena": "s8",
           "frame": 359,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x218",
+          "id": "x230",
           "cena": "s8",
           "frame": 462,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x219",
+          "id": "x231",
           "cena": "s9",
           "frame": 8,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x220",
+          "id": "x232",
           "cena": "s9",
           "frame": 14,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x221",
+          "id": "x233",
           "cena": "s9",
           "frame": 15,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x222",
+          "id": "x234",
           "cena": "s9",
           "frame": 17,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x223",
+          "id": "x235",
           "cena": "s9",
           "frame": 20,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x224",
+          "id": "x236",
           "cena": "s9",
           "frame": 22,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x225",
+          "id": "x237",
           "cena": "s9",
           "frame": 23,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x226",
+          "id": "x238",
           "cena": "s9",
           "frame": 26,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x227",
+          "id": "x239",
           "cena": "s9",
           "frame": 29,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x228",
+          "id": "x240",
           "cena": "s9",
           "frame": 32,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x229",
+          "id": "x241",
           "cena": "s9",
           "frame": 35,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x230",
+          "id": "x242",
           "cena": "s9",
           "frame": 41,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x231",
+          "id": "x243",
           "cena": "s9",
           "frame": 96,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x232",
+          "id": "x244",
           "cena": "s9",
           "frame": 120,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x233",
+          "id": "x245",
           "cena": "s9",
           "frame": 138,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x234",
+          "id": "x246",
           "cena": "s9",
           "frame": 200,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x235",
+          "id": "x247",
           "cena": "s9",
           "frame": 204,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x236",
+          "id": "x248",
           "cena": "s9",
           "frame": 208,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x237",
+          "id": "x249",
           "cena": "s9",
           "frame": 231,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x238",
+          "id": "x250",
           "cena": "s9",
           "frame": 292,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x239",
+          "id": "x251",
           "cena": "s9",
           "frame": 361,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x240",
+          "id": "x252",
           "cena": "s9",
           "frame": 389,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x241",
+          "id": "x253",
           "cena": "s9",
           "frame": 425,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
-          "id": "x242",
+          "id": "x254",
           "cena": "s9",
           "frame": 437,
           "som": "riser",
           "ganhoDb": -17
         },
         {
-          "id": "x243",
+          "id": "x255",
           "cena": "s9",
           "frame": 437,
           "som": "stinger_logo",
           "ganhoDb": -12
         },
         {
-          "id": "x244",
+          "id": "x256",
           "cena": "s9",
           "frame": 573,
           "som": "impact_low",

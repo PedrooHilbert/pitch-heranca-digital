@@ -1,7 +1,7 @@
 # Roteiro de gravação da narração — Herança Digital (v2)
 
 > Gerado de `src/data/narracao.ts` (rode `npm run roteiro` se o texto mudar).
-> Total: 31 frases · 446 palavras · ritmo-alvo 160–170 palavras/min (≈ 2 min 40 s de fala).
+> Total: 34 frases · 446 palavras · ritmo-alvo 160–170 palavras/min (≈ 2 min 40 s de fala).
 
 ## Guia rápido de gravação
 1. **Lugar:** o mais silencioso possível. Grave num cômodo com tecido (guarda-roupa aberto, cobertor nas costas, sofá). Nada de ventilador/ar-condicionado.
@@ -20,8 +20,11 @@
 ## Frases
 | id | Cena | Texto | Dica de entonação | Duração atual (voz sintética) |
 |---|---|---|---|---|
-| `s01_01` | Abertura | E o seu Instagram, o seu e-mail, as suas criptomoedas… quando você morrer, quem fica com eles? | Pergunta direta, olhando pra plateia. Pausa curta antes de "quando você morrer". Ênfase em "quem fica". | 6.0 s |
-| `s01_02` | Abertura | Somos o grupo **[NOME DO GRUPO]**, e esta é a Herança Digital. | Sorriso na voz. Ênfase em "Herança Digital". | 2.8 s |
+| `s01_01` | Abertura | Quando você morrer… | Grave e lento, quase sussurrado. Segure as reticências. | 1.3 s |
+| `s01_02` | Abertura | quem fica com o seu Instagram? | Pergunta direta, olhando pra plateia. Ênfase em "quem fica". | 1.8 s |
+| `s01_03` | Abertura | Com o seu e-mail? | Curta, subindo a entonação. | 1.2 s |
+| `s01_04` | Abertura | Com as suas criptomoedas? | Mais forte que a anterior (é o fim da escalada). | 1.9 s |
+| `s01_05` | Abertura | Somos o grupo EternaByte, e esta é a Herança Digital. | Depois do silêncio, voz aberta, sorriso na voz. Ênfase em "Herança Digital". | 3.5 s |
 | `s02_01` | Problema | Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas. | Lista rápida, em ritmo de enumeração. | 7.2 s |
 | `s02_02` | Problema | Quando a pessoa morre, a família não sabe o que existe, não tem as senhas, e não sabe o que ela queria. | Mais séria. Pequena pausa em cada vírgula (três golpes). | 5.7 s |
 | `s02_03` | Problema | Resultado: bens com valor perdidos, assinaturas cobrando para sempre e perfis virando alvo de golpe. | "Resultado:" com pausa. Final firme. | 5.9 s |

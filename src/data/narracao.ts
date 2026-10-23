@@ -11,12 +11,18 @@ export type Frase = {
   cena: CenaId;
   texto: string;
   dica: string; // dica de entonação para quem for gravar
+  /** silêncio ANTES desta frase, em quadros (substitui o respiro padrão da cena — use quando a animação precisa de espaço) */
+  pausa?: number;
 };
 
 export const NARRACAO: Frase[] = [
-  // S1 — Abertura (gancho)
-  { id: "s01_01", cena: "s1", texto: "E o seu Instagram, o seu e-mail, as suas criptomoedas… quando você morrer, quem fica com eles?", dica: "Pergunta direta, olhando pra plateia. Pausa curta antes de \"quando você morrer\". Ênfase em \"quem fica\"." },
-  { id: "s01_02", cena: "s1", texto: "Somos o grupo [NOME DO GRUPO], e esta é a Herança Digital.", dica: "Sorriso na voz. Ênfase em \"Herança Digital\"." },
+  // S1 — Abertura (gancho A, revisão #1): uma pergunta por frase, cada uma vira um "estouro" na tela.
+  { id: "s01_01", cena: "s1", texto: "Quando você morrer…", dica: "Grave e lento, quase sussurrado. Segure as reticências." },
+  { id: "s01_02", cena: "s1", texto: "quem fica com o seu Instagram?", dica: "Pergunta direta, olhando pra plateia. Ênfase em \"quem fica\".", pausa: 3 },
+  { id: "s01_03", cena: "s1", texto: "Com o seu e-mail?", dica: "Curta, subindo a entonação.", pausa: 3 },
+  { id: "s01_04", cena: "s1", texto: "Com as suas criptomoedas?", dica: "Mais forte que a anterior (é o fim da escalada).", pausa: 3 },
+  // a pausa longa é o fim do clímax (cadeados) + glitch + blackout + revelação do logo — ver T() em S1Abertura.tsx
+  { id: "s01_05", cena: "s1", texto: "Somos o grupo [NOME DO GRUPO], e esta é a Herança Digital.", dica: "Depois do silêncio, voz aberta, sorriso na voz. Ênfase em \"Herança Digital\".", pausa: 42 },
 
   // S2 — Problema
   { id: "s02_01", cena: "s2", texto: "Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas.", dica: "Lista rápida, em ritmo de enumeração." },

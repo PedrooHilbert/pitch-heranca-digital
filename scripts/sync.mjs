@@ -16,6 +16,9 @@ import { montarFala, alinhar, distribuir } from "./lib/fala.mjs";
 import { montarTimeline } from "./lib/timeline.mjs";
 
 const args = new Set(process.argv.slice(2));
+// --so=s1 (ou --so=s01_02,s01_03): gera a voz sintética só dessas cenas/frases; as outras ficam como estão
+const SO = process.argv.find((a) => a.startsWith("--so="))?.slice(5).split(",");
+const escolhida = (f) => !SO || SO.includes(f.cena) || SO.includes(f.id);
 const VOZDIR = P("public", "audio", "voz");
 const VOZ = process.env.TTS_VOZ || "pt-BR-AntonioNeural";
 const RATE0 = parseInt((process.env.TTS_RATE || "+8%").replace("%", ""), 10);
@@ -44,14 +47,14 @@ function normalizar(entrada, saida, { cortarSilencio = false } = {}) {
 
 // ---------- A) voz sintética ----------
 function vozSintetica(rate) {
-  const jobs = NARR.map((f) => ({ id: f.id, fala: montarFala(f.texto, GRUPO, PRON).fala }));
+  const jobs = NARR.filter(escolhida).map((f) => ({ id: f.id, fala: montarFala(f.texto, GRUPO, PRON).fala }));
   const jf = P("scripts", ".cache", "tts-jobs.json");
   gravarJSON(jf, jobs);
   log(`\n▶ voz sintética: ${VOZ} rate ${rate >= 0 ? "+" : ""}${rate}% (${jobs.length} frases)`);
   const r = spawnSync("python", [P("scripts", "voz_sintetica.py"), jf, VOZ, `${rate >= 0 ? "+" : ""}${rate}%`], { stdio: "inherit" });
   if (r.status !== 0) throw new Error("voz sintética falhou");
   log("▶ normalizando voz (−16 LUFS, true-peak −1,5 dB) e cortando o silêncio final…");
-  for (const f of NARR) {
+  for (const f of NARR.filter(escolhida)) {
     const mp3 = path.join(VOZDIR, f.id + ".mp3");
     normalizar(mp3, mp3);
     cortarFim(mp3, path.join(VOZDIR, f.id + ".words.json"));
@@ -142,7 +145,7 @@ function timings() {
     const palavras = itens.map((it, i) => ({ w: it.d, s: +tempos[i].s.toFixed(3), e: +tempos[i].e.toFixed(3) }));
     const texto = tokens(f.texto.replace("[NOME DO GRUPO]", GRUPO)).join(" ");
     vt[f.id] = { sec: +sec.toFixed(3), fonte: w.fonte, voz: w.voz ?? null, palavras };
-    frases.push({ id: f.id, cena: f.cena, texto, sec, palavras, fonte: w.fonte });
+    frases.push({ id: f.id, cena: f.cena, texto, sec, palavras, fonte: w.fonte, pausa: f.pausa });
   }
   gravarJSON(P("src", "data", "voice-timings.json"), vt);
   const fala = frases.reduce((a, f) => a + f.sec, 0);

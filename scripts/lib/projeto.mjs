@@ -33,7 +33,11 @@ export const duracao = (file) =>
 const imp = async (rel) => import(pathToFileURL(P(rel)).href);
 export const carregarNarracao = async () => (await imp("src/data/narracao.ts")).NARRACAO;
 export const carregarPronuncia = async () => (await imp("src/data/pronuncia.ts")).PRONUNCIA;
-export const carregarConfig = async () => (await imp("src/data/config.ts")).config;
+// config.ts lê o projeto (imports sem extensão, que o Node puro não resolve): os scripts leem o project.json direto
+export const carregarConfig = async () => {
+  const e = lerJSON(P("src", "data", "project.json")).equipe;
+  return { NOME_DO_GRUPO: e.nomeDoGrupo, MARCA: e.marca, CONTATO: e.contato, MEMBROS: e.membros };
+};
 export const carregarMusica = async () => imp("src/data/music.ts");
 
 export const tokens = (s) => s.split(/\s+/).filter(Boolean);
