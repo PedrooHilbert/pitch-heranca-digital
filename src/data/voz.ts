@@ -19,5 +19,5 @@ export const VOZ_ESCOLHIDA: VozConfig = {
   voz: "pt-BR-ThalitaMultilingualNeural",
   rate: "+0%",
   descricao: "Thalita (Microsoft, pt-BR, multilíngue) — feminina, velocidade natural",
-  provisoria: true,
+  provisoria: false, // escolhida pelo grupo depois de ouvir out/voz-teste
 };
