@@ -5,7 +5,7 @@
  "fonteVoz": "sintetica",
  "vozSintetica": "pt-BR-ThalitaMultilingualNeural",
  "nivel": "sem mínimos",
- "total": 5400,
+ "total": 5384,
  "cenas": [
   {
    "id": "s1",
@@ -61,13 +61,13 @@
    "nome": "Modelo de negócio",
    "tema": "escuro",
    "from": 4288,
-   "dur": 480
+   "dur": 464
   },
   {
    "id": "s9",
    "nome": "Equipe e fechamento",
    "tema": "claro",
-   "from": 4768,
+   "from": 4752,
    "dur": 632
   }
  ],
@@ -2178,218 +2178,178 @@
   {
    "id": "s08_01",
    "cena": "s8",
-   "texto": "A receita vem da assinatura anual do titular e de uma taxa na liberação.",
+   "texto": "Em vida, é gratuito.",
    "fonte": "sintetica",
    "from": 4296,
-   "dur": 131,
+   "dur": 55,
    "src": "audio/voz/s08_01.mp3",
    "palavras": [
     {
-     "w": "A",
+     "w": "Em",
      "from": 4297,
-     "to": 4300
+     "to": 4304
     },
     {
-     "w": "receita",
-     "from": 4300,
-     "to": 4320
+     "w": "vida,",
+     "from": 4304,
+     "to": 4316
     },
     {
-     "w": "vem",
-     "from": 4320,
-     "to": 4326
+     "w": "é",
+     "from": 4322,
+     "to": 4325
     },
     {
-     "w": "da",
-     "from": 4326,
-     "to": 4328
-    },
-    {
-     "w": "assinatura",
-     "from": 4328,
+     "w": "gratuito.",
+     "from": 4325,
      "to": 4346
-    },
-    {
-     "w": "anual",
-     "from": 4346,
-     "to": 4356
-    },
-    {
-     "w": "do",
-     "from": 4356,
-     "to": 4359
-    },
-    {
-     "w": "titular",
-     "from": 4359,
-     "to": 4376
-    },
-    {
-     "w": "e",
-     "from": 4376,
-     "to": 4379
-    },
-    {
-     "w": "de",
-     "from": 4379,
-     "to": 4382
-    },
-    {
-     "w": "uma",
-     "from": 4382,
-     "to": 4388
-    },
-    {
-     "w": "taxa",
-     "from": 4388,
-     "to": 4399
-    },
-    {
-     "w": "na",
-     "from": 4399,
-     "to": 4401
-    },
-    {
-     "w": "liberação.",
-     "from": 4401,
-     "to": 4423
     }
    ]
   },
   {
    "id": "s08_02",
    "cena": "s8",
-   "texto": "Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda.",
+   "texto": "Só na liberação há uma taxa única, a definir, com isenção prevista para quem não puder pagar.",
    "fonte": "sintetica",
-   "from": 4433,
-   "dur": 191,
+   "from": 4357,
+   "dur": 181,
    "src": "audio/voz/s08_02.mp3",
    "palavras": [
     {
-     "w": "Escritórios",
-     "from": 4434,
-     "to": 4456
+     "w": "Só",
+     "from": 4358,
+     "to": 4368
     },
     {
-     "w": "de",
-     "from": 4456,
-     "to": 4458
+     "w": "na",
+     "from": 4368,
+     "to": 4370
     },
     {
-     "w": "advocacia,",
-     "from": 4458,
-     "to": 4484
+     "w": "liberação",
+     "from": 4370,
+     "to": 4392
     },
     {
-     "w": "cartórios,",
-     "from": 4489,
+     "w": "há",
+     "from": 4392,
+     "to": 4393
+    },
+    {
+     "w": "uma",
+     "from": 4393,
+     "to": 4399
+    },
+    {
+     "w": "taxa",
+     "from": 4399,
+     "to": 4412
+    },
+    {
+     "w": "única,",
+     "from": 4412,
+     "to": 4426
+    },
+    {
+     "w": "a",
+     "from": 4432,
+     "to": 4435
+    },
+    {
+     "w": "definir,",
+     "from": 4435,
+     "to": 4455
+    },
+    {
+     "w": "com",
+     "from": 4460,
+     "to": 4465
+    },
+    {
+     "w": "isenção",
+     "from": 4465,
+     "to": 4479
+    },
+    {
+     "w": "prevista",
+     "from": 4479,
+     "to": 4498
+    },
+    {
+     "w": "para",
+     "from": 4498,
+     "to": 4503
+    },
+    {
+     "w": "quem",
+     "from": 4503,
      "to": 4509
     },
     {
-     "w": "bancos",
-     "from": 4514,
-     "to": 4528
+     "w": "não",
+     "from": 4509,
+     "to": 4515
     },
     {
-     "w": "e",
-     "from": 4528,
-     "to": 4531
+     "w": "puder",
+     "from": 4515,
+     "to": 4524
     },
     {
-     "w": "seguradoras",
-     "from": 4531,
-     "to": 4553
-    },
-    {
-     "w": "são",
-     "from": 4553,
-     "to": 4557
-    },
-    {
-     "w": "parceiros",
-     "from": 4557,
-     "to": 4571
-    },
-    {
-     "w": "previstos",
-     "from": 4571,
-     "to": 4591
-    },
-    {
-     "w": "e",
-     "from": 4591,
-     "to": 4594
-    },
-    {
-     "w": "canais",
-     "from": 4594,
-     "to": 4604
-    },
-    {
-     "w": "de",
-     "from": 4604,
-     "to": 4608
-    },
-    {
-     "w": "venda.",
-     "from": 4608,
-     "to": 4620
+     "w": "pagar.",
+     "from": 4524,
+     "to": 4534
     }
    ]
   },
   {
    "id": "s08_03",
    "cena": "s8",
-   "texto": "Os valores serão definidos depois da pesquisa com usuários.",
+   "texto": "Escritórios, cartórios e governo entram como parceiros previstos.",
    "fonte": "sintetica",
-   "from": 4630,
-   "dur": 110,
+   "from": 4544,
+   "dur": 137,
    "src": "audio/voz/s08_03.mp3",
    "palavras": [
     {
-     "w": "Os",
+     "w": "Escritórios,",
+     "from": 4545,
+     "to": 4569
+    },
+    {
+     "w": "cartórios",
+     "from": 4574,
+     "to": 4594
+    },
+    {
+     "w": "e",
+     "from": 4594,
+     "to": 4598
+    },
+    {
+     "w": "governo",
+     "from": 4598,
+     "to": 4621
+    },
+    {
+     "w": "entram",
+     "from": 4621,
+     "to": 4631
+    },
+    {
+     "w": "como",
      "from": 4631,
-     "to": 4636
+     "to": 4638
     },
     {
-     "w": "valores",
-     "from": 4636,
-     "to": 4652
+     "w": "parceiros",
+     "from": 4638,
+     "to": 4654
     },
     {
-     "w": "serão",
-     "from": 4652,
-     "to": 4659
-    },
-    {
-     "w": "definidos",
-     "from": 4659,
-     "to": 4676
-    },
-    {
-     "w": "depois",
-     "from": 4676,
-     "to": 4687
-    },
-    {
-     "w": "da",
-     "from": 4687,
-     "to": 4690
-    },
-    {
-     "w": "pesquisa",
-     "from": 4690,
-     "to": 4709
-    },
-    {
-     "w": "com",
-     "from": 4709,
-     "to": 4715
-    },
-    {
-     "w": "usuários.",
-     "from": 4715,
-     "to": 4736
+     "w": "previstos.",
+     "from": 4654,
+     "to": 4677
     }
    ]
   },
@@ -2398,79 +2358,79 @@
    "cena": "s9",
    "texto": "Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos.",
    "fonte": "sintetica",
-   "from": 4776,
+   "from": 4760,
    "dur": 203,
    "src": "audio/voz/s09_01.mp3",
    "palavras": [
     {
      "w": "Somos",
-     "from": 4777,
-     "to": 4788
+     "from": 4761,
+     "to": 4772
     },
     {
      "w": "um",
-     "from": 4788,
-     "to": 4793
+     "from": 4772,
+     "to": 4777
     },
     {
      "w": "projeto",
-     "from": 4793,
-     "to": 4806
+     "from": 4777,
+     "to": 4790
     },
     {
      "w": "de",
-     "from": 4806,
-     "to": 4808
+     "from": 4790,
+     "to": 4792
     },
     {
      "w": "faculdade;",
-     "from": 4808,
-     "to": 4830
+     "from": 4792,
+     "to": 4814
     },
     {
      "w": "escritórios,",
-     "from": 4836,
-     "to": 4859
+     "from": 4820,
+     "to": 4843
     },
     {
      "w": "cartórios",
-     "from": 4863,
-     "to": 4883
+     "from": 4847,
+     "to": 4867
     },
     {
      "w": "e",
-     "from": 4883,
-     "to": 4888
+     "from": 4867,
+     "to": 4872
     },
     {
      "w": "verificação",
-     "from": 4888,
-     "to": 4911
+     "from": 4872,
+     "to": 4895
     },
     {
      "w": "de",
-     "from": 4911,
-     "to": 4914
+     "from": 4895,
+     "to": 4898
     },
     {
      "w": "identidade",
-     "from": 4914,
-     "to": 4933
+     "from": 4898,
+     "to": 4917
     },
     {
      "w": "são",
-     "from": 4933,
-     "to": 4939
+     "from": 4917,
+     "to": 4923
     },
     {
      "w": "parceiros",
-     "from": 4939,
-     "to": 4953
+     "from": 4923,
+     "to": 4937
     },
     {
      "w": "previstos.",
-     "from": 4953,
-     "to": 4975
+     "from": 4937,
+     "to": 4959
     }
    ]
   },
@@ -2479,79 +2439,79 @@
    "cena": "s9",
    "texto": "Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP.",
    "fonte": "sintetica",
-   "from": 4985,
+   "from": 4969,
    "dur": 186,
    "src": "audio/voz/s09_02.mp3",
    "palavras": [
     {
      "w": "Próximos",
-     "from": 4986,
-     "to": 5001
+     "from": 4970,
+     "to": 4985
     },
     {
      "w": "passos:",
-     "from": 5001,
-     "to": 5017
+     "from": 4985,
+     "to": 5001
     },
     {
      "w": "validar",
-     "from": 5024,
-     "to": 5039
+     "from": 5008,
+     "to": 5023
     },
     {
      "w": "com",
-     "from": 5039,
-     "to": 5043
+     "from": 5023,
+     "to": 5027
     },
     {
      "w": "um",
-     "from": 5043,
-     "to": 5044
+     "from": 5027,
+     "to": 5028
     },
     {
      "w": "advogado",
-     "from": 5044,
-     "to": 5063
+     "from": 5028,
+     "to": 5047
     },
     {
      "w": "de",
-     "from": 5063,
-     "to": 5066
+     "from": 5047,
+     "to": 5050
     },
     {
      "w": "sucessões,",
-     "from": 5066,
-     "to": 5088
+     "from": 5050,
+     "to": 5072
     },
     {
      "w": "ouvir",
-     "from": 5094,
-     "to": 5105
+     "from": 5078,
+     "to": 5089
     },
     {
      "w": "usuários",
-     "from": 5105,
-     "to": 5121
+     "from": 5089,
+     "to": 5105
     },
     {
      "w": "e",
-     "from": 5121,
-     "to": 5126
+     "from": 5105,
+     "to": 5110
     },
     {
      "w": "construir",
-     "from": 5126,
-     "to": 5143
+     "from": 5110,
+     "to": 5127
     },
     {
      "w": "o",
-     "from": 5143,
-     "to": 5146
+     "from": 5127,
+     "to": 5130
     },
     {
      "w": "MVP.",
-     "from": 5146,
-     "to": 5167
+     "from": 5130,
+     "to": 5151
     }
    ]
   },
@@ -2560,49 +2520,49 @@
    "cena": "s9",
    "texto": "Herança Digital: seus dados, sua história, seu futuro.",
    "fonte": "sintetica",
-   "from": 5177,
+   "from": 5161,
    "dur": 125,
    "src": "audio/voz/s09_03.mp3",
    "palavras": [
     {
      "w": "Herança",
-     "from": 5178,
-     "to": 5193
+     "from": 5162,
+     "to": 5177
     },
     {
      "w": "Digital:",
-     "from": 5193,
-     "to": 5210
+     "from": 5177,
+     "to": 5194
     },
     {
      "w": "seus",
-     "from": 5217,
-     "to": 5226
+     "from": 5201,
+     "to": 5210
     },
     {
      "w": "dados,",
-     "from": 5226,
-     "to": 5242
+     "from": 5210,
+     "to": 5226
     },
     {
      "w": "sua",
-     "from": 5247,
-     "to": 5253
+     "from": 5231,
+     "to": 5237
     },
     {
      "w": "história,",
-     "from": 5253,
-     "to": 5268
+     "from": 5237,
+     "to": 5252
     },
     {
      "w": "seu",
-     "from": 5274,
-     "to": 5281
+     "from": 5258,
+     "to": 5265
     },
     {
      "w": "futuro.",
-     "from": 5281,
-     "to": 5298
+     "from": 5265,
+     "to": 5282
     }
    ]
   }

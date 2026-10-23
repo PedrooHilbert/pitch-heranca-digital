@@ -1,7 +1,7 @@
 # Roteiro de gravação da narração — Herança Digital (v2)
 
 > Gerado de `src/data/narracao.ts` (rode `npm run roteiro` se o texto mudar).
-> Total: 34 frases · 434 palavras · ritmo-alvo 160–170 palavras/min (≈ 2 min 40 s de fala).
+> Total: 34 frases · 426 palavras · ritmo-alvo 160–170 palavras/min (≈ 2 min 40 s de fala).
 
 ## Guia rápido de gravação
 1. **Lugar:** o mais silencioso possível. Grave num cômodo com tecido (guarda-roupa aberto, cobertor nas costas, sofá). Nada de ventilador/ar-condicionado.
@@ -48,9 +48,9 @@
 | `s07_01` | Concorrência | Gerenciadores de senha resolvem o dia a dia, não a sucessão. | Contraste: "dia a dia" × "sucessão". | 4.0 s |
 | `s07_02` | Concorrência | Os contatos de legado de Google, Apple e Meta cobrem só a própria plataforma. | Neutro, sem desdenhar. | 4.9 s |
 | `s07_03` | Concorrência | A Herança Digital reúne tudo em um só lugar, seguindo o rito legal brasileiro. | Confiante. Ênfase em "tudo em um só lugar". | 4.9 s |
-| `s08_01` | Modelo de negócio | A receita vem da assinatura anual do titular e de uma taxa na liberação. | Objetivo. | 4.3 s |
-| `s08_02` | Modelo de negócio | Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda. | Ênfase em "previstos". | 6.3 s |
-| `s08_03` | Modelo de negócio | Os valores serão definidos depois da pesquisa com usuários. | Honesto, tranquilo. | 3.7 s |
+| `s08_01` | Modelo de negócio | Em vida, é gratuito. | Curta e clara, sorriso na voz. Ênfase em "gratuito". | 1.8 s |
+| `s08_02` | Modelo de negócio | Só na liberação há uma taxa única, a definir, com isenção prevista para quem não puder pagar. | Transparente e tranquila. Pequena pausa em "a definir". | 6.0 s |
+| `s08_03` | Modelo de negócio | Escritórios, cartórios e governo entram como parceiros previstos. | Confiante. Ênfase leve em "previstos". | 4.5 s |
 | `s09_01` | Equipe e fechamento | Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos. | Honesto. Ênfase em "previstos". | 6.7 s |
 | `s09_02` | Equipe e fechamento | Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP. | Três passos, energia subindo. | 6.2 s |
 | `s09_03` | Equipe e fechamento | Herança Digital: seus dados, sua história, seu futuro. | Slogan devagar, uma pausa por vírgula, final firme (é a última fala do vídeo). | 4.2 s |

@@ -60,11 +60,11 @@ export const NARRACAO: Frase[] = [
   { id: "s07_03", cena: "s7", texto: "A Herança Digital reúne tudo em um só lugar, seguindo o rito legal brasileiro.", dica: "Confiante. Ênfase em \"tudo em um só lugar\"." },
 
   // S8 — Modelo de negócio
-  { id: "s08_01", cena: "s8", texto: "A receita vem da assinatura anual do titular e de uma taxa na liberação.", dica: "Objetivo." },
-  { id: "s08_02", cena: "s8", texto: "Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda.", dica: "Ênfase em \"previstos\"." },
-  { id: "s08_03", cena: "s8", texto: "Os valores serão definidos depois da pesquisa com usuários.", dica: "Honesto, tranquilo." },
+  { id: "s08_01", cena: "s8", texto: "Em vida, é gratuito.", dica: "Curta e clara, sorriso na voz. Ênfase em \"gratuito\"." },
+  { id: "s08_02", cena: "s8", texto: "Só na liberação há uma taxa única, a definir, com isenção prevista para quem não puder pagar.", dica: "Transparente e tranquila. Pequena pausa em \"a definir\"." },
+  { id: "s08_03", cena: "s8", texto: "Escritórios, cartórios e governo entram como parceiros previstos.", dica: "Confiante. Ênfase leve em \"previstos\"." },
 
-  // S9 — Equipe, próximos passos e fechamento
+  // S9 — Equipe e fechamento
   { id: "s09_01", cena: "s9", texto: "Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos.", dica: "Honesto. Ênfase em \"previstos\"." },
   { id: "s09_02", cena: "s9", texto: "Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP.", dica: "Três passos, energia subindo." },
   { id: "s09_03", cena: "s9", texto: "Herança Digital: seus dados, sua história, seu futuro.", dica: "Slogan devagar, uma pausa por vírgula, final firme (é a última fala do vídeo)." },

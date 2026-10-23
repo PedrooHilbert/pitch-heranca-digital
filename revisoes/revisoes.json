@@ -126,5 +126,23 @@
   "criadoEm": "2026-10-23T17:22:44.207Z",
   "resolvidoEm": "2026-10-23T17:40:20.199Z",
   "resolucao": "\"Obrigado!\" saiu da fala (s09_03 termina em \"seu futuro.\", voz regenerada), da legenda e da tela da S9 (bloco removido, slogan maior e linha final depois de \"futuro\"). Still: scripts/.cache/s9-fim.png"
+ },
+ {
+  "id": 8,
+  "frame": 4668,
+  "tempo": "02:35.6",
+  "cena": "s8",
+  "cenaNome": "Cena 8 · Modelo de negócio",
+  "x": null,
+  "y": null,
+  "texto": "REVISÃO — Cena S8 (Modelo de negócio): reescrever com o modelo novo (grátis em vida; taxa única a definir na liberação com isenção prevista; parceiros previstos).",
+  "queroQue": "",
+  "categoria": "Conteúdo",
+  "gravidade": "Média",
+  "still": "revisoes/pins/8.png",
+  "status": "feito",
+  "criadoEm": "2026-10-23T19:09:58.079Z",
+  "resolvidoEm": "2026-10-23T19:09:58.079Z",
+  "resolucao": "Narração nova (3 falas, voz só da S8), 3 estações (Em vida/GRÁTIS → Na liberação/taxa única A DEFINIR + isenção prevista → Quem sustenta/4 parceiros PREVISTO), frase final + rodapé. PROMPT.md e roteiro atualizados. Vídeo 179,47 s."
  }
 ]

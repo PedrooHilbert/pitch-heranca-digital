@@ -14,7 +14,7 @@ export const ComposicaoPitch: React.FC = () => (
     fps={30}
     width={1920}
     height={1080}
-    durationInFrames={5400}
+    durationInFrames={5384}
     calculateMetadata={({ props }) => {
       const total = (props as Projeto).cenas.reduce((a, c) => a + c.dur, 0);
       if (total > LIMITE_QUADROS) throw new Error(`Duração total ${total} q passa de ${LIMITE_QUADROS} (180 s).`);
@@ -485,24 +485,35 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s8",
           "nome": "Modelo de negócio",
-          "dur": 480,
+          "dur": 464,
           "fundos": {
             "negocio": "escuro"
           },
           "textos": {
-            "chamada": "COMO O PROJETO SE SUSTENTA",
-            "pilula1": "Assinatura anual do titular",
-            "pilula1Sub": "plano grátis + plano completo",
-            "pilula2": "Taxa na liberação",
-            "pilula2Sub": "paga pelo espólio / herdeiros",
-            "pilula3": "Plano para escritórios",
-            "pilula3Sub": "advogados de sucessões",
-            "pilula4": "Parceria com cartórios",
-            "pilula4Sub": "repasse por cofre ativo",
-            "pilula5": "Bancos, seguradoras, planos funerários",
-            "pilula5Sub": "canais de venda",
+            "est1": "Em vida",
+            "gratis": "GRÁTIS",
+            "item1": "Inventário",
+            "item2": "Cofre",
+            "item3": "Herdeiros",
+            "item4": "Regras",
+            "est2": "Na liberação",
+            "valida": "Validação",
+            "custodia": "Custódia",
+            "taxa": "Taxa única",
+            "adefinir": "A DEFINIR",
+            "isencao": "Isenção prevista",
+            "est3": "Quem sustenta",
+            "p1": "Escritórios",
+            "p1Sub": "plano profissional",
+            "p2": "Cartórios",
+            "p2Sub": "validação e custódia",
+            "p3": "Governo",
+            "p3Sub": "convênio",
+            "p4": "Bancos e seguradoras",
+            "p4Sub": "canal",
             "previsto": "PREVISTO",
-            "valores": "Valores a definir após pesquisa com usuários."
+            "final": "Grátis para o cidadão. *Sustentável* para quem opera em escala.",
+            "rodape": "Valores a definir após pesquisa com usuários e parecer jurídico."
           },
           "telas": {}
         },
@@ -2641,218 +2652,178 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s08_01",
           "cena": "s8",
-          "texto": "A receita vem da assinatura anual do titular e de uma taxa na liberação.",
+          "texto": "Em vida, é gratuito.",
           "fonte": "sintetica",
           "src": "audio/voz/s08_01.mp3",
-          "dur": 131,
+          "dur": 55,
           "inicio": 8,
           "palavras": [
             {
-              "w": "A",
+              "w": "Em",
               "de": 9,
-              "ate": 12
+              "ate": 16
             },
             {
-              "w": "receita",
-              "de": 12,
-              "ate": 32
+              "w": "vida,",
+              "de": 16,
+              "ate": 28
             },
             {
-              "w": "vem",
-              "de": 32,
-              "ate": 38
+              "w": "é",
+              "de": 34,
+              "ate": 37
             },
             {
-              "w": "da",
-              "de": 38,
-              "ate": 40
-            },
-            {
-              "w": "assinatura",
-              "de": 40,
+              "w": "gratuito.",
+              "de": 37,
               "ate": 58
-            },
-            {
-              "w": "anual",
-              "de": 58,
-              "ate": 68
-            },
-            {
-              "w": "do",
-              "de": 68,
-              "ate": 71
-            },
-            {
-              "w": "titular",
-              "de": 71,
-              "ate": 88
-            },
-            {
-              "w": "e",
-              "de": 88,
-              "ate": 91
-            },
-            {
-              "w": "de",
-              "de": 91,
-              "ate": 94
-            },
-            {
-              "w": "uma",
-              "de": 94,
-              "ate": 100
-            },
-            {
-              "w": "taxa",
-              "de": 100,
-              "ate": 111
-            },
-            {
-              "w": "na",
-              "de": 111,
-              "ate": 113
-            },
-            {
-              "w": "liberação.",
-              "de": 113,
-              "ate": 135
             }
           ]
         },
         {
           "id": "s08_02",
           "cena": "s8",
-          "texto": "Escritórios de advocacia, cartórios, bancos e seguradoras são parceiros previstos e canais de venda.",
+          "texto": "Só na liberação há uma taxa única, a definir, com isenção prevista para quem não puder pagar.",
           "fonte": "sintetica",
           "src": "audio/voz/s08_02.mp3",
-          "dur": 191,
-          "inicio": 145,
+          "dur": 181,
+          "inicio": 69,
           "palavras": [
             {
-              "w": "Escritórios",
-              "de": 146,
-              "ate": 168
+              "w": "Só",
+              "de": 70,
+              "ate": 80
             },
             {
-              "w": "de",
-              "de": 168,
-              "ate": 170
+              "w": "na",
+              "de": 80,
+              "ate": 82
             },
             {
-              "w": "advocacia,",
-              "de": 170,
-              "ate": 196
+              "w": "liberação",
+              "de": 82,
+              "ate": 104
             },
             {
-              "w": "cartórios,",
-              "de": 201,
+              "w": "há",
+              "de": 104,
+              "ate": 105
+            },
+            {
+              "w": "uma",
+              "de": 105,
+              "ate": 111
+            },
+            {
+              "w": "taxa",
+              "de": 111,
+              "ate": 124
+            },
+            {
+              "w": "única,",
+              "de": 124,
+              "ate": 138
+            },
+            {
+              "w": "a",
+              "de": 144,
+              "ate": 147
+            },
+            {
+              "w": "definir,",
+              "de": 147,
+              "ate": 167
+            },
+            {
+              "w": "com",
+              "de": 172,
+              "ate": 177
+            },
+            {
+              "w": "isenção",
+              "de": 177,
+              "ate": 191
+            },
+            {
+              "w": "prevista",
+              "de": 191,
+              "ate": 210
+            },
+            {
+              "w": "para",
+              "de": 210,
+              "ate": 215
+            },
+            {
+              "w": "quem",
+              "de": 215,
               "ate": 221
             },
             {
-              "w": "bancos",
-              "de": 226,
-              "ate": 240
+              "w": "não",
+              "de": 221,
+              "ate": 227
             },
             {
-              "w": "e",
-              "de": 240,
-              "ate": 243
+              "w": "puder",
+              "de": 227,
+              "ate": 236
             },
             {
-              "w": "seguradoras",
-              "de": 243,
-              "ate": 265
-            },
-            {
-              "w": "são",
-              "de": 265,
-              "ate": 269
-            },
-            {
-              "w": "parceiros",
-              "de": 269,
-              "ate": 283
-            },
-            {
-              "w": "previstos",
-              "de": 283,
-              "ate": 303
-            },
-            {
-              "w": "e",
-              "de": 303,
-              "ate": 306
-            },
-            {
-              "w": "canais",
-              "de": 306,
-              "ate": 316
-            },
-            {
-              "w": "de",
-              "de": 316,
-              "ate": 320
-            },
-            {
-              "w": "venda.",
-              "de": 320,
-              "ate": 332
+              "w": "pagar.",
+              "de": 236,
+              "ate": 246
             }
           ]
         },
         {
           "id": "s08_03",
           "cena": "s8",
-          "texto": "Os valores serão definidos depois da pesquisa com usuários.",
+          "texto": "Escritórios, cartórios e governo entram como parceiros previstos.",
           "fonte": "sintetica",
           "src": "audio/voz/s08_03.mp3",
-          "dur": 110,
-          "inicio": 342,
+          "dur": 137,
+          "inicio": 256,
           "palavras": [
             {
-              "w": "Os",
+              "w": "Escritórios,",
+              "de": 257,
+              "ate": 281
+            },
+            {
+              "w": "cartórios",
+              "de": 286,
+              "ate": 306
+            },
+            {
+              "w": "e",
+              "de": 306,
+              "ate": 310
+            },
+            {
+              "w": "governo",
+              "de": 310,
+              "ate": 333
+            },
+            {
+              "w": "entram",
+              "de": 333,
+              "ate": 343
+            },
+            {
+              "w": "como",
               "de": 343,
-              "ate": 348
+              "ate": 350
             },
             {
-              "w": "valores",
-              "de": 348,
-              "ate": 364
+              "w": "parceiros",
+              "de": 350,
+              "ate": 366
             },
             {
-              "w": "serão",
-              "de": 364,
-              "ate": 371
-            },
-            {
-              "w": "definidos",
-              "de": 371,
-              "ate": 388
-            },
-            {
-              "w": "depois",
-              "de": 388,
-              "ate": 399
-            },
-            {
-              "w": "da",
-              "de": 399,
-              "ate": 402
-            },
-            {
-              "w": "pesquisa",
-              "de": 402,
-              "ate": 421
-            },
-            {
-              "w": "com",
-              "de": 421,
-              "ate": 427
-            },
-            {
-              "w": "usuários.",
-              "de": 427,
-              "ate": 448
+              "w": "previstos.",
+              "de": 366,
+              "ate": 389
             }
           ]
         },
@@ -5127,78 +5098,28 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L36",
           "cena": "s8",
           "fraseId": "s08_01",
-          "de": -6,
-          "ate": 146,
+          "de": 5,
+          "ate": 66,
           "palavras": [
             {
-              "w": "A",
+              "w": "Em",
               "de": 9,
-              "ate": 12
+              "ate": 16
             },
             {
-              "w": "receita",
-              "de": 12,
-              "ate": 32
+              "w": "vida,",
+              "de": 16,
+              "ate": 28
             },
             {
-              "w": "vem",
-              "de": 32,
-              "ate": 38
+              "w": "é",
+              "de": 34,
+              "ate": 37
             },
             {
-              "w": "da",
-              "de": 38,
-              "ate": 40
-            },
-            {
-              "w": "assinatura",
-              "de": 40,
+              "w": "gratuito.",
+              "de": 37,
               "ate": 58
-            },
-            {
-              "w": "anual",
-              "de": 58,
-              "ate": 68
-            },
-            {
-              "w": "do",
-              "de": 68,
-              "ate": 71
-            },
-            {
-              "w": "titular",
-              "de": 71,
-              "ate": 88
-            },
-            {
-              "w": "e",
-              "de": 88,
-              "ate": 91
-            },
-            {
-              "w": "de",
-              "de": 91,
-              "ate": 94
-            },
-            {
-              "w": "uma",
-              "de": 94,
-              "ate": 100
-            },
-            {
-              "w": "taxa",
-              "de": 100,
-              "ate": 111
-            },
-            {
-              "w": "na",
-              "de": 111,
-              "ate": 113
-            },
-            {
-              "w": "liberação.",
-              "de": 113,
-              "ate": 135
             }
           ]
         },
@@ -5206,78 +5127,93 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L37",
           "cena": "s8",
           "fraseId": "s08_02",
-          "de": 146,
-          "ate": 339,
+          "de": 66,
+          "ate": 253,
           "palavras": [
             {
-              "w": "Escritórios",
-              "de": 146,
-              "ate": 168
+              "w": "Só",
+              "de": 70,
+              "ate": 80
             },
             {
-              "w": "de",
-              "de": 168,
-              "ate": 170
+              "w": "na",
+              "de": 80,
+              "ate": 82
             },
             {
-              "w": "advocacia,",
-              "de": 170,
-              "ate": 196
+              "w": "liberação",
+              "de": 82,
+              "ate": 104
             },
             {
-              "w": "cartórios,",
-              "de": 201,
+              "w": "há",
+              "de": 104,
+              "ate": 105
+            },
+            {
+              "w": "uma",
+              "de": 105,
+              "ate": 111
+            },
+            {
+              "w": "taxa",
+              "de": 111,
+              "ate": 124
+            },
+            {
+              "w": "única,",
+              "de": 124,
+              "ate": 138
+            },
+            {
+              "w": "a",
+              "de": 144,
+              "ate": 147
+            },
+            {
+              "w": "definir,",
+              "de": 147,
+              "ate": 167
+            },
+            {
+              "w": "com",
+              "de": 172,
+              "ate": 177
+            },
+            {
+              "w": "isenção",
+              "de": 177,
+              "ate": 191
+            },
+            {
+              "w": "prevista",
+              "de": 191,
+              "ate": 210
+            },
+            {
+              "w": "para",
+              "de": 210,
+              "ate": 215
+            },
+            {
+              "w": "quem",
+              "de": 215,
               "ate": 221
             },
             {
-              "w": "bancos",
-              "de": 226,
-              "ate": 240
+              "w": "não",
+              "de": 221,
+              "ate": 227
             },
             {
-              "w": "e",
-              "de": 240,
-              "ate": 243
+              "w": "puder",
+              "de": 227,
+              "ate": 236
             },
             {
-              "w": "seguradoras",
-              "de": 243,
-              "ate": 265
-            },
-            {
-              "w": "são",
-              "de": 265,
-              "ate": 269
-            },
-            {
-              "w": "parceiros",
-              "de": 269,
-              "ate": 283
-            },
-            {
-              "w": "previstos",
-              "de": 283,
-              "ate": 303
-            },
-            {
-              "w": "e",
-              "de": 303,
-              "ate": 306
-            },
-            {
-              "w": "canais",
-              "de": 306,
-              "ate": 316
-            },
-            {
-              "w": "de",
-              "de": 316,
-              "ate": 320
-            },
-            {
-              "w": "venda.",
-              "de": 320,
-              "ate": 332
+              "w": "pagar.",
+              "de": 236,
+              "ate": 246
             }
           ]
         },
@@ -5285,53 +5221,48 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L38",
           "cena": "s8",
           "fraseId": "s08_03",
-          "de": 339,
-          "ate": 458,
+          "de": 253,
+          "ate": 399,
           "palavras": [
             {
-              "w": "Os",
+              "w": "Escritórios,",
+              "de": 257,
+              "ate": 281
+            },
+            {
+              "w": "cartórios",
+              "de": 286,
+              "ate": 306
+            },
+            {
+              "w": "e",
+              "de": 306,
+              "ate": 310
+            },
+            {
+              "w": "governo",
+              "de": 310,
+              "ate": 333
+            },
+            {
+              "w": "entram",
+              "de": 333,
+              "ate": 343
+            },
+            {
+              "w": "como",
               "de": 343,
-              "ate": 348
+              "ate": 350
             },
             {
-              "w": "valores",
-              "de": 348,
-              "ate": 364
+              "w": "parceiros",
+              "de": 350,
+              "ate": 366
             },
             {
-              "w": "serão",
-              "de": 364,
-              "ate": 371
-            },
-            {
-              "w": "definidos",
-              "de": 371,
-              "ate": 388
-            },
-            {
-              "w": "depois",
-              "de": 388,
-              "ate": 399
-            },
-            {
-              "w": "da",
-              "de": 399,
-              "ate": 402
-            },
-            {
-              "w": "pesquisa",
-              "de": 402,
-              "ate": 421
-            },
-            {
-              "w": "com",
-              "de": 421,
-              "ate": 427
-            },
-            {
-              "w": "usuários.",
-              "de": 427,
-              "ate": 448
+              "w": "previstos.",
+              "de": 366,
+              "ate": 389
             }
           ]
         },
@@ -7010,334 +6941,369 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x210",
           "cena": "s8",
-          "frame": 4,
-          "som": "impact_low",
-          "ganhoDb": -14.9
+          "frame": 3,
+          "som": "whoosh_short",
+          "ganhoDb": -17
         },
         {
           "id": "x211",
           "cena": "s8",
-          "frame": 34,
-          "som": "whoosh_short",
-          "ganhoDb": -17
+          "frame": 15,
+          "som": "pop",
+          "ganhoDb": -20
         },
         {
           "id": "x212",
           "cena": "s8",
-          "frame": 44,
+          "frame": 20,
           "som": "pop",
-          "ganhoDb": -17
+          "ganhoDb": -20
         },
         {
           "id": "x213",
           "cena": "s8",
-          "frame": 94,
-          "som": "whoosh_short",
-          "ganhoDb": -17
+          "frame": 25,
+          "som": "pop",
+          "ganhoDb": -20
         },
         {
           "id": "x214",
           "cena": "s8",
-          "frame": 104,
+          "frame": 30,
           "som": "pop",
-          "ganhoDb": -17
+          "ganhoDb": -20
         },
         {
           "id": "x215",
           "cena": "s8",
-          "frame": 140,
-          "som": "whoosh_short",
-          "ganhoDb": -17
+          "frame": 35,
+          "som": "impact_low",
+          "ganhoDb": -13.2
         },
         {
           "id": "x216",
           "cena": "s8",
-          "frame": 150,
-          "som": "pop",
-          "ganhoDb": -17
+          "frame": 61,
+          "som": "whoosh_long",
+          "ganhoDb": -16
         },
         {
           "id": "x217",
           "cena": "s8",
-          "frame": 195,
-          "som": "whoosh_short",
+          "frame": 108,
+          "som": "pop",
           "ganhoDb": -17
         },
         {
           "id": "x218",
           "cena": "s8",
-          "frame": 205,
-          "som": "pop",
-          "ganhoDb": -17
+          "frame": 145,
+          "som": "thunk",
+          "ganhoDb": -14
         },
         {
           "id": "x219",
           "cena": "s8",
-          "frame": 220,
-          "som": "whoosh_short",
-          "ganhoDb": -17
+          "frame": 174,
+          "som": "ping",
+          "ganhoDb": -20
         },
         {
           "id": "x220",
           "cena": "s8",
-          "frame": 230,
-          "som": "pop",
-          "ganhoDb": -17
+          "frame": 248,
+          "som": "whoosh_long",
+          "ganhoDb": -16
         },
         {
           "id": "x221",
           "cena": "s8",
-          "frame": 280,
-          "som": "thunk",
-          "ganhoDb": -14
+          "frame": 259,
+          "som": "pop",
+          "ganhoDb": -17
         },
         {
           "id": "x222",
           "cena": "s8",
-          "frame": 285,
-          "som": "thunk",
-          "ganhoDb": -14
+          "frame": 288,
+          "som": "pop",
+          "ganhoDb": -17
         },
         {
           "id": "x223",
           "cena": "s8",
-          "frame": 345,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 312,
+          "som": "pop",
+          "ganhoDb": -17
         },
         {
           "id": "x224",
           "cena": "s8",
-          "frame": 348,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 320,
+          "som": "pop",
+          "ganhoDb": -17
         },
         {
           "id": "x225",
           "cena": "s8",
-          "frame": 351,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 364,
+          "som": "thunk",
+          "ganhoDb": -18.4
         },
         {
           "id": "x226",
           "cena": "s8",
-          "frame": 354,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 367,
+          "som": "thunk",
+          "ganhoDb": -18.4
         },
         {
           "id": "x227",
           "cena": "s8",
-          "frame": 357,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 370,
+          "som": "thunk",
+          "ganhoDb": -18.4
         },
         {
           "id": "x228",
           "cena": "s8",
-          "frame": 360,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 373,
+          "som": "thunk",
+          "ganhoDb": -18.4
         },
         {
           "id": "x229",
           "cena": "s8",
-          "frame": 363,
-          "som": "type",
-          "ganhoDb": -22
+          "frame": 397,
+          "som": "whoosh_short",
+          "ganhoDb": -17
         },
         {
           "id": "x230",
           "cena": "s8",
-          "frame": 366,
+          "frame": 415,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x231",
           "cena": "s8",
-          "frame": 478,
+          "frame": 418,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x232",
+          "cena": "s8",
+          "frame": 421,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x233",
+          "cena": "s8",
+          "frame": 424,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x234",
+          "cena": "s8",
+          "frame": 427,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x235",
+          "cena": "s8",
+          "frame": 430,
+          "som": "type",
+          "ganhoDb": -22
+        },
+        {
+          "id": "x236",
+          "cena": "s8",
+          "frame": 462,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x232",
+          "id": "x237",
           "cena": "s9",
           "frame": 6,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x233",
+          "id": "x238",
           "cena": "s9",
           "frame": 12,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x234",
+          "id": "x239",
           "cena": "s9",
           "frame": 13,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x235",
+          "id": "x240",
           "cena": "s9",
           "frame": 15,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x236",
+          "id": "x241",
           "cena": "s9",
           "frame": 18,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x237",
+          "id": "x242",
           "cena": "s9",
           "frame": 20,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x238",
+          "id": "x243",
           "cena": "s9",
           "frame": 21,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x239",
+          "id": "x244",
           "cena": "s9",
           "frame": 24,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x240",
+          "id": "x245",
           "cena": "s9",
           "frame": 27,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x241",
+          "id": "x246",
           "cena": "s9",
           "frame": 30,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x242",
+          "id": "x247",
           "cena": "s9",
           "frame": 33,
           "som": "type",
           "ganhoDb": -22
         },
         {
-          "id": "x243",
+          "id": "x248",
           "cena": "s9",
           "frame": 37,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x244",
+          "id": "x249",
           "cena": "s9",
           "frame": 65,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x245",
+          "id": "x250",
           "cena": "s9",
           "frame": 92,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x246",
+          "id": "x251",
           "cena": "s9",
           "frame": 117,
           "som": "pop",
           "ganhoDb": -17
         },
         {
-          "id": "x247",
+          "id": "x252",
           "cena": "s9",
           "frame": 182,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x248",
+          "id": "x253",
           "cena": "s9",
           "frame": 186,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x249",
+          "id": "x254",
           "cena": "s9",
           "frame": 190,
           "som": "thunk",
           "ganhoDb": -14
         },
         {
-          "id": "x250",
+          "id": "x255",
           "cena": "s9",
           "frame": 211,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
-          "id": "x251",
+          "id": "x256",
           "cena": "s9",
           "frame": 259,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x252",
+          "id": "x257",
           "cena": "s9",
           "frame": 329,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x253",
+          "id": "x258",
           "cena": "s9",
           "frame": 361,
           "som": "chime_ok",
           "ganhoDb": -16
         },
         {
-          "id": "x254",
+          "id": "x259",
           "cena": "s9",
           "frame": 395,
           "som": "whoosh_long",
           "ganhoDb": -16
         },
         {
-          "id": "x255",
+          "id": "x260",
           "cena": "s9",
           "frame": 407,
           "som": "riser",
           "ganhoDb": -17
         },
         {
-          "id": "x256",
+          "id": "x261",
           "cena": "s9",
           "frame": 407,
           "som": "stinger_logo",
           "ganhoDb": -12
         },
         {
-          "id": "x257",
+          "id": "x262",
           "cena": "s9",
           "frame": 530,
           "som": "impact_low",
