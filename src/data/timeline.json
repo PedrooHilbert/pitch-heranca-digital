@@ -4,71 +4,71 @@
  "framesPerBeat": 16,
  "fonteVoz": "sintetica",
  "vozSintetica": "pt-BR-ThalitaMultilingualNeural",
- "nivel": "respiros 80%",
- "total": 5360,
+ "nivel": "respiros 65%",
+ "total": 5384,
  "cenas": [
   {
    "id": "s1",
    "nome": "Abertura",
    "tema": "escuro",
    "from": 0,
-   "dur": 368
+   "dur": 360
   },
   {
    "id": "s2",
    "nome": "Problema",
    "tema": "claro",
-   "from": 368,
+   "from": 360,
    "dur": 632
   },
   {
    "id": "s3",
    "nome": "Proposta de valor",
    "tema": "escuro",
-   "from": 1000,
-   "dur": 544
+   "from": 992,
+   "dur": 536
   },
   {
    "id": "s4",
    "nome": "Como funciona",
    "tema": "claro",
-   "from": 1544,
+   "from": 1528,
    "dur": 432
   },
   {
    "id": "s5",
    "nome": "Demo do protótipo",
    "tema": "claro",
-   "from": 1976,
+   "from": 1960,
    "dur": 1240
   },
   {
    "id": "s6",
    "nome": "Segurança",
    "tema": "escuro",
-   "from": 3216,
+   "from": 3200,
    "dur": 616
   },
   {
    "id": "s7",
    "nome": "Concorrência",
    "tema": "claro",
-   "from": 3832,
+   "from": 3816,
    "dur": 456
   },
   {
    "id": "s8",
    "nome": "Modelo de negócio",
    "tema": "escuro",
-   "from": 4288,
-   "dur": 456
+   "from": 4272,
+   "dur": 504
   },
   {
    "id": "s9",
    "nome": "Equipe e fechamento",
    "tema": "claro",
-   "from": 4744,
-   "dur": 616
+   "from": 4776,
+   "dur": 608
   }
  ],
  "frases": [
@@ -262,89 +262,89 @@
    "cena": "s2",
    "texto": "Hoje quase todo mundo tem e-mail, redes sociais, banco digital, criptomoedas, fotos na nuvem e assinaturas.",
    "fonte": "sintetica",
-   "from": 376,
+   "from": 368,
    "dur": 217,
    "src": "audio/voz/s02_01.mp3",
    "palavras": [
     {
      "w": "Hoje",
-     "from": 377,
-     "to": 385
+     "from": 369,
+     "to": 377
     },
     {
      "w": "quase",
-     "from": 385,
-     "to": 394
+     "from": 377,
+     "to": 386
     },
     {
      "w": "todo",
-     "from": 394,
-     "to": 400
+     "from": 386,
+     "to": 392
     },
     {
      "w": "mundo",
-     "from": 400,
-     "to": 409
+     "from": 392,
+     "to": 401
     },
     {
      "w": "tem",
-     "from": 409,
-     "to": 413
+     "from": 401,
+     "to": 405
     },
     {
      "w": "e-mail,",
-     "from": 413,
-     "to": 426
+     "from": 405,
+     "to": 418
     },
     {
      "w": "redes",
-     "from": 431,
-     "to": 439
+     "from": 423,
+     "to": 431
     },
     {
      "w": "sociais,",
-     "from": 439,
-     "to": 459
+     "from": 431,
+     "to": 451
     },
     {
      "w": "banco",
-     "from": 463,
-     "to": 474
+     "from": 455,
+     "to": 466
     },
     {
      "w": "digital,",
-     "from": 474,
-     "to": 492
+     "from": 466,
+     "to": 484
     },
     {
      "w": "criptomoedas,",
-     "from": 496,
-     "to": 522
+     "from": 488,
+     "to": 514
     },
     {
      "w": "fotos",
-     "from": 528,
-     "to": 540
+     "from": 520,
+     "to": 532
     },
     {
      "w": "na",
-     "from": 540,
-     "to": 545
+     "from": 532,
+     "to": 537
     },
     {
      "w": "nuvem",
-     "from": 545,
-     "to": 561
+     "from": 537,
+     "to": 553
     },
     {
      "w": "e",
-     "from": 561,
-     "to": 564
+     "from": 553,
+     "to": 556
     },
     {
      "w": "assinaturas.",
-     "from": 564,
-     "to": 589
+     "from": 556,
+     "to": 581
     }
    ]
   },
@@ -353,119 +353,119 @@
    "cena": "s2",
    "texto": "Quando a pessoa morre, a família não sabe o que existe, não tem as senhas, e não sabe o que ela queria.",
    "fonte": "sintetica",
-   "from": 599,
+   "from": 591,
    "dur": 186,
    "src": "audio/voz/s02_02.mp3",
    "palavras": [
     {
      "w": "Quando",
-     "from": 600,
-     "to": 605
+     "from": 592,
+     "to": 597
     },
     {
      "w": "a",
-     "from": 605,
-     "to": 607
+     "from": 597,
+     "to": 599
     },
     {
      "w": "pessoa",
-     "from": 607,
-     "to": 616
+     "from": 599,
+     "to": 608
     },
     {
      "w": "morre,",
-     "from": 616,
-     "to": 628
+     "from": 608,
+     "to": 620
     },
     {
      "w": "a",
-     "from": 634,
-     "to": 636
+     "from": 626,
+     "to": 628
     },
     {
      "w": "família",
-     "from": 636,
-     "to": 646
+     "from": 628,
+     "to": 638
     },
     {
      "w": "não",
-     "from": 646,
-     "to": 652
+     "from": 638,
+     "to": 644
     },
     {
      "w": "sabe",
-     "from": 652,
-     "to": 673
+     "from": 644,
+     "to": 665
     },
     {
      "w": "o",
-     "from": 673,
-     "to": 674
+     "from": 665,
+     "to": 666
     },
     {
      "w": "que",
-     "from": 673,
-     "to": 677
+     "from": 665,
+     "to": 669
     },
     {
      "w": "existe,",
-     "from": 677,
-     "to": 693
+     "from": 669,
+     "to": 685
     },
     {
      "w": "não",
-     "from": 699,
-     "to": 705
+     "from": 691,
+     "to": 697
     },
     {
      "w": "tem",
-     "from": 705,
-     "to": 711
+     "from": 697,
+     "to": 703
     },
     {
      "w": "as",
-     "from": 711,
-     "to": 714
+     "from": 703,
+     "to": 706
     },
     {
      "w": "senhas,",
-     "from": 714,
-     "to": 726
+     "from": 706,
+     "to": 718
     },
     {
      "w": "e",
-     "from": 732,
-     "to": 734
+     "from": 724,
+     "to": 726
     },
     {
      "w": "não",
-     "from": 734,
-     "to": 741
+     "from": 726,
+     "to": 733
     },
     {
      "w": "sabe",
-     "from": 741,
-     "to": 762
+     "from": 733,
+     "to": 754
     },
     {
      "w": "o",
-     "from": 762,
-     "to": 763
+     "from": 754,
+     "to": 755
     },
     {
      "w": "que",
-     "from": 762,
-     "to": 765
+     "from": 754,
+     "to": 757
     },
     {
      "w": "ela",
-     "from": 765,
-     "to": 769
+     "from": 757,
+     "to": 761
     },
     {
      "w": "queria.",
-     "from": 769,
-     "to": 781
+     "from": 761,
+     "to": 773
     }
    ]
   },
@@ -474,84 +474,84 @@
    "cena": "s2",
    "texto": "Resultado: bens com valor perdidos, assinaturas cobrando para sempre e perfis virando alvo de golpe.",
    "fonte": "sintetica",
-   "from": 791,
+   "from": 783,
    "dur": 191,
    "src": "audio/voz/s02_03.mp3",
    "palavras": [
     {
      "w": "Resultado:",
-     "from": 792,
-     "to": 814
+     "from": 784,
+     "to": 806
     },
     {
      "w": "bens",
-     "from": 822,
-     "to": 832
+     "from": 814,
+     "to": 824
     },
     {
      "w": "com",
-     "from": 832,
-     "to": 836
+     "from": 824,
+     "to": 828
     },
     {
      "w": "valor",
-     "from": 836,
-     "to": 844
+     "from": 828,
+     "to": 836
     },
     {
      "w": "perdidos,",
-     "from": 844,
-     "to": 865
+     "from": 836,
+     "to": 857
     },
     {
      "w": "assinaturas",
-     "from": 871,
-     "to": 890
+     "from": 863,
+     "to": 882
     },
     {
      "w": "cobrando",
-     "from": 890,
-     "to": 903
+     "from": 882,
+     "to": 895
     },
     {
      "w": "para",
-     "from": 903,
-     "to": 909
+     "from": 895,
+     "to": 901
     },
     {
      "w": "sempre",
-     "from": 909,
-     "to": 922
+     "from": 901,
+     "to": 914
     },
     {
      "w": "e",
-     "from": 922,
-     "to": 923
+     "from": 914,
+     "to": 915
     },
     {
      "w": "perfis",
-     "from": 923,
-     "to": 940
+     "from": 915,
+     "to": 932
     },
     {
      "w": "virando",
-     "from": 940,
-     "to": 953
+     "from": 932,
+     "to": 945
     },
     {
      "w": "alvo",
-     "from": 953,
-     "to": 962
+     "from": 945,
+     "to": 954
     },
     {
      "w": "de",
-     "from": 962,
-     "to": 965
+     "from": 954,
+     "to": 957
     },
     {
      "w": "golpe.",
-     "from": 965,
-     "to": 978
+     "from": 957,
+     "to": 970
     }
    ]
   },
@@ -560,99 +560,99 @@
    "cena": "s3",
    "texto": "A Herança Digital é um cofre onde você organiza, em vida, tudo o que tem no mundo digital.",
    "fonte": "sintetica",
-   "from": 1010,
+   "from": 1002,
    "dur": 164,
    "src": "audio/voz/s03_01.mp3",
    "palavras": [
     {
      "w": "A",
-     "from": 1011,
-     "to": 1015
+     "from": 1003,
+     "to": 1007
     },
     {
      "w": "Herança",
-     "from": 1015,
-     "to": 1027
+     "from": 1007,
+     "to": 1019
     },
     {
      "w": "Digital",
-     "from": 1027,
-     "to": 1046
+     "from": 1019,
+     "to": 1038
     },
     {
      "w": "é",
-     "from": 1046,
-     "to": 1048
+     "from": 1038,
+     "to": 1040
     },
     {
      "w": "um",
-     "from": 1048,
-     "to": 1051
+     "from": 1040,
+     "to": 1043
     },
     {
      "w": "cofre",
-     "from": 1051,
-     "to": 1061
+     "from": 1043,
+     "to": 1053
     },
     {
      "w": "onde",
-     "from": 1061,
-     "to": 1067
+     "from": 1053,
+     "to": 1059
     },
     {
      "w": "você",
-     "from": 1067,
-     "to": 1075
+     "from": 1059,
+     "to": 1067
     },
     {
      "w": "organiza,",
-     "from": 1075,
-     "to": 1096
+     "from": 1067,
+     "to": 1088
     },
     {
      "w": "em",
-     "from": 1101,
-     "to": 1106
+     "from": 1093,
+     "to": 1098
     },
     {
      "w": "vida,",
-     "from": 1106,
-     "to": 1119
+     "from": 1098,
+     "to": 1111
     },
     {
      "w": "tudo",
-     "from": 1124,
-     "to": 1132
+     "from": 1116,
+     "to": 1124
     },
     {
      "w": "o",
-     "from": 1132,
-     "to": 1133
+     "from": 1124,
+     "to": 1125
     },
     {
      "w": "que",
-     "from": 1132,
-     "to": 1136
+     "from": 1124,
+     "to": 1128
     },
     {
      "w": "tem",
-     "from": 1136,
-     "to": 1140
+     "from": 1128,
+     "to": 1132
     },
     {
      "w": "no",
-     "from": 1140,
-     "to": 1143
+     "from": 1132,
+     "to": 1135
     },
     {
      "w": "mundo",
-     "from": 1143,
-     "to": 1154
+     "from": 1135,
+     "to": 1146
     },
     {
      "w": "digital.",
-     "from": 1154,
-     "to": 1170
+     "from": 1146,
+     "to": 1162
     }
    ]
   },
@@ -661,74 +661,74 @@
    "cena": "s3",
    "texto": "Juntamos três coisas: um inventário dos seus ativos, um cofre de acessos criptografado,",
    "fonte": "sintetica",
-   "from": 1180,
+   "from": 1172,
    "dur": 174,
    "src": "audio/voz/s03_02.mp3",
    "palavras": [
     {
      "w": "Juntamos",
-     "from": 1181,
-     "to": 1198
+     "from": 1173,
+     "to": 1190
     },
     {
      "w": "três",
-     "from": 1198,
-     "to": 1208
+     "from": 1190,
+     "to": 1200
     },
     {
      "w": "coisas:",
-     "from": 1208,
-     "to": 1223
+     "from": 1200,
+     "to": 1215
     },
     {
      "w": "um",
-     "from": 1232,
-     "to": 1235
+     "from": 1224,
+     "to": 1227
     },
     {
      "w": "inventário",
-     "from": 1235,
-     "to": 1253
+     "from": 1227,
+     "to": 1245
     },
     {
      "w": "dos",
-     "from": 1253,
-     "to": 1257
+     "from": 1245,
+     "to": 1249
     },
     {
      "w": "seus",
-     "from": 1257,
-     "to": 1260
+     "from": 1249,
+     "to": 1252
     },
     {
      "w": "ativos,",
-     "from": 1260,
-     "to": 1279
+     "from": 1252,
+     "to": 1271
     },
     {
      "w": "um",
-     "from": 1285,
-     "to": 1289
+     "from": 1277,
+     "to": 1281
     },
     {
      "w": "cofre",
-     "from": 1289,
-     "to": 1300
+     "from": 1281,
+     "to": 1292
     },
     {
      "w": "de",
-     "from": 1300,
-     "to": 1302
+     "from": 1292,
+     "to": 1294
     },
     {
      "w": "acessos",
-     "from": 1302,
-     "to": 1318
+     "from": 1294,
+     "to": 1310
     },
     {
      "w": "criptografado,",
-     "from": 1318,
-     "to": 1351
+     "from": 1310,
+     "to": 1343
     }
    ]
   },
@@ -737,84 +737,84 @@
    "cena": "s3",
    "texto": "e uma liberação que só vale pelo caminho legal: inventário em cartório ou na justiça.",
    "fonte": "sintetica",
-   "from": 1360,
+   "from": 1352,
    "dur": 153,
    "src": "audio/voz/s03_03.mp3",
    "palavras": [
     {
      "w": "e",
-     "from": 1361,
-     "to": 1364
+     "from": 1353,
+     "to": 1356
     },
     {
      "w": "uma",
-     "from": 1364,
-     "to": 1368
+     "from": 1356,
+     "to": 1360
     },
     {
      "w": "liberação",
-     "from": 1368,
-     "to": 1387
+     "from": 1360,
+     "to": 1379
     },
     {
      "w": "que",
-     "from": 1387,
-     "to": 1390
+     "from": 1379,
+     "to": 1382
     },
     {
      "w": "só",
-     "from": 1390,
-     "to": 1396
+     "from": 1382,
+     "to": 1388
     },
     {
      "w": "vale",
-     "from": 1396,
-     "to": 1405
+     "from": 1388,
+     "to": 1397
     },
     {
      "w": "pelo",
-     "from": 1405,
-     "to": 1411
+     "from": 1397,
+     "to": 1403
     },
     {
      "w": "caminho",
-     "from": 1411,
-     "to": 1420
+     "from": 1403,
+     "to": 1412
     },
     {
      "w": "legal:",
-     "from": 1420,
-     "to": 1433
+     "from": 1412,
+     "to": 1425
     },
     {
      "w": "inventário",
-     "from": 1440,
-     "to": 1458
+     "from": 1432,
+     "to": 1450
     },
     {
      "w": "em",
-     "from": 1458,
-     "to": 1461
+     "from": 1450,
+     "to": 1453
     },
     {
      "w": "cartório",
-     "from": 1461,
-     "to": 1482
+     "from": 1453,
+     "to": 1474
     },
     {
      "w": "ou",
-     "from": 1482,
-     "to": 1487
+     "from": 1474,
+     "to": 1479
     },
     {
      "w": "na",
-     "from": 1487,
-     "to": 1490
+     "from": 1479,
+     "to": 1482
     },
     {
      "w": "justiça.",
-     "from": 1490,
-     "to": 1509
+     "from": 1482,
+     "to": 1501
     }
    ]
   },
@@ -823,79 +823,79 @@
    "cena": "s4",
    "texto": "Em vida, o titular cadastra os ativos e escolhe o destino de cada um.",
    "fonte": "sintetica",
-   "from": 1552,
+   "from": 1536,
    "dur": 138,
    "src": "audio/voz/s04_01.mp3",
    "palavras": [
     {
      "w": "Em",
-     "from": 1553,
-     "to": 1559
+     "from": 1537,
+     "to": 1543
     },
     {
      "w": "vida,",
-     "from": 1559,
-     "to": 1571
+     "from": 1543,
+     "to": 1555
     },
     {
      "w": "o",
-     "from": 1578,
-     "to": 1580
+     "from": 1562,
+     "to": 1564
     },
     {
      "w": "titular",
-     "from": 1580,
-     "to": 1595
+     "from": 1564,
+     "to": 1579
     },
     {
      "w": "cadastra",
-     "from": 1595,
-     "to": 1610
+     "from": 1579,
+     "to": 1594
     },
     {
      "w": "os",
-     "from": 1610,
-     "to": 1611
+     "from": 1594,
+     "to": 1595
     },
     {
      "w": "ativos",
-     "from": 1611,
-     "to": 1628
+     "from": 1595,
+     "to": 1612
     },
     {
      "w": "e",
-     "from": 1628,
-     "to": 1635
+     "from": 1612,
+     "to": 1619
     },
     {
      "w": "escolhe",
-     "from": 1635,
-     "to": 1648
+     "from": 1619,
+     "to": 1632
     },
     {
      "w": "o",
-     "from": 1648,
-     "to": 1650
+     "from": 1632,
+     "to": 1634
     },
     {
      "w": "destino",
-     "from": 1650,
-     "to": 1665
+     "from": 1634,
+     "to": 1649
     },
     {
      "w": "de",
-     "from": 1665,
-     "to": 1668
+     "from": 1649,
+     "to": 1652
     },
     {
      "w": "cada",
-     "from": 1668,
-     "to": 1680
+     "from": 1652,
+     "to": 1664
     },
     {
      "w": "um.",
-     "from": 1680,
-     "to": 1686
+     "from": 1664,
+     "to": 1670
     }
    ]
   },
@@ -904,39 +904,39 @@
    "cena": "s4",
    "texto": "No falecimento, o cofre é congelado.",
    "fonte": "sintetica",
-   "from": 1696,
+   "from": 1680,
    "dur": 77,
    "src": "audio/voz/s04_02.mp3",
    "palavras": [
     {
      "w": "No",
-     "from": 1697,
-     "to": 1701
+     "from": 1681,
+     "to": 1685
     },
     {
      "w": "falecimento,",
-     "from": 1701,
-     "to": 1726
+     "from": 1685,
+     "to": 1710
     },
     {
      "w": "o",
-     "from": 1732,
-     "to": 1735
+     "from": 1716,
+     "to": 1719
     },
     {
      "w": "cofre",
-     "from": 1735,
-     "to": 1746
+     "from": 1719,
+     "to": 1730
     },
     {
      "w": "é",
-     "from": 1746,
-     "to": 1747
+     "from": 1730,
+     "to": 1731
     },
     {
      "w": "congelado.",
-     "from": 1747,
-     "to": 1768
+     "from": 1731,
+     "to": 1752
     }
    ]
   },
@@ -945,94 +945,94 @@
    "cena": "s4",
    "texto": "Só depois do inventário e de um prazo para contestação, cada herdeiro recebe apenas a sua parte.",
    "fonte": "sintetica",
-   "from": 1779,
+   "from": 1763,
    "dur": 174,
    "src": "audio/voz/s04_03.mp3",
    "palavras": [
     {
      "w": "Só",
-     "from": 1780,
-     "to": 1786
+     "from": 1764,
+     "to": 1770
     },
     {
      "w": "depois",
-     "from": 1786,
-     "to": 1797
+     "from": 1770,
+     "to": 1781
     },
     {
      "w": "do",
-     "from": 1797,
-     "to": 1799
+     "from": 1781,
+     "to": 1783
     },
     {
      "w": "inventário",
-     "from": 1799,
-     "to": 1822
+     "from": 1783,
+     "to": 1806
     },
     {
      "w": "e",
-     "from": 1822,
-     "to": 1825
+     "from": 1806,
+     "to": 1809
     },
     {
      "w": "de",
-     "from": 1825,
-     "to": 1827
+     "from": 1809,
+     "to": 1811
     },
     {
      "w": "um",
-     "from": 1827,
-     "to": 1831
+     "from": 1811,
+     "to": 1815
     },
     {
      "w": "prazo",
-     "from": 1831,
-     "to": 1842
+     "from": 1815,
+     "to": 1826
     },
     {
      "w": "para",
-     "from": 1842,
-     "to": 1847
+     "from": 1826,
+     "to": 1831
     },
     {
      "w": "contestação,",
-     "from": 1847,
-     "to": 1873
+     "from": 1831,
+     "to": 1857
     },
     {
      "w": "cada",
-     "from": 1878,
-     "to": 1885
+     "from": 1862,
+     "to": 1869
     },
     {
      "w": "herdeiro",
-     "from": 1885,
-     "to": 1898
+     "from": 1869,
+     "to": 1882
     },
     {
      "w": "recebe",
-     "from": 1898,
-     "to": 1910
+     "from": 1882,
+     "to": 1894
     },
     {
      "w": "apenas",
-     "from": 1910,
-     "to": 1925
+     "from": 1894,
+     "to": 1909
     },
     {
      "w": "a",
-     "from": 1925,
-     "to": 1928
+     "from": 1909,
+     "to": 1912
     },
     {
      "w": "sua",
-     "from": 1928,
-     "to": 1934
+     "from": 1912,
+     "to": 1918
     },
     {
      "w": "parte.",
-     "from": 1934,
-     "to": 1949
+     "from": 1918,
+     "to": 1933
     }
    ]
   },
@@ -1041,29 +1041,29 @@
    "cena": "s5",
    "texto": "Este é o protótipo.",
    "fonte": "sintetica",
-   "from": 1986,
+   "from": 1970,
    "dur": 41,
    "src": "audio/voz/s05_01.mp3",
    "palavras": [
     {
      "w": "Este",
-     "from": 1987,
-     "to": 1997
+     "from": 1971,
+     "to": 1981
     },
     {
      "w": "é",
-     "from": 1997,
-     "to": 1999
+     "from": 1981,
+     "to": 1983
     },
     {
      "w": "o",
-     "from": 1999,
-     "to": 2001
+     "from": 1983,
+     "to": 1985
     },
     {
      "w": "protótipo.",
-     "from": 2001,
-     "to": 2023
+     "from": 1985,
+     "to": 2007
     }
    ]
   },
@@ -1072,109 +1072,109 @@
    "cena": "s5",
    "texto": "O titular entra com a chave de acesso do celular e vê o que falta para o plano ficar completo.",
    "fonte": "sintetica",
-   "from": 2033,
+   "from": 2017,
    "dur": 147,
    "src": "audio/voz/s05_02.mp3",
    "palavras": [
     {
      "w": "O",
-     "from": 2034,
-     "to": 2037
+     "from": 2018,
+     "to": 2021
     },
     {
      "w": "titular",
-     "from": 2037,
-     "to": 2052
+     "from": 2021,
+     "to": 2036
     },
     {
      "w": "entra",
-     "from": 2052,
-     "to": 2060
+     "from": 2036,
+     "to": 2044
     },
     {
      "w": "com",
-     "from": 2060,
-     "to": 2063
+     "from": 2044,
+     "to": 2047
     },
     {
      "w": "a",
-     "from": 2063,
-     "to": 2065
+     "from": 2047,
+     "to": 2049
     },
     {
      "w": "chave",
-     "from": 2065,
-     "to": 2074
+     "from": 2049,
+     "to": 2058
     },
     {
      "w": "de",
-     "from": 2074,
-     "to": 2076
+     "from": 2058,
+     "to": 2060
     },
     {
      "w": "acesso",
-     "from": 2076,
-     "to": 2089
+     "from": 2060,
+     "to": 2073
     },
     {
      "w": "do",
-     "from": 2089,
-     "to": 2091
+     "from": 2073,
+     "to": 2075
     },
     {
      "w": "celular",
-     "from": 2091,
-     "to": 2109
+     "from": 2075,
+     "to": 2093
     },
     {
      "w": "e",
-     "from": 2109,
-     "to": 2114
+     "from": 2093,
+     "to": 2098
     },
     {
      "w": "vê",
-     "from": 2114,
-     "to": 2121
+     "from": 2098,
+     "to": 2105
     },
     {
      "w": "o",
-     "from": 2121,
-     "to": 2122
+     "from": 2105,
+     "to": 2106
     },
     {
      "w": "que",
+     "from": 2106,
+     "to": 2110
+    },
+    {
+     "w": "falta",
+     "from": 2110,
+     "to": 2122
+    },
+    {
+     "w": "para",
      "from": 2122,
      "to": 2126
     },
     {
-     "w": "falta",
-     "from": 2126,
-     "to": 2138
-    },
-    {
-     "w": "para",
-     "from": 2138,
-     "to": 2142
-    },
-    {
      "w": "o",
-     "from": 2142,
-     "to": 2143
+     "from": 2126,
+     "to": 2127
     },
     {
      "w": "plano",
-     "from": 2143,
-     "to": 2151
+     "from": 2127,
+     "to": 2135
     },
     {
      "w": "ficar",
-     "from": 2151,
-     "to": 2159
+     "from": 2135,
+     "to": 2143
     },
     {
      "w": "completo.",
-     "from": 2159,
-     "to": 2176
+     "from": 2143,
+     "to": 2160
     }
    ]
   },
@@ -1183,89 +1183,89 @@
    "cena": "s5",
    "texto": "No inventário, cada ativo (redes sociais, e-mails, cripto, assinaturas) recebe um destino: pessoal, patrimonial ou encerrar.",
    "fonte": "sintetica",
-   "from": 2186,
+   "from": 2170,
    "dur": 277,
    "src": "audio/voz/s05_03.mp3",
    "palavras": [
     {
      "w": "No",
-     "from": 2187,
-     "to": 2192
+     "from": 2171,
+     "to": 2176
     },
     {
      "w": "inventário,",
-     "from": 2192,
-     "to": 2214
+     "from": 2176,
+     "to": 2198
     },
     {
      "w": "cada",
-     "from": 2219,
-     "to": 2226
+     "from": 2203,
+     "to": 2210
     },
     {
      "w": "ativo",
-     "from": 2226,
-     "to": 2240
+     "from": 2210,
+     "to": 2224
     },
     {
      "w": "(redes",
-     "from": 2247,
-     "to": 2257
+     "from": 2231,
+     "to": 2241
     },
     {
      "w": "sociais,",
-     "from": 2257,
-     "to": 2276
+     "from": 2241,
+     "to": 2260
     },
     {
      "w": "e-mails,",
-     "from": 2282,
-     "to": 2300
+     "from": 2266,
+     "to": 2284
     },
     {
      "w": "cripto,",
-     "from": 2305,
-     "to": 2318
+     "from": 2289,
+     "to": 2302
     },
     {
      "w": "assinaturas)",
-     "from": 2323,
-     "to": 2346
+     "from": 2307,
+     "to": 2330
     },
     {
      "w": "recebe",
-     "from": 2353,
-     "to": 2363
+     "from": 2337,
+     "to": 2347
     },
     {
      "w": "um",
-     "from": 2363,
-     "to": 2365
+     "from": 2347,
+     "to": 2349
     },
     {
      "w": "destino:",
-     "from": 2365,
-     "to": 2381
+     "from": 2349,
+     "to": 2365
     },
     {
      "w": "pessoal,",
-     "from": 2387,
-     "to": 2406
+     "from": 2371,
+     "to": 2390
     },
     {
      "w": "patrimonial",
-     "from": 2410,
-     "to": 2438
+     "from": 2394,
+     "to": 2422
     },
     {
      "w": "ou",
-     "from": 2438,
-     "to": 2444
+     "from": 2422,
+     "to": 2428
     },
     {
      "w": "encerrar.",
-     "from": 2444,
-     "to": 2459
+     "from": 2428,
+     "to": 2443
     }
    ]
   },
@@ -1274,84 +1274,84 @@
    "cena": "s5",
    "texto": "Depois, ele escolhe os herdeiros e define a carência: quinze, trinta, sessenta ou noventa dias.",
    "fonte": "sintetica",
-   "from": 2469,
+   "from": 2453,
    "dur": 189,
    "src": "audio/voz/s05_04.mp3",
    "palavras": [
     {
      "w": "Depois,",
-     "from": 2470,
-     "to": 2487
+     "from": 2454,
+     "to": 2471
     },
     {
      "w": "ele",
-     "from": 2493,
-     "to": 2497
+     "from": 2477,
+     "to": 2481
     },
     {
      "w": "escolhe",
-     "from": 2497,
-     "to": 2508
+     "from": 2481,
+     "to": 2492
     },
     {
      "w": "os",
-     "from": 2508,
-     "to": 2509
+     "from": 2492,
+     "to": 2493
     },
     {
      "w": "herdeiros",
-     "from": 2509,
-     "to": 2525
+     "from": 2493,
+     "to": 2509
     },
     {
      "w": "e",
-     "from": 2525,
-     "to": 2528
+     "from": 2509,
+     "to": 2512
     },
     {
      "w": "define",
-     "from": 2528,
-     "to": 2539
+     "from": 2512,
+     "to": 2523
     },
     {
      "w": "a",
-     "from": 2539,
-     "to": 2541
+     "from": 2523,
+     "to": 2525
     },
     {
      "w": "carência:",
-     "from": 2541,
-     "to": 2556
+     "from": 2525,
+     "to": 2540
     },
     {
      "w": "quinze,",
-     "from": 2562,
-     "to": 2577
+     "from": 2546,
+     "to": 2561
     },
     {
      "w": "trinta,",
-     "from": 2581,
-     "to": 2594
+     "from": 2565,
+     "to": 2578
     },
     {
      "w": "sessenta",
-     "from": 2601,
-     "to": 2621
+     "from": 2585,
+     "to": 2605
     },
     {
      "w": "ou",
-     "from": 2621,
-     "to": 2624
+     "from": 2605,
+     "to": 2608
     },
     {
      "w": "noventa",
-     "from": 2624,
-     "to": 2638
+     "from": 2608,
+     "to": 2622
     },
     {
      "w": "dias.",
-     "from": 2638,
-     "to": 2653
+     "from": 2622,
+     "to": 2637
     }
    ]
   },
@@ -1360,134 +1360,134 @@
    "cena": "s5",
    "texto": "Quando o titular falece, o herdeiro abre o pedido com a certidão de óbito, o documento do inventário e uma selfie para confirmar a identidade.",
    "fonte": "sintetica",
-   "from": 2664,
+   "from": 2648,
    "dur": 240,
    "src": "audio/voz/s05_05.mp3",
    "palavras": [
     {
      "w": "Quando",
-     "from": 2665,
-     "to": 2671
+     "from": 2649,
+     "to": 2655
     },
     {
      "w": "o",
-     "from": 2671,
-     "to": 2672
+     "from": 2655,
+     "to": 2656
     },
     {
      "w": "titular",
-     "from": 2672,
-     "to": 2683
+     "from": 2656,
+     "to": 2667
     },
     {
      "w": "falece,",
-     "from": 2683,
-     "to": 2701
+     "from": 2667,
+     "to": 2685
     },
     {
      "w": "o",
-     "from": 2706,
-     "to": 2708
+     "from": 2690,
+     "to": 2692
     },
     {
      "w": "herdeiro",
-     "from": 2708,
-     "to": 2723
+     "from": 2692,
+     "to": 2707
     },
     {
      "w": "abre",
-     "from": 2723,
-     "to": 2730
+     "from": 2707,
+     "to": 2714
     },
     {
      "w": "o",
-     "from": 2730,
-     "to": 2732
+     "from": 2714,
+     "to": 2716
     },
     {
      "w": "pedido",
-     "from": 2732,
-     "to": 2744
+     "from": 2716,
+     "to": 2728
     },
     {
      "w": "com",
-     "from": 2744,
-     "to": 2747
+     "from": 2728,
+     "to": 2731
     },
     {
      "w": "a",
-     "from": 2747,
-     "to": 2748
+     "from": 2731,
+     "to": 2732
     },
     {
      "w": "certidão",
-     "from": 2748,
-     "to": 2766
+     "from": 2732,
+     "to": 2750
     },
     {
      "w": "de",
-     "from": 2766,
-     "to": 2771
+     "from": 2750,
+     "to": 2755
     },
     {
      "w": "óbito,",
-     "from": 2771,
-     "to": 2784
+     "from": 2755,
+     "to": 2768
     },
     {
      "w": "o",
-     "from": 2789,
-     "to": 2790
+     "from": 2773,
+     "to": 2774
     },
     {
      "w": "documento",
-     "from": 2790,
-     "to": 2807
+     "from": 2774,
+     "to": 2791
     },
     {
      "w": "do",
-     "from": 2807,
-     "to": 2809
+     "from": 2791,
+     "to": 2793
     },
     {
      "w": "inventário",
-     "from": 2809,
-     "to": 2834
+     "from": 2793,
+     "to": 2818
     },
     {
      "w": "e",
-     "from": 2834,
-     "to": 2837
+     "from": 2818,
+     "to": 2821
     },
     {
      "w": "uma",
-     "from": 2837,
-     "to": 2841
+     "from": 2821,
+     "to": 2825
     },
     {
      "w": "selfie",
-     "from": 2841,
-     "to": 2856
+     "from": 2825,
+     "to": 2840
     },
     {
      "w": "para",
-     "from": 2856,
-     "to": 2862
+     "from": 2840,
+     "to": 2846
     },
     {
      "w": "confirmar",
-     "from": 2862,
-     "to": 2877
+     "from": 2846,
+     "to": 2861
     },
     {
      "w": "a",
-     "from": 2877,
-     "to": 2879
+     "from": 2861,
+     "to": 2863
     },
     {
      "w": "identidade.",
-     "from": 2879,
-     "to": 2899
+     "from": 2863,
+     "to": 2883
     }
    ]
   },
@@ -1496,54 +1496,54 @@
    "cena": "s5",
    "texto": "A equipe valida, todos são avisados e podem contestar.",
    "fonte": "sintetica",
-   "from": 2910,
+   "from": 2894,
    "dur": 109,
    "src": "audio/voz/s05_06.mp3",
    "palavras": [
     {
      "w": "A",
-     "from": 2911,
-     "to": 2915
+     "from": 2895,
+     "to": 2899
     },
     {
      "w": "equipe",
-     "from": 2915,
-     "to": 2928
+     "from": 2899,
+     "to": 2912
     },
     {
      "w": "valida,",
-     "from": 2928,
-     "to": 2943
+     "from": 2912,
+     "to": 2927
     },
     {
      "w": "todos",
-     "from": 2950,
-     "to": 2959
+     "from": 2934,
+     "to": 2943
     },
     {
      "w": "são",
-     "from": 2959,
-     "to": 2964
+     "from": 2943,
+     "to": 2948
     },
     {
      "w": "avisados",
-     "from": 2964,
-     "to": 2980
+     "from": 2948,
+     "to": 2964
     },
     {
      "w": "e",
-     "from": 2980,
-     "to": 2985
+     "from": 2964,
+     "to": 2969
     },
     {
      "w": "podem",
-     "from": 2985,
-     "to": 2994
+     "from": 2969,
+     "to": 2978
     },
     {
      "w": "contestar.",
-     "from": 2994,
-     "to": 3015
+     "from": 2978,
+     "to": 2999
     }
    ]
   },
@@ -1552,99 +1552,99 @@
    "cena": "s5",
    "texto": "Terminado o prazo, cada herdeiro vê só o que foi destinado a ele, com instruções para cada ativo.",
    "fonte": "sintetica",
-   "from": 3025,
+   "from": 3009,
    "dur": 171,
    "src": "audio/voz/s05_07.mp3",
    "palavras": [
     {
      "w": "Terminado",
-     "from": 3026,
-     "to": 3041
+     "from": 3010,
+     "to": 3025
     },
     {
      "w": "o",
-     "from": 3041,
-     "to": 3042
+     "from": 3025,
+     "to": 3026
     },
     {
      "w": "prazo,",
-     "from": 3042,
-     "to": 3056
+     "from": 3026,
+     "to": 3040
     },
     {
      "w": "cada",
-     "from": 3060,
-     "to": 3068
+     "from": 3044,
+     "to": 3052
     },
     {
      "w": "herdeiro",
-     "from": 3068,
-     "to": 3080
+     "from": 3052,
+     "to": 3064
     },
     {
      "w": "vê",
-     "from": 3080,
-     "to": 3090
+     "from": 3064,
+     "to": 3074
     },
     {
      "w": "só",
-     "from": 3090,
-     "to": 3100
+     "from": 3074,
+     "to": 3084
     },
     {
      "w": "o",
-     "from": 3100,
-     "to": 3102
+     "from": 3084,
+     "to": 3086
     },
     {
      "w": "que",
-     "from": 3102,
-     "to": 3105
+     "from": 3086,
+     "to": 3089
     },
     {
      "w": "foi",
-     "from": 3105,
-     "to": 3110
+     "from": 3089,
+     "to": 3094
     },
     {
      "w": "destinado",
-     "from": 3110,
-     "to": 3127
+     "from": 3094,
+     "to": 3111
     },
     {
      "w": "a",
-     "from": 3127,
-     "to": 3130
+     "from": 3111,
+     "to": 3114
     },
     {
      "w": "ele,",
-     "from": 3130,
-     "to": 3139
+     "from": 3114,
+     "to": 3123
     },
     {
      "w": "com",
-     "from": 3144,
-     "to": 3148
+     "from": 3128,
+     "to": 3132
     },
     {
      "w": "instruções",
-     "from": 3148,
-     "to": 3165
+     "from": 3132,
+     "to": 3149
     },
     {
      "w": "para",
-     "from": 3165,
-     "to": 3171
+     "from": 3149,
+     "to": 3155
     },
     {
      "w": "cada",
-     "from": 3171,
-     "to": 3177
+     "from": 3155,
+     "to": 3161
     },
     {
      "w": "ativo.",
-     "from": 3177,
-     "to": 3191
+     "from": 3161,
+     "to": 3175
     }
    ]
   },
@@ -1653,39 +1653,39 @@
    "cena": "s6",
    "texto": "Segurança é o coração do produto.",
    "fonte": "sintetica",
-   "from": 3224,
+   "from": 3208,
    "dur": 69,
    "src": "audio/voz/s06_01.mp3",
    "palavras": [
     {
      "w": "Segurança",
-     "from": 3225,
-     "to": 3248
+     "from": 3209,
+     "to": 3232
     },
     {
      "w": "é",
-     "from": 3248,
-     "to": 3250
+     "from": 3232,
+     "to": 3234
     },
     {
      "w": "o",
-     "from": 3250,
-     "to": 3252
+     "from": 3234,
+     "to": 3236
     },
     {
      "w": "coração",
-     "from": 3252,
-     "to": 3270
+     "from": 3236,
+     "to": 3254
     },
     {
      "w": "do",
-     "from": 3270,
-     "to": 3273
+     "from": 3254,
+     "to": 3257
     },
     {
      "w": "produto.",
-     "from": 3273,
-     "to": 3289
+     "from": 3257,
+     "to": 3273
     }
    ]
   },
@@ -1694,49 +1694,49 @@
    "cena": "s6",
    "texto": "O conteúdo é cifrado no aparelho do titular.",
    "fonte": "sintetica",
-   "from": 3299,
+   "from": 3283,
    "dur": 80,
    "src": "audio/voz/s06_02.mp3",
    "palavras": [
     {
      "w": "O",
-     "from": 3300,
-     "to": 3302
+     "from": 3284,
+     "to": 3286
     },
     {
      "w": "conteúdo",
-     "from": 3302,
-     "to": 3322
+     "from": 3286,
+     "to": 3306
     },
     {
      "w": "é",
-     "from": 3322,
-     "to": 3323
+     "from": 3306,
+     "to": 3307
     },
     {
      "w": "cifrado",
-     "from": 3323,
-     "to": 3339
+     "from": 3307,
+     "to": 3323
     },
     {
      "w": "no",
-     "from": 3339,
-     "to": 3342
+     "from": 3323,
+     "to": 3326
     },
     {
      "w": "aparelho",
-     "from": 3342,
-     "to": 3357
+     "from": 3326,
+     "to": 3341
     },
     {
      "w": "do",
-     "from": 3357,
-     "to": 3359
+     "from": 3341,
+     "to": 3343
     },
     {
      "w": "titular.",
-     "from": 3359,
-     "to": 3374
+     "from": 3343,
+     "to": 3358
     }
    ]
   },
@@ -1745,124 +1745,124 @@
    "cena": "s6",
    "texto": "A chave de sucessão é dividida em três partes, e duas são necessárias para abri-la: nem a empresa consegue abrir o cofre sozinha.",
    "fonte": "sintetica",
-   "from": 3385,
+   "from": 3369,
    "dur": 229,
    "src": "audio/voz/s06_03.mp3",
    "palavras": [
     {
      "w": "A",
-     "from": 3386,
-     "to": 3390
+     "from": 3370,
+     "to": 3374
     },
     {
      "w": "chave",
-     "from": 3390,
-     "to": 3400
+     "from": 3374,
+     "to": 3384
     },
     {
      "w": "de",
-     "from": 3400,
-     "to": 3403
+     "from": 3384,
+     "to": 3387
     },
     {
      "w": "sucessão",
-     "from": 3403,
-     "to": 3421
+     "from": 3387,
+     "to": 3405
     },
     {
      "w": "é",
-     "from": 3421,
-     "to": 3422
+     "from": 3405,
+     "to": 3406
     },
     {
      "w": "dividida",
-     "from": 3422,
-     "to": 3435
+     "from": 3406,
+     "to": 3419
     },
     {
      "w": "em",
-     "from": 3435,
-     "to": 3438
+     "from": 3419,
+     "to": 3422
     },
     {
      "w": "três",
-     "from": 3438,
-     "to": 3447
+     "from": 3422,
+     "to": 3431
     },
     {
      "w": "partes,",
-     "from": 3447,
-     "to": 3462
+     "from": 3431,
+     "to": 3446
     },
     {
      "w": "e",
-     "from": 3469,
-     "to": 3471
+     "from": 3453,
+     "to": 3455
     },
     {
      "w": "duas",
-     "from": 3471,
-     "to": 3481
+     "from": 3455,
+     "to": 3465
     },
     {
      "w": "são",
-     "from": 3481,
-     "to": 3484
+     "from": 3465,
+     "to": 3468
     },
     {
      "w": "necessárias",
-     "from": 3484,
-     "to": 3504
+     "from": 3468,
+     "to": 3488
     },
     {
      "w": "para",
-     "from": 3504,
-     "to": 3508
+     "from": 3488,
+     "to": 3492
     },
     {
      "w": "abri-la:",
-     "from": 3508,
-     "to": 3519
+     "from": 3492,
+     "to": 3503
     },
     {
      "w": "nem",
-     "from": 3530,
-     "to": 3543
+     "from": 3514,
+     "to": 3527
     },
     {
      "w": "a",
-     "from": 3543,
-     "to": 3544
+     "from": 3527,
+     "to": 3528
     },
     {
      "w": "empresa",
-     "from": 3549,
-     "to": 3562
+     "from": 3533,
+     "to": 3546
     },
     {
      "w": "consegue",
-     "from": 3562,
-     "to": 3574
+     "from": 3546,
+     "to": 3558
     },
     {
      "w": "abrir",
-     "from": 3574,
-     "to": 3582
+     "from": 3558,
+     "to": 3566
     },
     {
      "w": "o",
-     "from": 3582,
-     "to": 3584
+     "from": 3566,
+     "to": 3568
     },
     {
      "w": "cofre",
-     "from": 3584,
-     "to": 3592
+     "from": 3568,
+     "to": 3576
     },
     {
      "w": "sozinha.",
-     "from": 3592,
-     "to": 3609
+     "from": 3576,
+     "to": 3593
     }
    ]
   },
@@ -1871,74 +1871,74 @@
    "cena": "s6",
    "texto": "Mudanças críticas, como remover um herdeiro, geram um alerta: Não foi você? Desfazer.",
    "fonte": "sintetica",
-   "from": 3620,
+   "from": 3604,
    "dur": 187,
    "src": "audio/voz/s06_04.mp3",
    "palavras": [
     {
      "w": "Mudanças",
-     "from": 3621,
-     "to": 3640
+     "from": 3605,
+     "to": 3624
     },
     {
      "w": "críticas,",
-     "from": 3640,
-     "to": 3659
+     "from": 3624,
+     "to": 3643
     },
     {
      "w": "como",
-     "from": 3663,
-     "to": 3669
+     "from": 3647,
+     "to": 3653
     },
     {
      "w": "remover",
-     "from": 3669,
-     "to": 3685
+     "from": 3653,
+     "to": 3669
     },
     {
      "w": "um",
-     "from": 3685,
-     "to": 3688
+     "from": 3669,
+     "to": 3672
     },
     {
      "w": "herdeiro,",
-     "from": 3688,
-     "to": 3702
+     "from": 3672,
+     "to": 3686
     },
     {
      "w": "geram",
-     "from": 3710,
-     "to": 3719
+     "from": 3694,
+     "to": 3703
     },
     {
      "w": "um",
-     "from": 3719,
-     "to": 3722
+     "from": 3703,
+     "to": 3706
     },
     {
      "w": "alerta:",
-     "from": 3722,
-     "to": 3737
+     "from": 3706,
+     "to": 3721
     },
     {
      "w": "Não",
-     "from": 3746,
-     "to": 3752
+     "from": 3730,
+     "to": 3736
     },
     {
      "w": "foi",
-     "from": 3752,
-     "to": 3757
+     "from": 3736,
+     "to": 3741
     },
     {
      "w": "você?",
-     "from": 3757,
-     "to": 3769
+     "from": 3741,
+     "to": 3753
     },
     {
      "w": "Desfazer.",
-     "from": 3779,
-     "to": 3803
+     "from": 3763,
+     "to": 3787
     }
    ]
   },
@@ -1947,64 +1947,64 @@
    "cena": "s7",
    "texto": "Gerenciadores de senha resolvem o dia a dia, não a sucessão.",
    "fonte": "sintetica",
-   "from": 3840,
+   "from": 3824,
    "dur": 120,
    "src": "audio/voz/s07_01.mp3",
    "palavras": [
     {
      "w": "Gerenciadores",
-     "from": 3841,
-     "to": 3866
+     "from": 3825,
+     "to": 3850
     },
     {
      "w": "de",
-     "from": 3866,
-     "to": 3869
+     "from": 3850,
+     "to": 3853
     },
     {
      "w": "senha",
-     "from": 3869,
-     "to": 3880
+     "from": 3853,
+     "to": 3864
     },
     {
      "w": "resolvem",
-     "from": 3880,
-     "to": 3898
+     "from": 3864,
+     "to": 3882
     },
     {
      "w": "o",
-     "from": 3898,
-     "to": 3900
+     "from": 3882,
+     "to": 3884
     },
     {
      "w": "dia",
-     "from": 3900,
-     "to": 3907
+     "from": 3884,
+     "to": 3891
     },
     {
      "w": "a",
-     "from": 3907,
-     "to": 3909
+     "from": 3891,
+     "to": 3893
     },
     {
      "w": "dia,",
-     "from": 3909,
-     "to": 3919
+     "from": 3893,
+     "to": 3903
     },
     {
      "w": "não",
-     "from": 3926,
-     "to": 3935
+     "from": 3910,
+     "to": 3919
     },
     {
      "w": "a",
-     "from": 3935,
-     "to": 3936
+     "from": 3919,
+     "to": 3920
     },
     {
      "w": "sucessão.",
-     "from": 3936,
-     "to": 3956
+     "from": 3920,
+     "to": 3940
     }
    ]
   },
@@ -2013,79 +2013,79 @@
    "cena": "s7",
    "texto": "Os contatos de legado de Google, Apple e Meta cobrem só a própria plataforma.",
    "fonte": "sintetica",
-   "from": 3966,
+   "from": 3950,
    "dur": 147,
    "src": "audio/voz/s07_02.mp3",
    "palavras": [
     {
      "w": "Os",
-     "from": 3967,
-     "to": 3971
+     "from": 3951,
+     "to": 3955
     },
     {
      "w": "contatos",
-     "from": 3971,
-     "to": 3987
+     "from": 3955,
+     "to": 3971
     },
     {
      "w": "de",
-     "from": 3987,
-     "to": 3990
+     "from": 3971,
+     "to": 3974
     },
     {
      "w": "legado",
-     "from": 3990,
-     "to": 4001
+     "from": 3974,
+     "to": 3985
     },
     {
      "w": "de",
-     "from": 4001,
-     "to": 4004
+     "from": 3985,
+     "to": 3988
     },
     {
      "w": "Google,",
-     "from": 4004,
-     "to": 4020
+     "from": 3988,
+     "to": 4004
     },
     {
      "w": "Apple",
-     "from": 4024,
-     "to": 4040
+     "from": 4008,
+     "to": 4024
     },
     {
      "w": "e",
-     "from": 4040,
-     "to": 4043
+     "from": 4024,
+     "to": 4027
     },
     {
      "w": "Meta",
-     "from": 4043,
-     "to": 4055
+     "from": 4027,
+     "to": 4039
     },
     {
      "w": "cobrem",
-     "from": 4055,
-     "to": 4068
+     "from": 4039,
+     "to": 4052
     },
     {
      "w": "só",
-     "from": 4068,
-     "to": 4075
+     "from": 4052,
+     "to": 4059
     },
     {
      "w": "a",
-     "from": 4075,
-     "to": 4077
+     "from": 4059,
+     "to": 4061
     },
     {
      "w": "própria",
-     "from": 4077,
-     "to": 4089
+     "from": 4061,
+     "to": 4073
     },
     {
      "w": "plataforma.",
-     "from": 4089,
-     "to": 4109
+     "from": 4073,
+     "to": 4093
     }
    ]
   },
@@ -2094,79 +2094,79 @@
    "cena": "s7",
    "texto": "A Herança Digital reúne tudo em um só lugar, seguindo o rito legal brasileiro.",
    "fonte": "sintetica",
-   "from": 4119,
+   "from": 4103,
    "dur": 147,
    "src": "audio/voz/s07_03.mp3",
    "palavras": [
     {
      "w": "A",
-     "from": 4120,
-     "to": 4124
+     "from": 4104,
+     "to": 4108
     },
     {
      "w": "Herança",
-     "from": 4124,
-     "to": 4136
+     "from": 4108,
+     "to": 4120
     },
     {
      "w": "Digital",
-     "from": 4136,
-     "to": 4152
+     "from": 4120,
+     "to": 4136
     },
     {
      "w": "reúne",
-     "from": 4152,
-     "to": 4165
+     "from": 4136,
+     "to": 4149
     },
     {
      "w": "tudo",
-     "from": 4165,
-     "to": 4172
+     "from": 4149,
+     "to": 4156
     },
     {
      "w": "em",
-     "from": 4172,
-     "to": 4176
+     "from": 4156,
+     "to": 4160
     },
     {
      "w": "um",
-     "from": 4176,
-     "to": 4178
+     "from": 4160,
+     "to": 4162
     },
     {
      "w": "só",
-     "from": 4178,
-     "to": 4187
+     "from": 4162,
+     "to": 4171
     },
     {
      "w": "lugar,",
-     "from": 4187,
-     "to": 4199
+     "from": 4171,
+     "to": 4183
     },
     {
      "w": "seguindo",
-     "from": 4207,
-     "to": 4221
+     "from": 4191,
+     "to": 4205
     },
     {
      "w": "o",
-     "from": 4221,
-     "to": 4223
+     "from": 4205,
+     "to": 4207
     },
     {
      "w": "rito",
-     "from": 4223,
-     "to": 4232
+     "from": 4207,
+     "to": 4216
     },
     {
      "w": "legal",
-     "from": 4232,
-     "to": 4243
+     "from": 4216,
+     "to": 4227
     },
     {
      "w": "brasileiro.",
-     "from": 4243,
-     "to": 4262
+     "from": 4227,
+     "to": 4246
     }
    ]
   },
@@ -2175,29 +2175,29 @@
    "cena": "s8",
    "texto": "Em vida, é gratuito.",
    "fonte": "sintetica",
-   "from": 4296,
+   "from": 4280,
    "dur": 55,
    "src": "audio/voz/s08_01.mp3",
    "palavras": [
     {
      "w": "Em",
-     "from": 4297,
-     "to": 4304
+     "from": 4281,
+     "to": 4288
     },
     {
      "w": "vida,",
-     "from": 4304,
-     "to": 4316
+     "from": 4288,
+     "to": 4300
     },
     {
      "w": "é",
-     "from": 4322,
-     "to": 4325
+     "from": 4306,
+     "to": 4309
     },
     {
      "w": "gratuito.",
-     "from": 4325,
-     "to": 4346
+     "from": 4309,
+     "to": 4330
     }
    ]
   },
@@ -2206,94 +2206,94 @@
    "cena": "s8",
    "texto": "Só na liberação há uma taxa única, a definir, com isenção prevista para quem não puder pagar.",
    "fonte": "sintetica",
-   "from": 4357,
+   "from": 4341,
    "dur": 181,
    "src": "audio/voz/s08_02.mp3",
    "palavras": [
     {
      "w": "Só",
-     "from": 4358,
-     "to": 4368
+     "from": 4342,
+     "to": 4352
     },
     {
      "w": "na",
-     "from": 4368,
-     "to": 4370
+     "from": 4352,
+     "to": 4354
     },
     {
      "w": "liberação",
-     "from": 4370,
-     "to": 4392
+     "from": 4354,
+     "to": 4376
     },
     {
      "w": "há",
-     "from": 4392,
-     "to": 4393
+     "from": 4376,
+     "to": 4377
     },
     {
      "w": "uma",
-     "from": 4393,
-     "to": 4399
+     "from": 4377,
+     "to": 4383
     },
     {
      "w": "taxa",
-     "from": 4399,
-     "to": 4412
+     "from": 4383,
+     "to": 4396
     },
     {
      "w": "única,",
-     "from": 4412,
-     "to": 4426
+     "from": 4396,
+     "to": 4410
     },
     {
      "w": "a",
-     "from": 4432,
-     "to": 4435
+     "from": 4416,
+     "to": 4419
     },
     {
      "w": "definir,",
-     "from": 4435,
-     "to": 4455
+     "from": 4419,
+     "to": 4439
     },
     {
      "w": "com",
-     "from": 4460,
-     "to": 4465
+     "from": 4444,
+     "to": 4449
     },
     {
      "w": "isenção",
-     "from": 4465,
-     "to": 4479
+     "from": 4449,
+     "to": 4463
     },
     {
      "w": "prevista",
-     "from": 4479,
-     "to": 4498
+     "from": 4463,
+     "to": 4482
     },
     {
      "w": "para",
-     "from": 4498,
-     "to": 4503
+     "from": 4482,
+     "to": 4487
     },
     {
      "w": "quem",
-     "from": 4503,
-     "to": 4509
+     "from": 4487,
+     "to": 4493
     },
     {
      "w": "não",
-     "from": 4509,
-     "to": 4515
+     "from": 4493,
+     "to": 4499
     },
     {
      "w": "puder",
-     "from": 4515,
-     "to": 4524
+     "from": 4499,
+     "to": 4508
     },
     {
      "w": "pagar.",
-     "from": 4524,
-     "to": 4534
+     "from": 4508,
+     "to": 4518
     }
    ]
   },
@@ -2302,49 +2302,49 @@
    "cena": "s8",
    "texto": "Escritórios, cartórios e governo entram como parceiros previstos.",
    "fonte": "sintetica",
-   "from": 4544,
+   "from": 4528,
    "dur": 137,
    "src": "audio/voz/s08_03.mp3",
    "palavras": [
     {
      "w": "Escritórios,",
-     "from": 4545,
-     "to": 4569
+     "from": 4529,
+     "to": 4553
     },
     {
      "w": "cartórios",
-     "from": 4574,
-     "to": 4594
+     "from": 4558,
+     "to": 4578
     },
     {
      "w": "e",
-     "from": 4594,
-     "to": 4598
+     "from": 4578,
+     "to": 4582
     },
     {
      "w": "governo",
-     "from": 4598,
-     "to": 4621
+     "from": 4582,
+     "to": 4605
     },
     {
      "w": "entram",
-     "from": 4621,
-     "to": 4631
+     "from": 4605,
+     "to": 4615
     },
     {
      "w": "como",
-     "from": 4631,
-     "to": 4638
+     "from": 4615,
+     "to": 4622
     },
     {
      "w": "parceiros",
-     "from": 4638,
-     "to": 4654
+     "from": 4622,
+     "to": 4638
     },
     {
      "w": "previstos.",
-     "from": 4654,
-     "to": 4677
+     "from": 4638,
+     "to": 4661
     }
    ]
   },
@@ -2353,79 +2353,79 @@
    "cena": "s9",
    "texto": "Somos um projeto de faculdade; escritórios, cartórios e verificação de identidade são parceiros previstos.",
    "fonte": "sintetica",
-   "from": 4752,
+   "from": 4784,
    "dur": 203,
    "src": "audio/voz/s09_01.mp3",
    "palavras": [
     {
      "w": "Somos",
-     "from": 4753,
-     "to": 4764
+     "from": 4785,
+     "to": 4796
     },
     {
      "w": "um",
-     "from": 4764,
-     "to": 4769
+     "from": 4796,
+     "to": 4801
     },
     {
      "w": "projeto",
-     "from": 4769,
-     "to": 4782
+     "from": 4801,
+     "to": 4814
     },
     {
      "w": "de",
-     "from": 4782,
-     "to": 4784
+     "from": 4814,
+     "to": 4816
     },
     {
      "w": "faculdade;",
-     "from": 4784,
-     "to": 4806
+     "from": 4816,
+     "to": 4838
     },
     {
      "w": "escritórios,",
-     "from": 4812,
-     "to": 4835
+     "from": 4844,
+     "to": 4867
     },
     {
      "w": "cartórios",
-     "from": 4839,
-     "to": 4859
+     "from": 4871,
+     "to": 4891
     },
     {
      "w": "e",
-     "from": 4859,
-     "to": 4864
+     "from": 4891,
+     "to": 4896
     },
     {
      "w": "verificação",
-     "from": 4864,
-     "to": 4887
+     "from": 4896,
+     "to": 4919
     },
     {
      "w": "de",
-     "from": 4887,
-     "to": 4890
+     "from": 4919,
+     "to": 4922
     },
     {
      "w": "identidade",
-     "from": 4890,
-     "to": 4909
+     "from": 4922,
+     "to": 4941
     },
     {
      "w": "são",
-     "from": 4909,
-     "to": 4915
+     "from": 4941,
+     "to": 4947
     },
     {
      "w": "parceiros",
-     "from": 4915,
-     "to": 4929
+     "from": 4947,
+     "to": 4961
     },
     {
      "w": "previstos.",
-     "from": 4929,
-     "to": 4951
+     "from": 4961,
+     "to": 4983
     }
    ]
   },
@@ -2434,79 +2434,79 @@
    "cena": "s9",
    "texto": "Próximos passos: validar com um advogado de sucessões, ouvir usuários e construir o MVP.",
    "fonte": "sintetica",
-   "from": 4961,
+   "from": 4993,
    "dur": 186,
    "src": "audio/voz/s09_02.mp3",
    "palavras": [
     {
      "w": "Próximos",
-     "from": 4962,
-     "to": 4977
+     "from": 4994,
+     "to": 5009
     },
     {
      "w": "passos:",
-     "from": 4977,
-     "to": 4993
+     "from": 5009,
+     "to": 5025
     },
     {
      "w": "validar",
-     "from": 5000,
-     "to": 5015
+     "from": 5032,
+     "to": 5047
     },
     {
      "w": "com",
-     "from": 5015,
-     "to": 5019
+     "from": 5047,
+     "to": 5051
     },
     {
      "w": "um",
-     "from": 5019,
-     "to": 5020
+     "from": 5051,
+     "to": 5052
     },
     {
      "w": "advogado",
-     "from": 5020,
-     "to": 5039
+     "from": 5052,
+     "to": 5071
     },
     {
      "w": "de",
-     "from": 5039,
-     "to": 5042
+     "from": 5071,
+     "to": 5074
     },
     {
      "w": "sucessões,",
-     "from": 5042,
-     "to": 5064
+     "from": 5074,
+     "to": 5096
     },
     {
      "w": "ouvir",
-     "from": 5070,
-     "to": 5081
+     "from": 5102,
+     "to": 5113
     },
     {
      "w": "usuários",
-     "from": 5081,
-     "to": 5097
+     "from": 5113,
+     "to": 5129
     },
     {
      "w": "e",
-     "from": 5097,
-     "to": 5102
+     "from": 5129,
+     "to": 5134
     },
     {
      "w": "construir",
-     "from": 5102,
-     "to": 5119
+     "from": 5134,
+     "to": 5151
     },
     {
      "w": "o",
-     "from": 5119,
-     "to": 5122
+     "from": 5151,
+     "to": 5154
     },
     {
      "w": "MVP.",
-     "from": 5122,
-     "to": 5143
+     "from": 5154,
+     "to": 5175
     }
    ]
   },
@@ -2515,49 +2515,49 @@
    "cena": "s9",
    "texto": "Herança Digital: seus dados, sua história, seu futuro.",
    "fonte": "sintetica",
-   "from": 5153,
+   "from": 5185,
    "dur": 125,
    "src": "audio/voz/s09_03.mp3",
    "palavras": [
     {
      "w": "Herança",
-     "from": 5154,
-     "to": 5169
+     "from": 5186,
+     "to": 5201
     },
     {
      "w": "Digital:",
-     "from": 5169,
-     "to": 5186
-    },
-    {
-     "w": "seus",
-     "from": 5193,
-     "to": 5202
-    },
-    {
-     "w": "dados,",
-     "from": 5202,
+     "from": 5201,
      "to": 5218
     },
     {
+     "w": "seus",
+     "from": 5225,
+     "to": 5234
+    },
+    {
+     "w": "dados,",
+     "from": 5234,
+     "to": 5250
+    },
+    {
      "w": "sua",
-     "from": 5223,
-     "to": 5229
+     "from": 5255,
+     "to": 5261
     },
     {
      "w": "história,",
-     "from": 5229,
-     "to": 5244
+     "from": 5261,
+     "to": 5276
     },
     {
      "w": "seu",
-     "from": 5250,
-     "to": 5257
+     "from": 5282,
+     "to": 5289
     },
     {
      "w": "futuro.",
-     "from": 5257,
-     "to": 5274
+     "from": 5289,
+     "to": 5306
     }
    ]
   }

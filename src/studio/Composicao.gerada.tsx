@@ -14,7 +14,7 @@ export const ComposicaoPitch: React.FC = () => (
     fps={30}
     width={1920}
     height={1080}
-    durationInFrames={5360}
+    durationInFrames={5384}
     calculateMetadata={({ props }) => {
       const total = (props as Projeto).cenas.reduce((a, c) => a + c.dur, 0);
       if (total > LIMITE_QUADROS) throw new Error(`Duração total ${total} q passa de ${LIMITE_QUADROS} (180 s).`);
@@ -100,7 +100,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s1",
           "nome": "Abertura",
-          "dur": 368,
+          "dur": 360,
           "fundos": {
             "gancho": "preto",
             "estouro": "escuro",
@@ -160,7 +160,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s3",
           "nome": "Proposta de valor",
-          "dur": 544,
+          "dur": 536,
           "fundos": {
             "abertura": "escuro",
             "t1": "claro",
@@ -485,7 +485,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s8",
           "nome": "Modelo de negócio",
-          "dur": 456,
+          "dur": 504,
           "fundos": {
             "negocio": "escuro"
           },
@@ -520,7 +520,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "s9",
           "nome": "Equipe e fechamento",
-          "dur": 616,
+          "dur": 608,
           "fundos": {
             "equipe": "claro",
             "passos": "claro",
@@ -3216,42 +3216,105 @@ export const ComposicaoPitch: React.FC = () => (
           "id": "L06",
           "cena": "s2",
           "fraseId": "s02_01",
+          "de": 5,
+          "ate": 156,
+          "palavras": [
+            {
+              "w": "Hoje",
+              "de": 9,
+              "ate": 17
+            },
+            {
+              "w": "quase",
+              "de": 17,
+              "ate": 26
+            },
+            {
+              "w": "todo",
+              "de": 26,
+              "ate": 32
+            },
+            {
+              "w": "mundo",
+              "de": 32,
+              "ate": 41
+            },
+            {
+              "w": "tem",
+              "de": 41,
+              "ate": 45
+            },
+            {
+              "w": "e-mail,",
+              "de": 45,
+              "ate": 58
+            },
+            {
+              "w": "redes",
+              "de": 63,
+              "ate": 71
+            },
+            {
+              "w": "sociais,",
+              "de": 71,
+              "ate": 91
+            },
+            {
+              "w": "banco",
+              "de": 95,
+              "ate": 106
+            },
+            {
+              "w": "digital,",
+              "de": 106,
+              "ate": 124
+            },
+            {
+              "w": "criptomoedas,",
+              "de": 128,
+              "ate": 154
+            }
+          ]
+        },
+        {
+          "id": "L07",
+          "cena": "s2",
+          "fraseId": "s02_01",
           "de": 156,
           "ate": 228,
           "palavras": [
             {
               "w": "fotos",
               "de": 160,
-              "ate": 173
+              "ate": 172
             },
             {
               "w": "na",
-              "de": 173,
-              "ate": 179
+              "de": 172,
+              "ate": 177
             },
             {
               "w": "nuvem",
-              "de": 179,
-              "ate": 192
+              "de": 177,
+              "ate": 193
             },
             {
               "w": "e",
-              "de": 192,
+              "de": 193,
               "ate": 196
             },
             {
-              "w": "assinaturas",
+              "w": "assinaturas.",
               "de": 196,
               "ate": 221
             }
-          ],
-          "manual": true
+          ]
         },
         {
-          "id": "L07",
+          "id": "L08",
           "cena": "s2",
           "fraseId": "s02_02",
-          "de": 217,
+          "de": 228,
           "ate": 374,
           "palavras": [
             {
@@ -3332,7 +3395,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L08",
+          "id": "L09",
           "cena": "s2",
           "fraseId": "s02_02",
           "de": 374,
@@ -3376,7 +3439,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L09",
+          "id": "L10",
           "cena": "s2",
           "fraseId": "s02_03",
           "de": 434,
@@ -3460,7 +3523,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L10",
+          "id": "L11",
           "cena": "s3",
           "fraseId": "s03_01",
           "de": -4,
@@ -3559,7 +3622,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L11",
+          "id": "L12",
           "cena": "s3",
           "fraseId": "s03_02",
           "de": 188,
@@ -3633,7 +3696,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L12",
+          "id": "L13",
           "cena": "s3",
           "fraseId": "s03_03",
           "de": 357,
@@ -3687,7 +3750,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L13",
+          "id": "L14",
           "cena": "s3",
           "fraseId": "s03_03",
           "de": 450,
@@ -3726,7 +3789,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L14",
+          "id": "L15",
           "cena": "s4",
           "fraseId": "s04_01",
           "de": 0,
@@ -3805,7 +3868,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L15",
+          "id": "L16",
           "cena": "s4",
           "fraseId": "s04_02",
           "de": 149,
@@ -3844,7 +3907,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L16",
+          "id": "L17",
           "cena": "s4",
           "fraseId": "s04_03",
           "de": 232,
@@ -3938,7 +4001,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L17",
+          "id": "L18",
           "cena": "s5",
           "fraseId": "s05_01",
           "de": 5,
@@ -3967,7 +4030,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L18",
+          "id": "L19",
           "cena": "s5",
           "fraseId": "s05_02",
           "de": 54,
@@ -4076,7 +4139,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L19",
+          "id": "L20",
           "cena": "s5",
           "fraseId": "s05_03",
           "de": 221,
@@ -4145,7 +4208,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L20",
+          "id": "L21",
           "cena": "s5",
           "fraseId": "s05_03",
           "de": 407,
@@ -4174,7 +4237,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L21",
+          "id": "L22",
           "cena": "s5",
           "fraseId": "s05_04",
           "de": 490,
@@ -4228,7 +4291,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L22",
+          "id": "L23",
           "cena": "s5",
           "fraseId": "s05_04",
           "de": 592,
@@ -4267,7 +4330,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L23",
+          "id": "L24",
           "cena": "s5",
           "fraseId": "s05_05",
           "de": 685,
@@ -4346,7 +4409,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L24",
+          "id": "L25",
           "cena": "s5",
           "fraseId": "s05_05",
           "de": 823,
@@ -4410,7 +4473,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L25",
+          "id": "L26",
           "cena": "s5",
           "fraseId": "s05_06",
           "de": 945,
@@ -4464,7 +4527,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L26",
+          "id": "L27",
           "cena": "s5",
           "fraseId": "s05_07",
           "de": 1046,
@@ -4563,7 +4626,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L27",
+          "id": "L28",
           "cena": "s6",
           "fraseId": "s06_01",
           "de": 5,
@@ -4602,7 +4665,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L28",
+          "id": "L29",
           "cena": "s6",
           "fraseId": "s06_02",
           "de": 80,
@@ -4651,7 +4714,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L29",
+          "id": "L30",
           "cena": "s6",
           "fraseId": "s06_03",
           "de": 172,
@@ -4735,7 +4798,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L30",
+          "id": "L31",
           "cena": "s6",
           "fraseId": "s06_03",
           "de": 324,
@@ -4784,7 +4847,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L31",
+          "id": "L32",
           "cena": "s6",
           "fraseId": "s06_04",
           "de": 415,
@@ -4838,7 +4901,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L32",
+          "id": "L33",
           "cena": "s6",
           "fraseId": "s06_04",
           "de": 526,
@@ -4867,7 +4930,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L33",
+          "id": "L34",
           "cena": "s7",
           "fraseId": "s07_01",
           "de": 5,
@@ -4931,7 +4994,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L34",
+          "id": "L35",
           "cena": "s7",
           "fraseId": "s07_02",
           "de": 131,
@@ -5010,7 +5073,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L35",
+          "id": "L36",
           "cena": "s7",
           "fraseId": "s07_03",
           "de": 284,
@@ -5089,7 +5152,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L36",
+          "id": "L37",
           "cena": "s8",
           "fraseId": "s08_01",
           "de": 5,
@@ -5118,7 +5181,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L37",
+          "id": "L38",
           "cena": "s8",
           "fraseId": "s08_02",
           "de": 66,
@@ -5212,7 +5275,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L38",
+          "id": "L39",
           "cena": "s8",
           "fraseId": "s08_03",
           "de": 253,
@@ -5261,7 +5324,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L39",
+          "id": "L40",
           "cena": "s9",
           "fraseId": "s09_01",
           "de": 5,
@@ -5340,7 +5403,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L40",
+          "id": "L41",
           "cena": "s9",
           "fraseId": "s09_02",
           "de": 214,
@@ -5419,7 +5482,7 @@ export const ComposicaoPitch: React.FC = () => (
           ]
         },
         {
-          "id": "L41",
+          "id": "L42",
           "cena": "s9",
           "fraseId": "s09_03",
           "de": 406,
@@ -6109,7 +6172,7 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x092",
           "cena": "s3",
-          "frame": 542,
+          "frame": 534,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
@@ -7075,56 +7138,56 @@ export const ComposicaoPitch: React.FC = () => (
         {
           "id": "x230",
           "cena": "s8",
-          "frame": 397,
+          "frame": 380,
           "som": "whoosh_short",
           "ganhoDb": -17
         },
         {
           "id": "x231",
           "cena": "s8",
-          "frame": 415,
+          "frame": 394,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x232",
           "cena": "s8",
-          "frame": 418,
+          "frame": 397,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x233",
           "cena": "s8",
-          "frame": 421,
+          "frame": 400,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x234",
           "cena": "s8",
-          "frame": 424,
+          "frame": 403,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x235",
           "cena": "s8",
-          "frame": 427,
+          "frame": 406,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x236",
           "cena": "s8",
-          "frame": 430,
+          "frame": 409,
           "som": "type",
           "ganhoDb": -22
         },
         {
           "id": "x237",
           "cena": "s8",
-          "frame": 454,
+          "frame": 502,
           "som": "whoosh_short",
           "ganhoDb": -17
         },

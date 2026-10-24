@@ -13,7 +13,7 @@ export const CENAS = [
   { id: "s5", nome: "Demo do protótipo", min: 42, lead: 10, respiro: 11, cauda: 20, tema: "claro" },
   { id: "s6", nome: "Segurança", min: 17, lead: 8, respiro: 13, cauda: 26, tema: "escuro" },
   { id: "s7", nome: "Concorrência", min: 12, lead: 8, respiro: 11, cauda: 26, tema: "claro" },
-  { id: "s8", nome: "Modelo de negócio", min: 10, lead: 8, respiro: 11, cauda: 70, tema: "escuro" }, // cauda longa: frase final + rodapé depois da fala
+  { id: "s8", nome: "Modelo de negócio", min: 10, lead: 8, respiro: 11, cauda: 150, tema: "escuro" }, // cauda longa: frase final + rodapé precisam de ~4 s para ler (revisão #18)
   { id: "s9", nome: "Equipe e fechamento", min: 16, lead: 8, respiro: 11, cauda: 96, tema: "claro" },
 ];
 

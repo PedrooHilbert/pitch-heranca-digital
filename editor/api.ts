@@ -235,7 +235,7 @@ export function apiPlugin(): Plugin {
         const rota = `${req.method} ${url.pathname}`;
         try {
           // arquivos de public/ (telas, áudio, marca)
-          if (req.method === "GET" && /^\/(screens|audio|brand)\//.test(url.pathname)) {
+          if (req.method === "GET" && /^\/(screens|audio|brand|fonts)\//.test(url.pathname)) {
             const f = path.join(PUB, decodeURIComponent(url.pathname));
             if (f.startsWith(PUB) && fs.existsSync(f) && fs.statSync(f).isFile()) return servirArquivo(req, res, f);
             res.statusCode = 404;

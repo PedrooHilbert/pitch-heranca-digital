@@ -303,8 +303,10 @@
   "categoria": "Texto",
   "gravidade": "Média",
   "still": "revisoes/pins/17.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-24T01:10:48.314Z"
+  "status": "feito",
+  "criadoEm": "2026-10-24T01:10:48.314Z",
+  "resolvidoEm": "2026-10-24T01:41:05.526Z",
+  "resolucao": "A 1ª fala da S2 tinha uma legenda manual cobrindo só \"fotos na nuvem e assinaturas\" (5 de 16 palavras) e o resto ficava sem legenda. O sync agora só aceita legendas manuais que cobrem a fala inteira; a S2 voltou a ter legenda do começo ao fim."
  },
  {
   "id": 18,
@@ -319,7 +321,9 @@
   "categoria": "Tempo",
   "gravidade": "Média",
   "still": "revisoes/pins/18.png",
-  "status": "aberto",
-  "criadoEm": "2026-10-24T01:15:13.511Z"
+  "status": "feito",
+  "criadoEm": "2026-10-24T01:15:13.511Z",
+  "resolvidoEm": "2026-10-24T01:41:05.526Z",
+  "resolucao": "Final da S8: a frase \"Grátis para o cidadão...\" entra logo depois dos carimbos PREVISTO, o rodapé aparece mais rápido e a cena guarda ~4 s depois da fala — frase e rodapé completos ficam ~3 s na tela."
  }
 ]

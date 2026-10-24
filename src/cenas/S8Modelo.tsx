@@ -61,8 +61,10 @@ const T = () => {
     e3: r.ini(c) - 8,
     pilulas: PILULAS.map((p, i) => (p.w ? r.em(c, p.w, 6) : governo + 8)),
     previstos: r.em(c, "previstos", 2),
-    final: fimFala + 4,
-    rodape: fimFala + 22,
+    // revisão #18: a frase final entra logo depois dos carimbos "previsto" e o rodapé aparece rápido — a cena
+    // guarda ~4 s depois da fala para dar tempo de ler
+    final: Math.min(fimFala + 4, r.em(c, "previstos", 2) + 16),
+    rodape: Math.min(fimFala + 22, r.em(c, "previstos", 2) + 30),
   };
 };
 
@@ -234,7 +236,7 @@ export const S8Modelo: React.FC<{ dur: number }> = ({ dur }) => {
         <AbsoluteFill style={{ alignItems: "center", paddingTop: 690 }}>
           {frame >= t.rodape ? (
             <div style={{ padding: "10px 26px", borderRadius: 999, background: "rgba(245,200,107,0.14)", border: "1.5px solid #F5C86B" }}>
-              <TypeText texto={tx("rodape")} inicio={t.rodape} cps={2.2} style={{ fontFamily, fontWeight: 700, fontSize: 24, color: "#FCE7B8" }} />
+              <TypeText texto={tx("rodape")} inicio={t.rodape} cps={4} style={{ fontFamily, fontWeight: 700, fontSize: 24, color: "#FCE7B8" }} />
             </div>
           ) : null}
         </AbsoluteFill>

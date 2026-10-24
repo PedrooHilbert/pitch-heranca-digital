@@ -122,6 +122,18 @@ const manuaisLeg = (antigo.legendas ?? []).filter((l) => {
   if (!ok) console.log(`  legenda manual ${l.id} (${l.fraseId}) descartada: a fala mudou (texto ou voz)`);
   return ok;
 });
+// revisão #17: as legendas manuais de uma fala só valem se, juntas, cobrirem TODAS as palavras dela — senão parte
+// da fala ficava sem legenda (ex.: o começo de s02_01). Incompletas → a fala inteira ganha legenda gerada.
+const norm = (w: string) => w.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9]/g, "");
+for (const id of new Set(manuaisLeg.map((l) => l.fraseId))) {
+  const fala = d.frases.find((f) => f.id === id)!;
+  const cobertas = manuaisLeg.filter((l) => l.fraseId === id).reduce((n, l) => n + l.palavras.length, 0);
+  const total = fala.palavras.filter((p) => norm(p.w)).length;
+  if (cobertas < total) {
+    console.log(`  legendas manuais de ${id} cobriam ${cobertas} de ${total} palavras: a fala inteira ganha legenda gerada`);
+    for (let i = manuaisLeg.length - 1; i >= 0; i--) if (manuaisLeg[i].fraseId === id) manuaisLeg.splice(i, 1);
+  }
+}
 const fraseManual = new Set(manuaisLeg.map((l) => l.fraseId));
 const geradas = gerarLegendas(d.frases.filter((f) => !fraseManual.has(f.id)), d.total).map((l) => {
   const cena = d.frases.find((f) => f.id === l.fraseId)!.cena;
