@@ -19,8 +19,13 @@ import type { IncomingMessage, ServerResponse } from "node:http";
 
 const ROOT = path.resolve(__dirname, "..");
 const PUB = path.join(ROOT, "public");
-const PROJ = path.join(ROOT, "src", "data", "project.json");
-const REVDIR = path.join(ROOT, "revisoes");
+// Dois editores independentes: FORMATO=vertical (npm run editor:vertical) usa o projeto, as revisões, a composição
+// e as saídas da versão em pé; o padrão é o horizontal.
+export const VERTICAL = process.env.FORMATO === "vertical";
+const COMP = VERTICAL ? "PitchVertical" : "PitchHerancaDigital";
+const PROJ = path.join(ROOT, "src", "data", VERTICAL ? "project-vertical.json" : "project.json");
+const REVRAIZ = path.join(ROOT, "revisoes");
+const REVDIR = VERTICAL ? path.join(REVRAIZ, "vertical") : REVRAIZ;
 const REV = path.join(REVDIR, "revisoes.json");
 const PINS = path.join(REVDIR, "pins");
 const HIST = path.join(REVDIR, "historico");
@@ -94,6 +99,7 @@ function salvarHistorico() {
 }
 
 async function regenerarStudio() {
+  if (VERTICAL) return; // o Studio só tem a ponte de salvar para o horizontal
   try {
     const m = await import(pathToFileURL(path.join(ROOT, "scripts", "gerar-studio.mjs")).href);
     m.gerarStudio();
@@ -179,11 +185,11 @@ function iniciarRender(tipo: "rascunho" | "final", projeto: unknown) {
   if (tipo === "rascunho") {
     const props = path.join(cache, "props-editor.json");
     fs.writeFileSync(props, JSON.stringify(projeto));
-    saida = path.join(OUT, "rascunho-540p.mp4");
-    args = ["remotion", "render", "PitchHerancaDigital", JSON.stringify(saida), "--scale=0.5", "--crf=28", `--props=${JSON.stringify(props)}`];
+    saida = path.join(OUT, VERTICAL ? "rascunho-vertical.mp4" : "rascunho-540p.mp4");
+    args = ["remotion", "render", COMP, JSON.stringify(saida), "--scale=0.5", "--crf=28", `--props=${JSON.stringify(props)}`];
   } else {
-    saida = path.join(OUT, "pitch-v2.mp4");
-    args = ["--no-warnings", "scripts/render-final.mjs"];
+    saida = path.join(OUT, VERTICAL ? "pitch-vertical.mp4" : "pitch-v2.mp4");
+    args = ["--no-warnings", "scripts/render-final.mjs", ...(VERTICAL ? ["--vertical"] : [])];
   }
   job = { tipo, status: "rodando", progresso: 0, etapa: "preparando", log: "", saida, inicio: Date.now() };
   const p = spawn(tipo === "rascunho" ? "npx" : "node", args, { cwd: ROOT, shell: true });
@@ -242,8 +248,8 @@ export function apiPlugin(): Plugin {
             return res.end("não encontrado");
           }
           if (req.method === "GET" && url.pathname.startsWith("/revisoes/")) {
-            const f = path.join(REVDIR, decodeURIComponent(url.pathname.slice("/revisoes/".length)));
-            if (f.startsWith(REVDIR) && fs.existsSync(f)) return servirArquivo(req, res, f);
+            const f = path.join(REVRAIZ, decodeURIComponent(url.pathname.slice("/revisoes/".length)));
+            if (f.startsWith(REVRAIZ) && fs.existsSync(f)) return servirArquivo(req, res, f);
           }
           if (!url.pathname.startsWith("/api/")) return next();
 
@@ -263,7 +269,7 @@ export function apiPlugin(): Plugin {
             const { pin, projeto } = await corpo(req);
             const lista = lerJSON(REV, []) as any[];
             const id = lista.reduce((m, r) => Math.max(m, Number(r.id) || 0), 0) + 1;
-            const novo: any = { id, ...pin, still: `revisoes/pins/${id}.png`, status: "aberto", criadoEm: new Date().toISOString() };
+            const novo: any = { id, ...pin, still: path.relative(ROOT, path.join(PINS, `${id}.png`)).replace(/\\/g, "/"), status: "aberto", criadoEm: new Date().toISOString() };
             try {
               await renderStillPNG(pin.frame, projeto, path.join(PINS, `${id}.png`), 1);
             } catch (e) {

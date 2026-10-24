@@ -81,6 +81,7 @@ export const temaSchema = z.object({
 export const projetoSchema = z
   .object({
     versao: z.literal(3),
+    formato: z.enum(["horizontal", "vertical"]).optional().describe("cada formato tem o próprio projeto e a própria trilha"),
     fps: z.literal(30),
     largura: z.literal(1920),
     altura: z.literal(1080),

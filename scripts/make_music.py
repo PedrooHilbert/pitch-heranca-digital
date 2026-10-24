@@ -24,7 +24,10 @@ from scipy.signal import butter, sosfilt
 SR = 44100
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Lê o projeto (fonte única): durações das cenas podem ter sido ajustadas no editor.
-PJ = json.load(open(os.path.join(ROOT, "src", "data", "project.json"), encoding="utf-8"))
+# uso: python scripts/make_music.py [project-vertical.json trilha-vertical.wav] — cada formato tem a própria trilha
+ARQ_PROJ = sys.argv[1] if len(sys.argv) > 1 else "project.json"
+ARQ_SAIDA = sys.argv[2] if len(sys.argv) > 2 else "trilha.wav"
+PJ = json.load(open(os.path.join(ROOT, "src", "data", ARQ_PROJ), encoding="utf-8"))
 FPS = PJ["fps"]
 BPM = PJ["bpm"]
 _acc = 0
@@ -183,7 +186,7 @@ FF = imageio_ffmpeg.get_ffmpeg_exe()
 med = subprocess.run([FF, "-hide_banner", "-i", tmp, "-af", "loudnorm=I=-26:TP=-3:LRA=11:print_format=json", "-f", "null", "-"], capture_output=True, text=True).stderr
 j = json.loads(med[med.rfind("{"):med.rfind("}") + 1])
 ln = f"loudnorm=I=-26:TP=-3:LRA=11:measured_I={j['input_i']}:measured_TP={j['input_tp']}:measured_LRA={j['input_lra']}:measured_thresh={j['input_thresh']}:offset={j['target_offset']}:linear=true"
-saida = os.path.join(ROOT, "public", "audio", "trilha.wav")
+saida = os.path.join(ROOT, "public", "audio", ARQ_SAIDA)
 subprocess.run([FF, "-hide_banner", "-y", "-i", tmp, "-af", ln, "-ar", str(SR), "-c:a", "pcm_s16le", saida], capture_output=True, check=True)
-print(f"✓ trilha.wav  {DUR:.1f}s  {BPM} BPM  (entrada {j['input_i']} LUFS → −26 LUFS)")
+print(f"✓ {ARQ_SAIDA}  {DUR:.1f}s  {BPM} BPM  (entrada {j['input_i']} LUFS → −26 LUFS)")
 print("  seções:", ", ".join(f"{s}@{t:.1f}s" for t, s in fronteiras))

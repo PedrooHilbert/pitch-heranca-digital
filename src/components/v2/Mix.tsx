@@ -56,7 +56,7 @@ export const Mix: React.FC<{ semVoz?: boolean }> = ({ semVoz = false }) => {
 
       {a.trilha.ativo ? (
         <Audio
-          src={staticFile("audio/trilha.wav")}
+          src={staticFile(p.formato === "vertical" ? "audio/trilha-vertical.wav" : "audio/trilha.wav")}
           volume={(f) => {
             const k = D[Math.min(D.length - 1, Math.max(0, f))];
             const fadeOut = Math.min(1, Math.max(0, (d.total - f) / 24));

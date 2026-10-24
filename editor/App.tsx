@@ -6,6 +6,14 @@ import {
   MessageSquarePlus, Undo2, Redo2, Save, Film, FolderOpen, RefreshCw, Settings2,
 } from "lucide-react";
 import { PitchHerancaDigital } from "../src/PitchHerancaDigital";
+import { PitchVertical } from "../src/Vertical";
+
+// dois editores independentes (scripts/editor.mjs): o vertical mostra e edita a versão em pé
+declare const __FORMATO__: string;
+const VERTICAL = __FORMATO__ === "vertical";
+const COMPONENTE = VERTICAL ? PitchVertical : PitchHerancaDigital;
+const LARGURA = VERTICAL ? 1080 : 1920;
+const ALTURA = VERTICAL ? 1920 : 1080;
 import { derivado } from "../src/data/projeto";
 import { useProjeto } from "./store";
 import { Timeline } from "./Timeline";
@@ -203,7 +211,7 @@ export const App: React.FC = () => {
       const k = e.key.toLowerCase();
       if ((e.ctrlKey || e.metaKey) && k === "s") {
         e.preventDefault();
-        void store.salvar().then((ok) => toast(ok ? "Salvo em project.json" : "Não salvei — há erros de validação."));
+        void store.salvar().then((ok) => toast(ok ? `Salvo em ${VERTICAL ? "project-vertical.json" : "project.json"}` : "Não salvei — há erros de validação."));
         return;
       }
       if ((e.ctrlKey || e.metaKey) && (k === "y" || (k === "z" && e.shiftKey))) {
@@ -272,7 +280,7 @@ export const App: React.FC = () => {
   return (
     <div className="app">
       <header className="topo">
-        <div className="titulo">Estúdio de Revisão · <span>{projeto.equipe.marca}</span></div>
+        <div className="titulo">Estúdio de Revisão · <span>{projeto.equipe.marca}</span> · {VERTICAL ? "Em pé 9:16" : "Horizontal 16:9"}</div>
         <span className={`selo ${statusCls}`} title={store.msg}>{statusTxt}</span>
         {store.erros.length ? (
           <span className="selo erro" title={store.erros.map((e) => `${e.caminho}: ${e.msg}`).join("\n")} onClick={() => toast(store.erros[0].msg)} style={{ cursor: "pointer" }}>
@@ -323,16 +331,23 @@ export const App: React.FC = () => {
 
       <main className="centro">
         <div className="palco">
-          <div className="tela16x9" style={{ maxWidth: "calc((100vh - 50px - var(--h-timeline, 300px) - 80px) * 16 / 9)" }}>
+          <div
+            className="tela16x9"
+            style={
+              VERTICAL
+                ? { aspectRatio: "9 / 16", width: "auto", height: "calc(100vh - 50px - var(--h-timeline, 300px) - 80px)", maxWidth: "100%" }
+                : { maxWidth: "calc((100vh - 50px - var(--h-timeline, 300px) - 80px) * 16 / 9)" }
+            }
+          >
             <Player
               ref={player}
               className="player"
-              component={PitchHerancaDigital}
+              component={COMPONENTE}
               inputProps={props}
               durationInFrames={total}
               fps={30}
-              compositionWidth={1920}
-              compositionHeight={1080}
+              compositionWidth={LARGURA}
+              compositionHeight={ALTURA}
               style={{ width: "100%", height: "100%" }}
               controls={false}
               clickToPlay={false}

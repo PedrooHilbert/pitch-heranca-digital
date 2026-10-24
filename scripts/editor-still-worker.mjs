@@ -35,7 +35,7 @@ async function serveUrl() {
       entryPoint: P("src", "index.ts"),
       // cache do webpack só do editor: os scripts (render, stills) usam o padrão e podem montar ao mesmo tempo
       webpackOverride: (c) =>
-        c.cache && typeof c.cache === "object" ? { ...c, cache: { ...c.cache, cacheDirectory: P("node_modules", ".cache", "webpack-editor") } } : c,
+        c.cache && typeof c.cache === "object" ? { ...c, cache: { ...c.cache, cacheDirectory: P("node_modules", ".cache", `webpack-editor-${process.env.FORMATO || "horizontal"}`) } } : c,
     });
   }
   return url;
@@ -43,7 +43,9 @@ async function serveUrl() {
 
 async function still({ frame, projeto, saida, escala }) {
   const serve = await serveUrl();
-  const composition = await selectComposition({ serveUrl: serve, id: "PitchHerancaDigital", inputProps: projeto });
+  // o editor vertical (FORMATO=vertical) tira as fotos da composição em pé
+  const id = process.env.FORMATO === "vertical" ? "PitchVertical" : "PitchHerancaDigital";
+  const composition = await selectComposition({ serveUrl: serve, id, inputProps: projeto });
   fs.mkdirSync(path.dirname(saida), { recursive: true });
   await renderStill({ serveUrl: serve, composition, frame, output: saida, overwrite: true, scale: escala, inputProps: projeto });
 }

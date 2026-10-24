@@ -206,18 +206,27 @@ function timeline(frases) {
   return tl;
 }
 
+// os DOIS formatos (horizontal e em pé) têm projeto próprio: a voz é a mesma, as edições de cada um são preservadas
+const FORMATOS = [
+  { projeto: "project.json", trilha: "trilha.wav" },
+  { projeto: "project-vertical.json", trilha: "trilha-vertical.wav" },
+].filter((f) => fs.existsSync(P("src", "data", f.projeto)));
 function projeto() {
-  log("▶ project.json (durações, falas, legendas, efeitos; preserva edições manuais)…");
-  const r = spawnSync("npx", ["tsx", "scripts/projeto-sync.mts"], { stdio: "inherit", shell: true, cwd: P() });
-  if (r.status !== 0) throw new Error("projeto-sync falhou");
+  for (const f of FORMATOS) {
+    log(`▶ ${f.projeto} (durações, falas, legendas, efeitos; preserva edições manuais)…`);
+    const r = spawnSync("npx", ["tsx", "scripts/projeto-sync.mts"], { stdio: "inherit", shell: true, cwd: P(), env: { ...process.env, PROJETO: f.projeto } });
+    if (r.status !== 0) throw new Error(`projeto-sync falhou (${f.projeto})`);
+  }
   spawnSync("node", ["scripts/gerar-studio.mjs"], { stdio: "inherit", shell: true, cwd: P() });
 }
 
 function musica() {
   if (!fs.existsSync(P("scripts", "make_music.py"))) return;
-  log("▶ trilha (make_music.py)…");
-  const r = spawnSync("python", [P("scripts", "make_music.py")], { stdio: "inherit" });
-  if (r.status !== 0) throw new Error("trilha falhou");
+  for (const f of FORMATOS) {
+    log(`▶ trilha ${f.trilha} (make_music.py)…`);
+    const r = spawnSync("python", [P("scripts", "make_music.py"), f.projeto, f.trilha], { stdio: "inherit" });
+    if (r.status !== 0) throw new Error("trilha falhou");
+  }
 }
 
 // ---------- execução ----------

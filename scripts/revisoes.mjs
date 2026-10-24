@@ -2,7 +2,8 @@
 import fs from "node:fs";
 import { P } from "./lib/projeto.mjs";
 
-const arq = P("revisoes", "revisoes.json");
+// --vertical → as revisões do editor da versão em pé (revisoes/vertical/)
+const arq = process.argv.includes("--vertical") ? P("revisoes", "vertical", "revisoes.json") : P("revisoes", "revisoes.json");
 const todas = process.argv.includes("--todas");
 const lista = fs.existsSync(arq) ? JSON.parse(fs.readFileSync(arq, "utf8")) : [];
 const mostrar = todas ? lista : lista.filter((r) => r.status !== "feito");

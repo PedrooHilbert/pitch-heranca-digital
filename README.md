@@ -13,8 +13,25 @@ voz, trilha e efeitos na batida) e acrescenta:
 ```bash
 cd video
 npm install
-npm run editor         # Estúdio de Revisão → http://localhost:5174 (abre o navegador sozinho)
+npm run editor            # editor do HORIZONTAL (16:9) → http://localhost:5174
+npm run editor:vertical   # editor da versão EM PÉ (9:16, TikTok/Reels) → http://localhost:5175
 ```
+
+### Dois vídeos, dois editores (independentes)
+
+| | Horizontal 16:9 | Em pé 9:16 (TikTok/Reels/Shorts) |
+|---|---|---|
+| Editor | `npm run editor` (:5174) | `npm run editor:vertical` (:5175) |
+| Projeto | `src/data/project.json` | `src/data/project-vertical.json` |
+| Revisões (pins) | `revisoes/` · `npm run revisoes` | `revisoes/vertical/` · `npm run revisoes:vertical` |
+| Trilha | `public/audio/trilha.wav` | `public/audio/trilha-vertical.wav` |
+| Render | `npm run render` → `out/pitch-v2.mp4` | `npm run render:vertical` → `out/pitch-vertical.mp4` |
+
+Editar um **não muda o outro** (textos, durações, legendas, efeitos, cores, volumes, pins). Os dois podem ficar
+abertos ao mesmo tempo. O que é **comum** aos dois: a narração (`narracao.ts`, a voz gravada/sintética) e as
+animações (código das cenas). Quando a voz muda, `npm run sync` atualiza os dois projetos preservando as edições
+manuais de cada um. Ao pedir correção ao Claude, diga de qual vídeo é o pin (o editor em pé mostra "Em pé 9:16"
+no título). `npm run stills:vertical -- --quadros=300,2400` tira fotos da versão em pé.
 
 Outros comandos:
 

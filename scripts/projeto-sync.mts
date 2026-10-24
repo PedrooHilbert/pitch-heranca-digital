@@ -25,7 +25,8 @@ import { PADRAO_S8 } from "../src/cenas/S8Modelo";
 import { PADRAO_S9 } from "../src/cenas/S9Fechamento";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const ARQ = path.join(ROOT, "src", "data", "project.json");
+// PROJETO=project-vertical.json → atualiza a versão em pé (cada formato guarda as próprias edições)
+const ARQ = path.join(ROOT, "src", "data", process.env.PROJETO || "project.json");
 const TLJ = path.join(ROOT, "src", "data", "timeline.json");
 
 type TLCena = { id: CenaId; nome: string; from: number; dur: number };
@@ -84,6 +85,7 @@ const frases = tl.frases.map((f) => ({
 
 const base = {
   versao: 3 as const,
+  ...(antigo.formato ? { formato: antigo.formato } : {}),
   fps: 30 as const,
   largura: 1920 as const,
   altura: 1080 as const,
@@ -157,4 +159,4 @@ if (!v.success) {
 }
 fs.writeFileSync(ARQ, JSON.stringify(projeto, null, 1), "utf8");
 const total = projeto.cenas.reduce((a, c) => a + c.dur, 0);
-console.log(`✓ project.json: ${total} q = ${(total / 30).toFixed(2)} s (máx. ${LIMITE_QUADROS}) · ${frases.length} falas · ${legendas.length} legendas (${manuaisLeg.length} manuais) · ${sfx.length} efeitos (${manuaisSfx.length} manuais)`);
+console.log(`✓ ${path.basename(ARQ)}: ${total} q = ${(total / 30).toFixed(2)} s (máx. ${LIMITE_QUADROS}) · ${frases.length} falas · ${legendas.length} legendas (${manuaisLeg.length} manuais) · ${sfx.length} efeitos (${manuaisSfx.length} manuais)`);
