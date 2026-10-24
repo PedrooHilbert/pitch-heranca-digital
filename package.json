@@ -55,7 +55,8 @@
     "voz": "node --no-warnings scripts/sync.mjs --voz",
     "voz:teste": "node --no-warnings scripts/voz-teste.mjs",
     "voz:conferir": "node --no-warnings scripts/voz-conferir.mjs",
-    "voz:niveis": "node --no-warnings scripts/voz-niveis.mjs"
+    "voz:niveis": "node --no-warnings scripts/voz-niveis.mjs",
+    "render:vertical": "node --no-warnings scripts/render-vertical.mjs"
   },
   "allowScripts": {
     "esbuild": false
