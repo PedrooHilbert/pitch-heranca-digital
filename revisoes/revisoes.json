@@ -289,5 +289,37 @@
   "atualizadoEm": "2026-10-23T22:56:53.098Z",
   "resolvidoEm": "2026-10-23T23:21:55.055Z",
   "resolucao": "Pronúncia \"ésta é\" (a voz lia \"está\", o verbo) na fala \"e esta é a Herança Digital\"; só a voz da s01_05 foi regenerada, legenda igual. Junto: a S1 voltou ao ritmo aprovado (voz 6 q depois do logo, sem o salto de +4 dB)."
+ },
+ {
+  "id": 17,
+  "frame": 382,
+  "tempo": "00:12.7",
+  "cena": "s2",
+  "cenaNome": "Cena 2 · Problema",
+  "x": null,
+  "y": null,
+  "texto": "está faltando legenda no s2 ",
+  "queroQue": "",
+  "categoria": "Texto",
+  "gravidade": "Média",
+  "still": "revisoes/pins/17.png",
+  "status": "aberto",
+  "criadoEm": "2026-10-24T01:10:48.314Z"
+ },
+ {
+  "id": 18,
+  "frame": 4705,
+  "tempo": "02:36.8",
+  "cena": "s8",
+  "cenaNome": "Cena 8 · Modelo de negócio",
+  "x": null,
+  "y": null,
+  "texto": "esse tempo final aqui está mt rápido, não consigo ler pq e mt rapido ",
+  "queroQue": "",
+  "categoria": "Tempo",
+  "gravidade": "Média",
+  "still": "revisoes/pins/18.png",
+  "status": "aberto",
+  "criadoEm": "2026-10-24T01:15:13.511Z"
  }
 ]
