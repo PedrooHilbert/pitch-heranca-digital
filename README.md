@@ -1,12 +1,36 @@
-# Pitch "Herança Digital" — vídeo v3 (Remotion + Estúdio de Revisão)
+# Herança Digital — pitch em vídeo feito com código
 
-Pitch de **≤ 3 min** do projeto **Herança Digital** (Sprint 2 do UC HUB, entrega 18/11).
-1920×1080, 30 fps, H.264. A v3 mantém o vídeo da v2 (tipografia cinética, telas do protótipo se montando,
-voz, trilha e efeitos na batida) e acrescenta:
+![Capa do pitch](docs/vitrine/capa.jpg)
 
-- **tudo editável num arquivo só** — `src/data/project.json`, validado por um schema Zod;
-- um **editor local** (`npm run editor`) para ajustar textos, tempos e áudio e para **deixar comentários no quadro exato**,
-  que depois o Claude Code resolve sozinho.
+Pitch de **3 minutos** da **Herança Digital** — um cofre para a vida digital: inventário de contas e ativos,
+acessos criptografados e um plano de liberação para os herdeiros. Projeto da squad **EternaByte**
+(UC HUB · Sprint 2).
+
+O vídeo inteiro é **programado em React** com [Remotion](https://www.remotion.dev/): cada cena é um componente,
+cada animação é calculada quadro a quadro e tudo se sincroniza com a narração.
+
+<p>
+  <img src="docs/vitrine/demo.gif" width="560" alt="Trecho do pitch: inventário de ativos sendo montado">
+  <img src="docs/vitrine/vertical.jpg" width="150" alt="Versão em pé 9:16">
+</p>
+
+**Destaques**
+
+- **Dois formatos do mesmo projeto:** horizontal 16:9 (1920×1080) e em pé 9:16 para TikTok/Reels/Shorts, com legendas grandes palavra a palavra.
+- **Sincronia automática com a voz:** a narração gera os tempos de cada palavra; cenas, legendas, efeitos e trilha se reposicionam sozinhos.
+- **Estúdio de Revisão próprio** (Vite + `@remotion/player`): editar textos, tempos e volumes e deixar *pins* de revisão no quadro exato, com foto.
+- **Trilha gerada por script** (Python) no andamento do vídeo, com mixagem e normalização a −14 LUFS.
+- **Dados validados** por schema Zod e auditorias automáticas (duração, legendas, níveis de áudio).
+
+**Stack:** TypeScript · React 19 · Remotion 4 · Vite · Zod · Python · FFmpeg
+
+---
+
+## Guia do projeto
+
+1920×1080, 30 fps, H.264, ≤ 3 min. Tudo é editável num arquivo só — `src/data/project.json`, validado por um
+schema Zod — e o editor local (`npm run editor`) serve para ajustar textos, tempos e áudio e **deixar comentários
+no quadro exato**, que depois o Claude Code resolve.
 
 ## Começar
 
