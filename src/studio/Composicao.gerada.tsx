@@ -6888,7 +6888,8 @@ export const ComposicaoPitch: React.FC = () => (
           "cena": "s7",
           "frame": 65,
           "som": "lock_click",
-          "ganhoDb": -18.4
+          "ganhoDb": -18.4,
+          "manual": true
         },
         {
           "id": "x195",
